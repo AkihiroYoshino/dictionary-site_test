@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dockerとは？ - なるほどIT用語辞典</title>
+  <meta name="description" content="Docker（ドッカー）を先生と生徒の対話形式でやさしく解説。コンテナ技術を分かりやすく説明します。">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        <span class="logo-icon">📖</span>
+        <span class="logo-text">
+          なるほどIT用語辞典
+          <span class="logo-sub">会話でわかるIT用語</span>
+        </span>
+      </a>
+      <div class="header-search" style="position:relative;">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="用語を検索…" autocomplete="off">
+          <button type="button" id="searchBtn">🔍</button>
+        </div>
+        <div class="search-results-dropdown" id="searchResults"></div>
+      </div>
+      <nav class="header-nav">
+        <a href="../index.html">🏠 トップ</a>
+        <a href="../index.html#categories">📂 カテゴリ</a>
+        <a href="../index.html#recent">🕐 最近の用語</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <nav class="breadcrumb">
+      <a href="../index.html">トップ</a> <span>›</span>
+      <a href="#">クラウド</a> <span>›</span>
+      <span>Docker</span>
+    </nav>
+
+    <div class="term-header">
+      <h1>Docker</h1>
+      <p class="term-reading">読み：ドッカー</p>
+      <p class="term-oneliner">💡 ひとことで言うと…アプリの動作環境を<strong>「お弁当箱」</strong>にパッケージングする技術！</p>
+    </div>
+
+    <div class="dialogue-section">
+      <h2>🗣️ 対話で理解しよう</h2>
+      <div class="dialogue">
+
+        <div class="dialogue-row student">
+          <div>
+            <div class="dialogue-avatar">🧑‍🎓</div>
+            <div class="dialogue-name">生徒</div>
+          </div>
+          <div class="dialogue-bubble">
+            先生、Dockerってよく「コンテナ」って言葉とセットで聞くんですけど、コンテナって貨物のコンテナのことですか？
+          </div>
+        </div>
+
+        <div class="dialogue-row teacher">
+          <div>
+            <div class="dialogue-avatar">🧑‍🏫</div>
+            <div class="dialogue-name">先生</div>
+          </div>
+          <div class="dialogue-bubble">
+            まさに、貨物のコンテナからイメージを借りてるんだよ！<br><br>
+            でもまず、こんな経験はない？<strong>「自分のパソコンでは動くのに、友達のパソコンでは動かない」</strong>ってこと。
+          </div>
+        </div>
+
+        <div class="dialogue-row student">
+          <div>
+            <div class="dialogue-avatar">🧑‍🎓</div>
+            <div class="dialogue-name">生徒</div>
+          </div>
+          <div class="dialogue-bubble">
+            あー！あります！「俺の環境では動くんだけどなぁ…」ってやつ！
+          </div>
+        </div>
+
+        <div class="dialogue-row teacher">
+          <div>
+            <div class="dialogue-avatar">🧑‍🏫</div>
+            <div class="dialogue-name">先生</div>
+          </div>
+          <div class="dialogue-bubble">
+            Dockerはその問題を解決するんだ！<br><br>
+            <strong>「お弁当箱」</strong>をイメージしてみて。お弁当箱には、ご飯もおかずも箸も全部入ってるよね。誰がどこで開けても、同じお弁当が食べられる。<br><br>
+            Dockerの<strong>コンテナ</strong>も同じで、アプリが動くために必要なもの（プログラム、設定、ライブラリなど）を<strong>全部まとめて1つの箱</strong>に入れるんだ。
+          </div>
+        </div>
+
+        <div class="dialogue-row student">
+          <div>
+            <div class="dialogue-avatar">🧑‍🎓</div>
+            <div class="dialogue-name">生徒</div>
+          </div>
+          <div class="dialogue-bubble">
+            なるほど！だから「どこでも同じように動く」んですね！自分のPC、友達のPC、サーバー、どこでも！
+          </div>
+        </div>
+
+        <div class="dialogue-row teacher">
+          <div>
+            <div class="dialogue-avatar">🧑‍🏫</div>
+            <div class="dialogue-name">先生</div>
+          </div>
+          <div class="dialogue-bubble">
+            完璧！ 🎉 しかもコンテナは<strong>とても軽い</strong>んだ。<br><br>
+            仮想マシン（VM）が「家を丸ごと建てる」イメージだとすると、コンテナは「お弁当箱を持っていく」イメージ。圧倒的に軽くて速い。<br>
+            だから今、クラウドの世界では<strong>Docker無しでは語れない</strong>くらい重要な技術なんだよ。
+          </div>
+        </div>
+
+        <div class="dialogue-row student">
+          <div>
+            <div class="dialogue-avatar">🧑‍🎓</div>
+            <div class="dialogue-name">生徒</div>
+          </div>
+          <div class="dialogue-bubble">
+            お弁当箱の例え、すごく分かりやすいです！Docker、触ってみたくなりました！
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="summary-box">
+      <h2>📝 まとめ</h2>
+      <ul>
+        <li><strong>Docker</strong>はアプリの動作環境をまとめて「コンテナ」にする技術</li>
+        <li><strong>お弁当箱</strong>のように、必要なものを全部1つにパッケージング</li>
+        <li>「自分の環境では動くのに…」という問題を解決</li>
+        <li>仮想マシンより<strong>軽くて速い</strong></li>
+        <li>クラウド・DevOpsの世界では<strong>必須の技術</strong></li>
+      </ul>
+    </div>
+
+    <div class="related-terms">
+      <h2>🔗 関連用語</h2>
+      <div class="related-tags">
+        <a href="#">Kubernetes</a>
+        <a href="#">仮想マシン</a>
+        <a href="#">コンテナ</a>
+        <a href="#">Docker Compose</a>
+        <a href="#">CI/CD</a>
+        <a href="api.html">API</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="../index.html">トップページ</a>
+      <a href="../index.html#categories">カテゴリ一覧</a>
+      <a href="../index.html#index">五十音索引</a>
+      <a href="../index.html#author">作者について</a>
+    </div>
+    <p class="copyright">&copy; 2026 なるほどIT用語辞典 All Rights Reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

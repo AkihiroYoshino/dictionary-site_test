@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie（クッキー）とは？ - なるほどIT用語辞典</title>
+  <meta name="description" content="Cookie（クッキー）を先生と生徒の対話形式でやさしく解説。Webサイトがブラウザに預ける小さなメモの正体。">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        <span class="logo-icon">📖</span>
+        <span class="logo-text">
+          なるほどIT用語辞典
+          <span class="logo-sub">会話でわかるIT用語</span>
+        </span>
+      </a>
+      <div class="header-search" style="position:relative;">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="用語を検索…" autocomplete="off">
+          <button type="button" id="searchBtn">🔍</button>
+        </div>
+        <div class="search-results-dropdown" id="searchResults"></div>
+      </div>
+      <nav class="header-nav">
+        <a href="../index.html">🏠 トップ</a>
+        <a href="../index.html#categories">📂 カテゴリ</a>
+        <a href="../index.html#recent">🕐 最近の用語</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <nav class="breadcrumb">
+      <a href="../index.html">トップ</a> <span>›</span>
+      <a href="#">Web技術</a> <span>›</span>
+      <span>Cookie（クッキー）</span>
+    </nav>
+
+    <div class="term-header">
+      <h1>Cookie（クッキー）</h1>
+      <p class="term-reading">読み：クッキー ／ 英語：HTTP Cookie</p>
+      <p class="term-oneliner">💡 ひとことで言うと…Webサイトがブラウザに預ける<strong>「小さなメモ」</strong>のこと！</p>
+    </div>
+
+    <div class="dialogue-section">
+      <h2>🗣️ 対話で理解しよう</h2>
+      <div class="dialogue">
+
+        <div class="dialogue-row student">
+          <div>
+            <div class="dialogue-avatar">🧑‍🎓</div>
+            <div class="dialogue-name">生徒</div>
+          </div>
+          <div class="dialogue-bubble">
+            先生、ネットしてると「Cookieを許可しますか？」って出るんですけど、あのCookieって食べるクッキーとは違いますよね…？
+          </div>
+        </div>
+
+        <div class="dialogue-row teacher">
+          <div>
+            <div class="dialogue-avatar">🧑‍🏫</div>
+            <div class="dialogue-name">先生</div>
+          </div>
+          <div class="dialogue-bubble">
+            うん、食べられないクッキーだね（笑）。<br><br>
+            <strong>Cookie</strong>っていうのは、Webサイトがキミのブラウザに預ける<strong>「小さなメモ」</strong>のことだよ。<br>
+            たとえば、クリーニング屋さんに服を預けたとき、<strong>引換券</strong>をもらうよね？
+          </div>
+        </div>
+
+        <div class="dialogue-row student">
+          <div>
+            <div class="dialogue-avatar">🧑‍🎓</div>
+            <div class="dialogue-name">生徒</div>
+          </div>
+          <div class="dialogue-bubble">
+            はい！次に来た時にその引換券を見せると「あ、この人の服はこれだね」って分かるやつ！
+          </div>
+        </div>
+
+        <div class="dialogue-row teacher">
+          <div>
+            <div class="dialogue-avatar">🧑‍🏫</div>
+            <div class="dialogue-name">先生</div>
+          </div>
+          <div class="dialogue-bubble">
+            完璧！Cookieはまさにその<strong>引換券</strong>と同じ仕組みなんだ。<br><br>
+            最初にWebサイトを訪問した時、サイトが「この人の情報メモ」をブラウザに渡す。次に来た時、ブラウザがそのメモを見せることで<strong>「あ、この人は前にも来たね！」</strong>って分かるわけ。
+          </div>
+        </div>
+
+        <div class="dialogue-row student">
+          <div>
+            <div class="dialogue-avatar">🧑‍🎓</div>
+            <div class="dialogue-name">生徒</div>
+          </div>
+          <div class="dialogue-bubble">
+            だからログインした状態が続いたり、買い物カゴの中身が残ってたりするんですね！
+          </div>
+        </div>
+
+        <div class="dialogue-row teacher">
+          <div>
+            <div class="dialogue-avatar">🧑‍🏫</div>
+            <div class="dialogue-name">先生</div>
+          </div>
+          <div class="dialogue-bubble">
+            その通り！ 🎉<br><br>
+            ただし注意点もあって、Cookieには<strong>個人の行動履歴</strong>が含まれることもあるんだ。だから最近は「Cookieを許可しますか？」って聞かれるようになったんだよ。<br>
+            プライバシーを守るために、<strong>必要なものだけ許可する</strong>のが賢い使い方だね。
+          </div>
+        </div>
+
+        <div class="dialogue-row student">
+          <div>
+            <div class="dialogue-avatar">🧑‍🎓</div>
+            <div class="dialogue-name">生徒</div>
+          </div>
+          <div class="dialogue-bubble">
+            なるほど〜！便利だけど、ちゃんと管理が必要なんですね。勉強になりました！
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="summary-box">
+      <h2>📝 まとめ</h2>
+      <ul>
+        <li><strong>Cookie</strong>はWebサイトがブラウザに預ける<strong>小さなメモ（データ）</strong></li>
+        <li>クリーニング店の<strong>引換券</strong>のようなもの</li>
+        <li>ログイン状態の維持、カート内容の保存などに使われる</li>
+        <li>プライバシーに関わるため、<strong>許可の管理</strong>が重要</li>
+        <li>ブラウザの設定からCookieの削除・管理ができる</li>
+      </ul>
+    </div>
+
+    <div class="related-terms">
+      <h2>🔗 関連用語</h2>
+      <div class="related-tags">
+        <a href="api.html">API</a>
+        <a href="#">セッション</a>
+        <a href="#">キャッシュ</a>
+        <a href="#">ローカルストレージ</a>
+        <a href="firewall.html">ファイアウォール</a>
+        <a href="#">HTTPS</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="../index.html">トップページ</a>
+      <a href="../index.html#categories">カテゴリ一覧</a>
+      <a href="../index.html#index">五十音索引</a>
+      <a href="../index.html#author">作者について</a>
+    </div>
+    <p class="copyright">&copy; 2026 なるほどIT用語辞典 All Rights Reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

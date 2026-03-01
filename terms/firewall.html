@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ファイアウォールとは？ - なるほどIT用語辞典</title>
+  <meta name="description" content="ファイアウォールを先生と生徒の対話形式でやさしく解説。ネットワークの門番の仕組みを分かりやすく説明。">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        <span class="logo-icon">📖</span>
+        <span class="logo-text">
+          なるほどIT用語辞典
+          <span class="logo-sub">会話でわかるIT用語</span>
+        </span>
+      </a>
+      <div class="header-search" style="position:relative;">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="用語を検索…" autocomplete="off">
+          <button type="button" id="searchBtn">🔍</button>
+        </div>
+        <div class="search-results-dropdown" id="searchResults"></div>
+      </div>
+      <nav class="header-nav">
+        <a href="../index.html">🏠 トップ</a>
+        <a href="../index.html#categories">📂 カテゴリ</a>
+        <a href="../index.html#recent">🕐 最近の用語</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <nav class="breadcrumb">
+      <a href="../index.html">トップ</a> <span>›</span>
+      <a href="#">セキュリティ</a> <span>›</span>
+      <span>ファイアウォール</span>
+    </nav>
+
+    <div class="term-header">
+      <h1>ファイアウォール</h1>
+      <p class="term-reading">読み：ファイアウォール ／ 英語：Firewall</p>
+      <p class="term-oneliner">💡 ひとことで言うと…ネットワークの<strong>「門番」</strong>！不正な通信をブロックする仕組み！</p>
+    </div>
+
+    <div class="dialogue-section">
+      <h2>🗣️ 対話で理解しよう</h2>
+      <div class="dialogue">
+
+        <div class="dialogue-row student">
+          <div>
+            <div class="dialogue-avatar">🧑‍🎓</div>
+            <div class="dialogue-name">生徒</div>
+          </div>
+          <div class="dialogue-bubble">
+            先生、「ファイアウォール」って名前がカッコいいですけど、ファイア…壁…？燃えてる壁ってこと？
+          </div>
+        </div>
+
+        <div class="dialogue-row teacher">
+          <div>
+            <div class="dialogue-avatar">🧑‍🏫</div>
+            <div class="dialogue-name">先生</div>
+          </div>
+          <div class="dialogue-bubble">
+            いいところに目をつけたね！元々「Firewall（防火壁）」は建物で火事が広がるのを防ぐ壁のことなんだ。<br><br>
+            IT用語では、ネットワークの<strong>「門番」</strong>として使われてるよ。お城の門番が「この人は入っていいか？」をチェックするみたいにね。
+          </div>
+        </div>
+
+        <div class="dialogue-row student">
+          <div>
+            <div class="dialogue-avatar">🧑‍🎓</div>
+            <div class="dialogue-name">生徒</div>
+          </div>
+          <div class="dialogue-bubble">
+            お城の門番！じゃあ、ファイアウォールは誰を通して誰を止めるんですか？
+          </div>
+        </div>
+
+        <div class="dialogue-row teacher">
+          <div>
+            <div class="dialogue-avatar">🧑‍🏫</div>
+            <div class="dialogue-name">先生</div>
+          </div>
+          <div class="dialogue-bubble">
+            いい質問！ファイアウォールは<strong>ネットワークを流れるデータ（通信）</strong>を見張ってるんだ。<br><br>
+            例えば…<br>
+            ✅ 「このWebサイトを見たい」→ OK、通ってよし！<br>
+            ❌ 「外部から勝手にPCに侵入しようとしてる」→ ストップ！通さない！<br><br>
+            こんな風に、<strong>ルールに基づいて通信を許可したりブロック</strong>したりしてるんだよ。
+          </div>
+        </div>
+
+        <div class="dialogue-row student">
+          <div>
+            <div class="dialogue-avatar">🧑‍🎓</div>
+            <div class="dialogue-name">生徒</div>
+          </div>
+          <div class="dialogue-bubble">
+            へー！じゃあWindowsに入ってる「Windows Defender ファイアウォール」もそれですか？
+          </div>
+        </div>
+
+        <div class="dialogue-row teacher">
+          <div>
+            <div class="dialogue-avatar">🧑‍🏫</div>
+            <div class="dialogue-name">先生</div>
+          </div>
+          <div class="dialogue-bubble">
+            まさにそれ！ 🎉 パソコン1台1台に入ってるのを<strong>「パーソナルファイアウォール」</strong>って呼ぶよ。<br><br>
+            会社とかだと、ネットワーク全体を守る<strong>専用のファイアウォール機器</strong>を置くこともあるんだ。門番にも「個人の門番」と「お城全体の門番」がいるってイメージだね。
+          </div>
+        </div>
+
+        <div class="dialogue-row student">
+          <div>
+            <div class="dialogue-avatar">🧑‍🎓</div>
+            <div class="dialogue-name">生徒</div>
+          </div>
+          <div class="dialogue-bubble">
+            なるほど！ファイアウォールって頼もしい存在なんですね。門番さんありがとう！
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="summary-box">
+      <h2>📝 まとめ</h2>
+      <ul>
+        <li><strong>ファイアウォール</strong>はネットワークの<strong>門番</strong>のような存在</li>
+        <li>通信を監視して、ルールに基づき<strong>許可・ブロック</strong>する</li>
+        <li>元々の意味は「防火壁」（火事の延焼を防ぐ壁）</li>
+        <li>PCに入っているものは<strong>パーソナルファイアウォール</strong></li>
+        <li>企業では専用の<strong>ファイアウォール機器</strong>を使うことも</li>
+      </ul>
+    </div>
+
+    <div class="related-terms">
+      <h2>🔗 関連用語</h2>
+      <div class="related-tags">
+        <a href="#">IDS / IPS</a>
+        <a href="#">VPN</a>
+        <a href="#">プロキシ</a>
+        <a href="#">ポート番号</a>
+        <a href="cookie.html">Cookie</a>
+        <a href="#">マルウェア</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="../index.html">トップページ</a>
+      <a href="../index.html#categories">カテゴリ一覧</a>
+      <a href="../index.html#index">五十音索引</a>
+      <a href="../index.html#author">作者について</a>
+    </div>
+    <p class="copyright">&copy; 2026 なるほどIT用語辞典 All Rights Reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

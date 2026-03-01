@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>なるほどIT用語辞典 - 会話でわかるIT用語</title>
+  <meta name="description" content="IT用語を先生と生徒の対話形式でやさしく解説。初心者でも「なるほど！」と分かるIT用語辞典です。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== ヘッダー ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">📖</span>
+        <span class="logo-text">
+          なるほどIT用語辞典
+          <span class="logo-sub">会話でわかるIT用語</span>
+        </span>
+      </a>
+      <div class="header-search" style="position:relative;">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="用語を検索…" autocomplete="off">
+          <button type="button" id="searchBtn">🔍</button>
+        </div>
+        <div class="search-results-dropdown" id="searchResults"></div>
+      </div>
+      <nav class="header-nav">
+        <a href="index.html">🏠 トップ</a>
+        <a href="#categories">📂 カテゴリ</a>
+        <a href="#recent">🕐 最近の用語</a>
+        <a href="#author">✏️ 作者</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- ===== ヒーロー ===== -->
+    <section class="hero">
+      <div class="hero-characters">🧑‍🎓💬🧑‍🏫</div>
+      <h1>なるほどIT用語辞典</h1>
+      <p>先生と生徒の会話形式で、IT用語を「なるほど！」と分かるように解説します</p>
+    </section>
+
+    <!-- ===== カテゴリ ===== -->
+    <section class="section" id="categories">
+      <h2 class="section-title"><span class="icon">📂</span> カテゴリから探す</h2>
+      <div class="category-grid">
+        <a href="#" class="category-card" data-category="network">
+          <span class="cat-icon">🌐</span>
+          <span class="cat-name">ネットワーク</span>
+          <span class="cat-count">42 用語</span>
+        </a>
+        <a href="#" class="category-card" data-category="security">
+          <span class="cat-icon">🔒</span>
+          <span class="cat-name">セキュリティ</span>
+          <span class="cat-count">38 用語</span>
+        </a>
+        <a href="#" class="category-card" data-category="programming">
+          <span class="cat-icon">💻</span>
+          <span class="cat-name">プログラミング</span>
+          <span class="cat-count">65 用語</span>
+        </a>
+        <a href="#" class="category-card" data-category="web">
+          <span class="cat-icon">🕸️</span>
+          <span class="cat-name">Web技術</span>
+          <span class="cat-count">51 用語</span>
+        </a>
+        <a href="#" class="category-card" data-category="database">
+          <span class="cat-icon">🗄️</span>
+          <span class="cat-name">データベース</span>
+          <span class="cat-count">29 用語</span>
+        </a>
+        <a href="#" class="category-card" data-category="hardware">
+          <span class="cat-icon">🖥️</span>
+          <span class="cat-name">ハードウェア</span>
+          <span class="cat-count">33 用語</span>
+        </a>
+        <a href="#" class="category-card" data-category="cloud">
+          <span class="cat-icon">☁️</span>
+          <span class="cat-name">クラウド</span>
+          <span class="cat-count">27 用語</span>
+        </a>
+        <a href="#" class="category-card" data-category="ai">
+          <span class="cat-icon">🤖</span>
+          <span class="cat-name">AI・機械学習</span>
+          <span class="cat-count">35 用語</span>
+        </a>
+        <a href="#" class="category-card" data-category="os">
+          <span class="cat-icon">⚙️</span>
+          <span class="cat-name">OS・システム</span>
+          <span class="cat-count">40 用語</span>
+        </a>
+        <a href="#" class="category-card" data-category="business">
+          <span class="cat-icon">📊</span>
+          <span class="cat-name">IT ビジネス</span>
+          <span class="cat-count">22 用語</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== 最近登録した用語 & ランキング ===== -->
+    <div class="two-col">
+      <!-- 最近の用語 -->
+      <section class="section" id="recent">
+        <h2 class="section-title"><span class="icon">🕐</span> 最近登録した用語</h2>
+        <div class="term-list">
+          <div class="term-item">
+            <span class="term-date">2026/03/01</span>
+            <div class="term-info">
+              <a href="terms/api.html" class="term-name">API</a>
+              <p class="term-desc">ソフトウェア同士が会話するための「窓口」のこと。レストランの注文カウンターのようなもの。</p>
+              <span class="term-tag">Web技術</span>
+            </div>
+          </div>
+          <div class="term-item">
+            <span class="term-date">2026/02/28</span>
+            <div class="term-info">
+              <a href="terms/cookie.html" class="term-name">Cookie（クッキー）</a>
+              <p class="term-desc">Webサイトがブラウザに預ける小さなメモ。あなたが誰かを覚えておくための仕組み。</p>
+              <span class="term-tag">Web技術</span>
+            </div>
+          </div>
+          <div class="term-item">
+            <span class="term-date">2026/02/26</span>
+            <div class="term-info">
+              <a href="terms/firewall.html" class="term-name">ファイアウォール</a>
+              <p class="term-desc">ネットワークの「門番」。外部からの不正アクセスをブロックするセキュリティの仕組み。</p>
+              <span class="term-tag">セキュリティ</span>
+            </div>
+          </div>
+          <div class="term-item">
+            <span class="term-date">2026/02/24</span>
+            <div class="term-info">
+              <a href="terms/sql.html" class="term-name">SQL</a>
+              <p class="term-desc">データベースに「これちょうだい」「これ追加して」とお願いするための言葉（言語）。</p>
+              <span class="term-tag">データベース</span>
+            </div>
+          </div>
+          <div class="term-item">
+            <span class="term-date">2026/02/22</span>
+            <div class="term-info">
+              <a href="terms/docker.html" class="term-name">Docker</a>
+              <p class="term-desc">アプリを動かすための環境を「コンテナ」にまとめて、どこでも同じように動かせる技術。</p>
+              <span class="term-tag">クラウド</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- アクセスランキング -->
+      <section class="section">
+        <h2 class="section-title"><span class="icon">🏆</span> アクセスランキング</h2>
+        <div class="term-list">
+          <div class="term-item">
+            <span class="term-date" style="background:var(--accent);">1位</span>
+            <div class="term-info">
+              <a href="terms/api.html" class="term-name">API</a>
+              <p class="term-desc">ソフトウェア同士が会話するための「窓口」のこと。</p>
+            </div>
+          </div>
+          <div class="term-item">
+            <span class="term-date" style="background:var(--accent);">2位</span>
+            <div class="term-info">
+              <a href="terms/cookie.html" class="term-name">Cookie（クッキー）</a>
+              <p class="term-desc">Webサイトがブラウザに預ける小さなメモ。</p>
+            </div>
+          </div>
+          <div class="term-item">
+            <span class="term-date" style="background:var(--accent);">3位</span>
+            <div class="term-info">
+              <a href="terms/firewall.html" class="term-name">ファイアウォール</a>
+              <p class="term-desc">ネットワークの「門番」。不正アクセスをブロック。</p>
+            </div>
+          </div>
+          <div class="term-item">
+            <span class="term-date" style="background:var(--accent);">4位</span>
+            <div class="term-info">
+              <a href="terms/sql.html" class="term-name">SQL</a>
+              <p class="term-desc">データベースにお願いするための言葉。</p>
+            </div>
+          </div>
+          <div class="term-item">
+            <span class="term-date" style="background:var(--accent);">5位</span>
+            <div class="term-info">
+              <a href="terms/docker.html" class="term-name">Docker</a>
+              <p class="term-desc">アプリ環境を「コンテナ」にまとめる技術。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ===== 五十音索引 ===== -->
+    <section class="section" id="index">
+      <h2 class="section-title"><span class="icon">🔤</span> 五十音索引</h2>
+      <div class="index-grid">
+        <a href="#">ア</a><a href="#">イ</a><a href="#">ウ</a><a href="#">エ</a><a href="#">オ</a>
+        <a href="#">カ</a><a href="#">キ</a><a href="#">ク</a><a href="#">ケ</a><a href="#">コ</a>
+        <a href="#">サ</a><a href="#">シ</a><a href="#">ス</a><a href="#">セ</a><a href="#">ソ</a>
+        <a href="#">タ</a><a href="#">チ</a><a href="#">ツ</a><a href="#">テ</a><a href="#">ト</a>
+        <a href="#">ナ</a><a href="#">ニ</a><a href="#">ヌ</a><a href="#">ネ</a><a href="#">ノ</a>
+        <a href="#">ハ</a><a href="#">ヒ</a><a href="#">フ</a><a href="#">ヘ</a><a href="#">ホ</a>
+        <a href="#">マ</a><a href="#">ミ</a><a href="#">ム</a><a href="#">メ</a><a href="#">モ</a>
+        <a href="#">ヤ</a><a href="#">ユ</a><a href="#">ヨ</a>
+        <a href="#">ラ</a><a href="#">リ</a><a href="#">ル</a><a href="#">レ</a><a href="#">ロ</a>
+        <a href="#">ワ</a>
+      </div>
+      <div class="index-grid index-alpha">
+        <a href="#">A</a><a href="#">B</a><a href="#">C</a><a href="#">D</a><a href="#">E</a>
+        <a href="#">F</a><a href="#">G</a><a href="#">H</a><a href="#">I</a><a href="#">J</a>
+        <a href="#">K</a><a href="#">L</a><a href="#">M</a><a href="#">N</a><a href="#">O</a>
+        <a href="#">P</a><a href="#">Q</a><a href="#">R</a><a href="#">S</a><a href="#">T</a>
+        <a href="#">U</a><a href="#">V</a><a href="#">W</a><a href="#">X</a><a href="#">Y</a>
+        <a href="#">Z</a>
+      </div>
+    </section>
+
+    <!-- ===== 作者について ===== -->
+    <section class="section" id="author">
+      <h2 class="section-title"><span class="icon">✏️</span> このサイトについて・作者</h2>
+      <div class="author-card">
+        <div class="author-avatar">🧑‍🏫</div>
+        <div class="author-info">
+          <h3>なるほどIT用語辞典 管理人</h3>
+          <p>
+            「IT用語って難しい…」そう思ったことはありませんか？<br>
+            このサイトでは、IT用語を<strong>先生と生徒の対話形式</strong>でやさしく解説しています。
+            難しい専門用語も、日常の例えを使って「なるほど！」と思えるように工夫しました。<br>
+            IT初心者の方からエンジニアの方まで、幅広くお役に立てれば嬉しいです。
+            掲載用語は随時追加中。リクエストも大歓迎です！
+          </p>
+          <div class="author-links">
+            <a href="#">📧 お問い合わせ</a>
+            <a href="#">🐦 Twitter / X</a>
+            <a href="#">📝 ブログ</a>
+            <a href="#">💡 用語リクエスト</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.container -->
+
+  <!-- ===== フッター ===== -->
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">トップページ</a>
+      <a href="#categories">カテゴリ一覧</a>
+      <a href="#index">五十音索引</a>
+      <a href="#author">作者について</a>
+      <a href="#">プライバシーポリシー</a>
+      <a href="#">お問い合わせ</a>
+    </div>
+    <p class="copyright">&copy; 2026 なるほどIT用語辞典 All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
