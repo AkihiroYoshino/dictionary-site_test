@@ -1,0 +1,58 @@
+{
+  "id": "sql",
+  "name": "SQL",
+  "reading": "エスキューエル",
+  "fullName": "Structured Query Language",
+  "aliases": ["シークェル"],
+  "oneLiner": "データベースに「これちょうだい」「これ追加して」とお願いするための言葉（言語）。",
+  "categories": ["database"],
+  "date": "2026-02-24",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、SQLって「プログラミング言語」なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "厳密にはちょっと違うんだ。SQLは<strong>データベースに「お願い」するための言葉</strong>だよ。<br><br>図書館で司書さんに「推理小説の棚を教えてください」って頼むよね？SQLはあの<strong>「頼み方のルール」</strong>みたいなものなんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど！データベースが図書館で、SQLが司書さんへの頼み方…ですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "そう！例えば…<br><br>「20歳以上の会員一覧を見せて」<br>→ <code>SELECT * FROM 会員 WHERE 年齢 >= 20;</code><br><br>「新しい会員を登録して」<br>→ <code>INSERT INTO 会員 (名前, 年齢) VALUES ('田中', 25);</code><br><br>こんな風に、<strong>データを取得・追加・更新・削除</strong>する操作をSQLで書くんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "おお！英語っぽいから読めば意味が分かりそうですね！SELECTは「選ぶ」、WHEREは「どこで（条件）」…"
+    },
+    {
+      "speaker": "teacher",
+      "text": "いいセンスだね！そう、SQLは<strong>英語に近い書き方</strong>だから、プログラミング言語の中では比較的読みやすいんだ。<br><br>世の中のほとんどのWebサービスやアプリの裏側で、SQLが使われてデータのやり取りをしてるんだよ。とっても大事な技術なんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "縁の下の力持ちって感じですね！ちょっと触ってみたくなりました！"
+    }
+  ],
+  "summary": [
+    "<strong>SQL</strong>は「Structured Query Language」の略",
+    "データベースにデータの取得・追加・更新・削除を<strong>お願いするための言葉</strong>",
+    "図書館の<strong>司書さんへの頼み方</strong>のようなもの",
+    "<code>SELECT</code>（取得）、<code>INSERT</code>（追加）、<code>UPDATE</code>（更新）、<code>DELETE</code>（削除）が基本",
+    "英語に近い文法で<strong>読みやすい</strong>"
+  ],
+  "relatedTerms": [
+    { "name": "データベース", "id": null },
+    { "name": "MySQL",        "id": null },
+    { "name": "PostgreSQL",   "id": null },
+    { "name": "テーブル",     "id": null },
+    { "name": "主キー",       "id": null },
+    { "name": "API",          "id": "api" }
+  ],
+  "termLinks": {
+    "API": "api"
+  }
+}
