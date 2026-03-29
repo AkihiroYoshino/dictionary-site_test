@@ -5,7 +5,6 @@
   "fullName": "",
   "aliases": [],
   "oneLiner": "アプリを動かすための環境を「コンテナ」にまとめて、どこでも同じように動かせる技術。",
-  "categories": ["cloud"],
   "date": "2026-02-22",
   "dialogue": [
     {
@@ -45,14 +44,30 @@
     "クラウド・DevOpsの世界では<strong>必須の技術</strong>"
   ],
   "relatedTerms": [
-    { "name": "Kubernetes",     "id": null },
-    { "name": "仮想マシン",     "id": null },
-    { "name": "コンテナ",       "id": null },
-    { "name": "Docker Compose", "id": null },
-    { "name": "CI/CD",         "id": null },
-    { "name": "API",           "id": "api" }
+    {
+      "name": "Kubernetes",
+      "id": null
+    },
+    {
+      "name": "仮想マシン",
+      "id": null
+    },
+    {
+      "name": "コンテナ",
+      "id": null
+    },
+    {
+      "name": "Docker Compose",
+      "id": null
+    },
+    {
+      "name": "CI/CD",
+      "id": null
+    },
+    {
+      "name": "API",
+      "id": "api"
+    }
   ],
-  "termLinks": {
-    "API": "api"
-  }
+  "termLinks": {}
 }

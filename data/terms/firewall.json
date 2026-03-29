@@ -3,9 +3,11 @@
   "name": "ファイアウォール",
   "reading": "ファイアウォール",
   "fullName": "Firewall",
-  "aliases": ["FW", "防火壁"],
+  "aliases": [
+    "FW",
+    "防火壁"
+  ],
   "oneLiner": "ネットワークの「門番」。外部からの不正アクセスをブロックするセキュリティの仕組み。",
-  "categories": ["security", "network"],
   "date": "2026-02-26",
   "dialogue": [
     {
@@ -45,15 +47,30 @@
     "企業では専用の<strong>ファイアウォール機器</strong>を使うことも"
   ],
   "relatedTerms": [
-    { "name": "IDS / IPS",  "id": null },
-    { "name": "VPN",        "id": null },
-    { "name": "プロキシ",   "id": null },
-    { "name": "ポート番号", "id": null },
-    { "name": "Cookie",     "id": "cookie" },
-    { "name": "マルウェア", "id": null }
+    {
+      "name": "IDS / IPS",
+      "id": null
+    },
+    {
+      "name": "VPN",
+      "id": null
+    },
+    {
+      "name": "プロキシ",
+      "id": null
+    },
+    {
+      "name": "ポート番号",
+      "id": null
+    },
+    {
+      "name": "Cookie",
+      "id": "cookie"
+    },
+    {
+      "name": "マルウェア",
+      "id": null
+    }
   ],
-  "termLinks": {
-    "Cookie": "cookie",
-    "VPN": "vpn"
-  }
+  "termLinks": {}
 }

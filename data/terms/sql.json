@@ -3,9 +3,10 @@
   "name": "SQL",
   "reading": "エスキューエル",
   "fullName": "Structured Query Language",
-  "aliases": ["シークェル"],
+  "aliases": [
+    "シークェル"
+  ],
   "oneLiner": "データベースに「これちょうだい」「これ追加して」とお願いするための言葉（言語）。",
-  "categories": ["database"],
   "date": "2026-02-24",
   "dialogue": [
     {
@@ -45,14 +46,30 @@
     "英語に近い文法で<strong>読みやすい</strong>"
   ],
   "relatedTerms": [
-    { "name": "データベース", "id": null },
-    { "name": "MySQL",        "id": null },
-    { "name": "PostgreSQL",   "id": null },
-    { "name": "テーブル",     "id": null },
-    { "name": "主キー",       "id": null },
-    { "name": "API",          "id": "api" }
+    {
+      "name": "データベース",
+      "id": null
+    },
+    {
+      "name": "MySQL",
+      "id": null
+    },
+    {
+      "name": "PostgreSQL",
+      "id": null
+    },
+    {
+      "name": "テーブル",
+      "id": null
+    },
+    {
+      "name": "主キー",
+      "id": null
+    },
+    {
+      "name": "API",
+      "id": "api"
+    }
   ],
-  "termLinks": {
-    "API": "api"
-  }
+  "termLinks": {}
 }

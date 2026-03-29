@@ -1,0 +1,529 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 3000">
+  <title>なるほどIT用語辞典 - デザインシステム</title>
+  <desc>Figmaでインポートして編集可能なデザインファイル</desc>
+  
+  <defs>
+    <!-- グラデーション定義 -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003399"/>
+      <stop offset="100%" stop-color="#001F5B"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFC300"/>
+      <stop offset="100%" stop-color="#FFD54F"/>
+    </linearGradient>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#003399"/>
+      <stop offset="100%" stop-color="#001F5B"/>
+    </linearGradient>
+    
+    <!-- シャドウフィルター -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+    <filter id="buttonShadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- ============================================
+       セクション1: カラーパレット
+       ============================================ -->
+  <g id="Color-Palette">
+    <text x="60" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#003399">カラーパレット / Color Palette</text>
+    
+    <!-- プライマリカラー -->
+    <g id="Primary-Colors">
+      <text x="60" y="90" font-family="Arial, sans-serif" font-size="14" fill="#666">Primary Colors</text>
+      
+      <g id="Color-Primary-Main">
+        <rect x="60" y="100" width="100" height="100" rx="8" fill="#003399"/>
+        <text x="110" y="220" font-family="Arial, sans-serif" font-size="11" fill="#333" text-anchor="middle">Primary</text>
+        <text x="110" y="235" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">#003399</text>
+      </g>
+      
+      <g id="Color-Primary-Dark">
+        <rect x="180" y="100" width="100" height="100" rx="8" fill="#001F5B"/>
+        <text x="230" y="220" font-family="Arial, sans-serif" font-size="11" fill="#333" text-anchor="middle">Primary Dark</text>
+        <text x="230" y="235" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">#001F5B</text>
+      </g>
+      
+      <g id="Color-Primary-Light">
+        <rect x="300" y="100" width="100" height="100" rx="8" fill="#4A7DC9"/>
+        <text x="350" y="220" font-family="Arial, sans-serif" font-size="11" fill="#333" text-anchor="middle">Primary Light</text>
+        <text x="350" y="235" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">#4A7DC9</text>
+      </g>
+    </g>
+    
+    <!-- アクセントカラー -->
+    <g id="Accent-Colors">
+      <text x="460" y="90" font-family="Arial, sans-serif" font-size="14" fill="#666">Accent Colors</text>
+      
+      <g id="Color-Accent-Main">
+        <rect x="460" y="100" width="100" height="100" rx="8" fill="#FFC300"/>
+        <text x="510" y="220" font-family="Arial, sans-serif" font-size="11" fill="#333" text-anchor="middle">Accent</text>
+        <text x="510" y="235" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">#FFC300</text>
+      </g>
+      
+      <g id="Color-Accent-Light">
+        <rect x="580" y="100" width="100" height="100" rx="8" fill="#FFD54F"/>
+        <text x="630" y="220" font-family="Arial, sans-serif" font-size="11" fill="#333" text-anchor="middle">Accent Light</text>
+        <text x="630" y="235" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">#FFD54F</text>
+      </g>
+      
+      <g id="Color-Accent-Dark">
+        <rect x="700" y="100" width="100" height="100" rx="8" fill="#E6AF00"/>
+        <text x="750" y="220" font-family="Arial, sans-serif" font-size="11" fill="#333" text-anchor="middle">Accent Dark</text>
+        <text x="750" y="235" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">#E6AF00</text>
+      </g>
+    </g>
+    
+    <!-- ニュートラルカラー -->
+    <g id="Neutral-Colors">
+      <text x="860" y="90" font-family="Arial, sans-serif" font-size="14" fill="#666">Neutral Colors</text>
+      
+      <g id="Color-Background">
+        <rect x="860" y="100" width="80" height="80" rx="6" fill="#F8F9FB" stroke="#e0e0e0"/>
+        <text x="900" y="200" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">BG</text>
+        <text x="900" y="212" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">#F8F9FB</text>
+      </g>
+      
+      <g id="Color-Surface">
+        <rect x="950" y="100" width="80" height="80" rx="6" fill="#FFFFFF" stroke="#e0e0e0"/>
+        <text x="990" y="200" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Surface</text>
+        <text x="990" y="212" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">#FFFFFF</text>
+      </g>
+      
+      <g id="Color-Border">
+        <rect x="1040" y="100" width="80" height="80" rx="6" fill="#E5E7EB"/>
+        <text x="1080" y="200" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Border</text>
+        <text x="1080" y="212" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">#E5E7EB</text>
+      </g>
+      
+      <g id="Color-Text">
+        <rect x="1130" y="100" width="80" height="80" rx="6" fill="#1A1A2E"/>
+        <text x="1170" y="200" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Text</text>
+        <text x="1170" y="212" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">#1A1A2E</text>
+      </g>
+      
+      <g id="Color-TextSub">
+        <rect x="1220" y="100" width="80" height="80" rx="6" fill="#6B7280"/>
+        <text x="1260" y="200" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Text Sub</text>
+        <text x="1260" y="212" font-family="Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">#6B7280</text>
+      </g>
+    </g>
+    
+    <!-- カテゴリカラー -->
+    <g id="Category-Colors">
+      <text x="60" y="280" font-family="Arial, sans-serif" font-size="14" fill="#666">Category Colors</text>
+      
+      <g id="Cat-Network"><rect x="60" y="295" width="60" height="60" rx="6" fill="#2563EB"/><text x="90" y="370" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Network</text></g>
+      <g id="Cat-Security"><rect x="130" y="295" width="60" height="60" rx="6" fill="#7C3AED"/><text x="160" y="370" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Security</text></g>
+      <g id="Cat-Programming"><rect x="200" y="295" width="60" height="60" rx="6" fill="#059669"/><text x="230" y="370" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Program</text></g>
+      <g id="Cat-Web"><rect x="270" y="295" width="60" height="60" rx="6" fill="#003399"/><text x="300" y="370" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Web</text></g>
+      <g id="Cat-Database"><rect x="340" y="295" width="60" height="60" rx="6" fill="#D97706"/><text x="370" y="370" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Database</text></g>
+      <g id="Cat-Hardware"><rect x="410" y="295" width="60" height="60" rx="6" fill="#64748B"/><text x="440" y="370" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Hardware</text></g>
+      <g id="Cat-Cloud"><rect x="480" y="295" width="60" height="60" rx="6" fill="#0EA5E9"/><text x="510" y="370" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Cloud</text></g>
+      <g id="Cat-AI"><rect x="550" y="295" width="60" height="60" rx="6" fill="#DC2626"/><text x="580" y="370" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">AI</text></g>
+      <g id="Cat-OS"><rect x="620" y="295" width="60" height="60" rx="6" fill="#6366F1"/><text x="650" y="370" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">OS</text></g>
+      <g id="Cat-Business"><rect x="690" y="295" width="60" height="60" rx="6" fill="#0D9488"/><text x="720" y="370" font-family="Arial, sans-serif" font-size="9" fill="#333" text-anchor="middle">Business</text></g>
+    </g>
+  </g>
+  
+  <!-- 区切り線 -->
+  <line x1="60" y1="410" x2="1380" y2="410" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- ============================================
+       セクション2: タイポグラフィ
+       ============================================ -->
+  <g id="Typography" transform="translate(0, 420)">
+    <text x="60" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#003399">タイポグラフィ / Typography</text>
+    
+    <g id="Headings">
+      <text x="60" y="70" font-family="Arial, sans-serif" font-size="14" fill="#666">Headings</text>
+      <text x="60" y="110" font-family="'Noto Sans JP', Arial, sans-serif" font-size="32" font-weight="bold" fill="#003399">H1 見出し - 32px Bold</text>
+      <text x="60" y="155" font-family="'Noto Sans JP', Arial, sans-serif" font-size="24" font-weight="bold" fill="#1A1A2E">H2 見出し - 24px Bold</text>
+      <text x="60" y="195" font-family="'Noto Sans JP', Arial, sans-serif" font-size="18" font-weight="bold" fill="#1A1A2E">H3 見出し - 18px Bold</text>
+    </g>
+    
+    <g id="Body-Text">
+      <text x="60" y="250" font-family="Arial, sans-serif" font-size="14" fill="#666">Body Text</text>
+      <text x="60" y="285" font-family="'Noto Sans JP', Arial, sans-serif" font-size="16" fill="#1A1A2E">本文テキスト - 16px Regular / Line-height: 1.8</text>
+      <text x="60" y="315" font-family="'Noto Sans JP', Arial, sans-serif" font-size="14" fill="#6B7280">サブテキスト - 14px / 補足説明やキャプション</text>
+      <text x="60" y="345" font-family="'Noto Sans JP', Arial, sans-serif" font-size="12" fill="#9CA3AF">小さなテキスト - 12px / 日付や注釈</text>
+    </g>
+    
+    <g id="Font-Family">
+      <text x="700" y="70" font-family="Arial, sans-serif" font-size="14" fill="#666">Font Family</text>
+      <text x="700" y="100" font-family="'Noto Sans JP', Arial, sans-serif" font-size="14" fill="#1A1A2E">日本語: Noto Sans JP / 游ゴシック</text>
+      <text x="700" y="125" font-family="'Inter', Arial, sans-serif" font-size="14" fill="#1A1A2E">英語: Inter / system-ui</text>
+      <text x="700" y="150" font-family="'Fira Code', monospace" font-size="14" fill="#1A1A2E">コード: Fira Code / Consolas</text>
+    </g>
+  </g>
+  
+  <!-- 区切り線 -->
+  <line x1="60" y1="810" x2="1380" y2="810" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- ============================================
+       セクション3: キャラクター
+       ============================================ -->
+  <g id="Characters" transform="translate(0, 820)">
+    <text x="60" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#003399">キャラクター / Characters</text>
+    <text x="60" y="55" font-family="Arial, sans-serif" font-size="12" fill="#666">※個別のSVGファイル（images/）も利用可能です</text>
+    
+    <!-- 先生キャラクター -->
+    <g id="Character-Teacher" transform="translate(60, 80)">
+      <text x="60" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">先生 / Teacher</text>
+      <g transform="translate(0, 15)">
+        <circle cx="60" cy="60" r="58" fill="#001F5B"/>
+        <g clip-path="url(#teacherClip)">
+          <defs><clipPath id="teacherClip"><circle cx="60" cy="60" r="56"/></clipPath></defs>
+          <ellipse cx="60" cy="130" rx="45" ry="35" fill="#FFC300"/>
+          <rect x="50" y="88" width="20" height="14" rx="6" fill="#E8C39E"/>
+          <ellipse cx="60" cy="66" rx="24" ry="28" fill="#F2D0A4"/>
+          <ellipse cx="60" cy="44" rx="26" ry="20" fill="#3A2A1A"/>
+          <rect x="34" y="39" width="52" height="9" rx="4" fill="#3A2A1A"/>
+          <!-- 眼鏡 -->
+          <rect x="40" y="60" width="16" height="12" rx="5" fill="none" stroke="#FFF" stroke-width="1.5"/>
+          <rect x="64" y="60" width="16" height="12" rx="5" fill="none" stroke="#FFF" stroke-width="1.5"/>
+          <line x1="56" y1="66" x2="64" y2="66" stroke="#FFF" stroke-width="1.5"/>
+          <circle cx="48" cy="66" r="2" fill="#1A1A2E"/>
+          <circle cx="72" cy="66" r="2" fill="#1A1A2E"/>
+          <path d="M52 78 Q60 84 68 78" fill="none" stroke="#C08060" stroke-width="1.5"/>
+        </g>
+      </g>
+      <text x="60" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">120x120px</text>
+    </g>
+    
+    <!-- 生徒キャラクター -->
+    <g id="Character-Student" transform="translate(250, 80)">
+      <text x="60" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">生徒 / Student</text>
+      <g transform="translate(0, 15)">
+        <circle cx="60" cy="60" r="58" fill="#4A90D9"/>
+        <g clip-path="url(#studentClip)">
+          <defs><clipPath id="studentClip"><circle cx="60" cy="60" r="56"/></clipPath></defs>
+          <ellipse cx="60" cy="130" rx="43" ry="32" fill="#FFFFFF"/>
+          <path d="M45 100 L51 105 L60 98 L69 105 L75 100 L75 107 L60 118 L45 107Z" fill="#003399"/>
+          <rect x="52" y="88" width="16" height="12" rx="5" fill="#F2D0A4"/>
+          <ellipse cx="60" cy="66" rx="23" ry="27" fill="#F2D0A4"/>
+          <path d="M36 55 C36 33, 84 33, 84 55 L84 48 C84 28, 36 28, 36 48Z" fill="#2C1B18"/>
+          <rect x="36" y="47" width="48" height="6" rx="2" fill="#2C1B18"/>
+          <ellipse cx="49" cy="66" rx="6" ry="7" fill="#FFF"/>
+          <ellipse cx="71" cy="66" rx="6" ry="7" fill="#FFF"/>
+          <circle cx="49" cy="67" r="3" fill="#1A1A2E"/>
+          <circle cx="71" cy="67" r="3" fill="#1A1A2E"/>
+          <circle cx="50" cy="66" r="1" fill="#FFF"/>
+          <circle cx="72" cy="66" r="1" fill="#FFF"/>
+          <path d="M54 80 Q60 86 66 80" fill="none" stroke="#C08060" stroke-width="1.5"/>
+          <ellipse cx="40" cy="73" rx="5" ry="3" fill="#F5B0A0" opacity="0.4"/>
+          <ellipse cx="80" cy="73" rx="5" ry="3" fill="#F5B0A0" opacity="0.4"/>
+        </g>
+      </g>
+      <text x="60" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">120x120px</text>
+    </g>
+    
+    <!-- 管理人キャラクター -->
+    <g id="Character-Admin" transform="translate(440, 80)">
+      <text x="60" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">管理人 / Admin</text>
+      <g transform="translate(0, 15)">
+        <circle cx="60" cy="60" r="58" fill="#FFC300"/>
+        <g clip-path="url(#adminClip)">
+          <defs><clipPath id="adminClip"><circle cx="60" cy="60" r="56"/></clipPath></defs>
+          <ellipse cx="60" cy="130" rx="43" ry="32" fill="#003399"/>
+          <rect x="52" y="88" width="16" height="12" rx="5" fill="#F2D0A4"/>
+          <ellipse cx="60" cy="66" rx="23" ry="27" fill="#F2D0A4"/>
+          <path d="M36 52 C36 30, 84 30, 84 52 L84 44 C84 24, 36 24, 36 44Z" fill="#4A3728"/>
+          <rect x="36" y="46" width="48" height="7" rx="3" fill="#4A3728"/>
+          <circle cx="49" cy="67" r="2.5" fill="#1A1A2E"/>
+          <circle cx="71" cy="67" r="2.5" fill="#1A1A2E"/>
+          <path d="M54 78 Q60 84 66 78" fill="none" stroke="#C08060" stroke-width="1.5"/>
+          <!-- 名札 -->
+          <rect x="72" y="102" width="14" height="10" rx="2" fill="#FFC300" stroke="#FFF" stroke-width="1"/>
+        </g>
+      </g>
+      <text x="60" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">120x120px</text>
+    </g>
+    
+    <!-- ロゴ -->
+    <g id="Site-Logo" transform="translate(650, 80)">
+      <text x="100" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">ロゴ / Logo</text>
+      <g transform="translate(0, 15)">
+        <rect x="0" y="0" width="200" height="60" rx="4" fill="#F8F9FB" stroke="#e0e0e0"/>
+        <!-- 星団 -->
+        <circle cx="18" cy="18" r="4" fill="#FFC300"/>
+        <circle cx="30" cy="12" r="3.2" fill="#FFC300"/>
+        <circle cx="42" cy="14" r="3.5" fill="#FFC300"/>
+        <circle cx="22" cy="30" r="3" fill="#FFC300" opacity="0.85"/>
+        <circle cx="34" cy="26" r="3.8" fill="#FFC300"/>
+        <circle cx="44" cy="28" r="2.8" fill="#FFC300" opacity="0.85"/>
+        <!-- 本 -->
+        <path d="M12 38 L12 52 Q30 46 48 52 L48 38 Q30 32 12 38Z" fill="#003399" opacity="0.9"/>
+        <line x1="30" y1="35" x2="30" y2="52" stroke="#FFC300" stroke-width="1.2"/>
+        <!-- テキスト -->
+        <text x="60" y="28" font-family="'Noto Sans JP', Arial, sans-serif" font-size="16" font-weight="bold" fill="#003399">なるほどIT用語辞典</text>
+        <text x="60" y="45" font-family="'Noto Sans JP', Arial, sans-serif" font-size="10" fill="#6B7280">会話でわかるIT用語</text>
+      </g>
+      <text x="100" y="95" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">200x60px</text>
+    </g>
+  </g>
+  
+  <!-- 区切り線 -->
+  <line x1="60" y1="1100" x2="1380" y2="1100" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- ============================================
+       セクション4: UIコンポーネント
+       ============================================ -->
+  <g id="UI-Components" transform="translate(0, 1110)">
+    <text x="60" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#003399">UIコンポーネント / UI Components</text>
+    
+    <!-- ヘッダー -->
+    <g id="Component-Header" transform="translate(60, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">ヘッダー / Header</text>
+      <g transform="translate(0, 15)">
+        <rect x="0" y="0" width="1260" height="70" fill="#003399"/>
+        <!-- ロゴ部分 -->
+        <circle cx="28" cy="25" r="6" fill="#FFC300"/>
+        <circle cx="38" cy="20" r="4" fill="#FFC300" opacity="0.8"/>
+        <circle cx="45" cy="28" r="5" fill="#FFC300" opacity="0.9"/>
+        <text x="60" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">なるほどIT用語辞典</text>
+        <text x="60" y="48" font-family="Arial, sans-serif" font-size="10" fill="#FFC300">会話でわかるIT用語</text>
+        <!-- 検索ボックス -->
+        <rect x="280" y="18" width="300" height="36" rx="18" fill="#FFFFFF"/>
+        <text x="300" y="42" font-family="Arial, sans-serif" font-size="14" fill="#9CA3AF">用語を検索…</text>
+        <circle cx="550" cy="36" r="12" fill="#F0F0F0"/>
+        <text x="550" y="40" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">🔍</text>
+        <!-- ナビゲーション -->
+        <text x="700" y="40" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF">トップ</text>
+        <text x="800" y="40" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF">カテゴリ</text>
+        <text x="920" y="40" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF">最近の用語</text>
+        <text x="1060" y="40" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF">このサイトについて</text>
+      </g>
+    </g>
+    
+    <!-- ボタン -->
+    <g id="Component-Buttons" transform="translate(60, 170)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">ボタン / Buttons</text>
+      <g transform="translate(0, 20)">
+        <!-- プライマリボタン -->
+        <g id="Button-Primary">
+          <rect x="0" y="0" width="140" height="48" rx="24" fill="#003399" filter="url(#buttonShadow)"/>
+          <text x="70" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Primary</text>
+        </g>
+        <!-- セカンダリボタン -->
+        <g id="Button-Secondary">
+          <rect x="160" y="0" width="140" height="48" rx="24" fill="#FFFFFF" stroke="#003399" stroke-width="2"/>
+          <text x="230" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#003399" text-anchor="middle">Secondary</text>
+        </g>
+        <!-- アクセントボタン -->
+        <g id="Button-Accent">
+          <rect x="320" y="0" width="140" height="48" rx="24" fill="#FFC300" filter="url(#buttonShadow)"/>
+          <text x="390" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#003399" text-anchor="middle">Accent</text>
+        </g>
+        <!-- ゴーストボタン -->
+        <g id="Button-Ghost">
+          <rect x="480" y="0" width="140" height="48" rx="24" fill="transparent" stroke="#E5E7EB" stroke-width="1"/>
+          <text x="550" y="30" font-family="Arial, sans-serif" font-size="14" fill="#6B7280" text-anchor="middle">Ghost</text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- カテゴリカード -->
+    <g id="Component-CategoryCard" transform="translate(60, 270)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">カテゴリーカード / Category Card</text>
+      <g transform="translate(0, 20)">
+        <g id="CategoryCard-Example" filter="url(#cardShadow)">
+          <rect x="0" y="0" width="180" height="100" rx="12" fill="#FFFFFF"/>
+          <circle cx="36" cy="36" r="20" fill="#2563EB"/>
+          <text x="36" y="42" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">N</text>
+          <text x="70" y="40" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A1A2E">ネットワーク</text>
+          <text x="70" y="58" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">42 用語</text>
+          <rect x="0" y="85" width="180" height="15" rx="0 0 12 12" fill="#F8F9FB"/>
+        </g>
+        
+        <g id="CategoryCard-Hover" transform="translate(200, 0)" filter="url(#cardShadow)">
+          <rect x="0" y="0" width="180" height="100" rx="12" fill="#FFFFFF" stroke="#FFC300" stroke-width="2"/>
+          <circle cx="36" cy="36" r="20" fill="#7C3AED"/>
+          <text x="36" y="42" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">S</text>
+          <text x="70" y="40" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A1A2E">セキュリティ</text>
+          <text x="70" y="58" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">38 用語</text>
+          <rect x="0" y="85" width="180" height="15" rx="0 0 12 12" fill="#FFF8E1"/>
+          <text x="90" y="-8" font-family="Arial, sans-serif" font-size="10" fill="#FFC300" text-anchor="middle">:hover</text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- 用語リストアイテム -->
+    <g id="Component-TermItem" transform="translate(60, 420)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">用語リストアイテム / Term List Item</text>
+      <g transform="translate(0, 20)">
+        <rect x="0" y="0" width="500" height="90" rx="8" fill="#FFFFFF" stroke="#E5E7EB"/>
+        <rect x="16" y="16" width="70" height="24" rx="4" fill="#F0F0F0"/>
+        <text x="51" y="33" font-family="Arial, sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">2026/03/01</text>
+        <text x="100" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#003399">API</text>
+        <text x="100" y="54" font-family="Arial, sans-serif" font-size="13" fill="#6B7280">ソフトウェア同士が会話するための「窓口」のこと。</text>
+        <rect x="100" y="64" width="60" height="20" rx="10" fill="#003399" opacity="0.1"/>
+        <text x="130" y="78" font-family="Arial, sans-serif" font-size="10" fill="#003399" text-anchor="middle">Web技術</text>
+      </g>
+    </g>
+    
+    <!-- 対話バブル -->
+    <g id="Component-DialogueBubble" transform="translate(60, 550)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">対話バブル / Dialogue Bubble</text>
+      
+      <!-- 生徒の吹き出し -->
+      <g id="Bubble-Student" transform="translate(0, 25)">
+        <circle cx="40" cy="40" r="35" fill="#4A90D9"/>
+        <text x="40" y="48" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">🧑‍🎓</text>
+        <text x="40" y="95" font-family="Arial, sans-serif" font-size="12" fill="#1A1A2E" text-anchor="middle">生徒</text>
+        <rect x="100" y="15" width="400" height="70" rx="16" fill="#E3F2FD"/>
+        <polygon points="100,45 85,50 100,55" fill="#E3F2FD"/>
+        <text x="120" y="50" font-family="Arial, sans-serif" font-size="14" fill="#1A1A2E">先生、APIってなんですか？</text>
+        <text x="120" y="70" font-family="Arial, sans-serif" font-size="14" fill="#1A1A2E">難しそうで全然分からないです…</text>
+      </g>
+      
+      <!-- 先生の吹き出し -->
+      <g id="Bubble-Teacher" transform="translate(520, 25)">
+        <rect x="0" y="15" width="400" height="70" rx="16" fill="#FFF8E1"/>
+        <polygon points="400,45 415,50 400,55" fill="#FFF8E1"/>
+        <text x="20" y="50" font-family="Arial, sans-serif" font-size="14" fill="#1A1A2E">全然難しくないよ！</text>
+        <text x="20" y="70" font-family="Arial, sans-serif" font-size="14" fill="#1A1A2E">レストランの<tspan font-weight="bold">注文カウンター</tspan>みたいなものだよ。</text>
+        <circle cx="460" cy="40" r="35" fill="#001F5B"/>
+        <text x="460" y="48" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">🧑‍🏫</text>
+        <text x="460" y="95" font-family="Arial, sans-serif" font-size="12" fill="#1A1A2E" text-anchor="middle">先生</text>
+      </g>
+    </g>
+    
+    <!-- まとめボックス -->
+    <g id="Component-SummaryBox" transform="translate(60, 700)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">まとめボックス / Summary Box</text>
+      <g transform="translate(0, 20)">
+        <rect x="0" y="0" width="500" height="150" rx="12" fill="#FFFFFF" stroke="#FFC300" stroke-width="3"/>
+        <rect x="0" y="0" width="500" height="40" rx="12 12 0 0" fill="#FFC300" opacity="0.15"/>
+        <text x="20" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#003399">まとめ</text>
+        <circle cx="8" cy="65" r="4" fill="#003399"/>
+        <text x="20" y="70" font-family="Arial, sans-serif" font-size="13" fill="#1A1A2E">APIは「Application Programming Interface」の略</text>
+        <circle cx="8" cy="95" r="4" fill="#003399"/>
+        <text x="20" y="100" font-family="Arial, sans-serif" font-size="13" fill="#1A1A2E">ソフトウェア同士がデータをやり取りするための窓口</text>
+        <circle cx="8" cy="125" r="4" fill="#003399"/>
+        <text x="20" y="130" font-family="Arial, sans-serif" font-size="13" fill="#1A1A2E">レストランの注文カウンターのようなもの</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 区切り線 -->
+  <line x1="60" y1="2000" x2="1380" y2="2000" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- ============================================
+       セクション5: ページレイアウト
+       ============================================ -->
+  <g id="Page-Layouts" transform="translate(0, 2010)">
+    <text x="60" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#003399">ページレイアウト / Page Layouts</text>
+    
+    <!-- トップページサムネイル -->
+    <g id="Layout-TopPage" transform="translate(60, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">トップページ / Top Page</text>
+      <g transform="translate(0, 20)">
+        <rect x="0" y="0" width="400" height="300" rx="8" fill="#F8F9FB" stroke="#E5E7EB"/>
+        <!-- ヘッダー -->
+        <rect x="0" y="0" width="400" height="30" rx="8 8 0 0" fill="#003399"/>
+        <!-- ヒーロー -->
+        <rect x="0" y="30" width="400" height="60" fill="url(#heroGradient)"/>
+        <text x="200" y="70" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">なるほどIT用語辞典</text>
+        <!-- カテゴリグリッド -->
+        <rect x="20" y="110" width="70" height="40" rx="4" fill="#FFFFFF"/>
+        <rect x="100" y="110" width="70" height="40" rx="4" fill="#FFFFFF"/>
+        <rect x="180" y="110" width="70" height="40" rx="4" fill="#FFFFFF"/>
+        <rect x="260" y="110" width="70" height="40" rx="4" fill="#FFFFFF"/>
+        <rect x="20" y="160" width="70" height="40" rx="4" fill="#FFFFFF"/>
+        <rect x="100" y="160" width="70" height="40" rx="4" fill="#FFFFFF"/>
+        <rect x="180" y="160" width="70" height="40" rx="4" fill="#FFFFFF"/>
+        <rect x="260" y="160" width="70" height="40" rx="4" fill="#FFFFFF"/>
+        <!-- 用語リスト -->
+        <rect x="20" y="220" width="160" height="60" rx="4" fill="#FFFFFF"/>
+        <rect x="200" y="220" width="160" height="60" rx="4" fill="#FFFFFF"/>
+        <!-- フッター -->
+        <rect x="0" y="285" width="400" height="15" rx="0 0 8 8" fill="#001F5B"/>
+      </g>
+    </g>
+    
+    <!-- 用語ページサムネイル -->
+    <g id="Layout-TermPage" transform="translate(520, 60)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" fill="#666">用語ページ / Term Page</text>
+      <g transform="translate(0, 20)">
+        <rect x="0" y="0" width="400" height="300" rx="8" fill="#F8F9FB" stroke="#E5E7EB"/>
+        <!-- ヘッダー -->
+        <rect x="0" y="0" width="400" height="30" rx="8 8 0 0" fill="#003399"/>
+        <!-- パンくず -->
+        <rect x="20" y="40" width="200" height="15" rx="2" fill="#E5E7EB"/>
+        <!-- 用語タイトル -->
+        <rect x="20" y="65" width="150" height="20" rx="2" fill="#003399"/>
+        <rect x="20" y="90" width="250" height="12" rx="2" fill="#E5E7EB"/>
+        <!-- 対話セクション -->
+        <rect x="20" y="115" width="180" height="40" rx="8" fill="#E3F2FD"/>
+        <rect x="100" y="165" width="180" height="40" rx="8" fill="#FFF8E1"/>
+        <rect x="20" y="215" width="180" height="40" rx="8" fill="#E3F2FD"/>
+        <!-- まとめ -->
+        <rect x="240" y="115" width="140" height="80" rx="4" fill="#FFFFFF" stroke="#FFC300"/>
+        <!-- フッター -->
+        <rect x="0" y="285" width="400" height="15" rx="0 0 8 8" fill="#001F5B"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- ============================================
+       セクション6: アイコン
+       ============================================ -->
+  <g id="Icons" transform="translate(0, 2400)">
+    <text x="60" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#003399">アイコン / Icons</text>
+    
+    <g transform="translate(60, 60)">
+      <!-- 検索アイコン -->
+      <g id="Icon-Search">
+        <rect x="0" y="0" width="48" height="48" rx="8" fill="#F8F9FB"/>
+        <circle cx="20" cy="20" r="8" fill="none" stroke="#003399" stroke-width="2"/>
+        <line x1="26" y1="26" x2="32" y2="32" stroke="#003399" stroke-width="2"/>
+        <text x="24" y="60" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Search</text>
+      </g>
+      
+      <!-- 矢印アイコン -->
+      <g id="Icon-ArrowUp" transform="translate(70, 0)">
+        <rect x="0" y="0" width="48" height="48" rx="8" fill="#F8F9FB"/>
+        <polyline points="14,28 24,18 34,28" fill="none" stroke="#003399" stroke-width="2"/>
+        <text x="24" y="60" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Up</text>
+      </g>
+      
+      <!-- メニューアイコン -->
+      <g id="Icon-Menu" transform="translate(140, 0)">
+        <rect x="0" y="0" width="48" height="48" rx="8" fill="#F8F9FB"/>
+        <line x1="12" y1="16" x2="36" y2="16" stroke="#003399" stroke-width="2"/>
+        <line x1="12" y1="24" x2="36" y2="24" stroke="#003399" stroke-width="2"/>
+        <line x1="12" y1="32" x2="36" y2="32" stroke="#003399" stroke-width="2"/>
+        <text x="24" y="60" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Menu</text>
+      </g>
+      
+      <!-- 閉じるアイコン -->
+      <g id="Icon-Close" transform="translate(210, 0)">
+        <rect x="0" y="0" width="48" height="48" rx="8" fill="#F8F9FB"/>
+        <line x1="14" y1="14" x2="34" y2="34" stroke="#003399" stroke-width="2"/>
+        <line x1="34" y1="14" x2="14" y2="34" stroke="#003399" stroke-width="2"/>
+        <text x="24" y="60" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Close</text>
+      </g>
+      
+      <!-- リンクアイコン -->
+      <g id="Icon-Link" transform="translate(280, 0)">
+        <rect x="0" y="0" width="48" height="48" rx="8" fill="#F8F9FB"/>
+        <path d="M20 28 L14 22 C12 20, 12 16, 14 14 C16 12, 20 12, 22 14 L28 20" fill="none" stroke="#003399" stroke-width="2"/>
+        <path d="M28 20 L34 26 C36 28, 36 32, 34 34 C32 36, 28 36, 26 34 L20 28" fill="none" stroke="#003399" stroke-width="2"/>
+        <text x="24" y="60" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Link</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- フッター情報 -->
+  <g transform="translate(0, 2550)">
+    <rect x="0" y="0" width="1440" height="60" fill="#001F5B"/>
+    <text x="720" y="28" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">なるほどIT用語辞典 - Design System for Figma</text>
+    <text x="720" y="48" font-family="Arial, sans-serif" font-size="12" fill="#FFC300" text-anchor="middle">© 2026 All Rights Reserved</text>
+  </g>
+  
+</svg>

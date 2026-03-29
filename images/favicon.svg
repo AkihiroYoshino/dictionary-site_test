@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#003399"/>
+      <stop offset="100%" style="stop-color:#001F5B"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="url(#bg)"/>
+  <!-- Car body -->
+  <path d="M12 38 L16 30 L26 28 L38 28 L48 30 L52 38 L52 44 L12 44 Z" fill="#FFC300"/>
+  <!-- Car windows -->
+  <path d="M18 30 L24 28 L36 28 L44 30 L40 36 L22 36 Z" fill="#E8F0FE" opacity="0.9"/>
+  <!-- Wheels -->
+  <circle cx="20" cy="44" r="6" fill="#333"/>
+  <circle cx="20" cy="44" r="3" fill="#666"/>
+  <circle cx="44" cy="44" r="6" fill="#333"/>
+  <circle cx="44" cy="44" r="3" fill="#666"/>
+  <!-- Book icon under car -->
+  <rect x="24" y="50" width="16" height="10" rx="1" fill="#FFF" opacity="0.9"/>
+  <line x1="32" y1="50" x2="32" y2="60" stroke="#003399" stroke-width="1"/>
+  <line x1="26" y1="53" x2="30" y2="53" stroke="#003399" stroke-width="0.8"/>
+  <line x1="26" y1="55" x2="30" y2="55" stroke="#003399" stroke-width="0.8"/>
+  <line x1="34" y1="53" x2="38" y2="53" stroke="#003399" stroke-width="0.8"/>
+  <line x1="34" y1="55" x2="38" y2="55" stroke="#003399" stroke-width="0.8"/>
+</svg>

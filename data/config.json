@@ -1,16 +1,4 @@
 {
-  "siteName": "なるほどIT用語辞典",
-  "siteSubtitle": "会話でわかるIT用語",
-  "categories": [
-    { "id": "network",     "name": "ネットワーク",   "initial": "N",  "color": "#2563EB" },
-    { "id": "security",    "name": "セキュリティ",   "initial": "S",  "color": "#7C3AED" },
-    { "id": "programming", "name": "プログラミング", "initial": "P",  "color": "#059669" },
-    { "id": "web",         "name": "Web技術",        "initial": "W",  "color": "#003399" },
-    { "id": "database",    "name": "データベース",   "initial": "D",  "color": "#D97706" },
-    { "id": "hardware",    "name": "ハードウェア",   "initial": "H",  "color": "#64748B" },
-    { "id": "cloud",       "name": "クラウド",       "initial": "C",  "color": "#0EA5E9" },
-    { "id": "ai",          "name": "AI・機械学習",   "initial": "AI", "color": "#DC2626" },
-    { "id": "os",          "name": "OS・システム",   "initial": "OS", "color": "#6366F1" },
-    { "id": "business",    "name": "ITビジネス",     "initial": "B",  "color": "#0D9488" }
-  ]
+  "siteName": "対話で学ぶ くるま🚙用語辞典",
+  "siteSubtitle": "会話でわかるくるまの用語"
 }

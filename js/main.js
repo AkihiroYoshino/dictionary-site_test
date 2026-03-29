@@ -1,5 +1,5 @@
 /* ============================================
-   なるほどIT用語辞典 - Main Script
+   対話で学ぶ くるま🚙用語辞典 - Main Script
    JSON駆動のサイトレンダリング
    ============================================ */
 
@@ -8,6 +8,8 @@
 
   /* ---------- セキュリティ: 右クリック & DevTools 制御 ---------- */
   document.addEventListener('contextmenu', function (e) {
+    // 用語名（コピー可能要素）では右クリック許可
+    if (e.target.closest('.term-name-copyable')) return;
     e.preventDefault();
   });
 
@@ -33,6 +35,8 @@
   var pageType = appEl.dataset.page;
   var termId = appEl.dataset.termId || null;
   var basePath = (pageType === 'term') ? '../' : '';
+
+  var SITE_NAME = '対話で学ぶ くるま🚙用語辞典';
 
   var IMAGES = {
     teacher: basePath + 'images/teacher.svg',
@@ -81,6 +85,30 @@
     return d.replace(/-/g, '/');
   }
 
+  /**
+   * ひらがな→カタカナ変換
+   */
+  function hiraganaToKatakana(str) {
+    return str.replace(/[\u3041-\u3096]/g, function(match) {
+      return String.fromCharCode(match.charCodeAt(0) + 0x60);
+    });
+  }
+
+  /**
+   * 文字がカタカナで始まるかチェック
+   */
+  function startsWithKana(reading, kana) {
+    var kanaReading = hiraganaToKatakana(reading);
+    return kanaReading.startsWith(kana);
+  }
+
+  /**
+   * 文字がアルファベットで始まるかチェック
+   */
+  function startsWithAlpha(name, alpha) {
+    return name.toUpperCase().startsWith(alpha.toUpperCase());
+  }
+
   /* ---------- データ読み込み ---------- */
   function loadJSON(path) {
     return fetch(basePath + path).then(function (r) {
@@ -96,7 +124,7 @@
         '<div class="header-inner">' +
           '<a href="' + basePath + 'index.html" class="site-logo">' +
             '<img src="' + IMAGES.logo + '" alt="" class="logo-icon">' +
-            '<span class="logo-text">なるほどIT用語辞典<span class="logo-sub">会話でわかるIT用語</span></span>' +
+            '<span class="logo-text">' + SITE_NAME + '</span>' +
           '</a>' +
           '<div class="header-search">' +
             '<div class="search-box">' +
@@ -110,8 +138,8 @@
           '<button class="nav-toggle" id="navToggle" aria-label="メニュー"><span></span><span></span><span></span></button>' +
           '<nav class="header-nav" id="headerNav">' +
             '<a href="' + basePath + 'index.html">トップ</a>' +
-            '<a href="' + basePath + 'index.html#categories">カテゴリ</a>' +
             '<a href="' + basePath + 'index.html#recent">最近の用語</a>' +
+            '<a href="' + basePath + 'index.html#index">五十音索引</a>' +
             '<a href="' + basePath + 'index.html#author">このサイトについて</a>' +
           '</nav>' +
         '</div>' +
@@ -125,11 +153,10 @@
         '<div class="footer-inner">' +
           '<div class="footer-links">' +
             '<a href="' + basePath + 'index.html">トップページ</a>' +
-            '<a href="' + basePath + 'index.html#categories">カテゴリ一覧</a>' +
             '<a href="' + basePath + 'index.html#index">五十音索引</a>' +
             '<a href="' + basePath + 'index.html#author">このサイトについて</a>' +
           '</div>' +
-          '<p class="copyright">&copy; 2026 なるほどIT用語辞典 All Rights Reserved.</p>' +
+          '<p class="copyright">&copy; 2026 ' + SITE_NAME + ' All Rights Reserved.</p>' +
         '</div>' +
       '</footer>'
     );
@@ -140,14 +167,7 @@
     // ローディング表示
     appEl.innerHTML = '<div class="loading-screen"><div class="loading-spinner"></div>読み込み中…</div>';
 
-    return Promise.all([
-      loadJSON('data/config.json'),
-      loadJSON('data/terms-index.json')
-    ]).then(function (res) {
-      var config = res[0];
-      var termsIndex = res[1];
-      var categories = config.categories;
-
+    return loadJSON('data/terms-index.json').then(function (termsIndex) {
       // 日付順ソート
       var sorted = termsIndex.slice().sort(function (a, b) {
         return new Date(b.date) - new Date(a.date);
@@ -165,31 +185,9 @@
             '<span class="hero-speech-bubble">なるほど！</span>' +
             '<img src="' + IMAGES.teacher + '" alt="先生" class="hero-char">' +
           '</div>' +
-          '<h1>なるほどIT用語辞典</h1>' +
-          '<p>先生と生徒の会話形式で、IT用語を「なるほど！」と分かるように解説します</p>' +
+          '<h1>' + SITE_NAME + '</h1>' +
+          '<p>先生と生徒の会話形式で、くるまの用語を「なるほど！」と分かるように解説します</p>' +
         '</section>';
-
-      /* ---- カテゴリ ---- */
-      html +=
-        '<section class="section" id="categories">' +
-          '<h2 class="section-title">カテゴリから探す</h2>' +
-          '<div class="category-grid">';
-
-      for (var ci = 0; ci < categories.length; ci++) {
-        var cat = categories[ci];
-        var count = 0;
-        for (var ti = 0; ti < termsIndex.length; ti++) {
-          if (termsIndex[ti].categories.indexOf(cat.id) !== -1) count++;
-        }
-        html +=
-          '<a href="#" class="category-card" data-category="' + cat.id + '" data-category-name="' + cat.name + '">' +
-            '<span class="cat-icon" style="background:' + cat.color + '">' + cat.initial + '</span>' +
-            '<span class="cat-name">' + cat.name + '</span>' +
-            '<span class="cat-count">' + count + ' 用語</span>' +
-          '</a>';
-      }
-
-      html += '</div></section>';
 
       /* ---- 2カラム ---- */
       html += '<div class="two-col">';
@@ -202,23 +200,14 @@
 
       for (var ri = 0; ri < recent.length; ri++) {
         var t = recent[ri];
-        var catLabels = '';
-        for (var k = 0; k < t.categories.length; k++) {
-          var found = null;
-          for (var j = 0; j < categories.length; j++) {
-            if (categories[j].id === t.categories[k]) { found = categories[j]; break; }
-          }
-          catLabels += '<span class="term-tag">' + (found ? found.name : t.categories[k]) + '</span> ';
-        }
         html +=
-          '<div class="term-item">' +
+          '<a href="terms/' + t.id + '.html" class="term-item term-item-link">' +
             '<span class="term-date">' + formatDate(t.date) + '</span>' +
             '<div class="term-info">' +
-              '<a href="terms/' + t.id + '.html" class="term-name">' + t.name + '</a>' +
+              '<span class="term-name">' + t.name + '</span>' +
               '<p class="term-desc">' + t.oneLiner + '</p>' +
-              catLabels +
             '</div>' +
-          '</div>';
+          '</a>';
       }
 
       html += '</div></section>';
@@ -232,13 +221,13 @@
       for (var qi = 0; qi < recent.length; qi++) {
         var q = recent[qi];
         html +=
-          '<div class="term-item">' +
+          '<a href="terms/' + q.id + '.html" class="term-item term-item-link">' +
             '<span class="term-rank">' + (qi + 1) + '位</span>' +
             '<div class="term-info">' +
-              '<a href="terms/' + q.id + '.html" class="term-name">' + q.name + '</a>' +
+              '<span class="term-name">' + q.name + '</span>' +
               '<p class="term-desc">' + q.oneLiner + '</p>' +
             '</div>' +
-          '</div>';
+          '</a>';
       }
 
       html += '</div></section>';
@@ -248,21 +237,26 @@
       html +=
         '<section class="section" id="index">' +
           '<h2 class="section-title">五十音索引</h2>' +
-          '<div class="index-grid">';
+          '<div class="index-grid" id="indexGridKana">';
 
       var kana = 'ア イ ウ エ オ カ キ ク ケ コ サ シ ス セ ソ タ チ ツ テ ト ナ ニ ヌ ネ ノ ハ ヒ フ ヘ ホ マ ミ ム メ モ ヤ ユ ヨ ラ リ ル レ ロ ワ'.split(' ');
       for (var ki = 0; ki < kana.length; ki++) {
-        html += '<a href="#" class="index-char">' + kana[ki] + '</a>';
+        html += '<button type="button" class="index-char" data-char="' + kana[ki] + '" data-type="kana">' + kana[ki] + '</button>';
       }
 
-      html += '</div><div class="index-grid index-alpha">';
+      html += '</div><div class="index-grid index-alpha" id="indexGridAlpha">';
 
       var alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
       for (var ai = 0; ai < alpha.length; ai++) {
-        html += '<a href="#" class="index-char">' + alpha[ai] + '</a>';
+        html += '<button type="button" class="index-char" data-char="' + alpha[ai] + '" data-type="alpha">' + alpha[ai] + '</button>';
       }
 
-      html += '</div></section>';
+      html += '</div>';
+      
+      /* 五十音索引の結果表示エリア */
+      html += '<div class="index-results" id="indexResults"></div>';
+      
+      html += '</section>';
 
       /* ---- 作者 ---- */
       html +=
@@ -271,11 +265,11 @@
           '<div class="author-card">' +
             '<div class="author-avatar"><img src="' + IMAGES.admin + '" alt="管理人"></div>' +
             '<div class="author-info">' +
-              '<h3>なるほどIT用語辞典 管理人</h3>' +
-              '<p>「IT用語って難しい…」そう思ったことはありませんか？<br>' +
-              'このサイトでは、IT用語を<strong>先生と生徒の対話形式</strong>でやさしく解説しています。' +
+              '<h3>' + SITE_NAME + ' 管理人</h3>' +
+              '<p>「くるまの用語って難しい…」そう思ったことはありませんか？<br>' +
+              'このサイトでは、くるまに関する用語を<strong>先生と生徒の対話形式</strong>でやさしく解説しています。' +
               '難しい専門用語も、日常の例えを使って「なるほど！」と思えるように工夫しました。<br>' +
-              'IT初心者の方からエンジニアの方まで、幅広くお役に立てれば嬉しいです。' +
+              '初心者の方から詳しい方まで、幅広くお役に立てれば嬉しいです。' +
               '掲載用語は随時追加中。リクエストも大歓迎です！</p>' +
               '<div class="author-links">' +
                 '<a href="#">お問い合わせ</a>' +
@@ -292,8 +286,8 @@
 
       appEl.innerHTML = html;
 
-      initSearch(termsIndex, categories);
-      initIndexInteractions();
+      initSearch(termsIndex);
+      initIndexInteractions(termsIndex);
       initSharedBehaviors();
     }).catch(function (err) {
       appEl.innerHTML = '<div class="loading-screen">データの読み込みに失敗しました。ページを再読み込みしてください。</div>';
@@ -306,24 +300,11 @@
     appEl.innerHTML = '<div class="loading-screen"><div class="loading-spinner"></div>読み込み中…</div>';
 
     return Promise.all([
-      loadJSON('data/config.json'),
       loadJSON('data/terms-index.json'),
       loadJSON('data/terms/' + termId + '.json')
     ]).then(function (res) {
-      var config = res[0];
-      var termsIndex = res[1];
-      var term = res[2];
-      var categories = config.categories;
-
-      // カテゴリ名解決
-      var catNames = [];
-      for (var i = 0; i < term.categories.length; i++) {
-        var found = null;
-        for (var j = 0; j < categories.length; j++) {
-          if (categories[j].id === term.categories[i]) { found = categories[j]; break; }
-        }
-        catNames.push(found ? found.name : term.categories[i]);
-      }
+      var termsIndex = res[0];
+      var term = res[1];
 
       var html = renderHeader();
       html += '<div class="container">';
@@ -332,14 +313,6 @@
       html +=
         '<nav class="breadcrumb">' +
           '<a href="' + basePath + 'index.html">トップ</a>' +
-          '<span class="sep">›</span>';
-
-      for (var ci = 0; ci < catNames.length; ci++) {
-        if (ci > 0) html += '<span class="sep">,</span> ';
-        html += '<a href="' + basePath + 'index.html#categories">' + catNames[ci] + '</a>';
-      }
-
-      html +=
           '<span class="sep">›</span>' +
           '<span>' + term.name + '</span>' +
         '</nav>';
@@ -347,11 +320,11 @@
       /* 用語ヘッダー */
       html +=
         '<div class="term-header">' +
-          '<h1>' + term.name + '</h1>' +
+          '<h1 class="term-name-copyable" title="クリックでコピー">' + term.name + '</h1>' +
           '<p class="term-reading">読み：' + term.reading;
 
       if (term.fullName) {
-        html += ' ／ 正式名称：' + term.fullName;
+        html += ' ／ 正式名称：<span class="term-name-copyable" title="クリックでコピー">' + term.fullName + '</span>';
       }
       if (term.aliases && term.aliases.length > 0) {
         html += ' ／ 別名：' + term.aliases.join('、');
@@ -425,10 +398,11 @@
       appEl.innerHTML = html;
 
       // タイトル更新
-      document.title = term.name + 'とは？ - なるほどIT用語辞典';
+      document.title = term.name + 'とは？ - ' + SITE_NAME;
 
-      initSearch(termsIndex, categories);
+      initSearch(termsIndex);
       initDialogueAnimation();
+      initCopyable();
       initSharedBehaviors();
     }).catch(function (err) {
       appEl.innerHTML = '<div class="loading-screen">データの読み込みに失敗しました。ページを再読み込みしてください。</div>';
@@ -437,7 +411,7 @@
   }
 
   /* ---------- 検索 ---------- */
-  function initSearch(termsIndex, categories) {
+  function initSearch(termsIndex) {
     var input = document.getElementById('searchInput');
     var results = document.getElementById('searchResults');
     var btn = document.getElementById('searchBtn');
@@ -468,19 +442,6 @@
         }
         // 一言まとめ
         if (!hit && t.oneLiner.toLowerCase().indexOf(q) !== -1) hit = true;
-        // カテゴリ名
-        if (!hit) {
-          for (var ci = 0; ci < t.categories.length; ci++) {
-            for (var cj = 0; cj < categories.length; cj++) {
-              if (categories[cj].id === t.categories[ci] &&
-                  categories[cj].name.toLowerCase().indexOf(q) !== -1) {
-                hit = true;
-                break;
-              }
-            }
-            if (hit) break;
-          }
-        }
 
         if (hit) matched.push(t);
       }
@@ -531,42 +492,107 @@
   }
 
   /* ---------- インデックスページの操作 ---------- */
-  function initIndexInteractions() {
-    // カテゴリカード
-    var cards = document.querySelectorAll('.category-card');
-    for (var i = 0; i < cards.length; i++) {
-      cards[i].addEventListener('click', function (e) {
-        e.preventDefault();
-        var name = this.dataset.categoryName;
-        var input = document.getElementById('searchInput');
-        if (input) {
-          input.value = name;
-          input.dispatchEvent(new Event('input'));
-          input.focus();
-          var search = document.querySelector('.header-search');
-          if (search) search.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      });
-    }
-
-    // 五十音
+  function initIndexInteractions(termsIndex) {
+    var resultsContainer = document.getElementById('indexResults');
     var chars = document.querySelectorAll('.index-char');
+    
     for (var j = 0; j < chars.length; j++) {
       chars[j].addEventListener('click', function (e) {
         e.preventDefault();
-        var c = this.textContent.trim();
-        var input = document.getElementById('searchInput');
-        if (input) {
-          input.value = c;
-          input.dispatchEvent(new Event('input'));
-          input.focus();
-          var search = document.querySelector('.header-search');
-          if (search) search.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+        var c = this.dataset.char;
+        var type = this.dataset.type;
+
+        // アクティブ状態管理
         for (var k = 0; k < chars.length; k++) chars[k].classList.remove('active');
         this.classList.add('active');
+
+        // 該当用語をフィルタ
+        var matched = [];
+        for (var i = 0; i < termsIndex.length; i++) {
+          var t = termsIndex[i];
+          var isMatch = false;
+
+          if (type === 'kana') {
+            // カタカナの場合、読みの頭文字でマッチ
+            isMatch = startsWithKana(t.reading, c);
+          } else if (type === 'alpha') {
+            // アルファベットの場合、name（英字の場合）でマッチ
+            isMatch = startsWithAlpha(t.name, c);
+          }
+
+          if (isMatch) matched.push(t);
+        }
+
+        // 結果表示
+        if (matched.length === 0) {
+          resultsContainer.innerHTML = '<div class="index-no-results">「' + c + '」で始まる用語はありません</div>';
+        } else {
+          var html = '<div class="index-results-title">「' + c + '」から始まる用語（' + matched.length + '件）</div><div class="index-results-list">';
+          for (var mi = 0; mi < matched.length; mi++) {
+            var m = matched[mi];
+            html +=
+              '<a href="terms/' + m.id + '.html" class="index-result-item">' +
+                '<span class="index-result-name">' + m.name + '</span>' +
+                '<span class="index-result-desc">' + m.oneLiner + '</span>' +
+              '</a>';
+          }
+          html += '</div>';
+          resultsContainer.innerHTML = html;
+        }
+
+        resultsContainer.classList.add('active');
+        resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
     }
+  }
+
+  /* ---------- 用語名コピー機能 ---------- */
+  function initCopyable() {
+    var copyables = document.querySelectorAll('.term-name-copyable');
+    
+    for (var i = 0; i < copyables.length; i++) {
+      copyables[i].addEventListener('click', function() {
+        var text = this.textContent;
+        
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function() {
+            showCopyToast('コピーしました: ' + text);
+          });
+        } else {
+          // フォールバック
+          var textarea = document.createElement('textarea');
+          textarea.value = text;
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          showCopyToast('コピーしました: ' + text);
+        }
+      });
+    }
+  }
+
+  function showCopyToast(message) {
+    var existing = document.querySelector('.copy-toast');
+    if (existing) existing.remove();
+
+    var toast = document.createElement('div');
+    toast.className = 'copy-toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(function() {
+      toast.classList.add('visible');
+    }, 10);
+
+    setTimeout(function() {
+      toast.classList.remove('visible');
+      setTimeout(function() {
+        toast.remove();
+      }, 300);
+    }, 2000);
   }
 
   /* ---------- 対話アニメーション ---------- */

@@ -1,0 +1,397 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+  body { font-family: "Meiryo UI", "Yu Gothic UI", sans-serif; line-height: 1.8; margin: 40px; }
+  h1 { color: #003399; border-bottom: 3px solid #FFC300; padding-bottom: 10px; font-size: 24pt; }
+  h2 { color: #003399; border-left: 5px solid #FFC300; padding-left: 12px; margin-top: 30px; font-size: 16pt; }
+  h3 { color: #001F5B; margin-top: 20px; font-size: 13pt; }
+  code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; font-size: 10pt; }
+  pre { background: #f8f9fa; border: 1px solid #e0e0e0; padding: 15px; border-radius: 5px; overflow-x: auto; font-family: Consolas, monospace; font-size: 10pt; line-height: 1.5; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+  th, td { border: 1px solid #ccc; padding: 10px 12px; text-align: left; }
+  th { background: #003399; color: white; }
+  .note { background: #fff8e1; border-left: 4px solid #FFC300; padding: 12px; margin: 15px 0; }
+  .important { background: #fce4ec; border-left: 4px solid #e91e63; padding: 12px; margin: 15px 0; }
+  .step { background: #e3f2fd; padding: 15px; margin: 10px 0; border-radius: 5px; }
+  ul, ol { margin-left: 20px; }
+  li { margin: 8px 0; }
+</style>
+</head>
+<body>
+
+<h1>なるほどIT用語辞典 — 用語追加マニュアル</h1>
+
+<p><strong>作成日:</strong> 2026年3月14日<br>
+<strong>対象:</strong> 用語追加を行う編集者・管理者</p>
+
+<hr>
+
+<h2>1. はじめに</h2>
+
+<p>このマニュアルでは、「なるほどIT用語辞典」に新しい用語を追加する手順を説明します。<br>
+用語の追加には、以下の<strong>3つのファイル</strong>を編集・作成する必要があります：</p>
+
+<ol>
+<li><code>data/terms-index.json</code> — 用語一覧インデックス</li>
+<li><code>data/terms/【用語ID】.json</code> — 個別用語データ</li>
+<li><code>terms/【用語ID】.html</code> — 用語ページHTML</li>
+</ol>
+
+<h2>2. フォルダ構成</h2>
+
+<pre>
+dictionary-site/
+├── index.html           ← トップページ
+├── css/
+│   └── style.css        ← スタイルシート
+├── js/
+│   └── main.js          ← メインスクリプト（編集不要）
+├── data/
+│   ├── config.json      ← サイト設定・カテゴリ定義
+│   ├── terms-index.json ← 【編集】用語一覧
+│   └── terms/
+│       ├── api.json     ← 個別用語データ
+│       ├── cookie.json
+│       ├── sql.json
+│       └── ...          ← 【新規作成】
+├── terms/
+│   ├── api.html         ← 用語ページHTML
+│   ├── cookie.html
+│   ├── sql.html
+│   └── ...              ← 【新規作成】
+└── images/
+    ├── teacher.svg      ← 先生アイコン
+    ├── student.svg      ← 生徒アイコン
+    └── ...
+</pre>
+
+<h2>3. 用語追加の手順</h2>
+
+<h3>ステップ1: 用語IDを決める</h3>
+
+<div class="step">
+<p>用語IDは<strong>半角英数字とハイフン</strong>で構成します。URLに使用されるため、簡潔で分かりやすいものにしてください。</p>
+
+<table>
+<tr><th>用語名</th><th>用語ID（推奨）</th></tr>
+<tr><td>API</td><td>api</td></tr>
+<tr><td>Cookie</td><td>cookie</td></tr>
+<tr><td>IPアドレス</td><td>ip-address</td></tr>
+<tr><td>機械学習</td><td>machine-learning</td></tr>
+</table>
+</div>
+
+<h3>ステップ2: terms-index.json に追加</h3>
+
+<div class="step">
+<p><code>data/terms-index.json</code> を開き、配列の最後に新しい用語を追加します。</p>
+
+<pre>
+{
+  "id": "【用語ID】",
+  "name": "【用語名】",
+  "reading": "【読み方（カタカナ）】",
+  "fullName": "【正式名称（英語など）】",
+  "aliases": ["【別名1】", "【別名2】"],
+  "oneLiner": "【一言で説明するキャッチコピー】",
+  "categories": ["【カテゴリID】"],
+  "date": "YYYY-MM-DD"
+}
+</pre>
+
+<p><strong>記入例（VPNの場合）：</strong></p>
+
+<pre>
+{
+  "id": "vpn",
+  "name": "VPN",
+  "reading": "ブイピーエヌ",
+  "fullName": "Virtual Private Network",
+  "aliases": [],
+  "oneLiner": "インターネット上に「専用のトンネル」を作って、安全に通信する仕組み。",
+  "categories": ["security", "network"],
+  "date": "2026-03-14"
+}
+</pre>
+</div>
+
+<div class="note">
+<strong>📝 カテゴリIDの一覧</strong><br>
+<code>network</code>（ネットワーク）, <code>security</code>（セキュリティ）, <code>programming</code>（プログラミング）, <code>web</code>（Web技術）, <code>database</code>（データベース）, <code>hardware</code>（ハードウェア）, <code>cloud</code>（クラウド）, <code>ai</code>（AI・機械学習）, <code>os</code>（OS・システム）, <code>business</code>（ITビジネス）
+</div>
+
+<h3>ステップ3: 個別用語JSONファイルを作成</h3>
+
+<div class="step">
+<p><code>data/terms/【用語ID】.json</code> を新規作成します。</p>
+
+<pre>
+{
+  "id": "【用語ID】",
+  "name": "【用語名】",
+  "reading": "【読み方】",
+  "fullName": "【正式名称】",
+  "aliases": [],
+  "oneLiner": "【一言説明】",
+  "categories": ["【カテゴリID】"],
+  "date": "YYYY-MM-DD",
+  
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "【生徒のセリフ】"
+    },
+    {
+      "speaker": "teacher",
+      "text": "【先生のセリフ】"
+    }
+  ],
+  
+  "summary": [
+    "【まとめポイント1】",
+    "【まとめポイント2】",
+    "【まとめポイント3】"
+  ],
+  
+  "relatedTerms": [
+    { "name": "【関連用語名】", "id": "【その用語のID、なければnull】" }
+  ],
+  
+  "termLinks": {
+    "【対話文中のキーワード】": "【リンク先の用語ID】"
+  }
+}
+</pre>
+</div>
+
+<h3>各フィールドの詳細説明</h3>
+
+<table>
+<tr><th>フィールド</th><th>必須</th><th>説明</th></tr>
+<tr><td><code>id</code></td><td>○</td><td>用語の一意識別子（半角英数字・ハイフン）</td></tr>
+<tr><td><code>name</code></td><td>○</td><td>表示される用語名</td></tr>
+<tr><td><code>reading</code></td><td>○</td><td>読み方（カタカナ）。検索に使用</td></tr>
+<tr><td><code>fullName</code></td><td>△</td><td>正式名称。省略形の場合に記載</td></tr>
+<tr><td><code>aliases</code></td><td>△</td><td>別名・略称の配列。検索に使用</td></tr>
+<tr><td><code>oneLiner</code></td><td>○</td><td>一言説明（トップページ一覧に表示）</td></tr>
+<tr><td><code>categories</code></td><td>○</td><td>カテゴリIDの配列（複数可）</td></tr>
+<tr><td><code>date</code></td><td>○</td><td>登録日（YYYY-MM-DD形式）</td></tr>
+<tr><td><code>dialogue</code></td><td>○</td><td>先生と生徒の対話（配列）</td></tr>
+<tr><td><code>summary</code></td><td>○</td><td>まとめポイント（配列）</td></tr>
+<tr><td><code>relatedTerms</code></td><td>△</td><td>関連用語（配列）</td></tr>
+<tr><td><code>termLinks</code></td><td>△</td><td>対話文中の用語リンク（オブジェクト）</td></tr>
+</table>
+
+<h3>対話文（dialogue）の書き方</h3>
+
+<div class="step">
+<p><code>dialogue</code>は先生と生徒の会話を配列で記述します。</p>
+
+<pre>
+"dialogue": [
+  {
+    "speaker": "student",
+    "text": "先生、VPNってなんですか？"
+  },
+  {
+    "speaker": "teacher",
+    "text": "VPNは&lt;strong&gt;仮想プライベートネットワーク&lt;/strong&gt;のことだよ。&lt;br&gt;&lt;br&gt;例えるなら..."
+  }
+]
+</pre>
+
+<p><strong>使用可能なHTMLタグ：</strong></p>
+<ul>
+<li><code>&lt;strong&gt;重要&lt;/strong&gt;</code> — 強調表示</li>
+<li><code>&lt;br&gt;</code> — 改行</li>
+<li><code>&lt;code&gt;コード&lt;/code&gt;</code> — コード表示</li>
+</ul>
+</div>
+
+<div class="important">
+<strong>⚠️ 注意：</strong> JSONファイル内でHTMLタグを使う場合、<code>&lt;</code>は<code>&amp;lt;</code>、<code>&gt;</code>は<code>&amp;gt;</code>にエスケープする必要はありません。そのまま<code>&lt;strong&gt;</code>と書いてOKです。ただし、<code>"</code>（ダブルクォート）を使いたい場合は<code>\"</code>とエスケープしてください。
+</div>
+
+<h3>ステップ4: HTMLファイルを作成</h3>
+
+<div class="step">
+<p><code>terms/【用語ID】.html</code> を以下のテンプレートで作成します。</p>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;【用語名】とは？ - なるほどIT用語辞典&lt;/title&gt;
+  &lt;meta name="description" content="【用語名】（【読み方】）を先生と生徒の対話形式でやさしく解説。【簡単な説明】"&gt;
+  &lt;link rel="stylesheet" href="../css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="app" data-page="term" data-term-id="【用語ID】"&gt;&lt;/div&gt;
+  &lt;script src="../js/main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p><strong>作成例（vpn.htmlの場合）：</strong></p>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;VPNとは？ - なるほどIT用語辞典&lt;/title&gt;
+  &lt;meta name="description" content="VPN（ブイピーエヌ）を先生と生徒の対話形式でやさしく解説。安全なネットワーク接続の仕組みを説明。"&gt;
+  &lt;link rel="stylesheet" href="../css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="app" data-page="term" data-term-id="vpn"&gt;&lt;/div&gt;
+  &lt;script src="../js/main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<div class="important">
+<strong>⚠️ 重要：</strong> <code>data-term-id</code>の値は、JSONファイルの<code>id</code>と<strong>完全に一致</strong>させてください。大文字・小文字も区別されます。
+</div>
+
+<h2>4. 完成例：VPNを追加する場合</h2>
+
+<h3>① data/terms-index.json に追加</h3>
+
+<pre>
+// 配列の最後に追加（既存の最後の要素の後ろに , を忘れずに）
+{
+  "id": "vpn",
+  "name": "VPN",
+  "reading": "ブイピーエヌ",
+  "fullName": "Virtual Private Network",
+  "aliases": ["仮想プライベートネットワーク"],
+  "oneLiner": "インターネット上に「専用のトンネル」を作って、安全に通信する仕組み。",
+  "categories": ["security", "network"],
+  "date": "2026-03-14"
+}
+</pre>
+
+<h3>② data/terms/vpn.json を作成</h3>
+
+<pre>
+{
+  "id": "vpn",
+  "name": "VPN",
+  "reading": "ブイピーエヌ",
+  "fullName": "Virtual Private Network",
+  "aliases": ["仮想プライベートネットワーク"],
+  "oneLiner": "インターネット上に「専用のトンネル」を作って、安全に通信する仕組み。",
+  "categories": ["security", "network"],
+  "date": "2026-03-14",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、VPNって最近よく聞くんですけど、何のことですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "VPNは&lt;strong&gt;Virtual Private Network（仮想プライベートネットワーク）&lt;/strong&gt;の略だよ。&lt;br&gt;&lt;br&gt;簡単に言うと、インターネット上に&lt;strong&gt;「自分専用のトンネル」&lt;/strong&gt;を作って、安全に通信する仕組みなんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "トンネル？道路のトンネルみたいなものですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "まさにそのイメージ！&lt;br&gt;&lt;br&gt;普通のインターネット通信は、いろんな人が通る「公道」を走る車のようなもの。誰かに見られる可能性があるよね。&lt;br&gt;&lt;br&gt;でもVPNを使うと、&lt;strong&gt;暗号化された専用トンネル&lt;/strong&gt;を通るから、中を見られる心配がないんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど！カフェのWi-Fiを使う時に安全になるって聞いたことがあります！"
+    },
+    {
+      "speaker": "teacher",
+      "text": "その通り！公共Wi-Fiはセキュリティが弱いことが多いから、VPNで通信を暗号化すると安心だね。&lt;br&gt;&lt;br&gt;他にも、会社から自宅で仕事する時に社内ネットワークに安全につなぐ、なんて使い方もあるよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "トンネルで守られてる感じが分かりやすいです！"
+    }
+  ],
+  "summary": [
+    "&lt;strong&gt;VPN&lt;/strong&gt;は「Virtual Private Network」の略",
+    "インターネット上に&lt;strong&gt;暗号化された専用トンネル&lt;/strong&gt;を作る仕組み",
+    "公共Wi-Fi利用時の&lt;strong&gt;セキュリティ対策&lt;/strong&gt;に有効",
+    "リモートワークで&lt;strong&gt;社内ネットワークに安全に接続&lt;/strong&gt;できる",
+    "通信内容を第三者から守る&lt;strong&gt;プライバシー保護&lt;/strong&gt;の役割も"
+  ],
+  "relatedTerms": [
+    { "name": "ファイアウォール", "id": "firewall" },
+    { "name": "プロキシ",         "id": "proxy" },
+    { "name": "暗号化",           "id": null },
+    { "name": "IPアドレス",       "id": "ip-address" }
+  ],
+  "termLinks": {
+    "ファイアウォール": "firewall"
+  }
+}
+</pre>
+
+<h3>③ terms/vpn.html を作成</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;VPNとは？ - なるほどIT用語辞典&lt;/title&gt;
+  &lt;meta name="description" content="VPN（ブイピーエヌ）を先生と生徒の対話形式でやさしく解説。安全なネットワーク接続の仕組みを説明。"&gt;
+  &lt;link rel="stylesheet" href="../css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="app" data-page="term" data-term-id="vpn"&gt;&lt;/div&gt;
+  &lt;script src="../js/main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h2>5. チェックリスト</h2>
+
+<p>用語追加後、以下を確認してください：</p>
+
+<table>
+<tr><th>チェック項目</th><th>確認方法</th></tr>
+<tr><td>☐ terms-index.json の構文エラーがないか</td><td>JSONバリデーターで検証</td></tr>
+<tr><td>☐ 個別JSONファイルの構文エラーがないか</td><td>JSONバリデーターで検証</td></tr>
+<tr><td>☐ HTMLファイルのdata-term-idが正しいか</td><td>JSONのidと一致を確認</td></tr>
+<tr><td>☐ トップページに用語が表示されるか</td><td>ブラウザで確認</td></tr>
+<tr><td>☐ 用語ページが正しく表示されるか</td><td>terms/【用語ID】.html をブラウザで開く</td></tr>
+<tr><td>☐ 検索で用語がヒットするか</td><td>検索欄で用語名・読み・別名を検索</td></tr>
+<tr><td>☐ 関連用語リンクが機能するか</td><td>relatedTermsのリンクをクリック</td></tr>
+</table>
+
+<h2>6. よくあるエラーと対処法</h2>
+
+<table>
+<tr><th>症状</th><th>原因</th><th>対処法</th></tr>
+<tr><td>ページが「読み込みに失敗しました」と表示される</td><td>JSONの構文エラー</td><td>JSONバリデーターでエラー箇所を確認</td></tr>
+<tr><td>用語ページが真っ白</td><td>data-term-idの不一致</td><td>HTMLのdata-term-idとJSONのidを照合</td></tr>
+<tr><td>トップページに表示されない</td><td>terms-index.jsonへの追加漏れ</td><td>terms-index.jsonに追加されているか確認</td></tr>
+<tr><td>カテゴリが「undefined」</td><td>カテゴリIDの誤り</td><td>config.jsonの定義済みIDを使用</td></tr>
+</table>
+
+<h2>7. 便利なツール</h2>
+
+<ul>
+<li><strong>JSONバリデーター:</strong> <a href="https://jsonlint.com/">https://jsonlint.com/</a></li>
+<li><strong>VS Code拡張:</strong> JSON Language Features（構文チェック）</li>
+<li><strong>ローカルサーバー:</strong> VS Code Live Server拡張、または <code>python -m http.server 8000</code></li>
+</ul>
+
+<hr>
+<p style="text-align: center; color: #666;">© 2026 なるほどIT用語辞典</p>
+
+</body>
+</html>

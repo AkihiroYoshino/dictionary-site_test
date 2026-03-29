@@ -6,7 +6,6 @@
     "fullName": "Application Programming Interface",
     "aliases": [],
     "oneLiner": "ソフトウェア同士が会話するための「窓口」のこと。レストランの注文カウンターのようなもの。",
-    "categories": ["web"],
     "date": "2026-03-01"
   },
   {
@@ -14,9 +13,10 @@
     "name": "Cookie（クッキー）",
     "reading": "クッキー",
     "fullName": "HTTP Cookie",
-    "aliases": ["HTTPクッキー"],
+    "aliases": [
+      "HTTPクッキー"
+    ],
     "oneLiner": "Webサイトがブラウザに預ける小さなメモ。あなたが誰かを覚えておくための仕組み。",
-    "categories": ["web"],
     "date": "2026-02-28"
   },
   {
@@ -24,9 +24,11 @@
     "name": "ファイアウォール",
     "reading": "ファイアウォール",
     "fullName": "Firewall",
-    "aliases": ["FW", "防火壁"],
+    "aliases": [
+      "FW",
+      "防火壁"
+    ],
     "oneLiner": "ネットワークの「門番」。外部からの不正アクセスをブロックするセキュリティの仕組み。",
-    "categories": ["security", "network"],
     "date": "2026-02-26"
   },
   {
@@ -34,9 +36,10 @@
     "name": "SQL",
     "reading": "エスキューエル",
     "fullName": "Structured Query Language",
-    "aliases": ["シークェル"],
+    "aliases": [
+      "シークェル"
+    ],
     "oneLiner": "データベースに「これちょうだい」「これ追加して」とお願いするための言葉（言語）。",
-    "categories": ["database"],
     "date": "2026-02-24"
   },
   {
@@ -46,107 +49,6 @@
     "fullName": "",
     "aliases": [],
     "oneLiner": "アプリを動かすための環境を「コンテナ」にまとめて、どこでも同じように動かせる技術。",
-    "categories": ["cloud"],
     "date": "2026-02-22"
-  },
-  {
-    "id": "html",
-    "name": "HTML",
-    "reading": "エイチティーエムエル",
-    "fullName": "HyperText Markup Language",
-    "aliases": [],
-    "oneLiner": "Webページの「骨格」を作るための言語。見出し・段落・画像などページの構造を定義する。",
-    "categories": ["web"],
-    "date": "2026-02-20"
-  },
-  {
-    "id": "css",
-    "name": "CSS",
-    "reading": "シーエスエス",
-    "fullName": "Cascading Style Sheets",
-    "aliases": [],
-    "oneLiner": "Webページの「見た目」を整えるための言語。色・レイアウト・フォントなどデザインを担当。",
-    "categories": ["web"],
-    "date": "2026-02-18"
-  },
-  {
-    "id": "javascript",
-    "name": "JavaScript",
-    "reading": "ジャバスクリプト",
-    "fullName": "",
-    "aliases": ["JS"],
-    "oneLiner": "Webページに「動き」を加えるプログラミング言語。ボタンクリックやアニメーションなど。",
-    "categories": ["programming", "web"],
-    "date": "2026-02-16"
-  },
-  {
-    "id": "ip-address",
-    "name": "IPアドレス",
-    "reading": "アイピーアドレス",
-    "fullName": "Internet Protocol Address",
-    "aliases": [],
-    "oneLiner": "インターネット上の住所。ネットワークに繋がる全ての機器に割り振られた識別番号。",
-    "categories": ["network"],
-    "date": "2026-02-14"
-  },
-  {
-    "id": "dns",
-    "name": "DNS",
-    "reading": "ディーエヌエス",
-    "fullName": "Domain Name System",
-    "aliases": [],
-    "oneLiner": "ドメイン名（google.comなど）をIPアドレスに変換する「電話帳」のような仕組み。",
-    "categories": ["network"],
-    "date": "2026-02-12"
-  },
-  {
-    "id": "cloud-computing",
-    "name": "クラウド",
-    "reading": "クラウド",
-    "fullName": "Cloud Computing",
-    "aliases": ["クラウドコンピューティング"],
-    "oneLiner": "インターネットを通じてサーバーやデータベースなどのITリソースを利用する仕組み。",
-    "categories": ["cloud"],
-    "date": "2026-02-10"
-  },
-  {
-    "id": "proxy",
-    "name": "プロキシ",
-    "reading": "プロキシ",
-    "fullName": "Proxy Server",
-    "aliases": ["プロキシサーバー"],
-    "oneLiner": "ユーザーの代わりにインターネットにアクセスする「代理人」のようなサーバー。",
-    "categories": ["network"],
-    "date": "2026-02-08"
-  },
-  {
-    "id": "vpn",
-    "name": "VPN",
-    "reading": "ブイピーエヌ",
-    "fullName": "Virtual Private Network",
-    "aliases": [],
-    "oneLiner": "インターネット上に「専用のトンネル」を作って、安全に通信する仕組み。",
-    "categories": ["security", "network"],
-    "date": "2026-02-06"
-  },
-  {
-    "id": "git",
-    "name": "Git",
-    "reading": "ギット",
-    "fullName": "",
-    "aliases": [],
-    "oneLiner": "ファイルの変更履歴を記録・管理するバージョン管理システム。タイムマシンのようなもの。",
-    "categories": ["programming"],
-    "date": "2026-02-04"
-  },
-  {
-    "id": "machine-learning",
-    "name": "機械学習",
-    "reading": "きかいがくしゅう",
-    "fullName": "Machine Learning",
-    "aliases": ["ML"],
-    "oneLiner": "コンピュータがデータから自動的にパターンやルールを学ぶ仕組み。AIの中核技術。",
-    "categories": ["ai"],
-    "date": "2026-02-02"
   }
 ]

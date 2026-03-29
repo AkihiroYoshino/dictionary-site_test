@@ -3,9 +3,10 @@
   "name": "Cookie（クッキー）",
   "reading": "クッキー",
   "fullName": "HTTP Cookie",
-  "aliases": ["HTTPクッキー"],
+  "aliases": [
+    "HTTPクッキー"
+  ],
   "oneLiner": "Webサイトがブラウザに預ける小さなメモ。あなたが誰かを覚えておくための仕組み。",
-  "categories": ["web"],
   "date": "2026-02-28",
   "dialogue": [
     {
@@ -45,15 +46,30 @@
     "ブラウザの設定からCookieの削除・管理ができる"
   ],
   "relatedTerms": [
-    { "name": "API",                "id": "api" },
-    { "name": "セッション",        "id": null },
-    { "name": "キャッシュ",        "id": null },
-    { "name": "ローカルストレージ", "id": null },
-    { "name": "ファイアウォール",  "id": "firewall" },
-    { "name": "HTTPS",             "id": null }
+    {
+      "name": "API",
+      "id": "api"
+    },
+    {
+      "name": "セッション",
+      "id": null
+    },
+    {
+      "name": "キャッシュ",
+      "id": null
+    },
+    {
+      "name": "ローカルストレージ",
+      "id": null
+    },
+    {
+      "name": "ファイアウォール",
+      "id": "firewall"
+    },
+    {
+      "name": "HTTPS",
+      "id": null
+    }
   ],
-  "termLinks": {
-    "API": "api",
-    "ファイアウォール": "firewall"
-  }
+  "termLinks": {}
 }
