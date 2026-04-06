@@ -54,6 +54,15 @@
     "date": "2026-04-06"
   },
   {
+    "id": "auto-isac",
+    "name": "Auto-ISAC",
+    "reading": "オートアイサック",
+    "fullName": "Automotive Information Sharing and Analysis Center",
+    "aliases": [],
+    "oneLiner": "自動車サイバーセキュリティ脅威情報を会員間で共有する米国主導の非営利センター。OEMとサプライヤーが参加。",
+    "date": "2026-04-06"
+  },
+  {
     "id": "awd",
     "name": "AWD",
     "reading": "エーダブリューディー",
@@ -96,6 +105,15 @@
     "fullName": "Three-Way Catalytic Converter",
     "aliases": [],
     "oneLiner": "HC・CO・NOxを同時に浄化する排気系部品。排ガス規制対応の要。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "ccu",
+    "name": "CCU",
+    "reading": "シーシーユー",
+    "fullName": "Central/Connectivity Control Unit",
+    "aliases": [],
+    "oneLiner": "車載の通信機能（LTE/5G・Wi-Fi・Bluetooth・V2X・ETC）を一元統合するコネクティビティ管理ECU。SDVアーキテクチャの要。",
     "date": "2026-04-06"
   },
   {
@@ -150,6 +168,15 @@
     "fullName": "Shock Absorber",
     "aliases": [],
     "oneLiner": "バネの振動を油圧で減衰させる装置。乗り心地と操安性の要。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "dcm",
+    "name": "DCM",
+    "reading": "ディーシーエム",
+    "fullName": "Data Communication Module",
+    "aliases": [],
+    "oneLiner": "車両とクラウドサーバーをLTE/5G/V2Xで繋ぐコネクテッドカーのテレマティクス通信モジュール。OTA配信の入口。",
     "date": "2026-04-06"
   },
   {
@@ -333,6 +360,15 @@
     "date": "2026-04-06"
   },
   {
+    "id": "ipc",
+    "name": "プロセス間通信（IPC）",
+    "reading": "プロセスカンツウシン",
+    "fullName": "Inter-Process Communication",
+    "aliases": [],
+    "oneLiner": "マルチコアECUやハイパーバイザー環境でプロセス/パーティション間のデータを安全に交換する仕組み。FFI確保の核心。",
+    "date": "2026-04-06"
+  },
+  {
     "id": "iso-26262",
     "name": "ISO 26262",
     "reading": "アイエスオー26262",
@@ -348,6 +384,42 @@
     "fullName": "ISO/SAE 21434 Road Vehicles - Cybersecurity Engineering",
     "aliases": [],
     "oneLiner": "車両サイバーセキュリティエンジニアリングの国際規格。UN R155の技術的裏付け。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "j-auto-isac",
+    "name": "J-Auto-ISAC",
+    "reading": "ジェイオートアイサック",
+    "fullName": "Japan Automotive ISAC",
+    "aliases": [],
+    "oneLiner": "日本版の自動車サイバーセキュリティ情報共有センター。国内OEM・Tier1が参加し脅威情報を共有。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "jasic",
+    "name": "JASIC",
+    "reading": "ジャシック",
+    "fullName": "Japan Automotive Security Information Center",
+    "aliases": [],
+    "oneLiner": "日本の自動車サイバーセキュリティ情報の収集・分析・共有を担う業界センター/委員会。J-Auto-ISACと連携。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "jaspar",
+    "name": "JASPAR",
+    "reading": "ジャスパー",
+    "fullName": "Japan Automotive Software Platform and Architecture",
+    "aliases": [],
+    "oneLiner": "日本のAUTOSAR普及・開発を担う業界団体。OEM・Tier1・半導体メーカーが参加し日本市場への適用ガイドを策定。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "jsae",
+    "name": "JSAE（自動車技術会）",
+    "reading": "ジェイサエ",
+    "fullName": "Society of Automotive Engineers of Japan",
+    "aliases": [],
+    "oneLiner": "自動車の技術標準（JASO規格）策定・研究発表・技術者育成を担う日本の学術団体。",
     "date": "2026-04-06"
   },
   {
@@ -432,6 +504,24 @@
     "date": "2026-04-06"
   },
   {
+    "id": "process-approval",
+    "name": "プロセス認可",
+    "reading": "プロセスニンカ",
+    "fullName": "Process Approval (A-SPICE Assessment)",
+    "aliases": [],
+    "oneLiner": "OEMがTier1のソフトウェア開発プロセスをA-SPICEやISO 26262準拠で審査・承認する仕組み。量産委託の前提条件。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "qnx",
+    "name": "QNX",
+    "reading": "キューエヌエックス",
+    "fullName": "QNX Neutrino RTOS",
+    "aliases": [],
+    "oneLiner": "BlackBerry製マイクロカーネル型車載リアルタイムOS。ISO 26262 ASIL-D対応認証を取得し、IVI・ADAS・インスツルメントクラスタに広く採用。",
+    "date": "2026-04-06"
+  },
+  {
     "id": "regenerative-braking",
     "name": "回生ブレーキ",
     "reading": "カイセイブレーキ",
@@ -465,6 +555,15 @@
     "fullName": "Safety Goal",
     "aliases": [],
     "oneLiner": "HARAから導出されるトップレベル安全要求。機能安全設計の出発点。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sbom",
+    "name": "SBOM",
+    "reading": "エスボム",
+    "fullName": "Software Bill of Materials",
+    "aliases": [],
+    "oneLiner": "ソフトウェアを構成するコンポーネント（OSS・商用ライブラリ等）の部品表。脆弱性管理・ライセンス管理の基盤。",
     "date": "2026-04-06"
   },
   {
@@ -635,7 +734,7 @@
     "reading": "ターラ",
     "fullName": "Threat Analysis and Risk Assessment",
     "aliases": [],
-    "oneLiner": "脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。",
+    "oneLiner": "脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。S値・E値・C値でリスクを定量評価する。",
     "date": "2026-04-06"
   },
   {
@@ -762,6 +861,15 @@
     "fullName": "World Forum for Harmonization of Vehicle Regulations",
     "aliases": [],
     "oneLiner": "国連欧州経済委員会(UNECE)の車両規則調和世界フォーラム。UN規則の策定母体。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "wpa",
+    "name": "WPA2/WPA3",
+    "reading": "ダブリューピーエーツースリー",
+    "fullName": "Wi-Fi Protected Access 2/3",
+    "aliases": [],
+    "oneLiner": "車載Wi-Fi通信のセキュリティプロトコル。IVI・TCU・DCMのWi-Fiアクセスポイント機能に適用されるセキュリティ規格。",
     "date": "2026-04-06"
   }
 ]

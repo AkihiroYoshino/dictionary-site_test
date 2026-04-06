@@ -1,0 +1,62 @@
+{
+  "id": "sbom",
+  "name": "SBOM",
+  "reading": "エスボム",
+  "fullName": "Software Bill of Materials",
+  "aliases": [],
+  "oneLiner": "ソフトウェアを構成するコンポーネント（OSS・商用ライブラリ等）の部品表。脆弱性管理・ライセンス管理の基盤。",
+  "category": "cybersecurity",
+  "dialogue": [
+    {
+      "speaker": "user",
+      "text": "SBOMって何？車のサイバーセキュリティでどう重要なの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "SBOM（Software Bill of Materials）は、ソフトウェアを構成するコンポーネント（OSS・商用ライブラリ等）の部品表。脆弱性管理・ライセンス管理の基盤。 たとえると「ソフトウェアの「食品成分表示」」だよ。"
+    },
+    {
+      "speaker": "user",
+      "text": "もう少し技術的に詳しく教えて。仕組みや構成は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "SPDX・CycloneDX等の標準形式で記述。CVE（既知脆弱性）公開時にSBOMをスキャンして影響コンポーネントを即時特定できる。UN R155のKVMS（既知脆弱性管理）の実装ではSBOM整備が前提条件。OSSライセンス違反（GPL/LGPLのコピーレフト汚染）の検出にも有効"
+    },
+    {
+      "speaker": "user",
+      "text": "UN R155やISO/SAE 21434との関係は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "OEMは自社ECUソフト・Tier1納入ソフト・OSSのSBOMをサプライチェーン全体で収集し統合管理するCentral SBOM Repositoryの構築が急務。RxSWIN管理とSBOMを紐づけてOTA後のソフト構成の認可追跡も実施する。米国EO 14028・EU CRA（Cyber Resilience Act）でもSBOM提供が義務化方向"
+    },
+    {
+      "speaker": "user",
+      "text": "実際の攻撃シナリオだとどう機能するの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "実際のサイバー攻撃では、SBOMは防御チェーンの重要な一環を担うよ。多層防御（Defense in Depth）の考え方でシステム全体の耐性を高めることが大切なんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "要点をまとめて。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめ：\n・定義：ソフトウェアを構成するコンポーネント（OSS・商用ライブラリ等）の部品表。脆弱性管理・ライセンス管理の基盤。\n・技術：SPDX・CycloneDX等の標準形式で記述。CVE（既知脆弱性）公開時にSBOMをスキャンして影響コンポーネントを即時特定できる。UN R155のKVMS（…\n・規制関連：OEMは自社ECUソフト・Tier1納入ソフト・OSSのSBOMをサプライチェーン全体で収集し統合管理するCentral SBOM Repositoryの構築が…\nCSMS構築のピースとして理解しておこう。"
+    }
+  ],
+  "summary": "SBOM（Software Bill of Materials）は、ソフトウェアを構成するコンポーネント（OSS・商用ライブラリ等）の部品表。脆弱性管理・ライセンス管理の基盤。\n\n■ 技術解説\nSPDX・CycloneDX等の標準形式で記述。CVE（既知脆弱性）公開時にSBOMをスキャンして影響コンポーネントを即時特定できる。UN R155のKVMS（既知脆弱性管理）の実装ではSBOM整備が前提条件。OSSライセンス違反（GPL/LGPLのコピーレフト汚染）の検出にも有効\n\n■ 業界・OEM視点\nOEMは自社ECUソフト・Tier1納入ソフト・OSSのSBOMをサプライチェーン全体で収集し統合管理するCentral SBOM Repositoryの構築が急務。RxSWIN管理とSBOMを紐づけてOTA後のソフト構成の認可追跡も実施する。米国EO 14028・EU CRA（Cyber Resilience Act）でもSBOM提供が義務化方向",
+  "termLinks": {
+    "CSMS": "csms",
+    "多層防御": "defense-in-depth",
+    "ECU": "ecu",
+    "ISO/SAE 21434": "iso-sae-21434",
+    "KVMS": "kvms",
+    "RxSWIN": "rxswin",
+    "UN R155": "un-r155"
+  },
+  "date": "2026-04-06"
+}

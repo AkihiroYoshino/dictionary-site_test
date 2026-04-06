@@ -52,6 +52,7 @@
   "termLinks": {
     "CSMS": "csms",
     "ISO/SAE 21434": "iso-sae-21434",
+    "SBOM": "sbom",
     "型式認可": "type-approval",
     "UN R155": "un-r155"
   },

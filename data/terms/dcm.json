@@ -1,0 +1,58 @@
+{
+  "id": "dcm",
+  "name": "DCM",
+  "reading": "ディーシーエム",
+  "fullName": "Data Communication Module",
+  "aliases": [],
+  "oneLiner": "車両とクラウドサーバーをLTE/5G/V2Xで繋ぐコネクテッドカーのテレマティクス通信モジュール。OTA配信の入口。",
+  "category": "auto-parts",
+  "dialogue": [
+    {
+      "speaker": "user",
+      "text": "DCMって何？自動車のどこに使われてるの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "DCM（Data Communication Module）は、車両とクラウドサーバーをLTE/5G/V2Xで繋ぐコネクテッドカーのテレマティクス通信モジュール。OTA配信の入口。 身近なたとえで言うと「車とクラウドをつなぐ「通信アンテナ」」のようなものだよ。"
+    },
+    {
+      "speaker": "user",
+      "text": "なるほど。もう少し技術的に教えて。どんな種類や構造があるの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "LTE Cat-4/Cat-M1からSA・NSA方式の5G Sub-6GHz対応へ移行中。GNSSモジュール（GPS/Galileo/GLONASS/BeiDou）を内蔵しテレマティクスデータをクラウド送信。eSIM（eUICC）採用でMNO遠隔プロビジョニングが可能に。OTA配信・リモート診断・フローティングカーデータ収集のゲートウェイ機能を担う"
+    },
+    {
+      "speaker": "user",
+      "text": "OEMの開発現場ではどういう位置づけなの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "デンソー・パナソニック・コンチネンタル・LGエレクがモジュール供給。OEMはDCMをUN R155の主要アタックサーフェス（リモート攻撃の入口）として位置づけ、セキュアブート・TLS1.3・HSM・SIM認証の多層保護を必須設計要件化している"
+    },
+    {
+      "speaker": "user",
+      "text": "EV化や電動化で、この部品はどう変わっていくの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "電動化の流れでDCMにも変革が求められているよ。軽量化・高効率化・システム統合が大きなトレンドで、従来のICE前提の設計からEV/HEV最適設計への移行が進んでいるんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "まとめると、DCMのポイントは？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめるとこうだよ：\n・基本：車両とクラウドサーバーをLTE/5G/V2Xで繋ぐコネクテッドカーのテレマティクス通信モジュール。OTA配信の入口。\n・技術：LTE Cat-4/Cat-M1からSA・NSA方式の5G Sub-6GHz対応へ移行中。GNSSモジュール（GPS/Galileo/GLONASS/BeiDo…\n・OEM視点：デンソー・パナソニック・コンチネンタル・LGエレクがモジュール供給。OEMはDCMをUN R155の主要アタックサーフェス（リモート攻撃の入口）として位置づけ、…\n開発者として押さえておくべき重要部品だね。"
+    }
+  ],
+  "summary": "DCM（Data Communication Module）は、車両とクラウドサーバーをLTE/5G/V2Xで繋ぐコネクテッドカーのテレマティクス通信モジュール。OTA配信の入口。\n\n■ 技術解説\nLTE Cat-4/Cat-M1からSA・NSA方式の5G Sub-6GHz対応へ移行中。GNSSモジュール（GPS/Galileo/GLONASS/BeiDou）を内蔵しテレマティクスデータをクラウド送信。eSIM（eUICC）採用でMNO遠隔プロビジョニングが可能に。OTA配信・リモート診断・フローティングカーデータ収集のゲートウェイ機能を担う\n\n■ 業界・OEM視点\nデンソー・パナソニック・コンチネンタル・LGエレクがモジュール供給。OEMはDCMをUN R155の主要アタックサーフェス（リモート攻撃の入口）として位置づけ、セキュアブート・TLS1.3・HSM・SIM認証の多層保護を必須設計要件化している",
+  "termLinks": {
+    "HSM": "hsm",
+    "セキュアブート": "secure-boot",
+    "UN R155": "un-r155"
+  },
+  "date": "2026-04-06"
+}

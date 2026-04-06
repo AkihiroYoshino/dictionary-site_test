@@ -4,7 +4,7 @@
   "reading": "ターラ",
   "fullName": "Threat Analysis and Risk Assessment",
   "aliases": [],
-  "oneLiner": "脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。",
+  "oneLiner": "脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。S値・E値・C値でリスクを定量評価する。",
   "category": "cybersecurity",
   "dialogue": [
     {
@@ -13,7 +13,7 @@
     },
     {
       "speaker": "assistant",
-      "text": "TARA（Threat Analysis and Risk Assessment）は、脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。 たとえると「車のセキュリティの「問診票と処方箋」」だよ。"
+      "text": "TARA（Threat Analysis and Risk Assessment）は、脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。S値・E値・C値でリスクを定量評価する。 たとえると「車のセキュリティの「問診票と処方箋」」だよ。"
     },
     {
       "speaker": "user",
@@ -21,7 +21,7 @@
     },
     {
       "speaker": "assistant",
-      "text": "アセット特定→脅威シナリオ列挙→影響度（Safety/Financial/Operational/Privacy）評価→攻撃経路分析→攻撃実現可能性評価→リスク値算出→対策決定のステップで実施。FMEAの知見をセキュリティ領域に応用"
+      "text": "アセット特定→脅威シナリオ列挙→影響度（S値）評価→攻撃実現可能性（E値）評価→リスク値（C値）算出→対策決定の6ステップ。【S値：Impact Severity（影響度の深刻さ）】 Safety/Financial/Operational/Privacyの4カテゴリで評価。Safetyは ISO 26262のSeverityと整合：S0=傷害なし、S1=軽傷（挫傷・骨折なし）、S2=重傷（骨折・生存）、S3=生命を脅かす・死亡。Financial F0〜F3、Operational O0〜O3、Privacy P0〜P3も同様に定義。【E値：Attack Feasibility（攻撃実現可能性）】攻撃者の属性5要素を各スコアで評価し合算：①Elapsed Time（<1日〜>6ヶ月）、②Expertise（Layman/Proficient/Expert/Multiple Expert）、③Knowledge of Item（Public/Restricted/Confidential/Strictly Confidential）、④Opportunity/Window（Unlimited/Easy/Moderate/Difficult）、⑤Equipment（Standard/Specialised/Bespoke/Multiple Bespoke）。スコア合計でHigh/Medium/Low/Very Low攻撃実現可能性に分類。【C値：Cybersecurity Risk Level/リスク評価】S値×E値でリスクマトリクスを構成しHigh/Medium/Low/Negligibleの4段階に決定。Highは対策必須、Mediumは対策検討、Lowは受容可の判断基準として使用"
     },
     {
       "speaker": "user",
@@ -29,7 +29,7 @@
     },
     {
       "speaker": "assistant",
-      "text": "ISO/SAE 21434 Clause 15に詳細手順。AUTOSARのARA（Adaptive AUTOSAR）やSECOCはTARA結果に基づいて実装される。OEMはコンセプト段階から量産後まで反復的にTARAを更新する"
+      "text": "ISO/SAE 21434 Clause 15に詳細手順。S値（Safety影響）はHARA（ISO 26262）のSeverity値と整合させ、S3判定のシナリオは機能安全とサイバーセキュリティの統合管理（Dual V字）で対応する。E値の評価はmedini analyze/PREEvision等のTARAツールでUN R155の7脅威カテゴリ・69脅威に照らして体系化する。TARAのアウトカムが：①SecOC適用判断（CAN ID優先順位付け）②SecurityAccessレベル設計（0x27の鍵強度）③PKI/HSMレベル選定④FW/IDSルール策定⑤サプライヤーへのCSR（Cybersecurity Specification Requirements）展開の根拠となる。OEMはコンセプト段階から量産後まで反復的にTARAを更新しCSMSのコアドキュメントとして管理する"
     },
     {
       "speaker": "user",
@@ -45,15 +45,19 @@
     },
     {
       "speaker": "assistant",
-      "text": "まとめ：\n・定義：脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。\n・技術：アセット特定→脅威シナリオ列挙→影響度（Safety/Financial/Operational/Privacy）評価→攻撃経路分析→攻撃実現可能性評価→リスク…\n・規制関連：ISO/SAE 21434 Clause 15に詳細手順。AUTOSARのARA（Adaptive AUTOSAR）やSECOCはTARA結果に基づいて実装され…\nCSMS構築のピースとして理解しておこう。"
+      "text": "まとめ：\n・定義：脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。S値・E値・C値でリスクを定量評価する。\n・技術：アセット特定→脅威シナリオ列挙→影響度（S値）評価→攻撃実現可能性（E値）評価→リスク値（C値）算出→対策決定の6ステップ。【S値：Impact Severit…\n・規制関連：ISO/SAE 21434 Clause 15に詳細手順。S値（Safety影響）はHARA（ISO 26262）のSeverity値と整合させ、S3判定のシナ…\nCSMS構築のピースとして理解しておこう。"
     }
   ],
-  "summary": "TARA（Threat Analysis and Risk Assessment）は、脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。\n\n■ 技術解説\nアセット特定→脅威シナリオ列挙→影響度（Safety/Financial/Operational/Privacy）評価→攻撃経路分析→攻撃実現可能性評価→リスク値算出→対策決定のステップで実施。FMEAの知見をセキュリティ領域に応用\n\n■ 業界・OEM視点\nISO/SAE 21434 Clause 15に詳細手順。AUTOSARのARA（Adaptive AUTOSAR）やSECOCはTARA結果に基づいて実装される。OEMはコンセプト段階から量産後まで反復的にTARAを更新する",
+  "summary": "TARA（Threat Analysis and Risk Assessment）は、脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。S値・E値・C値でリスクを定量評価する。\n\n■ 技術解説\nアセット特定→脅威シナリオ列挙→影響度（S値）評価→攻撃実現可能性（E値）評価→リスク値（C値）算出→対策決定の6ステップ。【S値：Impact Severity（影響度の深刻さ）】 Safety/Financial/Operational/Privacyの4カテゴリで評価。Safetyは ISO 26262のSeverityと整合：S0=傷害なし、S1=軽傷（挫傷・骨折なし）、S2=重傷（骨折・生存）、S3=生命を脅かす・死亡。Financial F0〜F3、Operational O0〜O3、Privacy P0〜P3も同様に定義。【E値：Attack Feasibility（攻撃実現可能性）】攻撃者の属性5要素を各スコアで評価し合算：①Elapsed Time（<1日〜>6ヶ月）、②Expertise（Layman/Proficient/Expert/Multiple Expert）、③Knowledge of Item（Public/Restricted/Confidential/Strictly Confidential）、④Opportunity/Window（Unlimited/Easy/Moderate/Difficult）、⑤Equipment（Standard/Specialised/Bespoke/Multiple Bespoke）。スコア合計でHigh/Medium/Low/Very Low攻撃実現可能性に分類。【C値：Cybersecurity Risk Level/リスク評価】S値×E値でリスクマトリクスを構成しHigh/Medium/Low/Negligibleの4段階に決定。Highは対策必須、Mediumは対策検討、Lowは受容可の判断基準として使用\n\n■ 業界・OEM視点\nISO/SAE 21434 Clause 15に詳細手順。S値（Safety影響）はHARA（ISO 26262）のSeverity値と整合させ、S3判定のシナリオは機能安全とサイバーセキュリティの統合管理（Dual V字）で対応する。E値の評価はmedini analyze/PREEvision等のTARAツールでUN R155の7脅威カテゴリ・69脅威に照らして体系化する。TARAのアウトカムが：①SecOC適用判断（CAN ID優先順位付け）②SecurityAccessレベル設計（0x27の鍵強度）③PKI/HSMレベル選定④FW/IDSルール策定⑤サプライヤーへのCSR（Cybersecurity Specification Requirements）展開の根拠となる。OEMはコンセプト段階から量産後まで反復的にTARAを更新しCSMSのコアドキュメントとして管理する",
   "termLinks": {
     "CSMS": "csms",
     "多層防御": "defense-in-depth",
-    "FMEA": "fmea",
+    "HARA": "hara",
+    "HSM": "hsm",
+    "ISO 26262": "iso-26262",
     "ISO/SAE 21434": "iso-sae-21434",
+    "PKI": "pki",
+    "SecOC": "secoc",
     "UN R155": "un-r155"
   },
   "date": "2026-04-06"
