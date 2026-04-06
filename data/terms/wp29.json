@@ -1,38 +1,58 @@
 {
   "id": "wp29",
-  "name": "WP.29（自動車基準調和世界フォーラム）",
+  "name": "WP.29",
   "reading": "ダブリューピーニジュウキュウ",
   "fullName": "World Forum for Harmonization of Vehicle Regulations",
   "aliases": [],
-  "oneLiner": "国連欧州経済委員会（UNECE）の下に設置された、自動車の国際基準を策定するフォーラム。各国の法規を調和させる場。",
-  "date": "2026-02-12",
+  "oneLiner": "国連欧州経済委員会(UNECE)の車両規則調和世界フォーラム。UN規則の策定母体。",
+  "category": "regulation",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>WP.29（自動車基準調和世界フォーラム）</strong>」ってどんな法規・規格なんですか？"
+      "speaker": "user",
+      "text": "WP.29って何？どんな規制・規格なの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>WP.29（自動車基準調和世界フォーラム）</strong>（World Forum for Harmonization of Vehicle Regulations）は、国連欧州経済委員会（UNECE）の下に設置された、自動車の国際基準を策定するフォーラム。各国の法規を調和させる場。<br><br>たとえるなら、<strong>世界中のクルマのルールを「統一」するための国際会議。各国が集まって共通の安全基準を決める場所</strong>のようなものだよ。"
+      "speaker": "assistant",
+      "text": "WP.29（World Forum for Harmonization of Vehicle Regulations）は、国連欧州経済委員会(UNECE)の車両規則調和世界フォーラム。UN規則の策定母体。 たとえると「車の国際ルールを決める「国連の会議体」」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "なるほど。なぜこの規制・規格が必要なんですか？"
+      "speaker": "user",
+      "text": "具体的な内容や要件を教えて。"
     },
     {
-      "speaker": "teacher",
-      "text": "この規格・法規があることで、クルマの安全性や環境性能が世界的に確保されているんだ。<br><br>世界中のクルマが一定の基準を満たすことで、私たちの安全と環境が守られているんだよ。"
+      "speaker": "assistant",
+      "text": "1958年協定（相互承認）と1998年協定（GTR）の2つの国際協定を管理。傘下にGRSP（衝突安全）・GRVA（自動運転・コネクテッド）・GRPE（排出ガス）・GRE（灯火器）等の作業部会がある"
     },
     {
-      "speaker": "student",
-      "text": "法規や規格って、私たちの安全を守るためにとても大切なんですね！"
+      "speaker": "user",
+      "text": "OEMの開発にはどう影響するの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "日本・欧州・韓国等が1958年協定に加盟（米国は未加盟で独自FMVSS体系）。近年はGRVAがサイバーセキュリティ（R155）・OTA（R156）・自動運転（R157）等を策定し注目度が高い"
+    },
+    {
+      "speaker": "user",
+      "text": "対応しないとどうなるの？時間軸は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "法規は型式認可や市場投入の前提条件なので、対応しないと新車を販売できないよ。計画的な対応と認可当局との事前調整が重要だね。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとしてのポイントを整理して。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ポイント整理：\n・概要：国連欧州経済委員会(UNECE)の車両規則調和世界フォーラム。UN規則の策定母体。\n・要件：1958年協定（相互承認）と1998年協定（GTR）の2つの国際協定を管理。傘下にGRSP（衝突安全）・GRVA（自動運転・コネクテッド）・GRPE（排出ガス）…\n・OEM影響：日本・欧州・韓国等が1958年協定に加盟（米国は未加盟で独自FMVSS体系）。近年はGRVAがサイバーセキュリティ（R155）・OTA（R156）・自動運転（R…\n法規動向は車両開発日程に直結するので常にウォッチしよう。"
     }
   ],
-  "summary": [
-    "<strong>WP.29（自動車基準調和世界フォーラム）</strong>は「World Forum for Harmonization of Vehicle Regulations」の略称・通称",
-    "国連欧州経済委員会（UNECE）の下に設置された、自動車の国際基準を策定するフォーラム。各国の法規を調和させる場。",
-    "たとえるなら「世界中のクルマのルールを「統一」するための国際会議。各国が集まって共通の安全基準を決める場所」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "WP.29（World Forum for Harmonization of Vehicle Regulations）は、国連欧州経済委員会(UNECE)の車両規則調和世界フォーラム。UN規則の策定母体。\n\n■ 技術解説\n1958年協定（相互承認）と1998年協定（GTR）の2つの国際協定を管理。傘下にGRSP（衝突安全）・GRVA（自動運転・コネクテッド）・GRPE（排出ガス）・GRE（灯火器）等の作業部会がある\n\n■ 業界・OEM視点\n日本・欧州・韓国等が1958年協定に加盟（米国は未加盟で独自FMVSS体系）。近年はGRVAがサイバーセキュリティ（R155）・OTA（R156）・自動運転（R157）等を策定し注目度が高い",
+  "termLinks": {
+    "1958年協定": "1958-agreement",
+    "GTR": "gtr",
+    "型式認可": "type-approval"
+  },
+  "date": "2026-04-06"
 }

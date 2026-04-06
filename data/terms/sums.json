@@ -1,40 +1,61 @@
 {
   "id": "sums",
-  "name": "SUMS（ソフトウェアアップデート管理システム）",
+  "name": "SUMS",
   "reading": "サムス",
   "fullName": "Software Update Management System",
   "aliases": [],
-  "oneLiner": "UN R156で要求される、車両ソフトウェアの更新を安全に管理するためのシステム。OTAを含む全更新プロセスを対象。",
-  "date": "2026-03-03",
+  "oneLiner": "UN R156が要求するソフトウェア更新管理体制。OTAとリコール更新の両方を包含。",
+  "category": "cybersecurity",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>SUMS（ソフトウェアアップデート管理システム）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+      "speaker": "user",
+      "text": "SUMSって何？車のサイバーセキュリティでどう重要なの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>SUMS（ソフトウェアアップデート管理システム）</strong>（Software Update Management System）は、UN R156で要求される、車両ソフトウェアの更新を安全に管理するためのシステム。OTAを含む全更新プロセスを対象。<br><br>たとえるなら、<strong>クルマのソフトウェアを「安全にアップデート」する管理体制。スマホのOS更新を厳格に管理する仕組み</strong>みたいなものだね。"
+      "speaker": "assistant",
+      "text": "SUMS（Software Update Management System）は、UN R156が要求するソフトウェア更新管理体制。OTAとリコール更新の両方を包含。 たとえると「ソフト更新の「品質管理体制」」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+      "speaker": "user",
+      "text": "もう少し技術的に詳しく教えて。仕組みや構成は？"
     },
     {
-      "speaker": "teacher",
-      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>SUMS（ソフトウェアアップデート管理システム）は、その防御の重要な一部なんだよ。"
+      "speaker": "assistant",
+      "text": "更新対象ソフトの特定→影響分析（安全・法規）→更新パッケージ作成→配信→車両側適用→結果確認の全プロセスを管理。RxSWIN変更時は認可当局への届出が必要"
     },
     {
-      "speaker": "student",
-      "text": "クルマのセキュリティって奥が深いんですね。SUMS（ソフトウェアアップデート管理システム）、しっかり覚えます！"
+      "speaker": "user",
+      "text": "UN R155やISO/SAE 21434との関係は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "CSMS認証とセットでSUMS認証が必要。OEMのソフト開発・配信プラットフォーム基盤の設計に直結する"
+    },
+    {
+      "speaker": "user",
+      "text": "実際の攻撃シナリオだとどう機能するの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "実際のサイバー攻撃では、SUMSは防御チェーンの重要な一環を担うよ。多層防御（Defense in Depth）の考え方でシステム全体の耐性を高めることが大切なんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "要点をまとめて。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめ：\n・定義：UN R156が要求するソフトウェア更新管理体制。OTAとリコール更新の両方を包含。\n・技術：更新対象ソフトの特定→影響分析（安全・法規）→更新パッケージ作成→配信→車両側適用→結果確認の全プロセスを管理。RxSWIN変更時は認可当局への届出が必要\n・規制関連：CSMS認証とセットでSUMS認証が必要。OEMのソフト開発・配信プラットフォーム基盤の設計に直結する\nCSMS構築のピースとして理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>SUMS（ソフトウェアアップデート管理システム）</strong>は「Software Update Management System」の略称・通称",
-    "UN R156で要求される、車両ソフトウェアの更新を安全に管理するためのシステム。OTAを含む全更新プロセスを対象。",
-    "たとえるなら「クルマのソフトウェアを「安全にアップデート」する管理体制。スマホのOS更新を厳格に管理する仕組み」"
-  ],
-  "relatedTerms": [],
+  "summary": "SUMS（Software Update Management System）は、UN R156が要求するソフトウェア更新管理体制。OTAとリコール更新の両方を包含。\n\n■ 技術解説\n更新対象ソフトの特定→影響分析（安全・法規）→更新パッケージ作成→配信→車両側適用→結果確認の全プロセスを管理。RxSWIN変更時は認可当局への届出が必要\n\n■ 業界・OEM視点\nCSMS認証とセットでSUMS認証が必要。OEMのソフト開発・配信プラットフォーム基盤の設計に直結する",
   "termLinks": {
+    "CSMS": "csms",
+    "多層防御": "defense-in-depth",
+    "ISO/SAE 21434": "iso-sae-21434",
+    "RxSWIN": "rxswin",
+    "UN R155": "un-r155",
     "UN R156": "un-r156"
-  }
+  },
+  "date": "2026-04-06"
 }

@@ -1,38 +1,59 @@
 {
   "id": "vlan-separation",
-  "name": "ネットワーク分離（VLAN/ゾーン分割）",
-  "reading": "ネットワークブンリ",
-  "fullName": "Network Segmentation / VLAN",
+  "name": "VLAN分離",
+  "reading": "ブイランブンリ",
+  "fullName": "VLAN Separation",
   "aliases": [],
-  "oneLiner": "車載ネットワークを機能別ゾーンに分割し、攻撃が一箇所から全体へ広がることを防ぐ設計手法。ゲートウェイECUで通信を制御する。",
-  "date": "2026-03-14",
+  "oneLiner": "車載Ethernet上でVLANタグにより通信ドメインを論理分離するセキュリティ手法。",
+  "category": "cybersecurity",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>ネットワーク分離（VLAN/ゾーン分割）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+      "speaker": "user",
+      "text": "VLAN分離って何？車のサイバーセキュリティでどう重要なの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>ネットワーク分離（VLAN/ゾーン分割）</strong>（Network Segmentation / VLAN）は、車載ネットワークを機能別ゾーンに分割し、攻撃が一箇所から全体へ広がることを防ぐ設計手法。ゲートウェイECUで通信を制御する。<br><br>たとえるなら、<strong>社内ネットワークを部署ごとに区切るように、車載ネットワークも「区画」に分けて被害拡大を防ぐ</strong>みたいなものだね。"
+      "speaker": "assistant",
+      "text": "VLAN分離（VLAN Separation）は、車載Ethernet上でVLANタグにより通信ドメインを論理分離するセキュリティ手法。 たとえると「ネットワークを「区画分け」して被害を封じ込める」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+      "speaker": "user",
+      "text": "もう少し技術的に詳しく教えて。仕組みや構成は？"
     },
     {
-      "speaker": "teacher",
-      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>ネットワーク分離（VLAN/ゾーン分割）は、その防御の重要な一部なんだよ。"
+      "speaker": "assistant",
+      "text": "IEEE 802.1Q VLANタグでIVI系・ADAS系・ボディ系等のドメインを分離。車載スイッチICがVLAN制御を担う。CAN→Ethernetへの移行に伴いネットワークセグメンテーションが実現可能に"
     },
     {
-      "speaker": "student",
-      "text": "クルマのセキュリティって奥が深いんですね。ネットワーク分離（VLAN/ゾーン分割）、しっかり覚えます！"
+      "speaker": "user",
+      "text": "UN R155やISO/SAE 21434との関係は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "マーベル・ブロードコム・NXPがEthernet SwitchICを供給。OEMはゾーンアーキテクチャ移行に合わせてVLAN設計を行う"
+    },
+    {
+      "speaker": "user",
+      "text": "実際の攻撃シナリオだとどう機能するの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "実際のサイバー攻撃では、VLAN分離は防御チェーンの重要な一環を担うよ。多層防御（Defense in Depth）の考え方でシステム全体の耐性を高めることが大切なんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "要点をまとめて。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめ：\n・定義：車載Ethernet上でVLANタグにより通信ドメインを論理分離するセキュリティ手法。\n・技術：IEEE 802.1Q VLANタグでIVI系・ADAS系・ボディ系等のドメインを分離。車載スイッチICがVLAN制御を担う。CAN→Ethernetへの移行に…\n・規制関連：マーベル・ブロードコム・NXPがEthernet SwitchICを供給。OEMはゾーンアーキテクチャ移行に合わせてVLAN設計を行う\nCSMS構築のピースとして理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>ネットワーク分離（VLAN/ゾーン分割）</strong>は「Network Segmentation / VLAN」の略称・通称",
-    "車載ネットワークを機能別ゾーンに分割し、攻撃が一箇所から全体へ広がることを防ぐ設計手法。ゲートウェイECUで通信を制御する。",
-    "たとえるなら「社内ネットワークを部署ごとに区切るように、車載ネットワークも「区画」に分けて被害拡大を防ぐ」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "VLAN分離（VLAN Separation）は、車載Ethernet上でVLANタグにより通信ドメインを論理分離するセキュリティ手法。\n\n■ 技術解説\nIEEE 802.1Q VLANタグでIVI系・ADAS系・ボディ系等のドメインを分離。車載スイッチICがVLAN制御を担う。CAN→Ethernetへの移行に伴いネットワークセグメンテーションが実現可能に\n\n■ 業界・OEM視点\nマーベル・ブロードコム・NXPがEthernet SwitchICを供給。OEMはゾーンアーキテクチャ移行に合わせてVLAN設計を行う",
+  "termLinks": {
+    "CSMS": "csms",
+    "多層防御": "defense-in-depth",
+    "ISO/SAE 21434": "iso-sae-21434",
+    "UN R155": "un-r155"
+  },
+  "date": "2026-04-06"
 }

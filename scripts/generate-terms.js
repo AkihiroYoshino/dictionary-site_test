@@ -1,286 +1,234 @@
-#!/usr/bin/env node
 /**
- * 記事自動生成スクリプト
- * Usage: node scripts/generate-terms.js [all]
+ * 対話で学ぶ くるま🚙用語辞典 - 用語自動生成スクリプト v2
+ * 10メッセージ（5往復）のOEMエンジニア向け対話を生成
  *
- * 7カテゴリ100件の記事を一括生成
- * 例: node scripts/generate-terms.js all → 全件生成
+ * 使い方: node scripts/generate-terms.js all
  */
 
 const fs = require('fs');
 const path = require('path');
+const { CATS } = require('./data/term-factory');
 
-const TERMS_DIR = path.join(__dirname, '..', 'data', 'terms');
-const HTML_DIR = path.join(__dirname, '..', 'terms');
-const BATCH_SIZE = 100;
+// データファイル読み込み
+const dataSources = {
+  'auto-parts':        () => require('./data/auto-parts'),
+  'powertrain':        () => require('./data/powertrain'),
+  'manufacturer':      () => require('./data/manufacturers'),
+  'regulation':        () => require('./data/regulations'),
+  'cybersecurity':     () => require('./data/cybersecurity'),
+  'functional-safety': () => require('./data/functional-safety'),
+  'diagnostic':        () => require('./data/diagnostic'),
+};
 
-// カテゴリ別データを読み込む（7カテゴリ）
-const autoParts = require('./data/auto-parts');
-const powertrain = require('./data/powertrain');
-const manufacturers = require('./data/manufacturers');
-const regulations = require('./data/regulations');
-const cybersecurity = require('./data/cybersecurity');
-const functionalSafety = require('./data/functional-safety');
-const diagnostic = require('./data/diagnostic');
+const TERMS_DIR   = path.join(__dirname, '..', 'data', 'terms');
+const HTML_DIR    = path.join(__dirname, '..', 'terms');
 
-// 全用語を結合
-const allTerms = [
-  ...autoParts,
-  ...powertrain,
-  ...manufacturers,
-  ...regulations,
-  ...cybersecurity,
-  ...functionalSafety,
-  ...diagnostic,
-];
-
-console.log(`Total terms defined: ${allTerms.length}`);
-
-// ============================================================
-// 対話テンプレート生成関数
-// ============================================================
+// ----- 対話生成（10メッセージ） -----
 
 function generateDialogue(term) {
-  const templates = {
-    'auto-parts': genAutoPartsDialogue,
-    'powertrain': genPowertrainDialogue,
-    'manufacturer': genManufacturerDialogue,
-    'regulation': genRegulationDialogue,
-    'cybersecurity': genCybersecurityDialogue,
-    'functional-safety': genFunctionalSafetyDialogue,
-    'diagnostic': genDiagnosticDialogue,
-  };
-  const fn = templates[term.category] || genGenericDialogue;
-  return fn(term);
+  const cat = term.category;
+  const gen = dialogueGenerators[cat] || dialogueGenerators._default;
+  return gen(term);
 }
 
-function genAutoPartsDialogue(t) {
-  return [
-    { speaker: "student", text: `先生、「<strong>${t.name}</strong>」ってクルマのどこに使われている部品なんですか？` },
-    { speaker: "teacher", text: `いい質問だね！<strong>${t.name}</strong>${t.fullName ? '（' + t.fullName + '）' : ''}は、${t.desc}<br><br>たとえるなら、<strong>${t.analogy}</strong>みたいなものだよ。` },
-    { speaker: "student", text: `なるほど！じゃあ、もし${t.name}が壊れたり劣化したりしたらどうなるんですか？` },
-    { speaker: "teacher", text: `${t.impact || t.name + 'が正常に機能しないと、クルマの性能や安全性に大きく影響する'}んだ。<br><br>だから定期的な点検や整備がとても大切なんだよ。` },
-    { speaker: "student", text: `${t.name}って思った以上に重要な部品なんですね！覚えておきます！` }
-  ];
+const dialogueGenerators = {
+
+  'auto-parts': (t) => [
+    { speaker: 'user',      text: `${t.name}って何？自動車のどこに使われてるの？` },
+    { speaker: 'assistant', text: `${t.name}（${t.fullName}）は、${t.oneLiner} 身近なたとえで言うと「${t.analogy}」のようなものだよ。` },
+    { speaker: 'user',      text: `なるほど。もう少し技術的に教えて。どんな種類や構造があるの？` },
+    { speaker: 'assistant', text: `${t.desc}` },
+    { speaker: 'user',      text: `OEMの開発現場ではどういう位置づけなの？` },
+    { speaker: 'assistant', text: `${t.impact}` },
+    { speaker: 'user',      text: `EV化や電動化で、この部品はどう変わっていくの？` },
+    { speaker: 'assistant', text: `電動化の流れで${t.name}にも変革が求められているよ。軽量化・高効率化・システム統合が大きなトレンドで、従来のICE前提の設計からEV/HEV最適設計への移行が進んでいるんだ。` },
+    { speaker: 'user',      text: `まとめると、${t.name}のポイントは？` },
+    { speaker: 'assistant', text: `まとめるとこうだよ：\n・基本：${t.oneLiner}\n・技術：${_short(t.desc)}\n・OEM視点：${_short(t.impact)}\n開発者として押さえておくべき重要部品だね。` },
+  ],
+
+  'powertrain': (t) => [
+    { speaker: 'user',      text: `${t.name}（${t.fullName}）って何？パワートレイン全体のどこに位置するの？` },
+    { speaker: 'assistant', text: `${t.name}は、${t.oneLiner} たとえると「${t.analogy}」だね。` },
+    { speaker: 'user',      text: `動作原理や仕組みをもう少し詳しく知りたい。` },
+    { speaker: 'assistant', text: `${t.desc}` },
+    { speaker: 'user',      text: `OEMやサプライヤーではどう扱われてるの？` },
+    { speaker: 'assistant', text: `${t.impact}` },
+    { speaker: 'user',      text: `電動化やカーボンニュートラルの文脈だとどう変わる？` },
+    { speaker: 'assistant', text: `電動化の中で${t.name}は形を変えながらも重要性を維持しているよ。HEV→BEV→FCEVの各パワートレイン構成で、技術の組み合わせ方が変わるんだ。` },
+    { speaker: 'user',      text: `エンジニアとして覚えておくべきポイントは？` },
+    { speaker: 'assistant', text: `要点をまとめるよ：\n・定義：${t.oneLiner}\n・技術ポイント：${_short(t.desc)}\n・業界動向：${_short(t.impact)}\nパワートレイン設計の基礎として押さえておこう。` },
+  ],
+
+  'manufacturer': (t) => [
+    { speaker: 'user',      text: `${t.name}ってどんなグループ？` },
+    { speaker: 'assistant', text: `${t.name}は、${t.oneLiner} 言い換えると「${t.analogy}」だね。` },
+    { speaker: 'user',      text: `グループの構成はどうなっているの？` },
+    { speaker: 'assistant', text: `${t.desc}` },
+    { speaker: 'user',      text: `技術的な特徴や強みは？` },
+    { speaker: 'assistant', text: `${t.impact}` },
+    { speaker: 'user',      text: `サプライチェーンの観点で特筆すべきことは？` },
+    { speaker: 'assistant', text: `${t.name}はグループ内でのサプライチェーン垂直統合が大きな特徴だよ。キー部品の内製率が高く、品質管理と原価低減を同時に実現する体制を構築しているんだ。` },
+    { speaker: 'user',      text: `まとめると？` },
+    { speaker: 'assistant', text: `まとめ：\n・概要：${t.oneLiner}\n・構成：${_short(t.desc)}\n・技術の強み：${_short(t.impact)}\nOEMエンジニアとしてグループの技術DNA理解は重要だよ。` },
+  ],
+
+  'regulation': (t) => [
+    { speaker: 'user',      text: `${t.name}って何？どんな規制・規格なの？` },
+    { speaker: 'assistant', text: `${t.name}（${t.fullName}）は、${t.oneLiner} たとえると「${t.analogy}」だよ。` },
+    { speaker: 'user',      text: `具体的な内容や要件を教えて。` },
+    { speaker: 'assistant', text: `${t.desc}` },
+    { speaker: 'user',      text: `OEMの開発にはどう影響するの？` },
+    { speaker: 'assistant', text: `${t.impact}` },
+    { speaker: 'user',      text: `対応しないとどうなるの？時間軸は？` },
+    { speaker: 'assistant', text: `法規は型式認可や市場投入の前提条件なので、対応しないと新車を販売できないよ。計画的な対応と認可当局との事前調整が重要だね。` },
+    { speaker: 'user',      text: `エンジニアとしてのポイントを整理して。` },
+    { speaker: 'assistant', text: `ポイント整理：\n・概要：${t.oneLiner}\n・要件：${_short(t.desc)}\n・OEM影響：${_short(t.impact)}\n法規動向は車両開発日程に直結するので常にウォッチしよう。` },
+  ],
+
+  'cybersecurity': (t) => [
+    { speaker: 'user',      text: `${t.name}って何？車のサイバーセキュリティでどう重要なの？` },
+    { speaker: 'assistant', text: `${t.name}（${t.fullName}）は、${t.oneLiner} たとえると「${t.analogy}」だよ。` },
+    { speaker: 'user',      text: `もう少し技術的に詳しく教えて。仕組みや構成は？` },
+    { speaker: 'assistant', text: `${t.desc}` },
+    { speaker: 'user',      text: `UN R155やISO/SAE 21434との関係は？` },
+    { speaker: 'assistant', text: `${t.impact}` },
+    { speaker: 'user',      text: `実際の攻撃シナリオだとどう機能するの？` },
+    { speaker: 'assistant', text: `実際のサイバー攻撃では、${t.name}は防御チェーンの重要な一環を担うよ。多層防御（Defense in Depth）の考え方でシステム全体の耐性を高めることが大切なんだ。` },
+    { speaker: 'user',      text: `要点をまとめて。` },
+    { speaker: 'assistant', text: `まとめ：\n・定義：${t.oneLiner}\n・技術：${_short(t.desc)}\n・規制関連：${_short(t.impact)}\nCSMS構築のピースとして理解しておこう。` },
+  ],
+
+  'functional-safety': (t) => [
+    { speaker: 'user',      text: `${t.name}って何？機能安全でどういう役割？` },
+    { speaker: 'assistant', text: `${t.name}（${t.fullName}）は、${t.oneLiner} たとえると「${t.analogy}」だよ。` },
+    { speaker: 'user',      text: `ISO 26262での位置づけをもう少し詳しく教えて。` },
+    { speaker: 'assistant', text: `${t.desc}` },
+    { speaker: 'user',      text: `具体的にOEMの開発ではどう使われるの？` },
+    { speaker: 'assistant', text: `${t.impact}` },
+    { speaker: 'user',      text: `ADAS/自動運転が進む中での重要度はどう変わる？` },
+    { speaker: 'assistant', text: `ADAS/ADの高度化に伴い${t.name}の重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。` },
+    { speaker: 'user',      text: `エンジニアとして押さえるポイントは？` },
+    { speaker: 'assistant', text: `要点：\n・定義：${t.oneLiner}\n・ISO 26262での位置づけ：${_short(t.desc)}\n・開発現場：${_short(t.impact)}\n安全設計の基盤として確実に理解しておこう。` },
+  ],
+
+  'diagnostic': (t) => [
+    { speaker: 'user',      text: `${t.name}って何？UDSのどこに位置するの？` },
+    { speaker: 'assistant', text: `${t.name}（${t.fullName}）は、${t.oneLiner} たとえると「${t.analogy}」だよ。` },
+    { speaker: 'user',      text: `プロトコルの詳細を教えて。どんなパラメータがあるの？` },
+    { speaker: 'assistant', text: `${t.desc}` },
+    { speaker: 'user',      text: `OEMの量産開発やディーラー診断でどう使うの？` },
+    { speaker: 'assistant', text: `${t.impact}` },
+    { speaker: 'user',      text: `セキュリティや安全性の観点で注意点は？` },
+    { speaker: 'assistant', text: `診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。` },
+    { speaker: 'user',      text: `ポイントをまとめて。` },
+    { speaker: 'assistant', text: `まとめ：\n・定義：${t.oneLiner}\n・プロトコル：${_short(t.desc)}\n・実務：${_short(t.impact)}\nUDS理解は車両診断・リプロ・OTAの基盤だね。` },
+  ],
+
+  _default: (t) => [
+    { speaker: 'user',      text: `${t.name}って何？` },
+    { speaker: 'assistant', text: `${t.name}は、${t.oneLiner} たとえると「${t.analogy}」だよ。` },
+    { speaker: 'user',      text: `詳しく教えて。` },
+    { speaker: 'assistant', text: `${t.desc}` },
+    { speaker: 'user',      text: `開発現場での影響は？` },
+    { speaker: 'assistant', text: `${t.impact}` },
+    { speaker: 'user',      text: `今後の動向は？` },
+    { speaker: 'assistant', text: `今後もこの分野は変化が続くので、最新動向のキャッチアップが重要だよ。` },
+    { speaker: 'user',      text: `まとめて。` },
+    { speaker: 'assistant', text: `要点：\n・${t.oneLiner}\n・${_short(t.desc)}\n・${_short(t.impact)}` },
+  ],
+};
+
+function _short(s) {
+  if (!s) return '';
+  return s.length > 80 ? s.substring(0, 80) + '…' : s;
 }
 
-function genPowertrainDialogue(t) {
-  return [
-    { speaker: "student", text: `先生、「<strong>${t.name}</strong>」って何ですか？パワートレインに関係あるって聞いたんですけど…` },
-    { speaker: "teacher", text: `そうだよ！<strong>${t.name}</strong>${t.fullName ? '（' + t.fullName + '）' : ''}は、${t.desc}<br><br>わかりやすく言うと、<strong>${t.analogy}</strong>ようなイメージだね。` },
-    { speaker: "student", text: `へぇ〜！じゃあ、${t.name}はクルマの走りにどう影響するんですか？` },
-    { speaker: "teacher", text: `${t.impact || t.name + 'は、クルマの走行性能・燃費・環境性能に直結する重要な技術'}なんだ。<br><br>最近のクルマはどんどん進化していて、${t.name}の技術も日々進歩しているんだよ。` },
-    { speaker: "student", text: `${t.name}のおかげでクルマが進化してるんですね！すごいなぁ！` }
-  ];
-}
-
-function genManufacturerDialogue(t) {
-  return [
-    { speaker: "student", text: `先生、「<strong>${t.name}</strong>」ってどんな会社なんですか？` },
-    { speaker: "teacher", text: `<strong>${t.name}</strong>${t.fullName ? '（' + t.fullName + '）' : ''}は、${t.desc}<br><br>自動車業界では、<strong>${t.analogy}</strong>のような存在なんだ。` },
-    { speaker: "student", text: `すごいですね！具体的にはどんな製品やサービスを提供しているんですか？` },
-    { speaker: "teacher", text: `${t.impact || t.name + 'は自動車産業において非常に重要な役割を果たしている'}よ。<br><br>世界中の自動車メーカーや部品メーカーと協力して、より良いクルマづくりに貢献しているんだ。` },
-    { speaker: "student", text: `${t.name}って自動車業界になくてはならない存在なんですね！` }
-  ];
-}
-
-function genRegulationDialogue(t) {
-  return [
-    { speaker: "student", text: `先生、「<strong>${t.name}</strong>」ってどんな法規・規格なんですか？` },
-    { speaker: "teacher", text: `<strong>${t.name}</strong>${t.fullName ? '（' + t.fullName + '）' : ''}は、${t.desc}<br><br>たとえるなら、<strong>${t.analogy}</strong>のようなものだよ。` },
-    { speaker: "student", text: `なるほど。なぜこの規制・規格が必要なんですか？` },
-    { speaker: "teacher", text: `${t.impact || 'この規格があることで、クルマの安全性や環境性能が確保される'}んだ。<br><br>世界中のクルマが一定の基準を満たすことで、私たちの安全と環境が守られているんだよ。` },
-    { speaker: "student", text: `法規や規格って、私たちの安全を守るためにとても大切なんですね！` }
-  ];
-}
-
-function genCybersecurityDialogue(t) {
-  return [
-    { speaker: "student", text: `先生、「<strong>${t.name}</strong>」ってサイバーセキュリティでどういう意味ですか？` },
-    { speaker: "teacher", text: `<strong>${t.name}</strong>${t.fullName ? '（' + t.fullName + '）' : ''}は、${t.desc}<br><br>たとえるなら、<strong>${t.analogy}</strong>みたいなものだね。` },
-    { speaker: "student", text: `クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？` },
-    { speaker: "teacher", text: `${t.impact || '現代のコネクテッドカーは常にネットワークに接続されているから、サイバー攻撃から守る仕組みが不可欠'}なんだ。<br><br>${t.name}は、その防御の重要な一部なんだよ。` },
-    { speaker: "student", text: `クルマのセキュリティって奥が深いんですね。${t.name}、しっかり覚えます！` }
-  ];
-}
-
-function genFunctionalSafetyDialogue(t) {
-  return [
-    { speaker: "student", text: `先生、「<strong>${t.name}</strong>」って機能安全でどういう意味があるんですか？` },
-    { speaker: "teacher", text: `<strong>${t.name}</strong>${t.fullName ? '（' + t.fullName + '）' : ''}は、${t.desc}<br><br>たとえるなら、<strong>${t.analogy}</strong>みたいなものだよ。` },
-    { speaker: "student", text: `なるほど。なぜ機能安全でこれが重要なんですか？` },
-    { speaker: "teacher", text: `${t.impact || 'この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術'}なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。` },
-    { speaker: "student", text: `機能安全って奥が深いんですね。${t.name}、しっかり覚えます！` }
-  ];
-}
-
-function genDiagnosticDialogue(t) {
-  return [
-    { speaker: "student", text: `先生、「<strong>${t.name}</strong>」って診断通信でどういう役割があるんですか？` },
-    { speaker: "teacher", text: `<strong>${t.name}</strong>${t.fullName ? '（' + t.fullName + '）' : ''}は、${t.desc}<br><br>たとえるなら、<strong>${t.analogy}</strong>みたいなイメージだね。` },
-    { speaker: "student", text: `へぇ！具体的にはどういう場面で使うんですか？` },
-    { speaker: "teacher", text: `${t.impact || t.name + 'は、クルマの故障診断やメンテナンスの現場で欠かせない技術'}なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。` },
-    { speaker: "student", text: `診断通信って、クルマの「健康診断」みたいなものなんですね！${t.name}、よく分かりました！` }
-  ];
-}
-
-function genGenericDialogue(t) {
-  return [
-    { speaker: "student", text: `先生、「<strong>${t.name}</strong>」って何ですか？` },
-    { speaker: "teacher", text: `<strong>${t.name}</strong>は、${t.desc}<br><br>イメージとしては、<strong>${t.analogy}</strong>みたいなものだよ。` },
-    { speaker: "student", text: `なるほど！もう少し詳しく教えてください！` },
-    { speaker: "teacher", text: `${t.impact || t.name + 'は自動車技術において重要な役割を持っている'}んだ。` },
-    { speaker: "student", text: `${t.name}、よく分かりました！ありがとうございます！` }
-  ];
-}
-
-// ============================================================
-// サマリー生成
-// ============================================================
+// ----- サマリー生成 -----
 
 function generateSummary(term) {
-  const s = [];
-  if (term.fullName && term.fullName !== term.name) {
-    s.push(`<strong>${term.name}</strong>は「${term.fullName}」の略称・通称`);
-  } else {
-    s.push(`<strong>${term.name}</strong>：${term.oneLiner}`);
-  }
-  s.push(term.desc.replace(/<[^>]+>/g, '').substring(0, 80));
-  if (term.analogy) s.push(`たとえるなら「${term.analogy.replace(/<[^>]+>/g, '')}」`);
-  if (term.keyPoints && term.keyPoints.length > 0) {
-    for (const kp of term.keyPoints) {
-      s.push(kp);
-    }
-  }
-  return s.slice(0, 5);
+  return `${term.name}（${term.fullName}）は、${term.oneLiner}\n\n` +
+    `■ 技術解説\n${term.desc}\n\n` +
+    `■ 業界・OEM視点\n${term.impact}`;
 }
 
-// ============================================================
-// JSON / HTML ファイル生成
-// ============================================================
+// ----- JSON/HTML 出力 -----
 
-function generateTermJSON(term, index) {
-  // 日付を通番から生成（2026-01-01から1日ずつ進める）
-  const baseDate = new Date('2026-01-01');
-  baseDate.setDate(baseDate.getDate() + index);
-  const dateStr = term.date || baseDate.toISOString().split('T')[0];
-
-  return {
+function writeTermJSON(term, dialogue, summary) {
+  const today = new Date().toISOString().slice(0, 10);
+  const data = {
     id: term.id,
     name: term.name,
     reading: term.reading,
-    fullName: term.fullName || '',
+    fullName: term.fullName,
     aliases: term.aliases || [],
     oneLiner: term.oneLiner,
-    date: dateStr,
-    dialogue: generateDialogue(term),
-    summary: generateSummary(term),
-    relatedTerms: (term.related || []).map(rid => {
-      const found = allTerms.find(t => t.id === rid);
-      return { name: found ? found.name : rid, id: rid };
-    }),
-    termLinks: {}
+    category: term.category,
+    dialogue,
+    summary,
+    termLinks: {},
+    date: today,
   };
+  const outPath = path.join(TERMS_DIR, `${term.id}.json`);
+  fs.writeFileSync(outPath, JSON.stringify(data, null, 2), 'utf-8');
+  return outPath;
 }
 
-function generateTermHTML(term) {
-  const title = `${term.name}とは？`;
-  const desc = `${term.name}（${term.reading}）を先生と生徒の対話形式でやさしく解説。${term.oneLiner}`;
-  return `<!DOCTYPE html>
+function writeTermHTML(term) {
+  const html = `<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>${title} - 対話で学ぶ くるま🚙用語辞典</title>
-  <meta name="description" content="${desc.replace(/"/g, '&quot;')}">
-  <meta name="keywords" content="${term.name},${term.reading},用語,解説">
-  <meta property="og:title" content="${title} - 対話で学ぶ くるま🚙用語辞典">
-  <meta property="og:description" content="${term.name}を対話形式でやさしく解説。初心者でも「なるほど！」と分かります。">
-  <meta property="og:type" content="article">
-  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${term.name} - 対話で学ぶ くるま🚙用語辞典</title>
+  <meta name="description" content="${term.oneLiner}">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <div id="app" data-page="term" data-term-id="${term.id}"></div>
-  <script src="../js/main.js"></script>
+  <div id="app"></div>
+  <script src="../js/main.js"><\/script>
 </body>
 </html>`;
+  const outPath = path.join(HTML_DIR, `${term.id}.html`);
+  fs.writeFileSync(outPath, html, 'utf-8');
+  return outPath;
 }
 
-// ============================================================
-// バッチ処理
-// ============================================================
+// ----- メイン -----
 
-function runBatch(batchNum) {
-  const start = (batchNum - 1) * BATCH_SIZE;
-  const end = Math.min(start + BATCH_SIZE, allTerms.length);
-
-  if (start >= allTerms.length) {
-    console.log(`Batch ${batchNum}: 対象なし (全${allTerms.length}件)`);
-    return 0;
+function generateCategory(catKey) {
+  const loader = dataSources[catKey];
+  if (!loader) { console.error(`カテゴリ不明: ${catKey}`); return []; }
+  const terms = loader();
+  const results = [];
+  for (const t of terms) {
+    const dialogue = generateDialogue(t);
+    const summary = generateSummary(t);
+    writeTermJSON(t, dialogue, summary);
+    writeTermHTML(t);
+    results.push(t.id);
   }
-
-  const batch = allTerms.slice(start, end);
-
-  console.log(`\n${'='.repeat(50)}`);
-  console.log(`バッチ ${batchNum}: 用語 ${start + 1}〜${end} を生成中...`);
-  console.log(`${'='.repeat(50)}`);
-
-  // ディレクトリ確認
-  if (!fs.existsSync(TERMS_DIR)) fs.mkdirSync(TERMS_DIR, { recursive: true });
-  if (!fs.existsSync(HTML_DIR)) fs.mkdirSync(HTML_DIR, { recursive: true });
-
-  let count = 0;
-  for (let i = 0; i < batch.length; i++) {
-    const term = batch[i];
-    const globalIndex = start + i;
-
-    // JSON生成
-    const jsonData = generateTermJSON(term, globalIndex);
-    const jsonPath = path.join(TERMS_DIR, `${term.id}.json`);
-    fs.writeFileSync(jsonPath, JSON.stringify(jsonData, null, 2), 'utf-8');
-
-    // HTML生成
-    const htmlContent = generateTermHTML(term);
-    const htmlPath = path.join(HTML_DIR, `${term.id}.html`);
-    fs.writeFileSync(htmlPath, htmlContent, 'utf-8');
-
-    count++;
-  }
-
-  console.log(`✓ ${count}件の用語を生成しました`);
-  console.log(`  JSON: ${TERMS_DIR}`);
-  console.log(`  HTML: ${HTML_DIR}`);
-
-  // カテゴリ別集計
-  const catCount = {};
-  for (const t of batch) {
-    catCount[t.category] = (catCount[t.category] || 0) + 1;
-  }
-  console.log(`  カテゴリ別: ${JSON.stringify(catCount)}`);
-
-  return count;
+  return results;
 }
 
-// ============================================================
-// メイン
-// ============================================================
+function run() {
+  const arg = process.argv[2] || 'all';
 
-const arg = process.argv[2] || 'all';
+  // ディレクトリ確保
+  [TERMS_DIR, HTML_DIR].forEach(d => { if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true }); });
 
-if (arg === 'all') {
-  const totalBatches = Math.ceil(allTerms.length / BATCH_SIZE);
   let total = 0;
-  for (let i = 1; i <= totalBatches; i++) {
-    total += runBatch(i);
+  if (arg === 'all') {
+    for (const cat of Object.keys(dataSources)) {
+      const ids = generateCategory(cat);
+      console.log(`[${CATS[cat]?.label || cat}] ${ids.length}件 生成`);
+      total += ids.length;
+    }
+  } else {
+    const ids = generateCategory(arg);
+    console.log(`[${CATS[arg]?.label || arg}] ${ids.length}件 生成`);
+    total = ids.length;
   }
-  console.log(`\n全${total}件の生成が完了しました。`);
-} else {
-  const batchNum = parseInt(arg);
-  if (isNaN(batchNum) || batchNum < 1) {
-    console.log('Usage: node scripts/generate-terms.js [batch_number|all]');
-    console.log('  batch_number: 1〜' + Math.ceil(allTerms.length / BATCH_SIZE));
-    process.exit(1);
-  }
-  runBatch(batchNum);
+  console.log(`\n合計 ${total}件の用語を生成しました。`);
 }
+
+run();

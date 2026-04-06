@@ -1,174 +1,30 @@
 [
   {
-    "id": "negative-response",
-    "name": "NRC（否定応答コード）",
-    "reading": "エヌアールシー",
-    "fullName": "Negative Response Code",
+    "id": "1958-agreement",
+    "name": "1958年協定",
+    "reading": "センキュウヒャクゴジュウハチネンキョウテイ",
+    "fullName": "Agreement of 1958 (UNECE)",
     "aliases": [],
-    "oneLiner": "UDSでECUがサービス要求を拒否したときに返す応答コード。SID 0x7Fで返され、原因を示すNRCコード（0x12:サブファンクション無効、0x31:範囲外等）が含まれる。",
-    "date": "2026-04-10"
-  },
-  {
-    "id": "sid-0x3e",
-    "name": "SID 0x3E（TesterPresent）",
-    "reading": "エスアイディーゼロエックスサンイー",
-    "fullName": "TesterPresent (SID 0x3E)",
-    "aliases": [],
-    "oneLiner": "診断ツールがまだ接続中であることをECUに知らせるキープアライブ信号。これを定期的に送らないとECUがデフォルトセッションに戻る。",
-    "date": "2026-04-09"
-  },
-  {
-    "id": "sid-0x34-36-37",
-    "name": "SID 0x34/0x36/0x37（ダウンロード転送）",
-    "reading": "エスアイディーゼロエックスサンヨン",
-    "fullName": "RequestDownload / TransferData / RequestTransferExit",
-    "aliases": [],
-    "oneLiner": "ECUへのプログラム書換え（リプログ）に使われるサービス群。0x34で転送開始要求、0x36でデータ送信、0x37で転送完了を行う。",
-    "date": "2026-04-08"
-  },
-  {
-    "id": "sid-0x31",
-    "name": "SID 0x31（RoutineControl）",
-    "reading": "エスアイディーゼロエックスサンジュウイチ",
-    "fullName": "RoutineControl (SID 0x31)",
-    "aliases": [],
-    "oneLiner": "ECU内部で特定のルーチン（処理）を開始・停止・結果取得するサービス。自己診断テスト・消去処理・学習値リセット等に使用。",
-    "date": "2026-04-07"
-  },
-  {
-    "id": "sid-0x2e",
-    "name": "SID 0x2E（WriteDataByIdentifier）",
-    "reading": "エスアイディーゼロエックスニジュウハチイー",
-    "fullName": "WriteDataByIdentifier (SID 0x2E)",
-    "aliases": [],
-    "oneLiner": "DID（データ識別子）を指定してECUにデータを書き込むサービス。VIN書込み・校正データ変更・オプション設定等に使用。通常はセキュリティアクセスが前提。",
+    "oneLiner": "車両の型式認可を締約国間で相互承認する国際協定。UN規則の法的根拠。",
     "date": "2026-04-06"
   },
   {
-    "id": "sid-0x27",
-    "name": "SID 0x27（SecurityAccess）",
-    "reading": "エスアイディーゼロエックスニジュウナナ",
-    "fullName": "SecurityAccess (SID 0x27)",
+    "id": "48v-mild-hybrid",
+    "name": "48Vマイルドハイブリッド",
+    "reading": "ヨンジュウハチボルトマイルドハイブリッド",
+    "fullName": "48V Mild Hybrid",
     "aliases": [],
-    "oneLiner": "ECUの保護された機能にアクセスするためのチャレンジ・レスポンス認証サービス。シードを受け取り、正しいキーを返すことで認証される。",
-    "date": "2026-04-05"
+    "oneLiner": "ISG+Li-ion電池でアイドリングストップ・回生・トルクアシストを行う簡易HEV。",
+    "date": "2026-04-06"
   },
   {
-    "id": "sid-0x22",
-    "name": "SID 0x22（ReadDataByIdentifier）",
-    "reading": "エスアイディーゼロエックスニジュウニ",
-    "fullName": "ReadDataByIdentifier (SID 0x22)",
+    "id": "agves",
+    "name": "AGVES",
+    "reading": "エージーブイイーエス",
+    "fullName": "Advisory Group on Vehicle-Environment-Safety",
     "aliases": [],
-    "oneLiner": "DID（データ識別子）を指定してECU内部のデータを読み出すサービス。車速・回転数・電圧等のリアルタイムデータや車台番号等を取得する。",
-    "date": "2026-04-04"
-  },
-  {
-    "id": "sid-0x19",
-    "name": "SID 0x19（ReadDTCInformation）",
-    "reading": "エスアイディーゼロエックスジュウキュウ",
-    "fullName": "ReadDTCInformation (SID 0x19)",
-    "aliases": [],
-    "oneLiner": "ECUに記録された故障コード（DTC）を読み出すサービス。サブファンクションで現在DTC・確定DTC・スナップショット等を指定する。",
-    "date": "2026-04-03"
-  },
-  {
-    "id": "sid-0x14",
-    "name": "SID 0x14（ClearDiagnosticInformation）",
-    "reading": "エスアイディーゼロエックスジュウヨン",
-    "fullName": "ClearDiagnosticInformation (SID 0x14)",
-    "aliases": [],
-    "oneLiner": "ECUに保存されたDTC（故障コード）やフリーズフレームデータを消去するサービス。整備後のリセットで使用する。",
-    "date": "2026-04-02"
-  },
-  {
-    "id": "sid-0x11",
-    "name": "SID 0x11（ECUReset）",
-    "reading": "エスアイディーゼロエックスジュウイチ",
-    "fullName": "ECUReset (SID 0x11)",
-    "aliases": [],
-    "oneLiner": "ECUをリセット（再起動）するサービス。ハードリセット・キーオフオンリセット・ソフトリセットの3種類がある。",
-    "date": "2026-04-01"
-  },
-  {
-    "id": "sid-0x10",
-    "name": "SID 0x10（DiagnosticSessionControl）",
-    "reading": "エスアイディーゼロエックスジュウ",
-    "fullName": "DiagnosticSessionControl (SID 0x10)",
-    "aliases": [],
-    "oneLiner": "UDSの診断セッションを切り替えるサービス。デフォルトセッション→拡張セッション→プログラミングセッション等を制御する。",
-    "date": "2026-03-31"
-  },
-  {
-    "id": "uds",
-    "name": "UDS（統一診断サービス）",
-    "reading": "ユーディーエス",
-    "fullName": "Unified Diagnostic Services (ISO 14229)",
-    "aliases": [],
-    "oneLiner": "自動車のECU診断通信の国際規格。SID（サービスID）で定義される各種診断サービスを用いて、ECUの状態取得・設定変更・プログラム書換等を行う。",
-    "date": "2026-03-30"
-  },
-  {
-    "id": "sotif",
-    "name": "SOTIF（意図した機能の安全性）",
-    "reading": "ソティフ",
-    "fullName": "Safety of the Intended Functionality (ISO 21448)",
-    "aliases": [],
-    "oneLiner": "故障のない状態でも、センサー認識限界やアルゴリズムの不十分さが引き起こすハザードに対処する規格。ISO 26262が故障起因なのに対し、SOTIFは性能限界起因の安全を扱う。",
-    "date": "2026-03-29"
-  },
-  {
-    "id": "freedom-from-interference",
-    "name": "FFI（干渉からの自由）",
-    "reading": "エフエフアイ",
-    "fullName": "Freedom From Interference",
-    "aliases": [],
-    "oneLiner": "異なるASILの要素間で、低ASIL側の故障が高ASIL側に悪影響を及ぼさないことを保証する設計概念。メモリ保護やタイミング保護で実現。",
-    "date": "2026-03-28"
-  },
-  {
-    "id": "safety-case",
-    "name": "セーフティケース",
-    "reading": "セーフティケース",
-    "fullName": "Safety Case",
-    "aliases": [],
-    "oneLiner": "安全性が十分に確保されていることを論理的に主張するための構造化された文書。証拠・主張・論拠の3要素で構成される（GSN記法が一般的）。",
-    "date": "2026-03-27"
-  },
-  {
-    "id": "fta",
-    "name": "FTA（故障の木解析）",
-    "reading": "エフティーエー",
-    "fullName": "Fault Tree Analysis",
-    "aliases": [],
-    "oneLiner": "望ましくない事象（頂上事象）を起点に、その原因を論理ゲート（AND/OR）でツリー状に展開して分析する手法。安全分析や信頼性解析に使用。",
-    "date": "2026-03-26"
-  },
-  {
-    "id": "fmea",
-    "name": "FMEA（故障モード影響解析）",
-    "reading": "エフエムイーエー",
-    "fullName": "Failure Mode and Effects Analysis",
-    "aliases": [],
-    "oneLiner": "部品やシステムの故障モードを洗い出し、その影響と重大度・発生頻度・検出度を評価する分析手法。設計FMEA・プロセスFMEAがある。",
-    "date": "2026-03-25"
-  },
-  {
-    "id": "hara",
-    "name": "HARA（ハザード分析とリスク評価）",
-    "reading": "ハラ",
-    "fullName": "Hazard Analysis and Risk Assessment",
-    "aliases": [],
-    "oneLiner": "ISO 26262のPart 3で規定される、S値・E値・C値からASILを決定するための分析手法。各ハザードシナリオに対してリスクを体系的に評価する。",
-    "date": "2026-03-24"
-  },
-  {
-    "id": "safety-goal",
-    "name": "セーフティゴール（安全目標）",
-    "reading": "セーフティゴール",
-    "fullName": "Safety Goal",
-    "aliases": [],
-    "oneLiner": "ハザード分析の結果として設定される、最上位の安全要求。各ハザードに対するASILと共に定義され、安全設計の出発点となる。",
-    "date": "2026-03-23"
+    "oneLiner": "国土交通省の車両環境安全に関する有識者会議。国内法規へのUN規則導入を議論。",
+    "date": "2026-04-06"
   },
   {
     "id": "asil-decomposition",
@@ -176,744 +32,53 @@
     "reading": "エーシルブンカイ",
     "fullName": "ASIL Decomposition",
     "aliases": [],
-    "oneLiner": "高いASIL要件を2つ以上の独立した要素に分割して、各要素のASILを下げる手法。例：ASIL D → ASIL B(D) + ASIL B(D)。冗長設計で安全を確保する。",
-    "date": "2026-03-22"
-  },
-  {
-    "id": "controllability",
-    "name": "C値（制御可能性）",
-    "reading": "シーチ",
-    "fullName": "Controllability (C0-C3)",
-    "aliases": [],
-    "oneLiner": "ISO 26262のリスク評価パラメータの一つ。ハザードが発生した際にドライバー等が回避できる難易度をC0（一般的に制御可能）〜C3（制御困難）で分類する。",
-    "date": "2026-03-21"
-  },
-  {
-    "id": "exposure",
-    "name": "E値（暴露度）",
-    "reading": "イーチ",
-    "fullName": "Exposure (E0-E4)",
-    "aliases": [],
-    "oneLiner": "ISO 26262のリスク評価パラメータの一つ。そのハザードに遭遇する頻度をE0（ありえない）〜E4（高い確率で遭遇）で分類する。",
-    "date": "2026-03-20"
-  },
-  {
-    "id": "severity",
-    "name": "S値（重大度）",
-    "reading": "エスチ",
-    "fullName": "Severity (S0-S3)",
-    "aliases": [],
-    "oneLiner": "ISO 26262のリスク評価パラメータの一つ。ハザードが人体に与える傷害の重大度をS0（傷害なし）〜S3（生命に関わる重症/死亡）で分類する。",
-    "date": "2026-03-19"
+    "oneLiner": "ASIL要求を冗長構成で分割しサブシステムの要求レベルを下げる手法。",
+    "date": "2026-04-06"
   },
   {
     "id": "asil",
-    "name": "ASIL（自動車安全度水準）",
+    "name": "ASIL",
     "reading": "エーシル",
     "fullName": "Automotive Safety Integrity Level",
     "aliases": [],
-    "oneLiner": "ISO 26262で定義される安全度の指標。A（低）→B→C→D（最高）の4レベルがあり、リスクが大きいほど高いASILが要求される。",
-    "date": "2026-03-18"
-  },
-  {
-    "id": "iso-26262",
-    "name": "ISO 26262",
-    "reading": "アイエスオーニロクニロクニ",
-    "fullName": "ISO 26262 Road Vehicles - Functional Safety",
-    "aliases": [],
-    "oneLiner": "自動車の電気・電子（E/E）システムの機能安全に関する国際規格。ハザード分析からASIL決定、設計・検証までの安全ライフサイクルを規定する。",
-    "date": "2026-03-17"
-  },
-  {
-    "id": "fuzz-testing",
-    "name": "ファジングテスト",
-    "reading": "ファジングテスト",
-    "fullName": "Fuzz Testing / Fuzzing",
-    "aliases": [],
-    "oneLiner": "意図的に異常なデータ（不正なCANメッセージ・大量データ等）を送り込み、ECUの脆弱性やクラッシュを発見するテスト手法。",
-    "date": "2026-03-16"
-  },
-  {
-    "id": "penetration-testing",
-    "name": "ペネトレーションテスト（侵入テスト）",
-    "reading": "ペネトレーションテスト",
-    "fullName": "Penetration Testing",
-    "aliases": [],
-    "oneLiner": "実際の攻撃者の視点でシステムの脆弱性を検証するセキュリティテスト。車両・ECU・通信IFに対して実施し、対策の有効性を確認する。",
-    "date": "2026-03-15"
-  },
-  {
-    "id": "vlan-separation",
-    "name": "ネットワーク分離（VLAN/ゾーン分割）",
-    "reading": "ネットワークブンリ",
-    "fullName": "Network Segmentation / VLAN",
-    "aliases": [],
-    "oneLiner": "車載ネットワークを機能別ゾーンに分割し、攻撃が一箇所から全体へ広がることを防ぐ設計手法。ゲートウェイECUで通信を制御する。",
-    "date": "2026-03-14"
-  },
-  {
-    "id": "pki",
-    "name": "PKI（公開鍵基盤）",
-    "reading": "ピーケーアイ",
-    "fullName": "Public Key Infrastructure",
-    "aliases": [],
-    "oneLiner": "公開鍵暗号を使ったデジタル証明書の発行・管理基盤。車載セキュアOTAやV2X通信の認証に使用される。",
-    "date": "2026-03-13"
-  },
-  {
-    "id": "hsm",
-    "name": "HSM（ハードウェアセキュリティモジュール）",
-    "reading": "エイチエスエム",
-    "fullName": "Hardware Security Module",
-    "aliases": [],
-    "oneLiner": "暗号鍵の生成・保管・暗号処理を専用ハードウェアで行うセキュリティチップ。SHE、Evita Full等の車載HSM規格がある。",
-    "date": "2026-03-12"
-  },
-  {
-    "id": "secoc",
-    "name": "SecOC（Secure Onboard Communication）",
-    "reading": "セックオーシー",
-    "fullName": "Secure Onboard Communication",
-    "aliases": [],
-    "oneLiner": "AUTOSAR規格の車載通信セキュリティモジュール。CANやEthernet上のメッセージにMAC（メッセージ認証コード）を付与して改ざんを検知する。",
-    "date": "2026-03-11"
-  },
-  {
-    "id": "vehicle-soc",
-    "name": "V-SOC（車両セキュリティオペレーションセンター）",
-    "reading": "ブイソック",
-    "fullName": "Vehicle Security Operations Center",
-    "aliases": [],
-    "oneLiner": "出荷後の車両からセキュリティ情報を収集・分析し、サイバー攻撃の兆候を24時間監視するセンター。UN R155の出荷後管理に対応。",
-    "date": "2026-03-10"
-  },
-  {
-    "id": "ids-ips",
-    "name": "IDS/IPS（侵入検知/防御システム）",
-    "reading": "アイディーエスアイピーエス",
-    "fullName": "Intrusion Detection System / Intrusion Prevention System",
-    "aliases": [],
-    "oneLiner": "車載ネットワーク上の不正な通信や攻撃パターンを検知（IDS）し、必要に応じてブロック（IPS）するセキュリティシステム。",
-    "date": "2026-03-09"
-  },
-  {
-    "id": "secure-ota",
-    "name": "セキュアOTA",
-    "reading": "セキュアオーティーエー",
-    "fullName": "Secure Over-The-Air Update",
-    "aliases": [],
-    "oneLiner": "車両ソフトウェアを無線通信で安全に更新する技術。暗号化・署名検証・差分更新・ロールバック機能で安全性を確保する。",
-    "date": "2026-03-08"
-  },
-  {
-    "id": "secure-boot",
-    "name": "セキュアブート",
-    "reading": "セキュアブート",
-    "fullName": "Secure Boot",
-    "aliases": [],
-    "oneLiner": "ECU起動時にソフトウェアの改ざんがないことを暗号的に検証してから起動するセキュリティ機構。不正なプログラムの実行を防止する。",
-    "date": "2026-03-07"
-  },
-  {
-    "id": "iso-sae-21434",
-    "name": "ISO/SAE 21434",
-    "reading": "アイエスオーエスエーイーニイチヨンサンヨン",
-    "fullName": "ISO/SAE 21434 Road Vehicles - Cybersecurity Engineering",
-    "aliases": [],
-    "oneLiner": "自動車のサイバーセキュリティエンジニアリングに関する国際規格。コンセプト段階から廃棄までのセキュリティ活動を体系化。",
-    "date": "2026-03-06"
-  },
-  {
-    "id": "tara",
-    "name": "TARA（脅威分析とリスク評価）",
-    "reading": "タラ",
-    "fullName": "Threat Analysis and Risk Assessment",
-    "aliases": [],
-    "oneLiner": "車両に対するサイバー攻撃の脅威を特定し、リスクの大きさを評価して対策の優先度を決める手法。ISO/SAE 21434で規定。",
-    "date": "2026-03-05"
-  },
-  {
-    "id": "defense-in-depth",
-    "name": "多層防御（Defense in Depth）",
-    "reading": "タソウボウギョ",
-    "fullName": "Defense in Depth",
-    "aliases": [],
-    "oneLiner": "単一の防御に頼らず、ネットワーク・ホスト・アプリケーション等の各層で多重にセキュリティ対策を施すアプローチ。車載システムでは外部IF→GW→ドメイン→ECU各層で防御する。",
-    "date": "2026-03-04"
-  },
-  {
-    "id": "sums",
-    "name": "SUMS（ソフトウェアアップデート管理システム）",
-    "reading": "サムス",
-    "fullName": "Software Update Management System",
-    "aliases": [],
-    "oneLiner": "UN R156で要求される、車両ソフトウェアの更新を安全に管理するためのシステム。OTAを含む全更新プロセスを対象。",
-    "date": "2026-03-03"
-  },
-  {
-    "id": "csms",
-    "name": "CSMS（サイバーセキュリティ管理システム）",
-    "reading": "シーエスエムエス",
-    "fullName": "Cyber Security Management System",
-    "aliases": [],
-    "oneLiner": "UN R155で要求される、車両のサイバーセキュリティリスクを組織的に管理するための仕組み。開発から廃棄まで車両ライフサイクル全体をカバーする。",
-    "date": "2026-03-02"
-  },
-  {
-    "id": "api",
-    "name": "API",
-    "reading": "エーピーアイ",
-    "fullName": "Application Programming Interface",
-    "aliases": [],
-    "oneLiner": "ソフトウェア同士が会話するための「窓口」のこと。レストランの注文カウンターのようなもの。",
-    "date": "2026-03-01"
-  },
-  {
-    "id": "wltp",
-    "name": "WLTP（世界統一試験手法）",
-    "reading": "ダブリューエルティーピー",
-    "fullName": "Worldwide harmonized Light vehicles Test Procedure",
-    "aliases": [],
-    "oneLiner": "乗用車の燃費・排ガスを測定するための世界統一試験方法。実走行に近い条件で計測し、従来のNEDCより現実的。",
-    "date": "2026-03-01"
-  },
-  {
-    "id": "cookie",
-    "name": "Cookie（クッキー）",
-    "reading": "クッキー",
-    "fullName": "HTTP Cookie",
-    "aliases": [
-      "HTTPクッキー"
-    ],
-    "oneLiner": "Webサイトがブラウザに預ける小さなメモ。あなたが誰かを覚えておくための仕組み。",
-    "date": "2026-02-28"
-  },
-  {
-    "id": "gtr",
-    "name": "GTR（世界技術規則）",
-    "reading": "ジーティーアール",
-    "fullName": "Global Technical Regulation",
-    "aliases": [],
-    "oneLiner": "1998年協定に基づく世界統一技術規則。UN規則とは異なり、各国が国内法に取り込む形で運用される。",
-    "date": "2026-02-28"
-  },
-  {
-    "id": "1958-agreement",
-    "name": "1958年協定",
-    "reading": "センキュウヒャクゴジュウハチネンキョウテイ",
-    "fullName": "UNECE 1958 Agreement",
-    "aliases": [],
-    "oneLiner": "車両の型式認可の相互承認に関する国際協定。ある国で取得した型式認可を他の締約国でも認める仕組み。",
-    "date": "2026-02-27"
-  },
-  {
-    "id": "firewall",
-    "name": "ファイアウォール",
-    "reading": "ファイアウォール",
-    "fullName": "Firewall",
-    "aliases": [
-      "FW",
-      "防火壁"
-    ],
-    "oneLiner": "ネットワークの「門番」。外部からの不正アクセスをブロックするセキュリティの仕組み。",
-    "date": "2026-02-26"
-  },
-  {
-    "id": "type-approval",
-    "name": "型式認可（タイプアプルーバル）",
-    "reading": "カタシキニンカ",
-    "fullName": "Type Approval",
-    "aliases": [],
-    "oneLiner": "車両や部品が法規の要件を満たすことを認証機関が審査・承認する制度。UN規則に基づくE/eマーク認証が代表的。",
-    "date": "2026-02-26"
-  },
-  {
-    "id": "un-r160",
-    "name": "UN R160",
-    "reading": "ユーエヌアールヒャクロクジュウ",
-    "fullName": "UN Regulation No. 160 (EDR - Event Data Recorder)",
-    "aliases": [],
-    "oneLiner": "事故時の車両データ記録装置（EDR）に関する国連規則。衝突前後の速度・ブレーキ操作・シートベルト状態等を記録する要件。",
-    "date": "2026-02-25"
-  },
-  {
-    "id": "sql",
-    "name": "SQL",
-    "reading": "エスキューエル",
-    "fullName": "Structured Query Language",
-    "aliases": [
-      "シークェル"
-    ],
-    "oneLiner": "データベースに「これちょうだい」「これ追加して」とお願いするための言葉（言語）。",
-    "date": "2026-02-24"
-  },
-  {
-    "id": "un-r158",
-    "name": "UN R158",
-    "reading": "ユーエヌアールヒャクゴジュウハチ",
-    "fullName": "UN Regulation No. 158 (Reversing motion / REI)",
-    "aliases": [],
-    "oneLiner": "後退時の安全性に関する国連規則。リバースカメラやセンサー等により後方の障害物を検知する機能要件を規定。",
-    "date": "2026-02-24"
-  },
-  {
-    "id": "un-r157",
-    "name": "UN R157",
-    "reading": "ユーエヌアールヒャクゴジュウナナ",
-    "fullName": "UN Regulation No. 157 (ALKS - Automated Lane Keeping System)",
-    "aliases": [],
-    "oneLiner": "自動車線維持システム（ALKS）に関する国連規則。レベル3自動運転の国際的な型式認可基準を世界で初めて規定。",
-    "date": "2026-02-23"
-  },
-  {
-    "id": "docker",
-    "name": "Docker",
-    "reading": "ドッカー",
-    "fullName": "",
-    "aliases": [],
-    "oneLiner": "アプリを動かすための環境を「コンテナ」にまとめて、どこでも同じように動かせる技術。",
-    "date": "2026-02-22"
-  },
-  {
-    "id": "un-r156",
-    "name": "UN R156",
-    "reading": "ユーエヌアールヒャクゴジュウロク",
-    "fullName": "UN Regulation No. 156 (Software Update)",
-    "aliases": [],
-    "oneLiner": "車両のソフトウェアアップデートに関する国連規則。SUMS（ソフトウェアアップデート管理システム）の要件を規定。OTAアップデートの安全管理が対象。",
-    "date": "2026-02-22"
-  },
-  {
-    "id": "un-r155",
-    "name": "UN R155",
-    "reading": "ユーエヌアールヒャクゴジュウゴ",
-    "fullName": "UN Regulation No. 155 (Cyber Security)",
-    "aliases": [],
-    "oneLiner": "車両のサイバーセキュリティに関する国連規則。CSMS（サイバーセキュリティ管理システム）の構築と型式認可要件を規定。2022年7月以降の新型車から適用。",
-    "date": "2026-02-21"
-  },
-  {
-    "id": "un-r152",
-    "name": "UN R152",
-    "reading": "ユーエヌアールヒャクゴジュウニ",
-    "fullName": "UN Regulation No. 152 (AEBS - M1/N1)",
-    "aliases": [],
-    "oneLiner": "乗用車・小型商用車向け衝突被害軽減ブレーキ（AEBS）の国連規則。自動ブレーキの検知能力と制動性能を規定。",
-    "date": "2026-02-20"
-  },
-  {
-    "id": "un-r151",
-    "name": "UN R151",
-    "reading": "ユーエヌアールヒャクゴジュウイチ",
-    "fullName": "UN Regulation No. 151 (BSIS - Blind Spot Information System)",
-    "aliases": [],
-    "oneLiner": "死角情報システム（BSIS）に関する国連規則。車両の死角にいる二輪車等を検知してドライバーに警報する機能要件。",
-    "date": "2026-02-19"
-  },
-  {
-    "id": "un-r137",
-    "name": "UN R137",
-    "reading": "ユーエヌアールヒャクサンジュウナナ",
-    "fullName": "UN Regulation No. 137 (Frontal Impact - Pole)",
-    "aliases": [],
-    "oneLiner": "前面衝突テストの一種で、電柱など狭い障害物への衝突時の乗員保護を評価する国連規則。",
-    "date": "2026-02-18"
-  },
-  {
-    "id": "un-r100",
-    "name": "UN R100",
-    "reading": "ユーエヌアールヒャク",
-    "fullName": "UN Regulation No. 100 (Electric Power Train)",
-    "aliases": [],
-    "oneLiner": "電気動力装置の安全性に関する国連規則。感電保護・バッテリー安全性・水没試験等のEV/HEV安全要件を規定。",
-    "date": "2026-02-17"
-  },
-  {
-    "id": "un-r95",
-    "name": "UN R95",
-    "reading": "ユーエヌアールキュウジュウゴ",
-    "fullName": "UN Regulation No. 95 (Lateral Collision)",
-    "aliases": [],
-    "oneLiner": "側面衝突時の乗員保護に関する国連規則。サイドインパクト試験での傷害基準値を規定する。",
-    "date": "2026-02-16"
-  },
-  {
-    "id": "un-r94",
-    "name": "UN R94",
-    "reading": "ユーエヌアールキュウジュウヨン",
-    "fullName": "UN Regulation No. 94 (Frontal Collision)",
-    "aliases": [],
-    "oneLiner": "前面衝突時の乗員保護に関する国連規則。オフセット衝突試験での傷害基準値（HIC、胸部変位量等）を規定。",
-    "date": "2026-02-15"
-  },
-  {
-    "id": "un-r79",
-    "name": "UN R79",
-    "reading": "ユーエヌアールナナジュウキュウ",
-    "fullName": "UN Regulation No. 79 (Steering Equipment)",
-    "aliases": [],
-    "oneLiner": "ステアリング装置に関する国連規則。ACSF（自動操舵機能）のカテゴリ分類やレーンキープの要件も規定する。",
-    "date": "2026-02-14"
-  },
-  {
-    "id": "un-r13h",
-    "name": "UN R13-H",
-    "reading": "ユーエヌアールジュウサンエイチ",
-    "fullName": "UN Regulation No. 13-H (Braking of M1 vehicles)",
-    "aliases": [],
-    "oneLiner": "乗用車（M1カテゴリ）のブレーキ性能に関する国連規則。制動距離・ABS性能・駐車ブレーキ等の要件を規定。",
-    "date": "2026-02-13"
-  },
-  {
-    "id": "wp29",
-    "name": "WP.29（自動車基準調和世界フォーラム）",
-    "reading": "ダブリューピーニジュウキュウ",
-    "fullName": "World Forum for Harmonization of Vehicle Regulations",
-    "aliases": [],
-    "oneLiner": "国連欧州経済委員会（UNECE）の下に設置された、自動車の国際基準を策定するフォーラム。各国の法規を調和させる場。",
-    "date": "2026-02-12"
-  },
-  {
-    "id": "honda",
-    "name": "本田技研工業（ホンダ）",
-    "reading": "ホンダ",
-    "fullName": "Honda Motor Co., Ltd.",
-    "aliases": [],
-    "oneLiner": "二輪・四輪・パワーエクイップメントを展開する総合モビリティメーカー。VTECエンジンやe:HEVなど独自技術を持つ。",
-    "date": "2026-02-11"
-  },
-  {
-    "id": "toyota",
-    "name": "トヨタ自動車",
-    "reading": "トヨタジドウシャ",
-    "fullName": "Toyota Motor Corporation",
-    "aliases": [],
-    "oneLiner": "世界最大級の自動車メーカー。ハイブリッド技術（THS）のパイオニアであり、TNGA・水素燃料電池など先進技術を牽引。",
-    "date": "2026-02-10"
-  },
-  {
-    "id": "sumitomo-wiring",
-    "name": "住友電装",
-    "reading": "スミトモデンソウ",
-    "fullName": "Sumitomo Wiring Systems, Ltd.",
-    "aliases": [],
-    "oneLiner": "自動車用ワイヤーハーネスで矢崎と並ぶ世界大手。コネクター技術や高圧ハーネス（EV向け）にも注力。",
-    "date": "2026-02-09"
-  },
-  {
-    "id": "nsk",
-    "name": "NSK（日本精工）",
-    "reading": "エヌエスケー",
-    "fullName": "NSK Ltd.",
-    "aliases": [],
-    "oneLiner": "自動車用・産業用ベアリングの大手メーカー。電動パワーステアリング用のコラムやラックも手がける。",
-    "date": "2026-02-08"
-  },
-  {
-    "id": "jtekt",
-    "name": "ジェイテクト",
-    "reading": "ジェイテクト",
-    "fullName": "JTEKT Corporation",
-    "aliases": [],
-    "oneLiner": "電動パワーステアリング（EPS）で世界トップシェアを持つトヨタ系サプライヤー。ベアリング技術にも強みがある。",
-    "date": "2026-02-07"
-  },
-  {
-    "id": "continental",
-    "name": "コンチネンタル",
-    "reading": "コンチネンタル",
-    "fullName": "Continental AG",
-    "aliases": [],
-    "oneLiner": "タイヤとブレーキ・ADAS・車載電子制御を手がけるドイツの大手Tier1。センサーフュージョン技術に強みを持つ。",
-    "date": "2026-02-06"
-  },
-  {
-    "id": "bosch",
-    "name": "ボッシュ",
-    "reading": "ボッシュ",
-    "fullName": "Robert Bosch GmbH",
-    "aliases": [],
-    "oneLiner": "世界最大の自動車部品サプライヤー。ABS・ESP・コモンレールディーゼル噴射など数多くの技術を普及させた。",
-    "date": "2026-02-05"
-  },
-  {
-    "id": "aisin",
-    "name": "アイシン",
-    "reading": "アイシン",
-    "fullName": "AISIN Corporation",
-    "aliases": [],
-    "oneLiner": "AT（オートマチックトランスミッション）で世界トップクラスのシェアを持つトヨタグループのTier1サプライヤー。",
-    "date": "2026-02-04"
-  },
-  {
-    "id": "denso",
-    "name": "デンソー",
-    "reading": "デンソー",
-    "fullName": "DENSO Corporation",
-    "aliases": [],
-    "oneLiner": "トヨタグループの中核サプライヤーであり、世界第2位の自動車部品メーカー。熱・パワトレイン・電子制御に強みを持つ。",
-    "date": "2026-02-03"
-  },
-  {
-    "id": "astemo",
-    "name": "日立Astemo（アステモ）",
-    "reading": "アステモ",
-    "fullName": "Hitachi Astemo, Ltd.",
-    "aliases": [],
-    "oneLiner": "日立製作所とホンダの合弁で誕生した大手Tier1サプライヤー。パワトレイン・シャシー・ADAS領域を統合的に提供。",
-    "date": "2026-02-02"
-  },
-  {
-    "id": "yazaki",
-    "name": "矢崎総業",
-    "reading": "ヤザキソウギョウ",
-    "fullName": "Yazaki Corporation",
-    "aliases": [],
-    "oneLiner": "自動車用ワイヤーハーネスで世界トップシェアを持つメガサプライヤー。クルマの「神経系」を担う。",
-    "date": "2026-02-01"
-  },
-  {
-    "id": "subaru",
-    "name": "SUBARU（スバル）",
-    "reading": "スバル",
-    "fullName": "SUBARU Corporation",
-    "aliases": [],
-    "oneLiner": "水平対向エンジンとシンメトリカルAWDを特徴とする日本の自動車OEM。高い走行安全性と悪路走破性でアウトドア層から支持される。",
-    "date": "2026-01-31"
-  },
-  {
-    "id": "battery-management-system",
-    "name": "BMS（バッテリーマネジメントシステム）",
-    "reading": "ビーエムエス",
-    "fullName": "Battery Management System",
-    "aliases": [],
-    "oneLiner": "バッテリーの電圧・温度・SOC（充電状態）を監視し、セルバランス・過充放電保護を行う制御システム。",
-    "date": "2026-01-30"
-  },
-  {
-    "id": "inverter",
-    "name": "インバーター",
-    "reading": "インバーター",
-    "fullName": "Inverter",
-    "aliases": [],
-    "oneLiner": "バッテリーの直流電力をモーター駆動用の交流電力に変換する電力変換器。モーターの回転数・トルクを制御する。",
-    "date": "2026-01-29"
-  },
-  {
-    "id": "motor-generator",
-    "name": "モータージェネレーター（MG）",
-    "reading": "モータージェネレーター",
-    "fullName": "Motor Generator",
-    "aliases": [],
-    "oneLiner": "モーター（駆動）とジェネレーター（発電）の両機能を兼ね備えた回転電機。HEV/EVの中核部品。",
-    "date": "2026-01-28"
+    "oneLiner": "ISO 26262で定義される安全度水準（A〜D）。HARAの結果から決定される。",
+    "date": "2026-04-06"
   },
   {
     "id": "atkinson-cycle",
-    "name": "アトキンソンサイクルエンジン",
-    "reading": "アトキンソンサイクルエンジン",
-    "fullName": "Atkinson Cycle Engine",
+    "name": "アトキンソンサイクル",
+    "reading": "アトキンソンサイクル",
+    "fullName": "Atkinson Cycle",
     "aliases": [],
-    "oneLiner": "膨張比を圧縮比より大きく取ることで熱効率を高めたエンジンサイクル。ハイブリッド車で広く採用。",
-    "date": "2026-01-27"
-  },
-  {
-    "id": "direct-injection",
-    "name": "直噴エンジン",
-    "reading": "チョクフンエンジン",
-    "fullName": "Direct Injection Engine",
-    "aliases": [],
-    "oneLiner": "燃料をシリンダー内に直接噴射するエンジン。高圧縮比と精密な燃料制御で熱効率を向上させる。",
-    "date": "2026-01-26"
+    "oneLiner": "膨張比>圧縮比で熱効率を高めたエンジン。HEV向けに広く採用。",
+    "date": "2026-04-06"
   },
   {
     "id": "awd",
-    "name": "AWD（全輪駆動）",
+    "name": "AWD",
     "reading": "エーダブリューディー",
     "fullName": "All-Wheel Drive",
     "aliases": [],
-    "oneLiner": "全てのタイヤに駆動力を配分するシステム。フルタイム式・オンデマンド式・トルクベクタリング式など方式が多様。",
-    "date": "2026-01-25"
+    "oneLiner": "全輪に駆動力を配分するシステム。オンデマンド式やトルクベクタリング式など。",
+    "date": "2026-04-06"
   },
   {
-    "id": "48v-mild-hybrid",
-    "name": "48Vマイルドハイブリッド",
-    "reading": "ヨンジュウハチボルトマイルドハイブリッド",
-    "fullName": "48V Mild Hybrid System",
+    "id": "battery-management-system",
+    "name": "BMS",
+    "reading": "ビーエムエス",
+    "fullName": "Battery Management System",
     "aliases": [],
-    "oneLiner": "48V系のISG（モータージェネレーター）とリチウムイオン電池で、アイドリングストップ・回生・トルクアシストを行う簡易HEV。",
-    "date": "2026-01-24"
+    "oneLiner": "バッテリー電圧・温度・SOCを監視しセルバランスと保護を行う制御システム。",
+    "date": "2026-04-06"
   },
   {
-    "id": "regenerative-braking",
-    "name": "回生ブレーキ",
-    "reading": "カイセイブレーキ",
-    "fullName": "Regenerative Braking",
+    "id": "bearing",
+    "name": "ベアリング",
+    "reading": "ベアリング",
+    "fullName": "Bearing",
     "aliases": [],
-    "oneLiner": "減速時にモーターを発電機として動作させ、運動エネルギーを電気エネルギーに変換してバッテリーに蓄える仕組み。",
-    "date": "2026-01-23"
-  },
-  {
-    "id": "planetary-gear",
-    "name": "遊星歯車機構",
-    "reading": "ユウセイハグルマキコウ",
-    "fullName": "Planetary Gear Set",
-    "aliases": [],
-    "oneLiner": "サンギア・プラネタリギア・リングギアで構成される歯車機構。変速機やハイブリッドシステムの中核に使われる。",
-    "date": "2026-01-22"
-  },
-  {
-    "id": "power-split-device",
-    "name": "動力分割機構",
-    "reading": "ドウリョクブンカツキコウ",
-    "fullName": "Power Split Device",
-    "aliases": [],
-    "oneLiner": "ハイブリッド車でエンジン出力をタイヤ駆動と発電に分配する遊星歯車機構。THSの中核技術。",
-    "date": "2026-01-21"
-  },
-  {
-    "id": "e-axle",
-    "name": "eアクスル（電動アクスル）",
-    "reading": "イーアクスル",
-    "fullName": "Electric Axle",
-    "aliases": [],
-    "oneLiner": "モーター・インバーター・減速機を一体化した電動駆動ユニット。EV・HEVの駆動系をコンパクトにまとめる。",
-    "date": "2026-01-20"
-  },
-  {
-    "id": "turbocharger",
-    "name": "ターボチャージャー（過給機）",
-    "reading": "ターボチャージャー",
-    "fullName": "Turbocharger",
-    "aliases": [],
-    "oneLiner": "排気ガスのエネルギーでタービンを回し、圧縮した空気をエンジンに送り込む過給器。小排気量でも大排気量並みの出力を実現する。",
-    "date": "2026-01-19"
-  },
-  {
-    "id": "differential",
-    "name": "デファレンシャルギア（差動装置）",
-    "reading": "デファレンシャルギア",
-    "fullName": "Differential Gear",
-    "aliases": [],
-    "oneLiner": "カーブ走行時に内輪と外輪の回転差を吸収する装置。左右のタイヤが異なる速度で回ることを可能にする。",
-    "date": "2026-01-18"
-  },
-  {
-    "id": "cvt",
-    "name": "CVT（無段変速機）",
-    "reading": "シーブイティー",
-    "fullName": "Continuously Variable Transmission",
-    "aliases": [],
-    "oneLiner": "ギアの段数がなく、プーリーとベルト（またはチェーン）で無段階に変速比を変える変速機。燃費効率に優れる。",
-    "date": "2026-01-17"
-  },
-  {
-    "id": "ths",
-    "name": "THS（トヨタハイブリッドシステム）",
-    "reading": "ティーエイチエス",
-    "fullName": "Toyota Hybrid System",
-    "aliases": [],
-    "oneLiner": "トヨタが開発した動力分割機構を用いたシリーズ・パラレル方式のハイブリッドシステム。遊星歯車機構でエンジンとモーターの動力を最適に配分する。",
-    "date": "2026-01-16"
-  },
-  {
-    "id": "fuel-injector",
-    "name": "インジェクター（燃料噴射装置）",
-    "reading": "インジェクター",
-    "fullName": "Fuel Injector",
-    "aliases": [],
-    "oneLiner": "ECUの指示に基づき、燃料を高精度に霧状噴射する装置。直噴・ポート噴射など方式がある。",
-    "date": "2026-01-15"
-  },
-  {
-    "id": "throttle-body",
-    "name": "スロットルボディ",
-    "reading": "スロットルボディ",
-    "fullName": "Throttle Body",
-    "aliases": [],
-    "oneLiner": "エンジンへの吸入空気量を制御するバルブユニット。電子制御式（DBW）が主流になり、きめ細かい制御が可能に。",
-    "date": "2026-01-14"
-  },
-  {
-    "id": "oil-pump",
-    "name": "オイルポンプ",
-    "reading": "オイルポンプ",
-    "fullName": "Oil Pump",
-    "aliases": [],
-    "oneLiner": "エンジンやトランスミッション内でオイルを循環させるポンプ。各部の潤滑・冷却・油圧確保に不可欠。",
-    "date": "2026-01-13"
-  },
-  {
-    "id": "drive-shaft",
-    "name": "ドライブシャフト",
-    "reading": "ドライブシャフト",
-    "fullName": "Drive Shaft",
-    "aliases": [],
-    "oneLiner": "トランスミッションからの動力をデファレンシャルギアやホイールに伝達する回転軸。",
-    "date": "2026-01-12"
-  },
-  {
-    "id": "stabilizer-bar",
-    "name": "スタビライザー",
-    "reading": "スタビライザー",
-    "fullName": "Stabilizer Bar / Anti-Roll Bar",
-    "aliases": [],
-    "oneLiner": "コーナリング時の車体のロール（傾き）を抑制する棒状の部品。左右のサスペンションを連結する。",
-    "date": "2026-01-11"
-  },
-  {
-    "id": "wheel-hub",
-    "name": "ホイールハブ",
-    "reading": "ホイールハブ",
-    "fullName": "Wheel Hub",
-    "aliases": [],
-    "oneLiner": "ホイールとアクスル（車軸）を接続する中心部品。ベアリングを内蔵し、車輪の回転を滑らかに支える。",
-    "date": "2026-01-10"
-  },
-  {
-    "id": "egr-valve",
-    "name": "EGRバルブ",
-    "reading": "イージーアールバルブ",
-    "fullName": "Exhaust Gas Recirculation Valve",
-    "aliases": [],
-    "oneLiner": "排気ガスの一部を吸気側に戻してNOx排出量を低減するバルブ。燃焼温度を下げることで有害物質を抑制する。",
-    "date": "2026-01-09"
-  },
-  {
-    "id": "ecu",
-    "name": "ECU（エンジンコントロールユニット）",
-    "reading": "イーシーユー",
-    "fullName": "Engine Control Unit",
-    "aliases": [],
-    "oneLiner": "エンジンの燃料噴射量・点火時期・アイドル回転数などを電子制御するコンピュータ。現代車の頭脳。",
-    "date": "2026-01-08"
-  },
-  {
-    "id": "intercooler",
-    "name": "インタークーラー",
-    "reading": "インタークーラー",
-    "fullName": "Intercooler",
-    "aliases": [],
-    "oneLiner": "ターボチャージャーで圧縮されて高温になった吸気を冷却する熱交換器。充填効率とノッキング耐性を向上させる。",
-    "date": "2026-01-07"
-  },
-  {
-    "id": "catalytic-converter",
-    "name": "触媒コンバーター（三元触媒）",
-    "reading": "ショクバイコンバーター",
-    "fullName": "Catalytic Converter",
-    "aliases": [],
-    "oneLiner": "排気ガス中のHC・CO・NOxを化学反応で無害な物質に変換する排気系部品。環境規制対応の要。",
-    "date": "2026-01-06"
-  },
-  {
-    "id": "cv-joint",
-    "name": "CVジョイント（等速ジョイント）",
-    "reading": "シーブイジョイント",
-    "fullName": "Constant Velocity Joint",
-    "aliases": [],
-    "oneLiner": "ステアリング操作で角度が変わっても、一定の回転速度でタイヤに動力を伝える継手。FF車やAWD車に不可欠。",
-    "date": "2026-01-05"
+    "oneLiner": "回転部を支え摩擦を低減する機械要素。ホイール・TM・エンジン内に広く使用。",
+    "date": "2026-04-06"
   },
   {
     "id": "brake-caliper",
@@ -921,26 +86,539 @@
     "reading": "ブレーキキャリパー",
     "fullName": "Brake Caliper",
     "aliases": [],
-    "oneLiner": "ディスクブレーキにおいて、ブレーキパッドをディスクローターに押し付けて制動力を発生させる装置。",
-    "date": "2026-01-04"
+    "oneLiner": "パッドをローターに押し付け制動力を発生させる装置。EPB内蔵化が進行中。",
+    "date": "2026-04-06"
   },
   {
-    "id": "bearing",
-    "name": "ベアリング（軸受）",
-    "reading": "ベアリング",
-    "fullName": "Bearing",
+    "id": "catalytic-converter",
+    "name": "三元触媒",
+    "reading": "サンゲンショクバイ",
+    "fullName": "Three-Way Catalytic Converter",
     "aliases": [],
-    "oneLiner": "回転する軸を支え、摩擦を低減する機械要素。ホイール、トランスミッション、エンジン内部など至る所で使用される。",
-    "date": "2026-01-03"
+    "oneLiner": "HC・CO・NOxを同時に浄化する排気系部品。排ガス規制対応の要。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "china-gb",
+    "name": "中国GB規格",
+    "reading": "チュウゴクジービーキカク",
+    "fullName": "China GB Standards (Guobiao)",
+    "aliases": [],
+    "oneLiner": "中国の強制国家規格。自動車分野ではGB/T基準が燃費・安全・排ガス・サイバーセキュリティに適用。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "controllability",
+    "name": "Controllability（制御可能性）",
+    "reading": "コントローラビリティ",
+    "fullName": "Controllability",
+    "aliases": [],
+    "oneLiner": "HARAで評価されるドライバー/乗員による回避可能性。C0〜C3。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "csms",
+    "name": "CSMS",
+    "reading": "シーエスエムエス",
+    "fullName": "Cyber Security Management System",
+    "aliases": [],
+    "oneLiner": "UN R155が要求するサイバーセキュリティ管理体制。型式認可の前提条件。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "cv-joint",
+    "name": "CVジョイント",
+    "reading": "シーブイジョイント",
+    "fullName": "Constant Velocity Joint",
+    "aliases": [],
+    "oneLiner": "角度変化があっても等速で動力を伝える継手。FF/AWD車に不可欠。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "cvt",
+    "name": "CVT",
+    "reading": "シーブイティー",
+    "fullName": "Continuously Variable Transmission",
+    "aliases": [],
+    "oneLiner": "プーリーとベルトで無段階に変速する変速機。燃費効率に優れる。",
+    "date": "2026-04-06"
   },
   {
     "id": "damper",
-    "name": "ダンパー（ショックアブソーバー）",
+    "name": "ダンパー",
     "reading": "ダンパー",
-    "fullName": "Shock Absorber / Damper",
+    "fullName": "Shock Absorber",
     "aliases": [],
-    "oneLiner": "サスペンションのバネの振動を減衰させる装置。バネだけでは揺れが続くのを、油圧の力で素早く収束させる。",
-    "date": "2026-01-02"
+    "oneLiner": "バネの振動を油圧で減衰させる装置。乗り心地と操安性の要。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "defense-in-depth",
+    "name": "多層防御",
+    "reading": "タソウボウギョ",
+    "fullName": "Defense in Depth",
+    "aliases": [],
+    "oneLiner": "複数の防御レイヤーで攻撃の侵入・拡大を防ぐセキュリティ設計原則。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "differential",
+    "name": "デファレンシャルギア",
+    "reading": "デファレンシャルギア",
+    "fullName": "Differential Gear",
+    "aliases": [],
+    "oneLiner": "コーナーで内外輪の回転差を吸収する差動装置。LSD付きもある。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "direct-injection",
+    "name": "直噴エンジン",
+    "reading": "チョクフンエンジン",
+    "fullName": "Direct Injection",
+    "aliases": [],
+    "oneLiner": "燃料を燃焼室に直接噴射し高圧縮比と精密制御で熱効率を向上させるエンジン。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "drive-shaft",
+    "name": "ドライブシャフト",
+    "reading": "ドライブシャフト",
+    "fullName": "Drive Shaft",
+    "aliases": [],
+    "oneLiner": "TMからの動力をホイールまたはデフに伝達する回転軸。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "e-axle",
+    "name": "eアクスル",
+    "reading": "イーアクスル",
+    "fullName": "Electric Axle",
+    "aliases": [],
+    "oneLiner": "モーター・インバーター・減速機を一体化したEV/HEV向け電動駆動ユニット。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "ecu",
+    "name": "ECU",
+    "reading": "イーシーユー",
+    "fullName": "Electronic Control Unit",
+    "aliases": [],
+    "oneLiner": "車両各システムを電子制御するコンピュータ。現代車は50〜100個搭載。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "egr-valve",
+    "name": "EGRバルブ",
+    "reading": "イージーアールバルブ",
+    "fullName": "EGR Valve",
+    "aliases": [],
+    "oneLiner": "排気ガスを吸気に戻しNOxを低減するバルブ。高圧/低圧EGRがある。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "exposure",
+    "name": "Exposure（頻度）",
+    "reading": "エクスポージャー",
+    "fullName": "Exposure",
+    "aliases": [],
+    "oneLiner": "HARAで評価されるハザーダスイベント発生条件の頻度。E0〜E4。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "fmea",
+    "name": "FMEA",
+    "reading": "エフエムイーエー",
+    "fullName": "Failure Mode and Effects Analysis",
+    "aliases": [],
+    "oneLiner": "故障モードとその影響を系統的に分析する手法。ISO 26262のHW/SW安全分析で必須。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "freedom-from-interference",
+    "name": "干渉からの自由",
+    "reading": "カンショウカラノジユウ",
+    "fullName": "Freedom From Interference (FFI)",
+    "aliases": [],
+    "oneLiner": "ASIL分解や混在システムでQM/低ASIL要素が高ASIL要素に悪影響を与えないことの保証。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "fta",
+    "name": "FTA",
+    "reading": "エフティーエー",
+    "fullName": "Fault Tree Analysis",
+    "aliases": [],
+    "oneLiner": "頂上事象から原因を論理ゲートで展開する故障木解析。定量的安全分析に使用。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "fuel-injector",
+    "name": "インジェクター",
+    "reading": "インジェクター",
+    "fullName": "Fuel Injector",
+    "aliases": [],
+    "oneLiner": "燃料を高精度に噴射する装置。直噴は200bar超で噴射しPM低減と燃費改善を両立。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "fuzz-testing",
+    "name": "ファズテスト",
+    "reading": "ファズテスト",
+    "fullName": "Fuzz Testing",
+    "aliases": [],
+    "oneLiner": "ランダム・半構造化データを入力し未知の脆弱性を発見するテスト手法。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "gtr",
+    "name": "GTR",
+    "reading": "ジーティーアール",
+    "fullName": "Global Technical Regulation",
+    "aliases": [],
+    "oneLiner": "1998年協定に基づくグローバル技術基準。米国含む主要国が参加。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "hara",
+    "name": "HARA",
+    "reading": "ハラ",
+    "fullName": "Hazard Analysis and Risk Assessment",
+    "aliases": [],
+    "oneLiner": "ISO 26262コンセプトフェーズのハザード分析・リスクアセスメント。ASILを決定。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "honda-group",
+    "name": "ホンダグループ",
+    "reading": "ホンダグループ",
+    "fullName": "Honda Group",
+    "aliases": [],
+    "oneLiner": "本田技研工業を中心とするOEM＋Tier1群。ケーヒン→日立Astemoへの再編で体制が変化。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "hsm",
+    "name": "HSM",
+    "reading": "エイチエスエム",
+    "fullName": "Hardware Security Module",
+    "aliases": [],
+    "oneLiner": "ECU内で暗号鍵を安全に保管・演算するハードウェアモジュール。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "ids-ips",
+    "name": "IDS/IPS",
+    "reading": "アイディーエスアイピーエス",
+    "fullName": "Intrusion Detection/Prevention System",
+    "aliases": [],
+    "oneLiner": "車載ネットワーク上の不正通信を検知（IDS）・遮断（IPS）するシステム。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "intercooler",
+    "name": "インタークーラー",
+    "reading": "インタークーラー",
+    "fullName": "Intercooler",
+    "aliases": [],
+    "oneLiner": "ターボで高温になった吸気を冷却する熱交換器。充填効率と耐ノック性を向上。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "inverter",
+    "name": "インバーター",
+    "reading": "インバーター",
+    "fullName": "Inverter",
+    "aliases": [],
+    "oneLiner": "バッテリーDC→モーター用ACの電力変換器。SiCデバイスで効率向上。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "iso-26262",
+    "name": "ISO 26262",
+    "reading": "アイエスオー26262",
+    "fullName": "ISO 26262 Road Vehicles - Functional Safety",
+    "aliases": [],
+    "oneLiner": "車両の機能安全に関する国際規格。安全ライフサイクル全体の活動を規定。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "iso-sae-21434",
+    "name": "ISO/SAE 21434",
+    "reading": "アイエスオーエスエーイー21434",
+    "fullName": "ISO/SAE 21434 Road Vehicles - Cybersecurity Engineering",
+    "aliases": [],
+    "oneLiner": "車両サイバーセキュリティエンジニアリングの国際規格。UN R155の技術的裏付け。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "kvms",
+    "name": "KVMS",
+    "reading": "ケーブイエムエス",
+    "fullName": "Known Vulnerability Management System",
+    "aliases": [],
+    "oneLiner": "既知の脆弱性を体系的に管理するプロセス。UN R155のCSMS要件の中核を成す。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "motor-generator",
+    "name": "モータージェネレーター",
+    "reading": "モータージェネレーター",
+    "fullName": "Motor Generator",
+    "aliases": [],
+    "oneLiner": "駆動と発電の両機能を持つ回転電機。HEV/EVの中核部品。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "negative-response",
+    "name": "ネガティブレスポンス",
+    "reading": "ネガティブレスポンス",
+    "fullName": "Negative Response Code (NRC)",
+    "aliases": [],
+    "oneLiner": "UDSサービス要求が拒否された際のエラーコード。原因特定のための共通コード体系。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "nhtsa",
+    "name": "NHTSA",
+    "reading": "エヌエイチティーエスエー",
+    "fullName": "National Highway Traffic Safety Administration",
+    "aliases": [],
+    "oneLiner": "米国の車両安全規制当局。FMVSSの策定・リコール管理を担当。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "nissan-group",
+    "name": "日産グループ（ルノー・日産・三菱アライアンス）",
+    "reading": "ニッサングループ",
+    "fullName": "Renault-Nissan-Mitsubishi Alliance",
+    "aliases": [],
+    "oneLiner": "日産自動車を核とするグローバルアライアンス。プラットフォーム共用とEV技術で協業。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "oil-pump",
+    "name": "オイルポンプ",
+    "reading": "オイルポンプ",
+    "fullName": "Oil Pump",
+    "aliases": [],
+    "oneLiner": "エンジン/TM内でオイルを循環させるポンプ。可変容量式で燃費改善に寄与。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "penetration-testing",
+    "name": "ペネトレーションテスト",
+    "reading": "ペネトレーションテスト",
+    "fullName": "Penetration Testing",
+    "aliases": [],
+    "oneLiner": "実際の攻撃手法で車両/ECUのセキュリティ耐性を評価するテスト。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "pki",
+    "name": "PKI",
+    "reading": "ピーケーアイ",
+    "fullName": "Public Key Infrastructure",
+    "aliases": [],
+    "oneLiner": "公開鍵暗号基盤。OTAやV2X通信の認証・署名に使用されるセキュリティインフラ。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "planetary-gear",
+    "name": "遊星歯車機構",
+    "reading": "ユウセイハグルマキコウ",
+    "fullName": "Planetary Gear Set",
+    "aliases": [],
+    "oneLiner": "サンギア・プラネタリ・リングギアで構成。AT/HEVシステムの中核。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "regenerative-braking",
+    "name": "回生ブレーキ",
+    "reading": "カイセイブレーキ",
+    "fullName": "Regenerative Braking",
+    "aliases": [],
+    "oneLiner": "減速時にモーターで発電し運動エネルギーを回収する仕組み。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "rxswin",
+    "name": "RxSWIN",
+    "reading": "アールエックススウィン",
+    "fullName": "Rx Software Identification Number",
+    "aliases": [],
+    "oneLiner": "型式認可に関わる車両ソフトウェアを識別する番号。UN R156で定義。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "safety-case",
+    "name": "セーフティケース",
+    "reading": "セーフティケース",
+    "fullName": "Safety Case",
+    "aliases": [],
+    "oneLiner": "安全性の論証構造。エビデンスに基づき安全目標の達成を体系的に示す文書。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "safety-goal",
+    "name": "セーフティゴール",
+    "reading": "セーフティゴール",
+    "fullName": "Safety Goal",
+    "aliases": [],
+    "oneLiner": "HARAから導出されるトップレベル安全要求。機能安全設計の出発点。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "secoc",
+    "name": "SecOC",
+    "reading": "セクオーシー",
+    "fullName": "Secure Onboard Communication",
+    "aliases": [],
+    "oneLiner": "AUTOSARのCAN/LIN通信認証プロトコル。メッセージのなりすまし・改ざんを検知。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "secure-boot",
+    "name": "セキュアブート",
+    "reading": "セキュアブート",
+    "fullName": "Secure Boot",
+    "aliases": [],
+    "oneLiner": "ECU起動時にファームウェアの完全性を暗号検証する仕組み。改ざん検知の第一防衛線。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "secure-ota",
+    "name": "セキュアOTA",
+    "reading": "セキュアオーティーエー",
+    "fullName": "Secure Over-The-Air Update",
+    "aliases": [],
+    "oneLiner": "暗号化・署名・認証を組合せてOTAアップデートの完全性と機密性を保証する仕組み。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "severity",
+    "name": "Severity（重大度）",
+    "reading": "セベリティ",
+    "fullName": "Severity",
+    "aliases": [],
+    "oneLiner": "HARAで評価される事故の重大度。S0（傷害なし）〜S3（致命的・生命を脅かす）。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sid-0x10",
+    "name": "SID 0x10 DiagnosticSessionControl",
+    "reading": "サービスアイディー0x10",
+    "fullName": "Diagnostic Session Control",
+    "aliases": [],
+    "oneLiner": "診断セッションの切替サービス。DefaultSession/ExtendedSession/ProgrammingSessionを管理。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sid-0x11",
+    "name": "SID 0x11 ECUReset",
+    "reading": "サービスアイディー0x11",
+    "fullName": "ECU Reset",
+    "aliases": [],
+    "oneLiner": "ECUをリセットするサービス。ハードリセット/ソフトリセット/キーオフオンリセットを指定。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sid-0x14",
+    "name": "SID 0x14 ClearDiagnosticInformation",
+    "reading": "サービスアイディー0x14",
+    "fullName": "Clear Diagnostic Information",
+    "aliases": [],
+    "oneLiner": "ECU内のDTC情報をクリアするサービス。修理後のDTC消去に使用。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sid-0x19",
+    "name": "SID 0x19 ReadDTCInformation",
+    "reading": "サービスアイディー0x19",
+    "fullName": "Read DTC Information",
+    "aliases": [],
+    "oneLiner": "DTC（故障コード）の読み出しサービス。StatusMaskやSnapshotDataの取得が可能。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sid-0x22",
+    "name": "SID 0x22 ReadDataByIdentifier",
+    "reading": "サービスアイディー0x22",
+    "fullName": "Read Data By Identifier",
+    "aliases": [],
+    "oneLiner": "DID（Data Identifier）指定でECU内部データを読み出すサービス。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sid-0x27",
+    "name": "SID 0x27 SecurityAccess",
+    "reading": "サービスアイディー0x27",
+    "fullName": "Security Access",
+    "aliases": [],
+    "oneLiner": "Seed&Key方式でECUへの重要操作をアクセス制御するサービス。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sid-0x2e",
+    "name": "SID 0x2E WriteDataByIdentifier",
+    "reading": "サービスアイディー0x2E",
+    "fullName": "Write Data By Identifier",
+    "aliases": [],
+    "oneLiner": "DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sid-0x31",
+    "name": "SID 0x31 RoutineControl",
+    "reading": "サービスアイディー0x31",
+    "fullName": "Routine Control",
+    "aliases": [],
+    "oneLiner": "ECU内部ルーチンの開始・停止・結果取得を制御するサービス。自己診断・初期化に使用。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sid-0x34-36-37",
+    "name": "SID 0x34/36/37 リプログラミング",
+    "reading": "リプログラミングサービス",
+    "fullName": "RequestDownload / TransferData / RequestTransferExit",
+    "aliases": [],
+    "oneLiner": "ECUのフラッシュメモリにソフトウェアをダウンロードする3つ組サービス。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sid-0x3e",
+    "name": "SID 0x3E TesterPresent",
+    "reading": "サービスアイディー0x3E",
+    "fullName": "Tester Present",
+    "aliases": [],
+    "oneLiner": "診断セッションのタイムアウトを防止するKeep-Aliveサービス。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sotif",
+    "name": "SOTIF",
+    "reading": "ソティフ",
+    "fullName": "Safety Of The Intended Functionality (ISO 21448)",
+    "aliases": [],
+    "oneLiner": "意図した機能が不十分な性能や誤使用でハザードを引き起こすリスクを扱う規格。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "stabilizer-bar",
+    "name": "スタビライザー",
+    "reading": "スタビライザー",
+    "fullName": "Anti-Roll Bar",
+    "aliases": [],
+    "oneLiner": "コーナリング時のロールを抑制する棒状部品。ステア特性のチューニング要素。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "sums",
+    "name": "SUMS",
+    "reading": "サムス",
+    "fullName": "Software Update Management System",
+    "aliases": [],
+    "oneLiner": "UN R156が要求するソフトウェア更新管理体制。OTAとリコール更新の両方を包含。",
+    "date": "2026-04-06"
   },
   {
     "id": "suspension",
@@ -948,7 +626,142 @@
     "reading": "サスペンション",
     "fullName": "Suspension",
     "aliases": [],
-    "oneLiner": "路面の凹凸を吸収し、車体の安定性と乗り心地を確保する懸架装置。タイヤと車体をつなぐ重要な足回り部品。",
-    "date": "2026-01-01"
+    "oneLiner": "路面の凹凸を吸収し車体の安定性と乗り心地を確保する懸架装置。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "tara",
+    "name": "TARA",
+    "reading": "ターラ",
+    "fullName": "Threat Analysis and Risk Assessment",
+    "aliases": [],
+    "oneLiner": "脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "throttle-body",
+    "name": "スロットルボディ",
+    "reading": "スロットルボディ",
+    "fullName": "Throttle Body",
+    "aliases": [],
+    "oneLiner": "エンジンの吸入空気量を制御するバルブ。DBW式が標準。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "ths",
+    "name": "THS",
+    "reading": "ティーエイチエス",
+    "fullName": "Toyota Hybrid System",
+    "aliases": [],
+    "oneLiner": "遊星歯車でエンジンとモーターの動力を最適配分するトヨタ独自のHEVシステム。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "toyota-group",
+    "name": "トヨタグループ",
+    "reading": "トヨタグループ",
+    "fullName": "Toyota Group",
+    "aliases": [],
+    "oneLiner": "トヨタ自動車を頂点とするOEM＋Tier1サプライヤー群。デンソー・アイシン・豊田自動織機等で構成。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "turbocharger",
+    "name": "ターボチャージャー",
+    "reading": "ターボチャージャー",
+    "fullName": "Turbocharger",
+    "aliases": [],
+    "oneLiner": "排気エネルギーでタービンを回し吸気を圧縮する過給器。ダウンサイジングの要。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "type-approval",
+    "name": "型式認可",
+    "reading": "カタシキニンカ",
+    "fullName": "Type Approval",
+    "aliases": [],
+    "oneLiner": "車両や部品が規制基準に適合することを公的に認証する制度。国・地域で体系が異なる。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "uds",
+    "name": "UDS",
+    "reading": "ユーディーエス",
+    "fullName": "Unified Diagnostic Services (ISO 14229)",
+    "aliases": [],
+    "oneLiner": "車載ECUの診断通信プロトコル。統一されたサービスIDで診断・書込み・制御を実行。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "un-r100",
+    "name": "UN R100",
+    "reading": "ユーエヌアールヒャク",
+    "fullName": "UN Regulation No.100 (EV Safety)",
+    "aliases": [],
+    "oneLiner": "電気自動車の感電保護・バッテリー安全に関する国際規則。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "un-r155",
+    "name": "UN R155",
+    "reading": "ユーエヌアールイチゴーゴー",
+    "fullName": "UN Regulation No.155 (Cyber Security)",
+    "aliases": [],
+    "oneLiner": "CSMS構築を義務付けるサイバーセキュリティの国際車両規制。2024年7月から全新車に適用。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "un-r156",
+    "name": "UN R156",
+    "reading": "ユーエヌアールイチゴーロク",
+    "fullName": "UN Regulation No.156 (Software Update)",
+    "aliases": [],
+    "oneLiner": "SUMS構築を義務付けるOTAアップデートの国際車両規制。R155とセットで適用。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "un-r157",
+    "name": "UN R157",
+    "reading": "ユーエヌアールイチゴーナナ",
+    "fullName": "UN Regulation No.157 (ALKS)",
+    "aliases": [],
+    "oneLiner": "レベル3自動運転（ALKS: Automated Lane Keeping System）の型式認可要件を定めた初の国際規則。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "vlan-separation",
+    "name": "VLAN分離",
+    "reading": "ブイランブンリ",
+    "fullName": "VLAN Separation",
+    "aliases": [],
+    "oneLiner": "車載Ethernet上でVLANタグにより通信ドメインを論理分離するセキュリティ手法。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "wheel-hub",
+    "name": "ホイールハブ",
+    "reading": "ホイールハブ",
+    "fullName": "Wheel Hub",
+    "aliases": [],
+    "oneLiner": "ホイールと車軸を接続する中心部品。ABSセンサー一体型が主流。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "wltp",
+    "name": "WLTP",
+    "reading": "ダブリューエルティーピー",
+    "fullName": "Worldwide Harmonized Light Vehicles Test Procedure",
+    "aliases": [],
+    "oneLiner": "国際統一の燃費・排ガス試験法。JC08やNEDCに代わるリアルワールド指向の試験。",
+    "date": "2026-04-06"
+  },
+  {
+    "id": "wp29",
+    "name": "WP.29",
+    "reading": "ダブリューピーニジュウキュウ",
+    "fullName": "World Forum for Harmonization of Vehicle Regulations",
+    "aliases": [],
+    "oneLiner": "国連欧州経済委員会(UNECE)の車両規則調和世界フォーラム。UN規則の策定母体。",
+    "date": "2026-04-06"
   }
 ]

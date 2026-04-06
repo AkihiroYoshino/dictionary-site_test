@@ -1,38 +1,58 @@
 {
   "id": "gtr",
-  "name": "GTR（世界技術規則）",
+  "name": "GTR",
   "reading": "ジーティーアール",
   "fullName": "Global Technical Regulation",
   "aliases": [],
-  "oneLiner": "1998年協定に基づく世界統一技術規則。UN規則とは異なり、各国が国内法に取り込む形で運用される。",
-  "date": "2026-02-28",
+  "oneLiner": "1998年協定に基づくグローバル技術基準。米国含む主要国が参加。",
+  "category": "regulation",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>GTR（世界技術規則）</strong>」ってどんな法規・規格なんですか？"
+      "speaker": "user",
+      "text": "GTRって何？どんな規制・規格なの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>GTR（世界技術規則）</strong>（Global Technical Regulation）は、1998年協定に基づく世界統一技術規則。UN規則とは異なり、各国が国内法に取り込む形で運用される。<br><br>たとえるなら、<strong>世界共通の車の「技術ルールブック」。各国が自国の法律に組み込んで使う</strong>のようなものだよ。"
+      "speaker": "assistant",
+      "text": "GTR（Global Technical Regulation）は、1998年協定に基づくグローバル技術基準。米国含む主要国が参加。 たとえると「世界共通の車両技術基準」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "なるほど。なぜこの規制・規格が必要なんですか？"
+      "speaker": "user",
+      "text": "具体的な内容や要件を教えて。"
     },
     {
-      "speaker": "teacher",
-      "text": "この規格・法規があることで、クルマの安全性や環境性能が世界的に確保されているんだ。<br><br>世界中のクルマが一定の基準を満たすことで、私たちの安全と環境が守られているんだよ。"
+      "speaker": "assistant",
+      "text": "UN規則（1958年協定ベース）と異なり、各国が国内法規に組み込む義務を負わない技術基準。ただし調和が進むことで各国法規の技術要件が収束する。GTR No.15（WLTP）が代表例"
     },
     {
-      "speaker": "student",
-      "text": "法規や規格って、私たちの安全を守るためにとても大切なんですね！"
+      "speaker": "user",
+      "text": "OEMの開発にはどう影響するの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "1998年協定には米国も参加しているため、FMVSSとUN規則の橋渡し的な役割。EVバッテリー安全のGTR No.20も重要"
+    },
+    {
+      "speaker": "user",
+      "text": "対応しないとどうなるの？時間軸は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "法規は型式認可や市場投入の前提条件なので、対応しないと新車を販売できないよ。計画的な対応と認可当局との事前調整が重要だね。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとしてのポイントを整理して。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ポイント整理：\n・概要：1998年協定に基づくグローバル技術基準。米国含む主要国が参加。\n・要件：UN規則（1958年協定ベース）と異なり、各国が国内法規に組み込む義務を負わない技術基準。ただし調和が進むことで各国法規の技術要件が収束する。GTR No.15…\n・OEM影響：1998年協定には米国も参加しているため、FMVSSとUN規則の橋渡し的な役割。EVバッテリー安全のGTR No.20も重要\n法規動向は車両開発日程に直結するので常にウォッチしよう。"
     }
   ],
-  "summary": [
-    "<strong>GTR（世界技術規則）</strong>は「Global Technical Regulation」の略称・通称",
-    "1998年協定に基づく世界統一技術規則。UN規則とは異なり、各国が国内法に取り込む形で運用される。",
-    "たとえるなら「世界共通の車の「技術ルールブック」。各国が自国の法律に組み込んで使う」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "GTR（Global Technical Regulation）は、1998年協定に基づくグローバル技術基準。米国含む主要国が参加。\n\n■ 技術解説\nUN規則（1958年協定ベース）と異なり、各国が国内法規に組み込む義務を負わない技術基準。ただし調和が進むことで各国法規の技術要件が収束する。GTR No.15（WLTP）が代表例\n\n■ 業界・OEM視点\n1998年協定には米国も参加しているため、FMVSSとUN規則の橋渡し的な役割。EVバッテリー安全のGTR No.20も重要",
+  "termLinks": {
+    "1958年協定": "1958-agreement",
+    "型式認可": "type-approval",
+    "WLTP": "wltp"
+  },
+  "date": "2026-04-06"
 }

@@ -2,37 +2,53 @@
   "id": "48v-mild-hybrid",
   "name": "48Vマイルドハイブリッド",
   "reading": "ヨンジュウハチボルトマイルドハイブリッド",
-  "fullName": "48V Mild Hybrid System",
+  "fullName": "48V Mild Hybrid",
   "aliases": [],
-  "oneLiner": "48V系のISG（モータージェネレーター）とリチウムイオン電池で、アイドリングストップ・回生・トルクアシストを行う簡易HEV。",
-  "date": "2026-01-24",
+  "oneLiner": "ISG+Li-ion電池でアイドリングストップ・回生・トルクアシストを行う簡易HEV。",
+  "category": "powertrain",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>48Vマイルドハイブリッド</strong>」って何ですか？パワートレインに関係あるって聞いたんですけど…"
+      "speaker": "user",
+      "text": "48Vマイルドハイブリッド（48V Mild Hybrid）って何？パワートレイン全体のどこに位置するの？"
     },
     {
-      "speaker": "teacher",
-      "text": "そうだよ！<strong>48Vマイルドハイブリッド</strong>（48V Mild Hybrid System）は、48V系のISG（モータージェネレーター）とリチウムイオン電池で、アイドリングストップ・回生・トルクアシストを行う簡易HEV。<br><br>わかりやすく言うと、<strong>本格ハイブリッドの「ライト版」。小さなモーターでエンジンをアシストし、燃費を改善する仕組み</strong>ようなイメージだね。"
+      "speaker": "assistant",
+      "text": "48Vマイルドハイブリッドは、ISG+Li-ion電池でアイドリングストップ・回生・トルクアシストを行う簡易HEV。 たとえると「本格HEVの「ライト版」」だね。"
     },
     {
-      "speaker": "student",
-      "text": "へぇ〜！じゃあ、48Vマイルドハイブリッドはクルマの走りにどう影響するんですか？"
+      "speaker": "user",
+      "text": "動作原理や仕組みをもう少し詳しく知りたい。"
     },
     {
-      "speaker": "teacher",
-      "text": "この技術はクルマの走行性能・燃費・環境性能に直結する重要な要素なんだ。<br><br>最近のクルマはどんどん進化していて、48Vマイルドハイブリッドの技術も日々進歩しているんだよ。"
+      "speaker": "assistant",
+      "text": "ISG（Integrated Starter Generator）をベルト駆動（P0）またはTM接続（P2）で搭載。コスト500ドル程度の追加でCO2を10-15%低減。欧州メーカーを中心に普及"
     },
     {
-      "speaker": "student",
-      "text": "48Vマイルドハイブリッドのおかげでクルマが進化してるんですね！すごいなぁ！"
+      "speaker": "user",
+      "text": "OEMやサプライヤーではどう扱われてるの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "日産・ルノーなども採用。48V系はDC/DCコンバーターで12V系と共存し、既存電装品との互換性を確保する"
+    },
+    {
+      "speaker": "user",
+      "text": "電動化やカーボンニュートラルの文脈だとどう変わる？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "電動化の中で48Vマイルドハイブリッドは形を変えながらも重要性を維持しているよ。HEV→BEV→FCEVの各パワートレイン構成で、技術の組み合わせ方が変わるんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとして覚えておくべきポイントは？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "要点をまとめるよ：\n・定義：ISG+Li-ion電池でアイドリングストップ・回生・トルクアシストを行う簡易HEV。\n・技術ポイント：ISG（Integrated Starter Generator）をベルト駆動（P0）またはTM接続（P2）で搭載。コスト500ドル程度の追加でCO2を10-1…\n・業界動向：日産・ルノーなども採用。48V系はDC/DCコンバーターで12V系と共存し、既存電装品との互換性を確保する\nパワートレイン設計の基礎として押さえておこう。"
     }
   ],
-  "summary": [
-    "<strong>48Vマイルドハイブリッド</strong>は「48V Mild Hybrid System」の略称・通称",
-    "48V系のISG（モータージェネレーター）とリチウムイオン電池で、アイドリングストップ・回生・トルクアシストを行う簡易HEV。",
-    "たとえるなら「本格ハイブリッドの「ライト版」。小さなモーターでエンジンをアシストし、燃費を改善する仕組み」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "48Vマイルドハイブリッド（48V Mild Hybrid）は、ISG+Li-ion電池でアイドリングストップ・回生・トルクアシストを行う簡易HEV。\n\n■ 技術解説\nISG（Integrated Starter Generator）をベルト駆動（P0）またはTM接続（P2）で搭載。コスト500ドル程度の追加でCO2を10-15%低減。欧州メーカーを中心に普及\n\n■ 業界・OEM視点\n日産・ルノーなども採用。48V系はDC/DCコンバーターで12V系と共存し、既存電装品との互換性を確保する",
+  "termLinks": {},
+  "date": "2026-04-06"
 }

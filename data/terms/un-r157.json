@@ -1,38 +1,56 @@
 {
   "id": "un-r157",
   "name": "UN R157",
-  "reading": "ユーエヌアールヒャクゴジュウナナ",
-  "fullName": "UN Regulation No. 157 (ALKS - Automated Lane Keeping System)",
+  "reading": "ユーエヌアールイチゴーナナ",
+  "fullName": "UN Regulation No.157 (ALKS)",
   "aliases": [],
-  "oneLiner": "自動車線維持システム（ALKS）に関する国連規則。レベル3自動運転の国際的な型式認可基準を世界で初めて規定。",
-  "date": "2026-02-23",
+  "oneLiner": "レベル3自動運転（ALKS: Automated Lane Keeping System）の型式認可要件を定めた初の国際規則。",
+  "category": "regulation",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>UN R157</strong>」ってどんな法規・規格なんですか？"
+      "speaker": "user",
+      "text": "UN R157って何？どんな規制・規格なの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>UN R157</strong>（UN Regulation No. 157 (ALKS - Automated Lane Keeping System)）は、自動車線維持システム（ALKS）に関する国連規則。レベル3自動運転の国際的な型式認可基準を世界で初めて規定。<br><br>たとえるなら、<strong>高速道路でハンズオフ自動運転を行うための「レベル3自動運転の世界初の国際基準」</strong>のようなものだよ。"
+      "speaker": "assistant",
+      "text": "UN R157（UN Regulation No.157 (ALKS)）は、レベル3自動運転（ALKS: Automated Lane Keeping System）の型式認可要件を定めた初の国際規則。 たとえると「自動運転レベル3の「国際免許」」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "なるほど。なぜこの規制・規格が必要なんですか？"
+      "speaker": "user",
+      "text": "具体的な内容や要件を教えて。"
     },
     {
-      "speaker": "teacher",
-      "text": "この規格・法規があることで、クルマの安全性や環境性能が世界的に確保されているんだ。<br><br>世界中のクルマが一定の基準を満たすことで、私たちの安全と環境が守られているんだよ。"
+      "speaker": "assistant",
+      "text": "DDT（動的運転タスク）の自動化区間において、システムの安全要件・MRM（Minimal Risk Manoeuvre）・運転者への引き渡し・データ記録（DSSAD）等を規定。適用領域はまず高速道路の低速渋滞時（60km/h以下→130km/hへ拡大検討中）"
     },
     {
-      "speaker": "student",
-      "text": "法規や規格って、私たちの安全を守るためにとても大切なんですね！"
+      "speaker": "user",
+      "text": "OEMの開発にはどう影響するの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ホンダLEGENDが世界初の型式認可を取得（日本）。OEMはDSSAD（走行データ記録装置）の実装とMRM設計が開発上の大きな課題"
+    },
+    {
+      "speaker": "user",
+      "text": "対応しないとどうなるの？時間軸は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "法規は型式認可や市場投入の前提条件なので、対応しないと新車を販売できないよ。計画的な対応と認可当局との事前調整が重要だね。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとしてのポイントを整理して。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ポイント整理：\n・概要：レベル3自動運転（ALKS: Automated Lane Keeping System）の型式認可要件を定めた初の国際規則。\n・要件：DDT（動的運転タスク）の自動化区間において、システムの安全要件・MRM（Minimal Risk Manoeuvre）・運転者への引き渡し・データ記録（DSS…\n・OEM影響：ホンダLEGENDが世界初の型式認可を取得（日本）。OEMはDSSAD（走行データ記録装置）の実装とMRM設計が開発上の大きな課題\n法規動向は車両開発日程に直結するので常にウォッチしよう。"
     }
   ],
-  "summary": [
-    "<strong>UN R157</strong>は「UN Regulation No. 157 (ALKS - Automated Lane Keeping System)」の略称・通称",
-    "自動車線維持システム（ALKS）に関する国連規則。レベル3自動運転の国際的な型式認可基準を世界で初めて規定。",
-    "たとえるなら「高速道路でハンズオフ自動運転を行うための「レベル3自動運転の世界初の国際基準」」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "UN R157（UN Regulation No.157 (ALKS)）は、レベル3自動運転（ALKS: Automated Lane Keeping System）の型式認可要件を定めた初の国際規則。\n\n■ 技術解説\nDDT（動的運転タスク）の自動化区間において、システムの安全要件・MRM（Minimal Risk Manoeuvre）・運転者への引き渡し・データ記録（DSSAD）等を規定。適用領域はまず高速道路の低速渋滞時（60km/h以下→130km/hへ拡大検討中）\n\n■ 業界・OEM視点\nホンダLEGENDが世界初の型式認可を取得（日本）。OEMはDSSAD（走行データ記録装置）の実装とMRM設計が開発上の大きな課題",
+  "termLinks": {
+    "型式認可": "type-approval"
+  },
+  "date": "2026-04-06"
 }

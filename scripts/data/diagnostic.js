@@ -1,23 +1,16 @@
-/**
- * 診断通信カテゴリ (12件)
- * UDS（ISO 14229）、SID全般、セキュリティアクセス
- */
 const { createTerms } = require('./term-factory');
-
-// [id, name, reading, fullName, oneLiner, analogy]
 const data = [
-  ['uds', 'UDS（統一診断サービス）', 'ユーディーエス', 'Unified Diagnostic Services (ISO 14229)', '自動車のECU診断通信の国際規格。SID（サービスID）で定義される各種診断サービスを用いて、ECUの状態取得・設定変更・プログラム書換等を行う。', 'ECUと対話するための「共通言語」。世界中の整備士がクルマの頭脳と会話するための統一ルール'],
-  ['sid-0x10', 'SID 0x10（DiagnosticSessionControl）', 'エスアイディーゼロエックスジュウ', 'DiagnosticSessionControl (SID 0x10)', 'UDSの診断セッションを切り替えるサービス。デフォルトセッション→拡張セッション→プログラミングセッション等を制御する。', 'ECUとの会話の「モード切替スイッチ」。普通の問診→精密検査→手術、と会話レベルを変える'],
-  ['sid-0x11', 'SID 0x11（ECUReset）', 'エスアイディーゼロエックスジュウイチ', 'ECUReset (SID 0x11)', 'ECUをリセット（再起動）するサービス。ハードリセット・キーオフオンリセット・ソフトリセットの3種類がある。', 'ECUの「再起動ボタン」。パソコンの再起動と同じで、問題が出たときにリフレッシュさせる'],
-  ['sid-0x14', 'SID 0x14（ClearDiagnosticInformation）', 'エスアイディーゼロエックスジュウヨン', 'ClearDiagnosticInformation (SID 0x14)', 'ECUに保存されたDTC（故障コード）やフリーズフレームデータを消去するサービス。整備後のリセットで使用する。', 'ECUの「故障履歴の消しゴム」。修理が終わったら故障記録をリセットする機能'],
-  ['sid-0x19', 'SID 0x19（ReadDTCInformation）', 'エスアイディーゼロエックスジュウキュウ', 'ReadDTCInformation (SID 0x19)', 'ECUに記録された故障コード（DTC）を読み出すサービス。サブファンクションで現在DTC・確定DTC・スナップショット等を指定する。', 'ECUの「健康診断カルテ」を読む機能。今の故障、過去の故障、発生時の状況を確認できる'],
-  ['sid-0x22', 'SID 0x22（ReadDataByIdentifier）', 'エスアイディーゼロエックスニジュウニ', 'ReadDataByIdentifier (SID 0x22)', 'DID（データ識別子）を指定してECU内部のデータを読み出すサービス。車速・回転数・電圧等のリアルタイムデータや車台番号等を取得する。', 'ECUに「この情報見せて」と番号で指定してデータを読み出す機能。商品の「バーコードで品物を特定する」ようなもの'],
-  ['sid-0x27', 'SID 0x27（SecurityAccess）', 'エスアイディーゼロエックスニジュウナナ', 'SecurityAccess (SID 0x27)', 'ECUの保護された機能にアクセスするためのチャレンジ・レスポンス認証サービス。シードを受け取り、正しいキーを返すことで認証される。', 'ECUの「暗号付きロック」。合言葉（シード＆キー）が合わないと重要な操作ができない認証システム'],
-  ['sid-0x2e', 'SID 0x2E（WriteDataByIdentifier）', 'エスアイディーゼロエックスニジュウハチイー', 'WriteDataByIdentifier (SID 0x2E)', 'DID（データ識別子）を指定してECUにデータを書き込むサービス。VIN書込み・校正データ変更・オプション設定等に使用。通常はセキュリティアクセスが前提。', 'ECUに「このデータを書いて」と指示する機能。鍵（セキュリティアクセス）がないと書けない安全設計'],
-  ['sid-0x31', 'SID 0x31（RoutineControl）', 'エスアイディーゼロエックスサンジュウイチ', 'RoutineControl (SID 0x31)', 'ECU内部で特定のルーチン（処理）を開始・停止・結果取得するサービス。自己診断テスト・消去処理・学習値リセット等に使用。', 'ECUに「この作業をやって」と命令する機能。アクチュエータテストや学習値初期化などを遠隔操作できる'],
-  ['sid-0x34-36-37', 'SID 0x34/0x36/0x37（ダウンロード転送）', 'エスアイディーゼロエックスサンヨン', 'RequestDownload / TransferData / RequestTransferExit', 'ECUへのプログラム書換え（リプログ）に使われるサービス群。0x34で転送開始要求、0x36でデータ送信、0x37で転送完了を行う。', 'ECUに新しいプログラムを「ダウンロード」する手順。リプログ（ソフト更新）の核となる通信3兄弟'],
-  ['sid-0x3e', 'SID 0x3E（TesterPresent）', 'エスアイディーゼロエックスサンイー', 'TesterPresent (SID 0x3E)', '診断ツールがまだ接続中であることをECUに知らせるキープアライブ信号。これを定期的に送らないとECUがデフォルトセッションに戻る。', '「まだ診断中ですよ」とECUに伝え続ける信号。電話の「もしもし」のように、通信切断を防ぐ'],
-  ['negative-response', 'NRC（否定応答コード）', 'エヌアールシー', 'Negative Response Code', 'UDSでECUがサービス要求を拒否したときに返す応答コード。SID 0x7Fで返され、原因を示すNRCコード（0x12:サブファンクション無効、0x31:範囲外等）が含まれる。', 'ECUからの「ごめん、それはできません」メッセージ。原因コード付きで拒否理由が分かる'],
+  ['uds', 'UDS', 'ユーディーエス', 'Unified Diagnostic Services (ISO 14229)', '車載ECUの診断通信プロトコル。統一されたサービスIDで診断・書込み・制御を実行。', 'ECUと対話するための「共通言語」', 'ISO 14229-1でサービス定義、14229-2でセッション管理、14229-3/5でCAN/IP上の実装を規定。テスター→ECU間のRequest/Responseモデルで動作。OBD-II診断もUDSベース化が進行中', 'OEM開発ではODX（Open Diagnostic Data eXchange）でUDS定義を管理しCANoeやCANdelaで診断テストを自動化。A-SPICEのSWE.6（SW統合テスト）でもUDS検証を活用'],
+  ['sid-0x10', 'SID 0x10 DiagnosticSessionControl', 'サービスアイディー0x10', 'Diagnostic Session Control', '診断セッションの切替サービス。DefaultSession/ExtendedSession/ProgrammingSessionを管理。', 'ECU診断の「入口の扉」を切りかえる', 'DefaultSession（通常稼働）→ExtendedSession（拡張診断）→ProgrammingSession（ソフト書込み）の3種+OEM定義セッション。セッションごとにアクセス可能なサービスが制限される', 'ProgrammingSessionへの遷移はSecurityAccess（0x27）と組み合わせてアクセス制御する。OEMはセッション遷移条件（車速0km/h等）を安全要件として定義'],
+  ['sid-0x11', 'SID 0x11 ECUReset', 'サービスアイディー0x11', 'ECU Reset', 'ECUをリセットするサービス。ハードリセット/ソフトリセット/キーオフオンリセットを指定。', 'ECUの「再起動ボタン」', 'hardReset(0x01)=電源断相当、keyOffOnReset(0x02)=IGオフオン相当、softReset(0x03)=SW再起動。OTA後のアクティベーションやECU状態復帰に使用', 'リプロ完了後のリセットシーケンスはOEMごとに規定。リセット中の通信途絶タイムアウトをテスターツール側で適切に設定する必要がある'],
+  ['sid-0x22', 'SID 0x22 ReadDataByIdentifier', 'サービスアイディー0x22', 'Read Data By Identifier', 'DID（Data Identifier）指定でECU内部データを読み出すサービス。', 'ECUの「データ読み出し窓口」', 'DID（2バイト）で読出し対象を指定。0xF190=VIN、0xF186=ActiveDiagSession、0xF195=SW番号等がISO定義。OEM独自DIDで車両固有データ（学習値・DTC詳細等）も読出し可能', 'OEM開発ではDID一覧をODXで管理。量産診断ではDID読出しによるECU状態確認・品質データ収集が日常的に使用される'],
+  ['sid-0x27', 'SID 0x27 SecurityAccess', 'サービスアイディー0x27', 'Security Access', 'Seed&Key方式でECUへの重要操作をアクセス制御するサービス。', 'ECUの「暗証番号ロック」', 'ECUがSeed（乱数）を送信→テスターがKey（Seedから算出）を返送→ECUが検証しアンロック。セキュリティレベルを複数持てる（Level 1=読出し、Level 2=書込み等）。UN R155対策で暗号強度の向上が進行中', 'OEMはSeed→Key変換アルゴリズムを秘匿管理。最近はPKCS#11ベースの証明書認証（0x29 Authentication）への移行も進む'],
+  ['sid-0x2e', 'SID 0x2E WriteDataByIdentifier', 'サービスアイディー0x2E', 'Write Data By Identifier', 'DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。', 'ECUの「データ書き込み窓口」', 'SecurityAccess後に使用。VINの書込み、車両仕様設定（CAN通信設定・機能ON/OFF等）、工場ラインでの個体別設定に使用される', 'DIDの書込み保護設計がセキュリティ上重要。OEMはどのDIDをどのセキュリティレベルで保護するかをTARA結果に基づいて設計する'],
+  ['sid-0x31', 'SID 0x31 RoutineControl', 'サービスアイディー0x31', 'Routine Control', 'ECU内部ルーチンの開始・停止・結果取得を制御するサービス。自己診断・初期化に使用。', 'ECUに「特別な作業指示」を出すサービス', 'startRoutine(0x01)/stopRoutine(0x02)/requestRoutineResults(0x03)のサブファンクション。用途例：メモリ消去（リプロ前）、アクチュエータ試験、EOL検査ルーチン、セルフテスト', 'OEMは工場ライン検査・ディーラー診断・リプログラミングの各フェーズで多数のRoutineを定義。RoutineIDはOEM固有のため互換性はない'],
+  ['sid-0x34-36-37', 'SID 0x34/36/37 リプログラミング', 'リプログラミングサービス', 'RequestDownload / TransferData / RequestTransferExit', 'ECUのフラッシュメモリにソフトウェアをダウンロードする3つ組サービス。', 'ECUソフトの「書き換えプロトコル」', '0x34:ダウンロード要求（開始アドレス・サイズ指定）→0x36:データ転送（ブロック単位、BlockSequenceCounterで順序管理）→0x37:転送終了→CRC検証。圧縮・暗号化フォーマットもサポート', 'OTA/リコール対応のリプロはこのサービスが基盤。OEMはリプロシーケンスを標準化し、転送速度（CAN:50KB/s、DoIP:数MB/s）の高速化がUX改善に直結'],
+  ['sid-0x3e', 'SID 0x3E TesterPresent', 'サービスアイディー0x3E', 'Tester Present', '診断セッションのタイムアウトを防止するKeep-Aliveサービス。', 'テスターの「生存確認の握手」', 'SubFunction=0x00（応答あり）/ 0x80（応答抑制）で定期送信。S3タイマー（通常5秒）内に送信しないとDefaultSessionに戻る。診断ツールが自動送信するのが一般的', '0x80（応答抑制）の方がバス負荷低減になる。長時間のリプロ中にTesterPresentが途切れるとセッション断→リプロ失敗となるため信頼性設計が重要'],
+  ['sid-0x19', 'SID 0x19 ReadDTCInformation', 'サービスアイディー0x19', 'Read DTC Information', 'DTC（故障コード）の読み出しサービス。StatusMaskやSnapshotDataの取得が可能。', 'ECUの「故障履歴の問診」', 'SubFunction多数：0x02(DTC by Status Mask)、0x04(Snapshot by DTC)、0x06(ExtData by DTC)等。DTCは3バイト（UDS DTC）で故障を一意に識別。StatusByteで現在/履歴/確定状態を管理', 'OEM開発では DTC設計（設定条件・解除条件・デバウンスロジック）が品質に直結。量産後のフィールド分析で0x19によるDTC収集が最も基本的な診断作業'],
+  ['sid-0x14', 'SID 0x14 ClearDiagnosticInformation', 'サービスアイディー0x14', 'Clear Diagnostic Information', 'ECU内のDTC情報をクリアするサービス。修理後のDTC消去に使用。', 'ECUの「故障記録の消しゴム」', 'GroupOfDTC（3バイト）指定で対象DTCグループをクリア。0xFFFFFF=全DTC消去。StatusByte・Snapshotデータ・ExtendedDataも同時にクリアされる', 'OEMはDTCクリア条件（修理完了確認後のみ等）を規定。排ガス関連DTCのクリアはOBD-II法規で制限される場合がある'],
+  ['negative-response', 'ネガティブレスポンス', 'ネガティブレスポンス', 'Negative Response Code (NRC)', 'UDSサービス要求が拒否された際のエラーコード。原因特定のための共通コード体系。', 'ECUからの「お断り理由」', '0x12:SubFunctionNotSupported, 0x13:IncorrectMessageLength, 0x22:ConditionsNotCorrect, 0x31:RequestOutOfRange, 0x35:InvalidKey, 0x72:GeneralProgrammingFailure等。OEM独自NRCも定義可能', 'NRC 0x78（ResponsePending）は長時間処理中の応答で、テスターはP2*タイマーで待機を延長する。OEM開発ではNRC返却条件の網羅テストが品質ゲート要件'],
 ];
-
 module.exports = createTerms('diagnostic', data);

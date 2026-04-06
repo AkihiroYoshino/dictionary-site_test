@@ -1,38 +1,59 @@
 {
   "id": "safety-goal",
-  "name": "セーフティゴール（安全目標）",
+  "name": "セーフティゴール",
   "reading": "セーフティゴール",
   "fullName": "Safety Goal",
   "aliases": [],
-  "oneLiner": "ハザード分析の結果として設定される、最上位の安全要求。各ハザードに対するASILと共に定義され、安全設計の出発点となる。",
-  "date": "2026-03-23",
+  "oneLiner": "HARAから導出されるトップレベル安全要求。機能安全設計の出発点。",
+  "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>セーフティゴール（安全目標）</strong>」って機能安全でどういう意味があるんですか？"
+      "speaker": "user",
+      "text": "セーフティゴールって何？機能安全でどういう役割？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>セーフティゴール（安全目標）</strong>（Safety Goal）は、ハザード分析の結果として設定される、最上位の安全要求。各ハザードに対するASILと共に定義され、安全設計の出発点となる。<br><br>たとえるなら、<strong>「このハザードが起きたら、こうやって人を守る」という安全設計の「大目標」</strong>みたいなものだよ。"
+      "speaker": "assistant",
+      "text": "セーフティゴール（Safety Goal）は、HARAから導出されるトップレベル安全要求。機能安全設計の出発点。 たとえると「安全設計の「最上位目標」」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+      "speaker": "user",
+      "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "teacher",
-      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+      "speaker": "assistant",
+      "text": "セーフティゴールはFault Tolerant Time Interval（FTTI）とSafe Stateとセットで定義される。例：「EPSの意図しないアシストトルクの発生を防ぐ（ASIL-D, FTTI=100ms, Safe State=アシストオフ）」"
     },
     {
-      "speaker": "student",
-      "text": "機能安全って奥が深いんですね。セーフティゴール（安全目標）、しっかり覚えます！"
+      "speaker": "user",
+      "text": "具体的にOEMの開発ではどう使われるの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "セーフティゴールからTSR（技術安全要求）→HSR/SSR（HW/SW安全要求）へとブレークダウンする。OEMとTier1でセーフティゴール〜TSRの分担が契約上の重要論点"
+    },
+    {
+      "speaker": "user",
+      "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ADAS/ADの高度化に伴いセーフティゴールの重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとして押さえるポイントは？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "要点：\n・定義：HARAから導出されるトップレベル安全要求。機能安全設計の出発点。\n・ISO 26262での位置づけ：セーフティゴールはFault Tolerant Time Interval（FTTI）とSafe Stateとセットで定義される。例：「EPSの意図しないアシス…\n・開発現場：セーフティゴールからTSR（技術安全要求）→HSR/SSR（HW/SW安全要求）へとブレークダウンする。OEMとTier1でセーフティゴール〜TSRの分担が契約…\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>セーフティゴール（安全目標）</strong>は「Safety Goal」の略称・通称",
-    "ハザード分析の結果として設定される、最上位の安全要求。各ハザードに対するASILと共に定義され、安全設計の出発点となる。",
-    "たとえるなら「「このハザードが起きたら、こうやって人を守る」という安全設計の「大目標」」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "セーフティゴール（Safety Goal）は、HARAから導出されるトップレベル安全要求。機能安全設計の出発点。\n\n■ 技術解説\nセーフティゴールはFault Tolerant Time Interval（FTTI）とSafe Stateとセットで定義される。例：「EPSの意図しないアシストトルクの発生を防ぐ（ASIL-D, FTTI=100ms, Safe State=アシストオフ）」\n\n■ 業界・OEM視点\nセーフティゴールからTSR（技術安全要求）→HSR/SSR（HW/SW安全要求）へとブレークダウンする。OEMとTier1でセーフティゴール〜TSRの分担が契約上の重要論点",
+  "termLinks": {
+    "ASIL": "asil",
+    "HARA": "hara",
+    "ISO 26262": "iso-26262",
+    "SOTIF": "sotif"
+  },
+  "date": "2026-04-06"
 }

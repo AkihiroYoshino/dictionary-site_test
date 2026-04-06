@@ -1,40 +1,59 @@
 {
   "id": "controllability",
-  "name": "C値（制御可能性）",
-  "reading": "シーチ",
-  "fullName": "Controllability (C0-C3)",
+  "name": "Controllability（制御可能性）",
+  "reading": "コントローラビリティ",
+  "fullName": "Controllability",
   "aliases": [],
-  "oneLiner": "ISO 26262のリスク評価パラメータの一つ。ハザードが発生した際にドライバー等が回避できる難易度をC0（一般的に制御可能）〜C3（制御困難）で分類する。",
-  "date": "2026-03-21",
+  "oneLiner": "HARAで評価されるドライバー/乗員による回避可能性。C0〜C3。",
+  "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>C値（制御可能性）</strong>」って機能安全でどういう意味があるんですか？"
+      "speaker": "user",
+      "text": "Controllability（制御可能性）って何？機能安全でどういう役割？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>C値（制御可能性）</strong>（Controllability (C0-C3)）は、ISO 26262のリスク評価パラメータの一つ。ハザードが発生した際にドライバー等が回避できる難易度をC0（一般的に制御可能）〜C3（制御困難）で分類する。<br><br>たとえるなら、<strong>危険な状態になったとき「人の力で避けられるか」を4段階で評価する指標</strong>みたいなものだよ。"
+      "speaker": "assistant",
+      "text": "Controllability（制御可能性）（Controllability）は、HARAで評価されるドライバー/乗員による回避可能性。C0〜C3。 たとえると「危険を「自力で回避できるか」の評価」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+      "speaker": "user",
+      "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "teacher",
-      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+      "speaker": "assistant",
+      "text": "C0:制御容易, C1:99%以上が回避可能, C2:90%以上が回避可能, C3:回避困難(<90%)。ドライバーの反応時間や操作難易度で評価。自動運転ではC3評価が多くなる"
     },
     {
-      "speaker": "student",
-      "text": "機能安全って奥が深いんですね。C値（制御可能性）、しっかり覚えます！"
+      "speaker": "user",
+      "text": "具体的にOEMの開発ではどう使われるの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ADAS/自動運転ではシステムが制御主体のためC3判定が増加→ASIL-D頻出となり、冗長設計のコストが課題。OEMはHMI設計での制御可能性向上も検討"
+    },
+    {
+      "speaker": "user",
+      "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ADAS/ADの高度化に伴いControllability（制御可能性）の重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとして押さえるポイントは？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "要点：\n・定義：HARAで評価されるドライバー/乗員による回避可能性。C0〜C3。\n・ISO 26262での位置づけ：C0:制御容易, C1:99%以上が回避可能, C2:90%以上が回避可能, C3:回避困難(<90%)。ドライバーの反応時間や操作難易度で評価。自動運転ではC…\n・開発現場：ADAS/自動運転ではシステムが制御主体のためC3判定が増加→ASIL-D頻出となり、冗長設計のコストが課題。OEMはHMI設計での制御可能性向上も検討\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>C値（制御可能性）</strong>は「Controllability (C0-C3)」の略称・通称",
-    "ISO 26262のリスク評価パラメータの一つ。ハザードが発生した際にドライバー等が回避できる難易度をC0（一般的に制御可能）〜C3（制御困難）で分類する。",
-    "たとえるなら「危険な状態になったとき「人の力で避けられるか」を4段階で評価する指標」"
-  ],
-  "relatedTerms": [],
+  "summary": "Controllability（制御可能性）（Controllability）は、HARAで評価されるドライバー/乗員による回避可能性。C0〜C3。\n\n■ 技術解説\nC0:制御容易, C1:99%以上が回避可能, C2:90%以上が回避可能, C3:回避困難(<90%)。ドライバーの反応時間や操作難易度で評価。自動運転ではC3評価が多くなる\n\n■ 業界・OEM視点\nADAS/自動運転ではシステムが制御主体のためC3判定が増加→ASIL-D頻出となり、冗長設計のコストが課題。OEMはHMI設計での制御可能性向上も検討",
   "termLinks": {
-    "ISO 26262": "iso-26262"
-  }
+    "ASIL": "asil",
+    "HARA": "hara",
+    "ISO 26262": "iso-26262",
+    "SOTIF": "sotif"
+  },
+  "date": "2026-04-06"
 }

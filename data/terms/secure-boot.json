@@ -4,35 +4,58 @@
   "reading": "セキュアブート",
   "fullName": "Secure Boot",
   "aliases": [],
-  "oneLiner": "ECU起動時にソフトウェアの改ざんがないことを暗号的に検証してから起動するセキュリティ機構。不正なプログラムの実行を防止する。",
-  "date": "2026-03-07",
+  "oneLiner": "ECU起動時にファームウェアの完全性を暗号検証する仕組み。改ざん検知の第一防衛線。",
+  "category": "cybersecurity",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>セキュアブート</strong>」ってサイバーセキュリティでどういう意味ですか？"
+      "speaker": "user",
+      "text": "セキュアブートって何？車のサイバーセキュリティでどう重要なの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>セキュアブート</strong>（Secure Boot）は、ECU起動時にソフトウェアの改ざんがないことを暗号的に検証してから起動するセキュリティ機構。不正なプログラムの実行を防止する。<br><br>たとえるなら、<strong>ECUが起動するとき「本物のソフトウェアか？」を署名で確認してから立ち上がる、偽造防止の仕組み</strong>みたいなものだね。"
+      "speaker": "assistant",
+      "text": "セキュアブート（Secure Boot）は、ECU起動時にファームウェアの完全性を暗号検証する仕組み。改ざん検知の第一防衛線。 たとえると「ECUの「起動時の身体検査」」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+      "speaker": "user",
+      "text": "もう少し技術的に詳しく教えて。仕組みや構成は？"
     },
     {
-      "speaker": "teacher",
-      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>セキュアブートは、その防御の重要な一部なんだよ。"
+      "speaker": "assistant",
+      "text": "Root of Trust（HSM/TPM内の公開鍵）→ブートローダー署名検証→アプリケーション署名検証のChain of Trustを構築。検証失敗時はセーフモードで起動または起動拒否"
     },
     {
-      "speaker": "student",
-      "text": "クルマのセキュリティって奥が深いんですね。セキュアブート、しっかり覚えます！"
+      "speaker": "user",
+      "text": "UN R155やISO/SAE 21434との関係は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "UN R155/R156の実質的必須要件。HSM（SHE+/Evita Full等）と組み合わせて実装。OEMはOTA更新後のイメージ署名検証もセキュアブートの延長線上で設計"
+    },
+    {
+      "speaker": "user",
+      "text": "実際の攻撃シナリオだとどう機能するの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "実際のサイバー攻撃では、セキュアブートは防御チェーンの重要な一環を担うよ。多層防御（Defense in Depth）の考え方でシステム全体の耐性を高めることが大切なんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "要点をまとめて。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめ：\n・定義：ECU起動時にファームウェアの完全性を暗号検証する仕組み。改ざん検知の第一防衛線。\n・技術：Root of Trust（HSM/TPM内の公開鍵）→ブートローダー署名検証→アプリケーション署名検証のChain of Trustを構築。検証失敗時はセーフ…\n・規制関連：UN R155/R156の実質的必須要件。HSM（SHE+/Evita Full等）と組み合わせて実装。OEMはOTA更新後のイメージ署名検証もセキュアブートの…\nCSMS構築のピースとして理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>セキュアブート</strong>は「Secure Boot」の略称・通称",
-    "ECU起動時にソフトウェアの改ざんがないことを暗号的に検証してから起動するセキュリティ機構。不正なプログラムの実行を防止する。",
-    "たとえるなら「ECUが起動するとき「本物のソフトウェアか？」を署名で確認してから立ち上がる、偽造防止の仕組み」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "セキュアブート（Secure Boot）は、ECU起動時にファームウェアの完全性を暗号検証する仕組み。改ざん検知の第一防衛線。\n\n■ 技術解説\nRoot of Trust（HSM/TPM内の公開鍵）→ブートローダー署名検証→アプリケーション署名検証のChain of Trustを構築。検証失敗時はセーフモードで起動または起動拒否\n\n■ 業界・OEM視点\nUN R155/R156の実質的必須要件。HSM（SHE+/Evita Full等）と組み合わせて実装。OEMはOTA更新後のイメージ署名検証もセキュアブートの延長線上で設計",
+  "termLinks": {
+    "CSMS": "csms",
+    "多層防御": "defense-in-depth",
+    "ECU": "ecu",
+    "HSM": "hsm",
+    "ISO/SAE 21434": "iso-sae-21434",
+    "UN R155": "un-r155"
+  },
+  "date": "2026-04-06"
 }

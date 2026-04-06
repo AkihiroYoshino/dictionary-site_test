@@ -1,38 +1,59 @@
 {
   "id": "sid-0x34-36-37",
-  "name": "SID 0x34/0x36/0x37（ダウンロード転送）",
-  "reading": "エスアイディーゼロエックスサンヨン",
+  "name": "SID 0x34/36/37 リプログラミング",
+  "reading": "リプログラミングサービス",
   "fullName": "RequestDownload / TransferData / RequestTransferExit",
   "aliases": [],
-  "oneLiner": "ECUへのプログラム書換え（リプログ）に使われるサービス群。0x34で転送開始要求、0x36でデータ送信、0x37で転送完了を行う。",
-  "date": "2026-04-08",
+  "oneLiner": "ECUのフラッシュメモリにソフトウェアをダウンロードする3つ組サービス。",
+  "category": "diagnostic",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>SID 0x34/0x36/0x37（ダウンロード転送）</strong>」って診断通信でどういう役割があるんですか？"
+      "speaker": "user",
+      "text": "SID 0x34/36/37 リプログラミングって何？UDSのどこに位置するの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>SID 0x34/0x36/0x37（ダウンロード転送）</strong>（RequestDownload / TransferData / RequestTransferExit）は、ECUへのプログラム書換え（リプログ）に使われるサービス群。0x34で転送開始要求、0x36でデータ送信、0x37で転送完了を行う。<br><br>たとえるなら、<strong>ECUに新しいプログラムを「ダウンロード」する手順。リプログ（ソフト更新）の核となる通信3兄弟</strong>みたいなイメージだね。"
+      "speaker": "assistant",
+      "text": "SID 0x34/36/37 リプログラミング（RequestDownload / TransferData / RequestTransferExit）は、ECUのフラッシュメモリにソフトウェアをダウンロードする3つ組サービス。 たとえると「ECUソフトの「書き換えプロトコル」」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+      "speaker": "user",
+      "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
     },
     {
-      "speaker": "teacher",
-      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+      "speaker": "assistant",
+      "text": "0x34:ダウンロード要求（開始アドレス・サイズ指定）→0x36:データ転送（ブロック単位、BlockSequenceCounterで順序管理）→0x37:転送終了→CRC検証。圧縮・暗号化フォーマットもサポート"
     },
     {
-      "speaker": "student",
-      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！SID 0x34/0x36/0x37（ダウンロード転送）、よく分かりました！"
+      "speaker": "user",
+      "text": "OEMの量産開発やディーラー診断でどう使うの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "OTA/リコール対応のリプロはこのサービスが基盤。OEMはリプロシーケンスを標準化し、転送速度（CAN:50KB/s、DoIP:数MB/s）の高速化がUX改善に直結"
+    },
+    {
+      "speaker": "user",
+      "text": "セキュリティや安全性の観点で注意点は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
+    },
+    {
+      "speaker": "user",
+      "text": "ポイントをまとめて。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめ：\n・定義：ECUのフラッシュメモリにソフトウェアをダウンロードする3つ組サービス。\n・プロトコル：0x34:ダウンロード要求（開始アドレス・サイズ指定）→0x36:データ転送（ブロック単位、BlockSequenceCounterで順序管理）→0x37:転送…\n・実務：OTA/リコール対応のリプロはこのサービスが基盤。OEMはリプロシーケンスを標準化し、転送速度（CAN:50KB/s、DoIP:数MB/s）の高速化がUX改善に…\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
     }
   ],
-  "summary": [
-    "<strong>SID 0x34/0x36/0x37（ダウンロード転送）</strong>は「RequestDownload / TransferData / RequestTransferExit」の略称・通称",
-    "ECUへのプログラム書換え（リプログ）に使われるサービス群。0x34で転送開始要求、0x36でデータ送信、0x37で転送完了を行う。",
-    "たとえるなら「ECUに新しいプログラムを「ダウンロード」する手順。リプログ（ソフト更新）の核となる通信3兄弟」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "SID 0x34/36/37 リプログラミング（RequestDownload / TransferData / RequestTransferExit）は、ECUのフラッシュメモリにソフトウェアをダウンロードする3つ組サービス。\n\n■ 技術解説\n0x34:ダウンロード要求（開始アドレス・サイズ指定）→0x36:データ転送（ブロック単位、BlockSequenceCounterで順序管理）→0x37:転送終了→CRC検証。圧縮・暗号化フォーマットもサポート\n\n■ 業界・OEM視点\nOTA/リコール対応のリプロはこのサービスが基盤。OEMはリプロシーケンスを標準化し、転送速度（CAN:50KB/s、DoIP:数MB/s）の高速化がUX改善に直結",
+  "termLinks": {
+    "ECU": "ecu",
+    "TARA": "tara",
+    "UDS": "uds",
+    "UN R155": "un-r155"
+  },
+  "date": "2026-04-06"
 }

@@ -1,38 +1,63 @@
 {
   "id": "hsm",
-  "name": "HSM（ハードウェアセキュリティモジュール）",
+  "name": "HSM",
   "reading": "エイチエスエム",
   "fullName": "Hardware Security Module",
   "aliases": [],
-  "oneLiner": "暗号鍵の生成・保管・暗号処理を専用ハードウェアで行うセキュリティチップ。SHE、Evita Full等の車載HSM規格がある。",
-  "date": "2026-03-12",
+  "oneLiner": "ECU内で暗号鍵を安全に保管・演算するハードウェアモジュール。",
+  "category": "cybersecurity",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>HSM（ハードウェアセキュリティモジュール）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+      "speaker": "user",
+      "text": "HSMって何？車のサイバーセキュリティでどう重要なの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>HSM（ハードウェアセキュリティモジュール）</strong>（Hardware Security Module）は、暗号鍵の生成・保管・暗号処理を専用ハードウェアで行うセキュリティチップ。SHE、Evita Full等の車載HSM規格がある。<br><br>たとえるなら、<strong>暗号の鍵を「金庫」のようなハードウェアで守るチップ。鍵が外部に漏れないように物理的に保護する</strong>みたいなものだね。"
+      "speaker": "assistant",
+      "text": "HSM（Hardware Security Module）は、ECU内で暗号鍵を安全に保管・演算するハードウェアモジュール。 たとえると「ECUの中の「金庫室」」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+      "speaker": "user",
+      "text": "もう少し技術的に詳しく教えて。仕組みや構成は？"
     },
     {
-      "speaker": "teacher",
-      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>HSM（ハードウェアセキュリティモジュール）は、その防御の重要な一部なんだよ。"
+      "speaker": "assistant",
+      "text": "SHE（Secure Hardware Extension）/SHE+/Evita Medium/Evita Fullの各レベルがある。AES128/256、RSA、ECDSAなどの暗号演算を耐タンパー領域で実行。セキュアブート・SecOC・SecureDebugの基盤"
     },
     {
-      "speaker": "student",
-      "text": "クルマのセキュリティって奥が深いんですね。HSM（ハードウェアセキュリティモジュール）、しっかり覚えます！"
+      "speaker": "user",
+      "text": "UN R155やISO/SAE 21434との関係は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "インフィニオンAURIX TC3xx/TC4xx内蔵HSMが主流。ルネサスRH850/U2AもICU搭載。OEMはHSMレベル選定をTARA結果のAttack Feasibility Ratingに基づいて決定"
+    },
+    {
+      "speaker": "user",
+      "text": "実際の攻撃シナリオだとどう機能するの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "実際のサイバー攻撃では、HSMは防御チェーンの重要な一環を担うよ。多層防御（Defense in Depth）の考え方でシステム全体の耐性を高めることが大切なんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "要点をまとめて。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめ：\n・定義：ECU内で暗号鍵を安全に保管・演算するハードウェアモジュール。\n・技術：SHE（Secure Hardware Extension）/SHE+/Evita Medium/Evita Fullの各レベルがある。AES128/256、R…\n・規制関連：インフィニオンAURIX TC3xx/TC4xx内蔵HSMが主流。ルネサスRH850/U2AもICU搭載。OEMはHSMレベル選定をTARA結果のAttack …\nCSMS構築のピースとして理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>HSM（ハードウェアセキュリティモジュール）</strong>は「Hardware Security Module」の略称・通称",
-    "暗号鍵の生成・保管・暗号処理を専用ハードウェアで行うセキュリティチップ。SHE、Evita Full等の車載HSM規格がある。",
-    "たとえるなら「暗号の鍵を「金庫」のようなハードウェアで守るチップ。鍵が外部に漏れないように物理的に保護する」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "HSM（Hardware Security Module）は、ECU内で暗号鍵を安全に保管・演算するハードウェアモジュール。\n\n■ 技術解説\nSHE（Secure Hardware Extension）/SHE+/Evita Medium/Evita Fullの各レベルがある。AES128/256、RSA、ECDSAなどの暗号演算を耐タンパー領域で実行。セキュアブート・SecOC・SecureDebugの基盤\n\n■ 業界・OEM視点\nインフィニオンAURIX TC3xx/TC4xx内蔵HSMが主流。ルネサスRH850/U2AもICU搭載。OEMはHSMレベル選定をTARA結果のAttack Feasibility Ratingに基づいて決定",
+  "termLinks": {
+    "CSMS": "csms",
+    "多層防御": "defense-in-depth",
+    "ECU": "ecu",
+    "ISO/SAE 21434": "iso-sae-21434",
+    "SecOC": "secoc",
+    "セキュアブート": "secure-boot",
+    "TARA": "tara",
+    "UN R155": "un-r155"
+  },
+  "date": "2026-04-06"
 }

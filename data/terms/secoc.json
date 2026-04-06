@@ -1,38 +1,61 @@
 {
   "id": "secoc",
-  "name": "SecOC（Secure Onboard Communication）",
-  "reading": "セックオーシー",
+  "name": "SecOC",
+  "reading": "セクオーシー",
   "fullName": "Secure Onboard Communication",
   "aliases": [],
-  "oneLiner": "AUTOSAR規格の車載通信セキュリティモジュール。CANやEthernet上のメッセージにMAC（メッセージ認証コード）を付与して改ざんを検知する。",
-  "date": "2026-03-11",
+  "oneLiner": "AUTOSARのCAN/LIN通信認証プロトコル。メッセージのなりすまし・改ざんを検知。",
+  "category": "cybersecurity",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>SecOC（Secure Onboard Communication）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+      "speaker": "user",
+      "text": "SecOCって何？車のサイバーセキュリティでどう重要なの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>SecOC（Secure Onboard Communication）</strong>（Secure Onboard Communication）は、AUTOSAR規格の車載通信セキュリティモジュール。CANやEthernet上のメッセージにMAC（メッセージ認証コード）を付与して改ざんを検知する。<br><br>たとえるなら、<strong>車内通信メッセージに「印鑑」を押して、途中で改ざんされていないかを確認する仕組み</strong>みたいなものだね。"
+      "speaker": "assistant",
+      "text": "SecOC（Secure Onboard Communication）は、AUTOSARのCAN/LIN通信認証プロトコル。メッセージのなりすまし・改ざんを検知。 たとえると「車内通信の「本人確認」」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+      "speaker": "user",
+      "text": "もう少し技術的に詳しく教えて。仕組みや構成は？"
     },
     {
-      "speaker": "teacher",
-      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>SecOC（Secure Onboard Communication）は、その防御の重要な一部なんだよ。"
+      "speaker": "assistant",
+      "text": "MAC（Message Authentication Code）をPDUに付加しTruncateして送信。Freshness Value（カウンタ）でリプレイ攻撃を防止。AUTOSAR Classic/Adaptive両方で定義"
     },
     {
-      "speaker": "student",
-      "text": "クルマのセキュリティって奥が深いんですね。SecOC（Secure Onboard Communication）、しっかり覚えます！"
+      "speaker": "user",
+      "text": "UN R155やISO/SAE 21434との関係は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "CAN通信の帯域制限があるためMAC長のトレードオフが設計課題。HSMでの鍵管理と組み合わせて実装。OEMはどのメッセージにSecOCを適用するかをTARA結果で判断"
+    },
+    {
+      "speaker": "user",
+      "text": "実際の攻撃シナリオだとどう機能するの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "実際のサイバー攻撃では、SecOCは防御チェーンの重要な一環を担うよ。多層防御（Defense in Depth）の考え方でシステム全体の耐性を高めることが大切なんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "要点をまとめて。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめ：\n・定義：AUTOSARのCAN/LIN通信認証プロトコル。メッセージのなりすまし・改ざんを検知。\n・技術：MAC（Message Authentication Code）をPDUに付加しTruncateして送信。Freshness Value（カウンタ）でリプレイ攻…\n・規制関連：CAN通信の帯域制限があるためMAC長のトレードオフが設計課題。HSMでの鍵管理と組み合わせて実装。OEMはどのメッセージにSecOCを適用するかをTARA結果…\nCSMS構築のピースとして理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>SecOC（Secure Onboard Communication）</strong>は「Secure Onboard Communication」の略称・通称",
-    "AUTOSAR規格の車載通信セキュリティモジュール。CANやEthernet上のメッセージにMAC（メッセージ認証コード）を付与して改ざんを検知する。",
-    "たとえるなら「車内通信メッセージに「印鑑」を押して、途中で改ざんされていないかを確認する仕組み」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "SecOC（Secure Onboard Communication）は、AUTOSARのCAN/LIN通信認証プロトコル。メッセージのなりすまし・改ざんを検知。\n\n■ 技術解説\nMAC（Message Authentication Code）をPDUに付加しTruncateして送信。Freshness Value（カウンタ）でリプレイ攻撃を防止。AUTOSAR Classic/Adaptive両方で定義\n\n■ 業界・OEM視点\nCAN通信の帯域制限があるためMAC長のトレードオフが設計課題。HSMでの鍵管理と組み合わせて実装。OEMはどのメッセージにSecOCを適用するかをTARA結果で判断",
+  "termLinks": {
+    "CSMS": "csms",
+    "多層防御": "defense-in-depth",
+    "HSM": "hsm",
+    "ISO/SAE 21434": "iso-sae-21434",
+    "TARA": "tara",
+    "UN R155": "un-r155"
+  },
+  "date": "2026-04-06"
 }

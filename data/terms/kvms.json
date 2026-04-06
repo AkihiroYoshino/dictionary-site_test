@@ -1,0 +1,59 @@
+{
+  "id": "kvms",
+  "name": "KVMS",
+  "reading": "ケーブイエムエス",
+  "fullName": "Known Vulnerability Management System",
+  "aliases": [],
+  "oneLiner": "既知の脆弱性を体系的に管理するプロセス。UN R155のCSMS要件の中核を成す。",
+  "category": "regulation",
+  "dialogue": [
+    {
+      "speaker": "user",
+      "text": "KVMSって何？どんな規制・規格なの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "KVMS（Known Vulnerability Management System）は、既知の脆弱性を体系的に管理するプロセス。UN R155のCSMS要件の中核を成す。 たとえると「サイバー脅威の「健康診断台帳」」だよ。"
+    },
+    {
+      "speaker": "user",
+      "text": "具体的な内容や要件を教えて。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "CVE/NVD等の公開脆弱性DBを定期スキャンし、自社製品への影響を評価してパッチ適用可否を判断する。ISO/SAE 21434ではVulnerability Analysisとして定義。サプライチェーン全体での脆弱性情報共有が課題"
+    },
+    {
+      "speaker": "user",
+      "text": "OEMの開発にはどう影響するの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "OEMは生産後も車両ライフサイクル全体で脆弱性モニタリングを継続する義務がある（R155要件）。PSIRT体制の構築とSBOM管理がセット"
+    },
+    {
+      "speaker": "user",
+      "text": "対応しないとどうなるの？時間軸は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "法規は型式認可や市場投入の前提条件なので、対応しないと新車を販売できないよ。計画的な対応と認可当局との事前調整が重要だね。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとしてのポイントを整理して。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ポイント整理：\n・概要：既知の脆弱性を体系的に管理するプロセス。UN R155のCSMS要件の中核を成す。\n・要件：CVE/NVD等の公開脆弱性DBを定期スキャンし、自社製品への影響を評価してパッチ適用可否を判断する。ISO/SAE 21434ではVulnerability …\n・OEM影響：OEMは生産後も車両ライフサイクル全体で脆弱性モニタリングを継続する義務がある（R155要件）。PSIRT体制の構築とSBOM管理がセット\n法規動向は車両開発日程に直結するので常にウォッチしよう。"
+    }
+  ],
+  "summary": "KVMS（Known Vulnerability Management System）は、既知の脆弱性を体系的に管理するプロセス。UN R155のCSMS要件の中核を成す。\n\n■ 技術解説\nCVE/NVD等の公開脆弱性DBを定期スキャンし、自社製品への影響を評価してパッチ適用可否を判断する。ISO/SAE 21434ではVulnerability Analysisとして定義。サプライチェーン全体での脆弱性情報共有が課題\n\n■ 業界・OEM視点\nOEMは生産後も車両ライフサイクル全体で脆弱性モニタリングを継続する義務がある（R155要件）。PSIRT体制の構築とSBOM管理がセット",
+  "termLinks": {
+    "CSMS": "csms",
+    "ISO/SAE 21434": "iso-sae-21434",
+    "型式認可": "type-approval",
+    "UN R155": "un-r155"
+  },
+  "date": "2026-04-06"
+}

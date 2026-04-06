@@ -1,38 +1,54 @@
 {
   "id": "catalytic-converter",
-  "name": "触媒コンバーター（三元触媒）",
-  "reading": "ショクバイコンバーター",
-  "fullName": "Catalytic Converter",
+  "name": "三元触媒",
+  "reading": "サンゲンショクバイ",
+  "fullName": "Three-Way Catalytic Converter",
   "aliases": [],
-  "oneLiner": "排気ガス中のHC・CO・NOxを化学反応で無害な物質に変換する排気系部品。環境規制対応の要。",
-  "date": "2026-01-06",
+  "oneLiner": "HC・CO・NOxを同時に浄化する排気系部品。排ガス規制対応の要。",
+  "category": "auto-parts",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>触媒コンバーター（三元触媒）</strong>」ってクルマのどこに使われている部品なんですか？"
+      "speaker": "user",
+      "text": "三元触媒って何？自動車のどこに使われてるの？"
     },
     {
-      "speaker": "teacher",
-      "text": "いい質問だね！<strong>触媒コンバーター（三元触媒）</strong>（Catalytic Converter）は、排気ガス中のHC・CO・NOxを化学反応で無害な物質に変換する排気系部品。環境規制対応の要。<br><br>たとえるなら、<strong>排気ガスを「浄化するフィルター」。有害物質を無害な水やCO2に変える化学工場</strong>みたいなものだよ。"
+      "speaker": "assistant",
+      "text": "三元触媒（Three-Way Catalytic Converter）は、HC・CO・NOxを同時に浄化する排気系部品。排ガス規制対応の要。 身近なたとえで言うと「排気ガスの「浄化工場」」のようなものだよ。"
     },
     {
-      "speaker": "student",
-      "text": "なるほど！じゃあ、もし触媒コンバーター（三元触媒）が壊れたり劣化したりしたらどうなるんですか？"
+      "speaker": "user",
+      "text": "なるほど。もう少し技術的に教えて。どんな種類や構造があるの？"
     },
     {
-      "speaker": "teacher",
-      "text": "この部品が正常に機能しないと、クルマの性能や安全性に大きく影響するんだ。<br><br>だから定期的な点検や整備がとても大切なんだよ。"
+      "speaker": "assistant",
+      "text": "Pt/Pd/Rhを担持したセラミックハニカム構造。ライトオフ温度300℃で冷間始動時のエミッション対策が課題。GPF併用でPM/PN規制にも対応"
     },
     {
-      "speaker": "student",
-      "text": "触媒コンバーター（三元触媒）って思った以上に重要な部品なんですね！覚えておきます！"
+      "speaker": "user",
+      "text": "OEMの開発現場ではどういう位置づけなの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "Euro 7・中国国七等の規制強化で触媒容量増大と貴金属低減の両立が求められる。GT-SUITEでライトオフ挙動を予測しエンジン制御と協調チューニング"
+    },
+    {
+      "speaker": "user",
+      "text": "EV化や電動化で、この部品はどう変わっていくの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "電動化の流れで三元触媒にも変革が求められているよ。軽量化・高効率化・システム統合が大きなトレンドで、従来のICE前提の設計からEV/HEV最適設計への移行が進んでいるんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "まとめると、三元触媒のポイントは？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめるとこうだよ：\n・基本：HC・CO・NOxを同時に浄化する排気系部品。排ガス規制対応の要。\n・技術：Pt/Pd/Rhを担持したセラミックハニカム構造。ライトオフ温度300℃で冷間始動時のエミッション対策が課題。GPF併用でPM/PN規制にも対応\n・OEM視点：Euro 7・中国国七等の規制強化で触媒容量増大と貴金属低減の両立が求められる。GT-SUITEでライトオフ挙動を予測しエンジン制御と協調チューニング\n開発者として押さえておくべき重要部品だね。"
     }
   ],
-  "summary": [
-    "<strong>触媒コンバーター（三元触媒）</strong>は「Catalytic Converter」の略称・通称",
-    "排気ガス中のHC・CO・NOxを化学反応で無害な物質に変換する排気系部品。環境規制対応の要。",
-    "たとえるなら「排気ガスを「浄化するフィルター」。有害物質を無害な水やCO2に変える化学工場」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "三元触媒（Three-Way Catalytic Converter）は、HC・CO・NOxを同時に浄化する排気系部品。排ガス規制対応の要。\n\n■ 技術解説\nPt/Pd/Rhを担持したセラミックハニカム構造。ライトオフ温度300℃で冷間始動時のエミッション対策が課題。GPF併用でPM/PN規制にも対応\n\n■ 業界・OEM視点\nEuro 7・中国国七等の規制強化で触媒容量増大と貴金属低減の両立が求められる。GT-SUITEでライトオフ挙動を予測しエンジン制御と協調チューニング",
+  "termLinks": {},
+  "date": "2026-04-06"
 }

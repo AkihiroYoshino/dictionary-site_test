@@ -1,38 +1,57 @@
 {
   "id": "iso-26262",
   "name": "ISO 26262",
-  "reading": "アイエスオーニロクニロクニ",
+  "reading": "アイエスオー26262",
   "fullName": "ISO 26262 Road Vehicles - Functional Safety",
   "aliases": [],
-  "oneLiner": "自動車の電気・電子（E/E）システムの機能安全に関する国際規格。ハザード分析からASIL決定、設計・検証までの安全ライフサイクルを規定する。",
-  "date": "2026-03-17",
+  "oneLiner": "車両の機能安全に関する国際規格。安全ライフサイクル全体の活動を規定。",
+  "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>ISO 26262</strong>」って機能安全でどういう意味があるんですか？"
+      "speaker": "user",
+      "text": "ISO 26262って何？機能安全でどういう役割？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>ISO 26262</strong>（ISO 26262 Road Vehicles - Functional Safety）は、自動車の電気・電子（E/E）システムの機能安全に関する国際規格。ハザード分析からASIL決定、設計・検証までの安全ライフサイクルを規定する。<br><br>たとえるなら、<strong>クルマの電子制御が「万が一壊れても人を傷つけない」ための安全設計・開発ルールブック</strong>みたいなものだよ。"
+      "speaker": "assistant",
+      "text": "ISO 26262（ISO 26262 Road Vehicles - Functional Safety）は、車両の機能安全に関する国際規格。安全ライフサイクル全体の活動を規定。 たとえると「車の安全設計の「バイブル」」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+      "speaker": "user",
+      "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "teacher",
-      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+      "speaker": "assistant",
+      "text": "2018年に第2版が発行。全12パートで管理・コンセプト・システム・HW・SW・生産・運用まで包括。ASILに基づく安全要求と検証手法を規定。SOTIF（ISO 21448）と補完関係"
     },
     {
-      "speaker": "student",
-      "text": "機能安全って奥が深いんですね。ISO 26262、しっかり覚えます！"
+      "speaker": "user",
+      "text": "具体的にOEMの開発ではどう使われるの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "OEMは社内の安全文化構築とプロセス標準化が必須。A-SPICEと合わせてTier1への要求水準としても使用。ツールクオリフィケーション（Part 8）も重要要件"
+    },
+    {
+      "speaker": "user",
+      "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ADAS/ADの高度化に伴いISO 26262の重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとして押さえるポイントは？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "要点：\n・定義：車両の機能安全に関する国際規格。安全ライフサイクル全体の活動を規定。\n・ISO 26262での位置づけ：2018年に第2版が発行。全12パートで管理・コンセプト・システム・HW・SW・生産・運用まで包括。ASILに基づく安全要求と検証手法を規定。SOTIF（ISO…\n・開発現場：OEMは社内の安全文化構築とプロセス標準化が必須。A-SPICEと合わせてTier1への要求水準としても使用。ツールクオリフィケーション（Part 8）も重要要…\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>ISO 26262</strong>は「ISO 26262 Road Vehicles - Functional Safety」の略称・通称",
-    "自動車の電気・電子（E/E）システムの機能安全に関する国際規格。ハザード分析からASIL決定、設計・検証までの安全ライフサイクルを規定する。",
-    "たとえるなら「クルマの電子制御が「万が一壊れても人を傷つけない」ための安全設計・開発ルールブック」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "ISO 26262（ISO 26262 Road Vehicles - Functional Safety）は、車両の機能安全に関する国際規格。安全ライフサイクル全体の活動を規定。\n\n■ 技術解説\n2018年に第2版が発行。全12パートで管理・コンセプト・システム・HW・SW・生産・運用まで包括。ASILに基づく安全要求と検証手法を規定。SOTIF（ISO 21448）と補完関係\n\n■ 業界・OEM視点\nOEMは社内の安全文化構築とプロセス標準化が必須。A-SPICEと合わせてTier1への要求水準としても使用。ツールクオリフィケーション（Part 8）も重要要件",
+  "termLinks": {
+    "ASIL": "asil",
+    "SOTIF": "sotif"
+  },
+  "date": "2026-04-06"
 }

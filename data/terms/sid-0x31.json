@@ -1,38 +1,59 @@
 {
   "id": "sid-0x31",
-  "name": "SID 0x31（RoutineControl）",
-  "reading": "エスアイディーゼロエックスサンジュウイチ",
-  "fullName": "RoutineControl (SID 0x31)",
+  "name": "SID 0x31 RoutineControl",
+  "reading": "サービスアイディー0x31",
+  "fullName": "Routine Control",
   "aliases": [],
-  "oneLiner": "ECU内部で特定のルーチン（処理）を開始・停止・結果取得するサービス。自己診断テスト・消去処理・学習値リセット等に使用。",
-  "date": "2026-04-07",
+  "oneLiner": "ECU内部ルーチンの開始・停止・結果取得を制御するサービス。自己診断・初期化に使用。",
+  "category": "diagnostic",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>SID 0x31（RoutineControl）</strong>」って診断通信でどういう役割があるんですか？"
+      "speaker": "user",
+      "text": "SID 0x31 RoutineControlって何？UDSのどこに位置するの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>SID 0x31（RoutineControl）</strong>（RoutineControl (SID 0x31)）は、ECU内部で特定のルーチン（処理）を開始・停止・結果取得するサービス。自己診断テスト・消去処理・学習値リセット等に使用。<br><br>たとえるなら、<strong>ECUに「この作業をやって」と命令する機能。アクチュエータテストや学習値初期化などを遠隔操作できる</strong>みたいなイメージだね。"
+      "speaker": "assistant",
+      "text": "SID 0x31 RoutineControl（Routine Control）は、ECU内部ルーチンの開始・停止・結果取得を制御するサービス。自己診断・初期化に使用。 たとえると「ECUに「特別な作業指示」を出すサービス」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+      "speaker": "user",
+      "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
     },
     {
-      "speaker": "teacher",
-      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+      "speaker": "assistant",
+      "text": "startRoutine(0x01)/stopRoutine(0x02)/requestRoutineResults(0x03)のサブファンクション。用途例：メモリ消去（リプロ前）、アクチュエータ試験、EOL検査ルーチン、セルフテスト"
     },
     {
-      "speaker": "student",
-      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！SID 0x31（RoutineControl）、よく分かりました！"
+      "speaker": "user",
+      "text": "OEMの量産開発やディーラー診断でどう使うの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "OEMは工場ライン検査・ディーラー診断・リプログラミングの各フェーズで多数のRoutineを定義。RoutineIDはOEM固有のため互換性はない"
+    },
+    {
+      "speaker": "user",
+      "text": "セキュリティや安全性の観点で注意点は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
+    },
+    {
+      "speaker": "user",
+      "text": "ポイントをまとめて。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめ：\n・定義：ECU内部ルーチンの開始・停止・結果取得を制御するサービス。自己診断・初期化に使用。\n・プロトコル：startRoutine(0x01)/stopRoutine(0x02)/requestRoutineResults(0x03)のサブファンクション。用途例：メ…\n・実務：OEMは工場ライン検査・ディーラー診断・リプログラミングの各フェーズで多数のRoutineを定義。RoutineIDはOEM固有のため互換性はない\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
     }
   ],
-  "summary": [
-    "<strong>SID 0x31（RoutineControl）</strong>は「RoutineControl (SID 0x31)」の略称・通称",
-    "ECU内部で特定のルーチン（処理）を開始・停止・結果取得するサービス。自己診断テスト・消去処理・学習値リセット等に使用。",
-    "たとえるなら「ECUに「この作業をやって」と命令する機能。アクチュエータテストや学習値初期化などを遠隔操作できる」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "SID 0x31 RoutineControl（Routine Control）は、ECU内部ルーチンの開始・停止・結果取得を制御するサービス。自己診断・初期化に使用。\n\n■ 技術解説\nstartRoutine(0x01)/stopRoutine(0x02)/requestRoutineResults(0x03)のサブファンクション。用途例：メモリ消去（リプロ前）、アクチュエータ試験、EOL検査ルーチン、セルフテスト\n\n■ 業界・OEM視点\nOEMは工場ライン検査・ディーラー診断・リプログラミングの各フェーズで多数のRoutineを定義。RoutineIDはOEM固有のため互換性はない",
+  "termLinks": {
+    "ECU": "ecu",
+    "TARA": "tara",
+    "UDS": "uds",
+    "UN R155": "un-r155"
+  },
+  "date": "2026-04-06"
 }

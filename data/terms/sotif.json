@@ -1,40 +1,58 @@
 {
   "id": "sotif",
-  "name": "SOTIF（意図した機能の安全性）",
+  "name": "SOTIF",
   "reading": "ソティフ",
-  "fullName": "Safety of the Intended Functionality (ISO 21448)",
+  "fullName": "Safety Of The Intended Functionality (ISO 21448)",
   "aliases": [],
-  "oneLiner": "故障のない状態でも、センサー認識限界やアルゴリズムの不十分さが引き起こすハザードに対処する規格。ISO 26262が故障起因なのに対し、SOTIFは性能限界起因の安全を扱う。",
-  "date": "2026-03-29",
+  "oneLiner": "意図した機能が不十分な性能や誤使用でハザードを引き起こすリスクを扱う規格。",
+  "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>SOTIF（意図した機能の安全性）</strong>」って機能安全でどういう意味があるんですか？"
+      "speaker": "user",
+      "text": "SOTIFって何？機能安全でどういう役割？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>SOTIF（意図した機能の安全性）</strong>（Safety of the Intended Functionality (ISO 21448)）は、故障のない状態でも、センサー認識限界やアルゴリズムの不十分さが引き起こすハザードに対処する規格。ISO 26262が故障起因なのに対し、SOTIFは性能限界起因の安全を扱う。<br><br>たとえるなら、<strong>「壊れていないのに危険」なケースに備える安全の考え方。センサーの見落としやAIの判断ミスへの対策</strong>みたいなものだよ。"
+      "speaker": "assistant",
+      "text": "SOTIF（Safety Of The Intended Functionality (ISO 21448)）は、意図した機能が不十分な性能や誤使用でハザードを引き起こすリスクを扱う規格。 たとえると「「正常動作するのに危険」を防ぐ安全規格」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+      "speaker": "user",
+      "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "teacher",
-      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+      "speaker": "assistant",
+      "text": "ISO 26262は故障起因の危険を扱うのに対し、SOTIFは故障なしでの危険（センサー限界・AI誤認識等）を扱う。ADAS/自動運転のフォルスポジティブ/ネガティブ対策が主ターゲット"
     },
     {
-      "speaker": "student",
-      "text": "機能安全って奥が深いんですね。SOTIF（意図した機能の安全性）、しっかり覚えます！"
+      "speaker": "user",
+      "text": "具体的にOEMの開発ではどう使われるの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "レベル3以上の自動運転認可にはSOTIF対応が事実上必須。OEMはISO 26262 + SOTIF + ISO/SAE 21434のトリプルV字プロセスを構築する必要がある"
+    },
+    {
+      "speaker": "user",
+      "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ADAS/ADの高度化に伴いSOTIFの重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとして押さえるポイントは？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "要点：\n・定義：意図した機能が不十分な性能や誤使用でハザードを引き起こすリスクを扱う規格。\n・ISO 26262での位置づけ：ISO 26262は故障起因の危険を扱うのに対し、SOTIFは故障なしでの危険（センサー限界・AI誤認識等）を扱う。ADAS/自動運転のフォルスポジティブ/ネガ…\n・開発現場：レベル3以上の自動運転認可にはSOTIF対応が事実上必須。OEMはISO 26262 + SOTIF + ISO/SAE 21434のトリプルV字プロセスを構築…\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>SOTIF（意図した機能の安全性）</strong>は「Safety of the Intended Functionality (ISO 21448)」の略称・通称",
-    "故障のない状態でも、センサー認識限界やアルゴリズムの不十分さが引き起こすハザードに対処する規格。ISO 26262が故障起因なのに対し、SOTIFは性能限界起因",
-    "たとえるなら「「壊れていないのに危険」なケースに備える安全の考え方。センサーの見落としやAIの判断ミスへの対策」"
-  ],
-  "relatedTerms": [],
+  "summary": "SOTIF（Safety Of The Intended Functionality (ISO 21448)）は、意図した機能が不十分な性能や誤使用でハザードを引き起こすリスクを扱う規格。\n\n■ 技術解説\nISO 26262は故障起因の危険を扱うのに対し、SOTIFは故障なしでの危険（センサー限界・AI誤認識等）を扱う。ADAS/自動運転のフォルスポジティブ/ネガティブ対策が主ターゲット\n\n■ 業界・OEM視点\nレベル3以上の自動運転認可にはSOTIF対応が事実上必須。OEMはISO 26262 + SOTIF + ISO/SAE 21434のトリプルV字プロセスを構築する必要がある",
   "termLinks": {
-    "ISO 26262": "iso-26262"
-  }
+    "ASIL": "asil",
+    "ISO 26262": "iso-26262",
+    "ISO/SAE 21434": "iso-sae-21434"
+  },
+  "date": "2026-04-06"
 }

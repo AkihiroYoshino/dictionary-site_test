@@ -1,38 +1,58 @@
 {
   "id": "sid-0x3e",
-  "name": "SID 0x3E（TesterPresent）",
-  "reading": "エスアイディーゼロエックスサンイー",
-  "fullName": "TesterPresent (SID 0x3E)",
+  "name": "SID 0x3E TesterPresent",
+  "reading": "サービスアイディー0x3E",
+  "fullName": "Tester Present",
   "aliases": [],
-  "oneLiner": "診断ツールがまだ接続中であることをECUに知らせるキープアライブ信号。これを定期的に送らないとECUがデフォルトセッションに戻る。",
-  "date": "2026-04-09",
+  "oneLiner": "診断セッションのタイムアウトを防止するKeep-Aliveサービス。",
+  "category": "diagnostic",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>SID 0x3E（TesterPresent）</strong>」って診断通信でどういう役割があるんですか？"
+      "speaker": "user",
+      "text": "SID 0x3E TesterPresentって何？UDSのどこに位置するの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>SID 0x3E（TesterPresent）</strong>（TesterPresent (SID 0x3E)）は、診断ツールがまだ接続中であることをECUに知らせるキープアライブ信号。これを定期的に送らないとECUがデフォルトセッションに戻る。<br><br>たとえるなら、<strong>「まだ診断中ですよ」とECUに伝え続ける信号。電話の「もしもし」のように、通信切断を防ぐ</strong>みたいなイメージだね。"
+      "speaker": "assistant",
+      "text": "SID 0x3E TesterPresent（Tester Present）は、診断セッションのタイムアウトを防止するKeep-Aliveサービス。 たとえると「テスターの「生存確認の握手」」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+      "speaker": "user",
+      "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
     },
     {
-      "speaker": "teacher",
-      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+      "speaker": "assistant",
+      "text": "SubFunction=0x00（応答あり）/ 0x80（応答抑制）で定期送信。S3タイマー（通常5秒）内に送信しないとDefaultSessionに戻る。診断ツールが自動送信するのが一般的"
     },
     {
-      "speaker": "student",
-      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！SID 0x3E（TesterPresent）、よく分かりました！"
+      "speaker": "user",
+      "text": "OEMの量産開発やディーラー診断でどう使うの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "0x80（応答抑制）の方がバス負荷低減になる。長時間のリプロ中にTesterPresentが途切れるとセッション断→リプロ失敗となるため信頼性設計が重要"
+    },
+    {
+      "speaker": "user",
+      "text": "セキュリティや安全性の観点で注意点は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
+    },
+    {
+      "speaker": "user",
+      "text": "ポイントをまとめて。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめ：\n・定義：診断セッションのタイムアウトを防止するKeep-Aliveサービス。\n・プロトコル：SubFunction=0x00（応答あり）/ 0x80（応答抑制）で定期送信。S3タイマー（通常5秒）内に送信しないとDefaultSessionに戻る。診断…\n・実務：0x80（応答抑制）の方がバス負荷低減になる。長時間のリプロ中にTesterPresentが途切れるとセッション断→リプロ失敗となるため信頼性設計が重要\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
     }
   ],
-  "summary": [
-    "<strong>SID 0x3E（TesterPresent）</strong>は「TesterPresent (SID 0x3E)」の略称・通称",
-    "診断ツールがまだ接続中であることをECUに知らせるキープアライブ信号。これを定期的に送らないとECUがデフォルトセッションに戻る。",
-    "たとえるなら「「まだ診断中ですよ」とECUに伝え続ける信号。電話の「もしもし」のように、通信切断を防ぐ」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "SID 0x3E TesterPresent（Tester Present）は、診断セッションのタイムアウトを防止するKeep-Aliveサービス。\n\n■ 技術解説\nSubFunction=0x00（応答あり）/ 0x80（応答抑制）で定期送信。S3タイマー（通常5秒）内に送信しないとDefaultSessionに戻る。診断ツールが自動送信するのが一般的\n\n■ 業界・OEM視点\n0x80（応答抑制）の方がバス負荷低減になる。長時間のリプロ中にTesterPresentが途切れるとセッション断→リプロ失敗となるため信頼性設計が重要",
+  "termLinks": {
+    "TARA": "tara",
+    "UDS": "uds",
+    "UN R155": "un-r155"
+  },
+  "date": "2026-04-06"
 }

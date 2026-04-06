@@ -4,35 +4,55 @@
   "reading": "エーシルブンカイ",
   "fullName": "ASIL Decomposition",
   "aliases": [],
-  "oneLiner": "高いASIL要件を2つ以上の独立した要素に分割して、各要素のASILを下げる手法。例：ASIL D → ASIL B(D) + ASIL B(D)。冗長設計で安全を確保する。",
-  "date": "2026-03-22",
+  "oneLiner": "ASIL要求を冗長構成で分割しサブシステムの要求レベルを下げる手法。",
+  "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>ASIL分解</strong>」って機能安全でどういう意味があるんですか？"
+      "speaker": "user",
+      "text": "ASIL分解って何？機能安全でどういう役割？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>ASIL分解</strong>（ASIL Decomposition）は、高いASIL要件を2つ以上の独立した要素に分割して、各要素のASILを下げる手法。例：ASIL D → ASIL B(D) + ASIL B(D)。冗長設計で安全を確保する。<br><br>たとえるなら、<strong>「一人で重いものを持つ代わりに、二人で分担して持つ」ことで安全を確保する設計手法</strong>みたいなものだよ。"
+      "speaker": "assistant",
+      "text": "ASIL分解（ASIL Decomposition）は、ASIL要求を冗長構成で分割しサブシステムの要求レベルを下げる手法。 たとえると「高い安全要件を「分担」して楽にする方法」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+      "speaker": "user",
+      "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "teacher",
-      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+      "speaker": "assistant",
+      "text": "ASIL-D → ASIL-B(D) + ASIL-B(D)、ASIL-C → ASIL-A(C) + ASIL-B(C) 等に分解可能。独立性要件（DFI : Dependent Failure Initiative）の確保がASIL分解成立の前提条件。共通原因故障（CCF）対策が必須"
     },
     {
-      "speaker": "student",
-      "text": "機能安全って奥が深いんですね。ASIL分解、しっかり覚えます！"
+      "speaker": "user",
+      "text": "具体的にOEMの開発ではどう使われるの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "OEMは冗長センサー・冗長MCU・異種SW実装等でDFIを確保。コスト最適化と安全性のバランスがシステムアーキテクチャ設計の腕の見せ所"
+    },
+    {
+      "speaker": "user",
+      "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ADAS/ADの高度化に伴いASIL分解の重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとして押さえるポイントは？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "要点：\n・定義：ASIL要求を冗長構成で分割しサブシステムの要求レベルを下げる手法。\n・ISO 26262での位置づけ：ASIL-D → ASIL-B(D) + ASIL-B(D)、ASIL-C → ASIL-A(C) + ASIL-B(C) 等に分解可能。独立性要件（DFI :…\n・開発現場：OEMは冗長センサー・冗長MCU・異種SW実装等でDFIを確保。コスト最適化と安全性のバランスがシステムアーキテクチャ設計の腕の見せ所\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>ASIL分解</strong>は「ASIL Decomposition」の略称・通称",
-    "高いASIL要件を2つ以上の独立した要素に分割して、各要素のASILを下げる手法。例：ASIL D → ASIL B(D) + ASIL B(D)。冗長設計で安",
-    "たとえるなら「「一人で重いものを持つ代わりに、二人で分担して持つ」ことで安全を確保する設計手法」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "ASIL分解（ASIL Decomposition）は、ASIL要求を冗長構成で分割しサブシステムの要求レベルを下げる手法。\n\n■ 技術解説\nASIL-D → ASIL-B(D) + ASIL-B(D)、ASIL-C → ASIL-A(C) + ASIL-B(C) 等に分解可能。独立性要件（DFI : Dependent Failure Initiative）の確保がASIL分解成立の前提条件。共通原因故障（CCF）対策が必須\n\n■ 業界・OEM視点\nOEMは冗長センサー・冗長MCU・異種SW実装等でDFIを確保。コスト最適化と安全性のバランスがシステムアーキテクチャ設計の腕の見せ所",
+  "termLinks": {
+    "ASIL": "asil",
+    "ISO 26262": "iso-26262",
+    "SOTIF": "sotif"
+  },
+  "date": "2026-04-06"
 }

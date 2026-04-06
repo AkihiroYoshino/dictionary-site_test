@@ -1,38 +1,58 @@
 {
   "id": "fta",
-  "name": "FTA（故障の木解析）",
+  "name": "FTA",
   "reading": "エフティーエー",
   "fullName": "Fault Tree Analysis",
   "aliases": [],
-  "oneLiner": "望ましくない事象（頂上事象）を起点に、その原因を論理ゲート（AND/OR）でツリー状に展開して分析する手法。安全分析や信頼性解析に使用。",
-  "date": "2026-03-26",
+  "oneLiner": "頂上事象から原因を論理ゲートで展開する故障木解析。定量的安全分析に使用。",
+  "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>FTA（故障の木解析）</strong>」って機能安全でどういう意味があるんですか？"
+      "speaker": "user",
+      "text": "FTAって何？機能安全でどういう役割？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>FTA（故障の木解析）</strong>（Fault Tree Analysis）は、望ましくない事象（頂上事象）を起点に、その原因を論理ゲート（AND/OR）でツリー状に展開して分析する手法。安全分析や信頼性解析に使用。<br><br>たとえるなら、<strong>「なぜこの危険が起きるのか？」を枝分かれする木のように原因を辿っていく分析手法</strong>みたいなものだよ。"
+      "speaker": "assistant",
+      "text": "FTA（Fault Tree Analysis）は、頂上事象から原因を論理ゲートで展開する故障木解析。定量的安全分析に使用。 たとえると「故障原因を「逆さの木」でたどる分析」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+      "speaker": "user",
+      "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "teacher",
-      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+      "speaker": "assistant",
+      "text": "AND/ORゲートで故障伝播を構造化。最小カットセットの確率計算でPMHF（Probabilistic Metric for Hardware Failure）を算出。ISO 26262 Part 5のHW安全分析で使用"
     },
     {
-      "speaker": "student",
-      "text": "機能安全って奥が深いんですね。FTA（故障の木解析）、しっかり覚えます！"
+      "speaker": "user",
+      "text": "具体的にOEMの開発ではどう使われるの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ASIL-D: PMHF < 10^-8/hの目標値達成にはFTAによる定量評価が不可欠。Isograph FaultTree+、medini analyze等のツールを使用"
+    },
+    {
+      "speaker": "user",
+      "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ADAS/ADの高度化に伴いFTAの重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとして押さえるポイントは？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "要点：\n・定義：頂上事象から原因を論理ゲートで展開する故障木解析。定量的安全分析に使用。\n・ISO 26262での位置づけ：AND/ORゲートで故障伝播を構造化。最小カットセットの確率計算でPMHF（Probabilistic Metric for Hardware Failure）…\n・開発現場：ASIL-D: PMHF < 10^-8/hの目標値達成にはFTAによる定量評価が不可欠。Isograph FaultTree+、medini analyze等…\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>FTA（故障の木解析）</strong>は「Fault Tree Analysis」の略称・通称",
-    "望ましくない事象（頂上事象）を起点に、その原因を論理ゲート（AND/OR）でツリー状に展開して分析する手法。安全分析や信頼性解析に使用。",
-    "たとえるなら「「なぜこの危険が起きるのか？」を枝分かれする木のように原因を辿っていく分析手法」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "FTA（Fault Tree Analysis）は、頂上事象から原因を論理ゲートで展開する故障木解析。定量的安全分析に使用。\n\n■ 技術解説\nAND/ORゲートで故障伝播を構造化。最小カットセットの確率計算でPMHF（Probabilistic Metric for Hardware Failure）を算出。ISO 26262 Part 5のHW安全分析で使用\n\n■ 業界・OEM視点\nASIL-D: PMHF < 10^-8/hの目標値達成にはFTAによる定量評価が不可欠。Isograph FaultTree+、medini analyze等のツールを使用",
+  "termLinks": {
+    "ASIL": "asil",
+    "ISO 26262": "iso-26262",
+    "SOTIF": "sotif"
+  },
+  "date": "2026-04-06"
 }

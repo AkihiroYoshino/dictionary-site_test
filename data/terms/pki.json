@@ -1,40 +1,60 @@
 {
   "id": "pki",
-  "name": "PKI（公開鍵基盤）",
+  "name": "PKI",
   "reading": "ピーケーアイ",
   "fullName": "Public Key Infrastructure",
   "aliases": [],
-  "oneLiner": "公開鍵暗号を使ったデジタル証明書の発行・管理基盤。車載セキュアOTAやV2X通信の認証に使用される。",
-  "date": "2026-03-13",
+  "oneLiner": "公開鍵暗号基盤。OTAやV2X通信の認証・署名に使用されるセキュリティインフラ。",
+  "category": "cybersecurity",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>PKI（公開鍵基盤）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+      "speaker": "user",
+      "text": "PKIって何？車のサイバーセキュリティでどう重要なの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>PKI（公開鍵基盤）</strong>（Public Key Infrastructure）は、公開鍵暗号を使ったデジタル証明書の発行・管理基盤。車載セキュアOTAやV2X通信の認証に使用される。<br><br>たとえるなら、<strong>「デジタルの身分証明書」を発行・管理する仕組み。クルマが本物のサーバーと安全に通信するために使う</strong>みたいなものだね。"
+      "speaker": "assistant",
+      "text": "PKI（Public Key Infrastructure）は、公開鍵暗号基盤。OTAやV2X通信の認証・署名に使用されるセキュリティインフラ。 たとえると「デジタル世界の「身分証明書発行局」」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+      "speaker": "user",
+      "text": "もう少し技術的に詳しく教えて。仕組みや構成は？"
     },
     {
-      "speaker": "teacher",
-      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>PKI（公開鍵基盤）は、その防御の重要な一部なんだよ。"
+      "speaker": "assistant",
+      "text": "Root CA→中間CA→リーフ証明書の階層構造。車載ではX.509証明書でECU認証・OTAイメージ署名検証・V2X通信認証を実現。証明書失効処理（CRL/OCSP）の車載実装が課題"
     },
     {
-      "speaker": "student",
-      "text": "クルマのセキュリティって奥が深いんですね。PKI（公開鍵基盤）、しっかり覚えます！"
+      "speaker": "user",
+      "text": "UN R155やISO/SAE 21434との関係は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "OEMはPKIインフラを自社構築またはDigiCert等のサービスを利用。車両ライフ15年超の長期運用に耐える暗号アジリティ設計が重要"
+    },
+    {
+      "speaker": "user",
+      "text": "実際の攻撃シナリオだとどう機能するの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "実際のサイバー攻撃では、PKIは防御チェーンの重要な一環を担うよ。多層防御（Defense in Depth）の考え方でシステム全体の耐性を高めることが大切なんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "要点をまとめて。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめ：\n・定義：公開鍵暗号基盤。OTAやV2X通信の認証・署名に使用されるセキュリティインフラ。\n・技術：Root CA→中間CA→リーフ証明書の階層構造。車載ではX.509証明書でECU認証・OTAイメージ署名検証・V2X通信認証を実現。証明書失効処理（CRL/O…\n・規制関連：OEMはPKIインフラを自社構築またはDigiCert等のサービスを利用。車両ライフ15年超の長期運用に耐える暗号アジリティ設計が重要\nCSMS構築のピースとして理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>PKI（公開鍵基盤）</strong>は「Public Key Infrastructure」の略称・通称",
-    "公開鍵暗号を使ったデジタル証明書の発行・管理基盤。車載セキュアOTAやV2X通信の認証に使用される。",
-    "たとえるなら「「デジタルの身分証明書」を発行・管理する仕組み。クルマが本物のサーバーと安全に通信するために使う」"
-  ],
-  "relatedTerms": [],
+  "summary": "PKI（Public Key Infrastructure）は、公開鍵暗号基盤。OTAやV2X通信の認証・署名に使用されるセキュリティインフラ。\n\n■ 技術解説\nRoot CA→中間CA→リーフ証明書の階層構造。車載ではX.509証明書でECU認証・OTAイメージ署名検証・V2X通信認証を実現。証明書失効処理（CRL/OCSP）の車載実装が課題\n\n■ 業界・OEM視点\nOEMはPKIインフラを自社構築またはDigiCert等のサービスを利用。車両ライフ15年超の長期運用に耐える暗号アジリティ設計が重要",
   "termLinks": {
-    "セキュアOTA": "secure-ota"
-  }
+    "CSMS": "csms",
+    "多層防御": "defense-in-depth",
+    "ECU": "ecu",
+    "ISO/SAE 21434": "iso-sae-21434",
+    "UN R155": "un-r155"
+  },
+  "date": "2026-04-06"
 }

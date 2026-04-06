@@ -1,40 +1,58 @@
 {
   "id": "asil",
-  "name": "ASIL（自動車安全度水準）",
+  "name": "ASIL",
   "reading": "エーシル",
   "fullName": "Automotive Safety Integrity Level",
   "aliases": [],
-  "oneLiner": "ISO 26262で定義される安全度の指標。A（低）→B→C→D（最高）の4レベルがあり、リスクが大きいほど高いASILが要求される。",
-  "date": "2026-03-18",
+  "oneLiner": "ISO 26262で定義される安全度水準（A〜D）。HARAの結果から決定される。",
+  "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>ASIL（自動車安全度水準）</strong>」って機能安全でどういう意味があるんですか？"
+      "speaker": "user",
+      "text": "ASILって何？機能安全でどういう役割？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>ASIL（自動車安全度水準）</strong>（Automotive Safety Integrity Level）は、ISO 26262で定義される安全度の指標。A（低）→B→C→D（最高）の4レベルがあり、リスクが大きいほど高いASILが要求される。<br><br>たとえるなら、<strong>リスクの大きさで決まる安全設計の「ランク」。DはVIP警護レベル、AはカジュアルSPレベル</strong>みたいなものだよ。"
+      "speaker": "assistant",
+      "text": "ASIL（Automotive Safety Integrity Level）は、ISO 26262で定義される安全度水準（A〜D）。HARAの結果から決定される。 たとえると「安全性の「ランク付け」A=低〜D=最高」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+      "speaker": "user",
+      "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "teacher",
-      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+      "speaker": "assistant",
+      "text": "Severity（S1-S3）×Exposure（E1-E4）×Controllability（C1-C3）の組み合わせ表で決定。QMはASIL不要。ASIL-Dが最も厳格で航空のDAL-Aに相当"
     },
     {
-      "speaker": "student",
-      "text": "機能安全って奥が深いんですね。ASIL（自動車安全度水準）、しっかり覚えます！"
+      "speaker": "user",
+      "text": "具体的にOEMの開発ではどう使われるの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ASIL-Dでは2重冗長やダイバーシティ設計、高いテストカバレッジが要求され開発コストが大幅に増加。OEMはASIL配分の妥当性確認がコスト最適化の鍵"
+    },
+    {
+      "speaker": "user",
+      "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ADAS/ADの高度化に伴いASILの重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとして押さえるポイントは？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "要点：\n・定義：ISO 26262で定義される安全度水準（A〜D）。HARAの結果から決定される。\n・ISO 26262での位置づけ：Severity（S1-S3）×Exposure（E1-E4）×Controllability（C1-C3）の組み合わせ表で決定。QMはASIL不要。ASIL-…\n・開発現場：ASIL-Dでは2重冗長やダイバーシティ設計、高いテストカバレッジが要求され開発コストが大幅に増加。OEMはASIL配分の妥当性確認がコスト最適化の鍵\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>ASIL（自動車安全度水準）</strong>は「Automotive Safety Integrity Level」の略称・通称",
-    "ISO 26262で定義される安全度の指標。A（低）→B→C→D（最高）の4レベルがあり、リスクが大きいほど高いASILが要求される。",
-    "たとえるなら「リスクの大きさで決まる安全設計の「ランク」。DはVIP警護レベル、AはカジュアルSPレベル」"
-  ],
-  "relatedTerms": [],
+  "summary": "ASIL（Automotive Safety Integrity Level）は、ISO 26262で定義される安全度水準（A〜D）。HARAの結果から決定される。\n\n■ 技術解説\nSeverity（S1-S3）×Exposure（E1-E4）×Controllability（C1-C3）の組み合わせ表で決定。QMはASIL不要。ASIL-Dが最も厳格で航空のDAL-Aに相当\n\n■ 業界・OEM視点\nASIL-Dでは2重冗長やダイバーシティ設計、高いテストカバレッジが要求され開発コストが大幅に増加。OEMはASIL配分の妥当性確認がコスト最適化の鍵",
   "termLinks": {
-    "ISO 26262": "iso-26262"
-  }
+    "HARA": "hara",
+    "ISO 26262": "iso-26262",
+    "SOTIF": "sotif"
+  },
+  "date": "2026-04-06"
 }

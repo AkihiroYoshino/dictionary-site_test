@@ -1,40 +1,60 @@
 {
   "id": "tara",
-  "name": "TARA（脅威分析とリスク評価）",
-  "reading": "タラ",
+  "name": "TARA",
+  "reading": "ターラ",
   "fullName": "Threat Analysis and Risk Assessment",
   "aliases": [],
-  "oneLiner": "車両に対するサイバー攻撃の脅威を特定し、リスクの大きさを評価して対策の優先度を決める手法。ISO/SAE 21434で規定。",
-  "date": "2026-03-05",
+  "oneLiner": "脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。",
+  "category": "cybersecurity",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>TARA（脅威分析とリスク評価）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+      "speaker": "user",
+      "text": "TARAって何？車のサイバーセキュリティでどう重要なの？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>TARA（脅威分析とリスク評価）</strong>（Threat Analysis and Risk Assessment）は、車両に対するサイバー攻撃の脅威を特定し、リスクの大きさを評価して対策の優先度を決める手法。ISO/SAE 21434で規定。<br><br>たとえるなら、<strong>「どんな泥棒がどこから侵入しうるか」を洗い出し、対策の優先順位をつける分析手法</strong>みたいなものだね。"
+      "speaker": "assistant",
+      "text": "TARA（Threat Analysis and Risk Assessment）は、脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。 たとえると「車のセキュリティの「問診票と処方箋」」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+      "speaker": "user",
+      "text": "もう少し技術的に詳しく教えて。仕組みや構成は？"
     },
     {
-      "speaker": "teacher",
-      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>TARA（脅威分析とリスク評価）は、その防御の重要な一部なんだよ。"
+      "speaker": "assistant",
+      "text": "アセット特定→脅威シナリオ列挙→影響度（Safety/Financial/Operational/Privacy）評価→攻撃経路分析→攻撃実現可能性評価→リスク値算出→対策決定のステップで実施。FMEAの知見をセキュリティ領域に応用"
     },
     {
-      "speaker": "student",
-      "text": "クルマのセキュリティって奥が深いんですね。TARA（脅威分析とリスク評価）、しっかり覚えます！"
+      "speaker": "user",
+      "text": "UN R155やISO/SAE 21434との関係は？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ISO/SAE 21434 Clause 15に詳細手順。AUTOSARのARA（Adaptive AUTOSAR）やSECOCはTARA結果に基づいて実装される。OEMはコンセプト段階から量産後まで反復的にTARAを更新する"
+    },
+    {
+      "speaker": "user",
+      "text": "実際の攻撃シナリオだとどう機能するの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "実際のサイバー攻撃では、TARAは防御チェーンの重要な一環を担うよ。多層防御（Defense in Depth）の考え方でシステム全体の耐性を高めることが大切なんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "要点をまとめて。"
+    },
+    {
+      "speaker": "assistant",
+      "text": "まとめ：\n・定義：脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。\n・技術：アセット特定→脅威シナリオ列挙→影響度（Safety/Financial/Operational/Privacy）評価→攻撃経路分析→攻撃実現可能性評価→リスク…\n・規制関連：ISO/SAE 21434 Clause 15に詳細手順。AUTOSARのARA（Adaptive AUTOSAR）やSECOCはTARA結果に基づいて実装され…\nCSMS構築のピースとして理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>TARA（脅威分析とリスク評価）</strong>は「Threat Analysis and Risk Assessment」の略称・通称",
-    "車両に対するサイバー攻撃の脅威を特定し、リスクの大きさを評価して対策の優先度を決める手法。ISO/SAE 21434で規定。",
-    "たとえるなら「「どんな泥棒がどこから侵入しうるか」を洗い出し、対策の優先順位をつける分析手法」"
-  ],
-  "relatedTerms": [],
+  "summary": "TARA（Threat Analysis and Risk Assessment）は、脅威分析とリスク評価。ISO/SAE 21434で定義されるサイバーセキュリティのコア手法。\n\n■ 技術解説\nアセット特定→脅威シナリオ列挙→影響度（Safety/Financial/Operational/Privacy）評価→攻撃経路分析→攻撃実現可能性評価→リスク値算出→対策決定のステップで実施。FMEAの知見をセキュリティ領域に応用\n\n■ 業界・OEM視点\nISO/SAE 21434 Clause 15に詳細手順。AUTOSARのARA（Adaptive AUTOSAR）やSECOCはTARA結果に基づいて実装される。OEMはコンセプト段階から量産後まで反復的にTARAを更新する",
   "termLinks": {
-    "ISO/SAE 21434": "iso-sae-21434"
-  }
+    "CSMS": "csms",
+    "多層防御": "defense-in-depth",
+    "FMEA": "fmea",
+    "ISO/SAE 21434": "iso-sae-21434",
+    "UN R155": "un-r155"
+  },
+  "date": "2026-04-06"
 }

@@ -1,38 +1,57 @@
 {
   "id": "battery-management-system",
-  "name": "BMS（バッテリーマネジメントシステム）",
+  "name": "BMS",
   "reading": "ビーエムエス",
   "fullName": "Battery Management System",
   "aliases": [],
-  "oneLiner": "バッテリーの電圧・温度・SOC（充電状態）を監視し、セルバランス・過充放電保護を行う制御システム。",
-  "date": "2026-01-30",
+  "oneLiner": "バッテリー電圧・温度・SOCを監視しセルバランスと保護を行う制御システム。",
+  "category": "powertrain",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>BMS（バッテリーマネジメントシステム）</strong>」って何ですか？パワートレインに関係あるって聞いたんですけど…"
+      "speaker": "user",
+      "text": "BMS（Battery Management System）って何？パワートレイン全体のどこに位置するの？"
     },
     {
-      "speaker": "teacher",
-      "text": "そうだよ！<strong>BMS（バッテリーマネジメントシステム）</strong>（Battery Management System）は、バッテリーの電圧・温度・SOC（充電状態）を監視し、セルバランス・過充放電保護を行う制御システム。<br><br>わかりやすく言うと、<strong>バッテリーの「健康管理者」。各セルの状態を見張り、安全で長寿命な使い方を実現する</strong>ようなイメージだね。"
+      "speaker": "assistant",
+      "text": "BMSは、バッテリー電圧・温度・SOCを監視しセルバランスと保護を行う制御システム。 たとえると「バッテリーの「健康管理AI」」だね。"
     },
     {
-      "speaker": "student",
-      "text": "へぇ〜！じゃあ、BMS（バッテリーマネジメントシステム）はクルマの走りにどう影響するんですか？"
+      "speaker": "user",
+      "text": "動作原理や仕組みをもう少し詳しく知りたい。"
     },
     {
-      "speaker": "teacher",
-      "text": "この技術はクルマの走行性能・燃費・環境性能に直結する重要な要素なんだ。<br><br>最近のクルマはどんどん進化していて、BMS（バッテリーマネジメントシステム）の技術も日々進歩しているんだよ。"
+      "speaker": "assistant",
+      "text": "セル電圧監視IC（AFE）でmV単位の精度で各セルを監視。パッシブ/アクティブセルバランスでセル間ばらつきを補正。SOC/SOH推定アルゴリズム（拡張カルマンフィルタ等）が航続距離精度に直結"
     },
     {
-      "speaker": "student",
-      "text": "BMS（バッテリーマネジメントシステム）のおかげでクルマが進化してるんですね！すごいなぁ！"
+      "speaker": "user",
+      "text": "OEMやサプライヤーではどう扱われてるの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "OEMはBMS内製化を進める傾向（テスラ・BYD等）。ISO 26262 ASIL-C/D対応の安全設計が必須。デンソー・LGエナジー・CATL等が供給"
+    },
+    {
+      "speaker": "user",
+      "text": "電動化やカーボンニュートラルの文脈だとどう変わる？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "電動化の中でBMSは形を変えながらも重要性を維持しているよ。HEV→BEV→FCEVの各パワートレイン構成で、技術の組み合わせ方が変わるんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとして覚えておくべきポイントは？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "要点をまとめるよ：\n・定義：バッテリー電圧・温度・SOCを監視しセルバランスと保護を行う制御システム。\n・技術ポイント：セル電圧監視IC（AFE）でmV単位の精度で各セルを監視。パッシブ/アクティブセルバランスでセル間ばらつきを補正。SOC/SOH推定アルゴリズム（拡張カルマンフ…\n・業界動向：OEMはBMS内製化を進める傾向（テスラ・BYD等）。ISO 26262 ASIL-C/D対応の安全設計が必須。デンソー・LGエナジー・CATL等が供給\nパワートレイン設計の基礎として押さえておこう。"
     }
   ],
-  "summary": [
-    "<strong>BMS（バッテリーマネジメントシステム）</strong>は「Battery Management System」の略称・通称",
-    "バッテリーの電圧・温度・SOC（充電状態）を監視し、セルバランス・過充放電保護を行う制御システム。",
-    "たとえるなら「バッテリーの「健康管理者」。各セルの状態を見張り、安全で長寿命な使い方を実現する」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "BMS（Battery Management System）は、バッテリー電圧・温度・SOCを監視しセルバランスと保護を行う制御システム。\n\n■ 技術解説\nセル電圧監視IC（AFE）でmV単位の精度で各セルを監視。パッシブ/アクティブセルバランスでセル間ばらつきを補正。SOC/SOH推定アルゴリズム（拡張カルマンフィルタ等）が航続距離精度に直結\n\n■ 業界・OEM視点\nOEMはBMS内製化を進める傾向（テスラ・BYD等）。ISO 26262 ASIL-C/D対応の安全設計が必須。デンソー・LGエナジー・CATL等が供給",
+  "termLinks": {
+    "ASIL": "asil",
+    "ISO 26262": "iso-26262"
+  },
+  "date": "2026-04-06"
 }

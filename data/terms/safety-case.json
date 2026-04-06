@@ -4,35 +4,55 @@
   "reading": "セーフティケース",
   "fullName": "Safety Case",
   "aliases": [],
-  "oneLiner": "安全性が十分に確保されていることを論理的に主張するための構造化された文書。証拠・主張・論拠の3要素で構成される（GSN記法が一般的）。",
-  "date": "2026-03-27",
+  "oneLiner": "安全性の論証構造。エビデンスに基づき安全目標の達成を体系的に示す文書。",
+  "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "student",
-      "text": "先生、「<strong>セーフティケース</strong>」って機能安全でどういう意味があるんですか？"
+      "speaker": "user",
+      "text": "セーフティケースって何？機能安全でどういう役割？"
     },
     {
-      "speaker": "teacher",
-      "text": "<strong>セーフティケース</strong>（Safety Case）は、安全性が十分に確保されていることを論理的に主張するための構造化された文書。証拠・主張・論拠の3要素で構成される（GSN記法が一般的）。<br><br>たとえるなら、<strong>「このシステムは安全です」を証拠と論理で証明する「安全の説明書」</strong>みたいなものだよ。"
+      "speaker": "assistant",
+      "text": "セーフティケース（Safety Case）は、安全性の論証構造。エビデンスに基づき安全目標の達成を体系的に示す文書。 たとえると「「だから安全です」を証明する論拠の体系」だよ。"
     },
     {
-      "speaker": "student",
-      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+      "speaker": "user",
+      "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "teacher",
-      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+      "speaker": "assistant",
+      "text": "GSN（Goal Structuring Notation）やCAE（Claims-Arguments-Evidence）で構造化。トップゴール→サブゴール→エビデンスの論証チェーンを構築。ISO 26262 Part 2で作成が要求される"
     },
     {
-      "speaker": "student",
-      "text": "機能安全って奥が深いんですね。セーフティケース、しっかり覚えます！"
+      "speaker": "user",
+      "text": "具体的にOEMの開発ではどう使われるの？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "OEMはセーフティケース作成のための専門チームを設けることが多い。第三者アセッサーのレビューで論証の妥当性を検証する"
+    },
+    {
+      "speaker": "user",
+      "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "ADAS/ADの高度化に伴いセーフティケースの重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
+    },
+    {
+      "speaker": "user",
+      "text": "エンジニアとして押さえるポイントは？"
+    },
+    {
+      "speaker": "assistant",
+      "text": "要点：\n・定義：安全性の論証構造。エビデンスに基づき安全目標の達成を体系的に示す文書。\n・ISO 26262での位置づけ：GSN（Goal Structuring Notation）やCAE（Claims-Arguments-Evidence）で構造化。トップゴール→サブゴール→エ…\n・開発現場：OEMはセーフティケース作成のための専門チームを設けることが多い。第三者アセッサーのレビューで論証の妥当性を検証する\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": [
-    "<strong>セーフティケース</strong>は「Safety Case」の略称・通称",
-    "安全性が十分に確保されていることを論理的に主張するための構造化された文書。証拠・主張・論拠の3要素で構成される（GSN記法が一般的）。",
-    "たとえるなら「「このシステムは安全です」を証拠と論理で証明する「安全の説明書」」"
-  ],
-  "relatedTerms": [],
-  "termLinks": {}
+  "summary": "セーフティケース（Safety Case）は、安全性の論証構造。エビデンスに基づき安全目標の達成を体系的に示す文書。\n\n■ 技術解説\nGSN（Goal Structuring Notation）やCAE（Claims-Arguments-Evidence）で構造化。トップゴール→サブゴール→エビデンスの論証チェーンを構築。ISO 26262 Part 2で作成が要求される\n\n■ 業界・OEM視点\nOEMはセーフティケース作成のための専門チームを設けることが多い。第三者アセッサーのレビューで論証の妥当性を検証する",
+  "termLinks": {
+    "ASIL": "asil",
+    "ISO 26262": "iso-26262",
+    "SOTIF": "sotif"
+  },
+  "date": "2026-04-06"
 }
