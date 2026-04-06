@@ -9,54 +9,63 @@
   "dialogue": [
     {
       "speaker": "student",
-      "text": "Auto-ISACって何？車のサイバーセキュリティでどう重要なの？"
+      "text": "Auto-ISACって車のセキュリティでどんな意味があるの？"
     },
     {
       "speaker": "teacher",
-      "text": "Auto-ISAC（Automotive Information Sharing and Analysis Center）は、自動車サイバーセキュリティ脅威情報を会員間で共有する米国主導の非営利センター。OEMとサプライヤーが参加。 たとえると「車業界のサイバー脅威「情報共有クラブ」」だよ。"
+      "text": "Auto-ISACは「自動車サイバーセキュリティ脅威情報を会員間で共有する米国主導の非営利センター。OEMとサプライヤーが参加。」だよ。たとえると「車業界のサイバー脅威「情報共有クラブ」」のような役割かな。"
     },
     {
       "speaker": "student",
-      "text": "もう少し技術的に詳しく教えて。仕組みや構成は？"
+      "text": "仕組みをもう少し教えて！"
     },
     {
       "speaker": "teacher",
-      "text": "米国の主要OEM（フォード・GM・トヨタ北米・FCA等）が参加。TLP（Traffic Light Protocol）分類で匿名化した脅威インテリジェンス・CVE・インシデント情報を会員間共有。Best Practicesガイドや脆弱性開示ポリシー（CVD）フレームワークも公開"
+      "text": "米国の主要OEM（フォード・GM・トヨタ北米・FCA等）が参加。"
     },
     {
       "speaker": "student",
-      "text": "UN R155やISO/SAE 21434との関係は？"
+      "text": "技術的にはどう実装されてるの？"
     },
     {
       "speaker": "teacher",
-      "text": "UN R155の量産後モニタリング体制において、Auto-ISACからの脅威情報をvSOCに取り込む連携体制が推奨される。2015年のクライスラー・チェロキーのリモートハック事件（Charlie Miller/Chris Valasek）を契機に発足。OEMのPSIRT（製品セキュリティインシデント対応チーム）がAuto-ISACの対応窓口を担う"
+      "text": "TLP（Traffic Light Protocol）分類で匿名化した脅威インテリジェンス・CVE・インシデント情報を会員間共有。Best Practicesガイドや脆弱性開示ポリシー（CVD）フレームワークも公開"
     },
     {
       "speaker": "student",
-      "text": "実際の攻撃シナリオだとどう機能するの？"
+      "text": "UN R155やISO/SAE 21434とはどう関係するの？"
     },
     {
       "speaker": "teacher",
-      "text": "実際のサイバー攻撃では、Auto-ISACは防御チェーンの重要な一環を担うよ。多層防御（Defense in Depth）の考え方でシステム全体の耐性を高めることが大切なんだ。"
+      "text": "UN R155の量産後モニタリング体制において、Auto-ISACからの脅威情報をvSOCに取り込む連携体制が推奨される。"
     },
     {
       "speaker": "student",
-      "text": "要点をまとめて。"
+      "text": "実際の攻撃を受けたらどうなるの？"
     },
     {
       "speaker": "teacher",
-      "text": "まとめ：\n・定義：自動車サイバーセキュリティ脅威情報を会員間で共有する米国主導の非営利センター。OEMとサプライヤーが参加。\n・技術：米国の主要OEM（フォード・GM・トヨタ北米・FCA等）が参加。TLP（Traffic Light Protocol）分類で匿名化した脅威インテリジェンス・CV…\n・規制関連：UN R155の量産後モニタリング体制において、Auto-ISACからの脅威情報をvSOCに取り込む連携体制が推奨される。2015年のクライスラー・チェロキーの…\nCSMS構築のピースとして理解しておこう。"
+      "text": "攻撃が成功すると車両制御への不正介入やデータ漏洩につながるよ。だからAuto-ISACは多層防御の重要な1層を担っているんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "CSMS構築で最重要なポイントは？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "①自動車サイバーセキュリティ脅威情報を会員間で共有する米国主導の非営利センター。OEMとサプライヤーが参加。②米国の主要OEM（フォード・GM・トヨタ北米・FCA等）が参加。TLP（Traffic Light Proto…③UN R155の量産後モニタリング体制において、Auto-ISACからの脅威情報をvSOCに取り込む連携体制が…——TARA・ペネトレテストとセットで理解しよう。"
     }
   ],
   "summary": [
-    "Auto-ISAC（Automotive Information Sharing and Analysis Center）は、自動車サイバーセキュリティ脅威情報を会員間で共有する米国主導の非営利センター。OEMとサプライヤーが参加。",
-    "【技術解説】米国の主要OEM（フォード・GM・トヨタ北米・FCA等）が参加。TLP（Traffic Light Protocol）分類で匿名化した脅威インテリジェンス・CVE・インシデント情報を会員間共有。Best Practicesガイドや脆弱性開示ポリシー（CVD）フレームワークも公開",
-    "【業界・OEM視点】UN R155の量産後モニタリング体制において、Auto-ISACからの脅威情報をvSOCに取り込む連携体制が推奨される。2015年のクライスラー・チェロキーのリモートハック事件（Charlie Miller/Chris Valasek）を契機に発足。OEMのPSIRT（製品セキュリティインシデント対応チーム）がAuto-ISACの対応窓口を担う"
+    "【定義】Auto-ISACは「自動車サイバーセキュリティ脅威情報を会員間で共有する米国主導の非営利センター。OEMとサプライヤーが参加。」",
+    "【技術】米国の主要OEM（フォード・GM・トヨタ北米・FCA等）が参加。TLP（Traffic Light Protocol）分類で匿名化した脅威インテリジェンス・CVE・インシデント情報を会員間共有。Best Practice…",
+    "【OEM視点】UN R155の量産後モニタリング体制において、Auto-ISACからの脅威情報をvSOCに取り込む連携体制が推奨される。2015年のクライスラー・チェロキーのリモートハック事件（Charlie Miller/Chris…"
   ],
   "termLinks": {
     "CSMS": "csms",
     "多層防御": "defense-in-depth",
     "ISO/SAE 21434": "iso-sae-21434",
+    "TARA": "tara",
     "UN R155": "un-r155"
   },
   "date": "2026-04-06"

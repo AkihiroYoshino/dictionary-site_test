@@ -9,49 +9,57 @@
   "dialogue": [
     {
       "speaker": "student",
-      "text": "SID 0x3E TesterPresentって何？UDSのどこに位置するの？"
+      "text": "SID 0x3E TesterPresentってUDSのどのサービスなの？"
     },
     {
       "speaker": "teacher",
-      "text": "SID 0x3E TesterPresent（Tester Present）は、診断セッションのタイムアウトを防止するKeep-Aliveサービス。 たとえると「テスターの「生存確認の握手」」だよ。"
+      "text": "SID 0x3E TesterPresentは「診断セッションのタイムアウトを防止するKeep-Aliveサービス。」だよ。たとえると「テスターの「生存確認の握手」」のような役割かな。"
     },
     {
       "speaker": "student",
-      "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
+      "text": "プロトコルの仕様を教えて！"
     },
     {
       "speaker": "teacher",
-      "text": "SubFunction=0x00（応答あり）/ 0x80（応答抑制）で定期送信。S3タイマー（通常5秒）内に送信しないとDefaultSessionに戻る。診断ツールが自動送信するのが一般的"
+      "text": "SubFunction=0x00（応答あり）/ 0x80（応答抑制）で定期送信。"
     },
     {
       "speaker": "student",
-      "text": "OEMの量産開発やディーラー診断でどう使うの？"
+      "text": "リクエスト/レスポンスの具体的な形式は？"
     },
     {
       "speaker": "teacher",
-      "text": "0x80（応答抑制）の方がバス負荷低減になる。長時間のリプロ中にTesterPresentが途切れるとセッション断→リプロ失敗となるため信頼性設計が重要"
+      "text": "S3タイマー（通常5秒）内に送信しないとDefaultSessionに戻る。診断ツールが自動送信するのが一般的"
     },
     {
       "speaker": "student",
-      "text": "セキュリティや安全性の観点で注意点は？"
+      "text": "量産開発やディーラー診断でどう使うの？"
     },
     {
       "speaker": "teacher",
-      "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
+      "text": "0x80（応答抑制）の方がバス負荷低減になる。"
     },
     {
       "speaker": "student",
-      "text": "ポイントをまとめて。"
+      "text": "セキュリティ観点での注意点はある？"
     },
     {
       "speaker": "teacher",
-      "text": "まとめ：\n・定義：診断セッションのタイムアウトを防止するKeep-Aliveサービス。\n・プロトコル：SubFunction=0x00（応答あり）/ 0x80（応答抑制）で定期送信。S3タイマー（通常5秒）内に送信しないとDefaultSessionに戻る。診断…\n・実務：0x80（応答抑制）の方がバス負荷低減になる。長時間のリプロ中にTesterPresentが途切れるとセッション断→リプロ失敗となるため信頼性設計が重要\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
+      "text": "診断通信はUN R155のアタックサーフェスになり得るよ。SecurityAccess(0x27)の強度やProgrammingSessionのアクセス制御がTARAの重要チェックポイントなんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "まとめるとどのポイントが大事？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "①診断セッションのタイムアウトを防止するKeep-Aliveサービス。②SubFunction=0x00（応答あり）/ 0x80（応答抑制）で定期送信。S3タイマー（通常5秒）内に送…③0x80（応答抑制）の方がバス負荷低減になる。長時間のリプロ中にTesterPresentが途切れるとセッショ…——UDS理解は車両診断・リプロ・OTAの基盤だよ。"
     }
   ],
   "summary": [
-    "SID 0x3E TesterPresent（Tester Present）は、診断セッションのタイムアウトを防止するKeep-Aliveサービス。",
-    "【技術解説】SubFunction=0x00（応答あり）/ 0x80（応答抑制）で定期送信。S3タイマー（通常5秒）内に送信しないとDefaultSessionに戻る。診断ツールが自動送信するのが一般的",
-    "【業界・OEM視点】0x80（応答抑制）の方がバス負荷低減になる。長時間のリプロ中にTesterPresentが途切れるとセッション断→リプロ失敗となるため信頼性設計が重要"
+    "【定義】SID 0x3E TesterPresentは「診断セッションのタイムアウトを防止するKeep-Aliveサービス。」",
+    "【技術】SubFunction=0x00（応答あり）/ 0x80（応答抑制）で定期送信。S3タイマー（通常5秒）内に送信しないとDefaultSessionに戻る。診断ツールが自動送信するのが一般的",
+    "【OEM視点】0x80（応答抑制）の方がバス負荷低減になる。長時間のリプロ中にTesterPresentが途切れるとセッション断→リプロ失敗となるため信頼性設計が重要"
   ],
   "termLinks": {
     "TARA": "tara",

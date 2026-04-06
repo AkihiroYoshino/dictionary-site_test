@@ -9,49 +9,57 @@
   "dialogue": [
     {
       "speaker": "student",
-      "text": "WLTPって何？どんな規制・規格なの？"
+      "text": "WLTPって何の規制なの？"
     },
     {
       "speaker": "teacher",
-      "text": "WLTP（Worldwide Harmonized Light Vehicles Test Procedure）は、国際統一の燃費・排ガス試験法。JC08やNEDCに代わるリアルワールド指向の試験。 たとえると「世界共通の燃費測定「モノサシ」」だよ。"
+      "text": "WLTPは「国際統一の燃費・排ガス試験法。JC08やNEDCに代わるリアルワールド指向の試験。」だよ。ルールブックに例えると「世界共通の燃費測定「モノサシ」」みたいな位置づけかな。"
     },
     {
       "speaker": "student",
-      "text": "具体的な内容や要件を教えて。"
+      "text": "具体的に何を規定してるの？"
     },
     {
       "speaker": "teacher",
-      "text": "WLTCモード（Low/Mid/High/Extra High）で構成。実走行に近い走行パターンでJC08比でカタログ燃費と実燃費の乖離が縮小。試験温度23℃、RDE（Real Driving Emissions）と組み合わせて運用"
+      "text": "WLTCモード（Low/Mid/High/Extra High）で構成。"
     },
     {
       "speaker": "student",
-      "text": "OEMの開発にはどう影響するの？"
+      "text": "もう少し詳しく！要件の中身は？"
     },
     {
       "speaker": "teacher",
-      "text": "GTR No.15として策定。日本は2018年から採用。OEMは認証燃費値がJC08より悪化するためカタログ訴求戦略の見直しが必要だった"
+      "text": "実走行に近い走行パターンでJC08比でカタログ燃費と実燃費の乖離が縮小。試験温度23℃、RDE（Real Driving Emissions）と組み合わせて運用"
     },
     {
       "speaker": "student",
-      "text": "対応しないとどうなるの？時間軸は？"
+      "text": "OEMの開発スケジュールにはどう影響するの？"
     },
     {
       "speaker": "teacher",
-      "text": "法規は型式認可や市場投入の前提条件なので、対応しないと新車を販売できないよ。計画的な対応と認可当局との事前調整が重要だね。"
+      "text": "GTR No.15として策定。日本は2018年から採用。"
     },
     {
       "speaker": "student",
-      "text": "エンジニアとしてのポイントを整理して。"
+      "text": "対応できなかったらどうなるの？"
     },
     {
       "speaker": "teacher",
-      "text": "ポイント整理：\n・概要：国際統一の燃費・排ガス試験法。JC08やNEDCに代わるリアルワールド指向の試験。\n・要件：WLTCモード（Low/Mid/High/Extra High）で構成。実走行に近い走行パターンでJC08比でカタログ燃費と実燃費の乖離が縮小。試験温度23℃、…\n・OEM影響：GTR No.15として策定。日本は2018年から採用。OEMは認証燃費値がJC08より悪化するためカタログ訴求戦略の見直しが必要だった\n法規動向は車両開発日程に直結するので常にウォッチしよう。"
+      "text": "型式認可が下りないと新車を市場に出せないよ。規制発効の数年前から対応計画を立てることが必須なんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "エンジニアとして最低限押さえるポイントは？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "①国際統一の燃費・排ガス試験法。JC08やNEDCに代わるリアルワールド指向の試験。②WLTCモード（Low/Mid/High/Extra High）で構成。実走行に近い走行パターンでJC08比で…③GTR No.15として策定。日本は2018年から採用。OEMは認証燃費値がJC08より悪化するためカタログ訴…——法規動向は車両開発日程に直結するので常にウォッチしよう。"
     }
   ],
   "summary": [
-    "WLTP（Worldwide Harmonized Light Vehicles Test Procedure）は、国際統一の燃費・排ガス試験法。JC08やNEDCに代わるリアルワールド指向の試験。",
-    "【技術解説】WLTCモード（Low/Mid/High/Extra High）で構成。実走行に近い走行パターンでJC08比でカタログ燃費と実燃費の乖離が縮小。試験温度23℃、RDE（Real Driving Emissions）と組み合わせて運用",
-    "【業界・OEM視点】GTR No.15として策定。日本は2018年から採用。OEMは認証燃費値がJC08より悪化するためカタログ訴求戦略の見直しが必要だった"
+    "【定義】WLTPは「国際統一の燃費・排ガス試験法。JC08やNEDCに代わるリアルワールド指向の試験。」",
+    "【技術】WLTCモード（Low/Mid/High/Extra High）で構成。実走行に近い走行パターンでJC08比でカタログ燃費と実燃費の乖離が縮小。試験温度23℃、RDE（Real Driving Emissions）と組み合わせて運用",
+    "【OEM視点】GTR No.15として策定。日本は2018年から採用。OEMは認証燃費値がJC08より悪化するためカタログ訴求戦略の見直しが必要だった"
   ],
   "termLinks": {
     "GTR": "gtr",

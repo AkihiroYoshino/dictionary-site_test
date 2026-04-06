@@ -347,7 +347,11 @@
         var cls = isT ? 'teacher' : 'student';
         var avatar = isT ? IMAGES.teacher : IMAGES.student;
         var name = isT ? '先生' : '生徒';
-        var text = processTermLinks(d.text, term.termLinks, term.id);
+        var text = processTermLinks(
+          escapeHtml(d.text).replace(/\n/g, '<br>'),
+          term.termLinks,
+          term.id
+        );
 
         html +=
           '<div class="dialogue-row ' + cls + '">' +
@@ -362,38 +366,31 @@
       html += '</div></div>';
 
       /* まとめ */
-      html +=
-        '<div class="summary-box">' +
-          '<h2>まとめ</h2>';
-
-      if (Array.isArray(term.summary)) {
+      html += '<div class="summary-box"><h2>まとめ</h2>';
+      if (Array.isArray(term.summary) && term.summary.length > 0) {
         html += '<ul>';
         for (var si = 0; si < term.summary.length; si++) {
-          html += '<li>' + escapeHtml(term.summary[si]) + '</li>';
-        }
-        html += '</ul>';
-      } else if (typeof term.summary === 'string') {
-        html += '<p style="white-space:pre-line">' + escapeHtml(term.summary) + '</p>';
-      }
-
-      html += '</div>';
-
-      /* 関連用語 */
-      if (term.relatedTerms && term.relatedTerms.length > 0) {
-        html +=
-          '<div class="related-terms">' +
-            '<h2>関連用語</h2>' +
-            '<div class="related-tags">';
-
-        for (var rti = 0; rti < term.relatedTerms.length; rti++) {
-          var rt = term.relatedTerms[rti];
-          if (rt.id) {
-            html += '<a href="' + rt.id + '.html">' + rt.name + '</a>';
-          } else {
-            html += '<span class="related-tag-disabled">' + rt.name + '</span>';
+          var sLine = term.summary[si];
+          if (typeof sLine === 'string' && sLine.length > 0) {
+            html += '<li>' + escapeHtml(sLine).replace(/\n/g, '<br>') + '</li>';
           }
         }
+        html += '</ul>';
+      } else if (typeof term.summary === 'string' && term.summary.length > 0) {
+        html += '<p style="white-space:pre-line">' + escapeHtml(term.summary) + '</p>';
+      }
+      html += '</div>';
 
+      /* 関連用語 — termLinks から生成 */
+      var termLinksObj = term.termLinks || {};
+      var termLinkKeys = Object.keys(termLinksObj);
+      if (termLinkKeys.length > 0) {
+        html += '<div class="related-terms"><h2>関連用語</h2><div class="related-tags">';
+        for (var rti = 0; rti < termLinkKeys.length; rti++) {
+          var rtName = termLinkKeys[rti];
+          var rtId   = termLinksObj[rtName];
+          html += '<a href="' + escapeHtml(rtId) + '.html" class="related-tag">' + escapeHtml(rtName) + '</a>';
+        }
         html += '</div></div>';
       }
 

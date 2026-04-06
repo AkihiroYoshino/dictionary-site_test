@@ -9,49 +9,57 @@
   "dialogue": [
     {
       "speaker": "student",
-      "text": "ネガティブレスポンスって何？UDSのどこに位置するの？"
+      "text": "ネガティブレスポンスってUDSのどのサービスなの？"
     },
     {
       "speaker": "teacher",
-      "text": "ネガティブレスポンス（Negative Response Code (NRC)）は、UDSサービス要求が拒否された際のエラーコード。原因特定のための共通コード体系。 たとえると「ECUからの「お断り理由」」だよ。"
+      "text": "ネガティブレスポンスは「UDSサービス要求が拒否された際のエラーコード。原因特定のための共通コード体系。」だよ。たとえると「ECUからの「お断り理由」」のような役割かな。"
     },
     {
       "speaker": "student",
-      "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
+      "text": "プロトコルの仕様を教えて！"
     },
     {
       "speaker": "teacher",
-      "text": "0x12:SubFunctionNotSupported, 0x13:IncorrectMessageLength, 0x22:ConditionsNotCorrect, 0x31:RequestOutOfRange, 0x35:InvalidKey, 0x72:GeneralProgrammingFailure等。OEM独自NRCも定義可能"
+      "text": "0x12:SubFunctionNotSupported, 0x13:IncorrectMessageLength, 0x22:ConditionsNotCorrect, 0x31:RequestOutOfRange, 0x35:InvalidKey, 0x72:GeneralProgrammingFailure等。"
     },
     {
       "speaker": "student",
-      "text": "OEMの量産開発やディーラー診断でどう使うの？"
+      "text": "リクエスト/レスポンスの具体的な形式は？"
     },
     {
       "speaker": "teacher",
-      "text": "NRC 0x78（ResponsePending）は長時間処理中の応答で、テスターはP2*タイマーで待機を延長する。OEM開発ではNRC返却条件の網羅テストが品質ゲート要件"
+      "text": "NRC（Negative Response Code）で正常/異常を判別し、エラー要因を特定できるように設計されているんだよ。"
     },
     {
       "speaker": "student",
-      "text": "セキュリティや安全性の観点で注意点は？"
+      "text": "量産開発やディーラー診断でどう使うの？"
     },
     {
       "speaker": "teacher",
-      "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
+      "text": "NRC 0x78（ResponsePending）は長時間処理中の応答で、テスターはP2*タイマーで待機を延長する。"
     },
     {
       "speaker": "student",
-      "text": "ポイントをまとめて。"
+      "text": "セキュリティ観点での注意点はある？"
     },
     {
       "speaker": "teacher",
-      "text": "まとめ：\n・定義：UDSサービス要求が拒否された際のエラーコード。原因特定のための共通コード体系。\n・プロトコル：0x12:SubFunctionNotSupported, 0x13:IncorrectMessageLength, 0x22:ConditionsNotCor…\n・実務：NRC 0x78（ResponsePending）は長時間処理中の応答で、テスターはP2*タイマーで待機を延長する。OEM開発ではNRC返却条件の網羅テストが品…\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
+      "text": "診断通信はUN R155のアタックサーフェスになり得るよ。SecurityAccess(0x27)の強度やProgrammingSessionのアクセス制御がTARAの重要チェックポイントなんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "まとめるとどのポイントが大事？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "①UDSサービス要求が拒否された際のエラーコード。原因特定のための共通コード体系。②0x12:SubFunctionNotSupported, 0x13:IncorrectMessageLeng…③NRC 0x78（ResponsePending）は長時間処理中の応答で、テスターはP2*タイマーで待機を延長…——UDS理解は車両診断・リプロ・OTAの基盤だよ。"
     }
   ],
   "summary": [
-    "ネガティブレスポンス（Negative Response Code (NRC)）は、UDSサービス要求が拒否された際のエラーコード。原因特定のための共通コード体系。",
-    "【技術解説】0x12:SubFunctionNotSupported, 0x13:IncorrectMessageLength, 0x22:ConditionsNotCorrect, 0x31:RequestOutOfRange, 0x35:InvalidKey, 0x72:GeneralProgrammingFailure等。OEM独自NRCも定義可能",
-    "【業界・OEM視点】NRC 0x78（ResponsePending）は長時間処理中の応答で、テスターはP2*タイマーで待機を延長する。OEM開発ではNRC返却条件の網羅テストが品質ゲート要件"
+    "【定義】ネガティブレスポンスは「UDSサービス要求が拒否された際のエラーコード。原因特定のための共通コード体系。」",
+    "【技術】0x12:SubFunctionNotSupported, 0x13:IncorrectMessageLength, 0x22:ConditionsNotCorrect, 0x31:RequestOutOfRange, …",
+    "【OEM視点】NRC 0x78（ResponsePending）は長時間処理中の応答で、テスターはP2*タイマーで待機を延長する。OEM開発ではNRC返却条件の網羅テストが品質ゲート要件"
   ],
   "termLinks": {
     "ECU": "ecu",

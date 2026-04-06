@@ -9,35 +9,43 @@
   "dialogue": [
     {
       "speaker": "student",
-      "text": "干渉からの自由って何？機能安全でどういう役割？"
+      "text": "干渉からの自由って機能安全でどんな意味があるの？"
     },
     {
       "speaker": "teacher",
-      "text": "干渉からの自由（Freedom From Interference (FFI)）は、ASIL分解や混在システムでQM/低ASIL要素が高ASIL要素に悪影響を与えないことの保証。 たとえると「安全な部分を「汚染させない」壁」だよ。"
+      "text": "干渉からの自由は「ASIL分解や混在システムでQM/低ASIL要素が高ASIL要素に悪影響を与えないことの保証。」だよ。わかりやすく言えば「安全な部分を「汚染させない」壁」みたいなイメージかな。"
     },
     {
       "speaker": "student",
-      "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
+      "text": "ISO 26262の中でどう位置づけられてるの？"
     },
     {
       "speaker": "teacher",
-      "text": "メモリ保護（MPU）・時間保護（タイムスロット）・通信保護（E2E Protection）の3軸で確保。AUTOSARのOSがMPU/タイミング保護機能を提供"
+      "text": "メモリ保護（MPU）・時間保護（タイムスロット）・通信保護（E2E Protection）の3軸で確保。"
     },
     {
       "speaker": "student",
-      "text": "具体的にOEMの開発ではどう使われるの？"
+      "text": "もう少し詳しく教えて！"
     },
     {
       "speaker": "teacher",
-      "text": "マルチコアMCUでのFFI確保はISO 26262 Part 6（SW開発）の重点課題。OEMはLOCKSTEP実行やSW-C isolation設計で対応"
+      "text": "AUTOSARのOSがMPU/タイミング保護機能を提供"
     },
     {
       "speaker": "student",
-      "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
+      "text": "具体的に開発現場ではどう使われるの？"
     },
     {
       "speaker": "teacher",
-      "text": "ADAS/ADの高度化に伴い干渉からの自由の重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
+      "text": "マルチコアMCUでのFFI確保はISO 26262 Part 6（SW開発）の重点課題。"
+    },
+    {
+      "speaker": "student",
+      "text": "ADAS・自動運転でのニーズはどう変わってる？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "ADAS/ADの高度化でASIL-C/D要件が増えており、SOTIFやサイバーセキュリティとの複合対応が求められているよ。安全分析がより複雑になっているんだ。"
     },
     {
       "speaker": "student",
@@ -45,13 +53,13 @@
     },
     {
       "speaker": "teacher",
-      "text": "要点：\n・定義：ASIL分解や混在システムでQM/低ASIL要素が高ASIL要素に悪影響を与えないことの保証。\n・ISO 26262での位置づけ：メモリ保護（MPU）・時間保護（タイムスロット）・通信保護（E2E Protection）の3軸で確保。AUTOSARのOSがMPU/タイミング保護機能を提供\n・開発現場：マルチコアMCUでのFFI確保はISO 26262 Part 6（SW開発）の重点課題。OEMはLOCKSTEP実行やSW-C isolation設計で対応\n安全設計の基盤として確実に理解しておこう。"
+      "text": "①ASIL分解や混在システムでQM/低ASIL要素が高ASIL要素に悪影響を与えないことの保証。②メモリ保護（MPU）・時間保護（タイムスロット）・通信保護（E2E Protection）の3軸で確保。AUT…③マルチコアMCUでのFFI確保はISO 26262 Part 6（SW開発）の重点課題。OEMはLOCKSTE…——安全設計の基盤として確実に理解しておこう。"
     }
   ],
   "summary": [
-    "干渉からの自由（Freedom From Interference (FFI)）は、ASIL分解や混在システムでQM/低ASIL要素が高ASIL要素に悪影響を与えないことの保証。",
-    "【技術解説】メモリ保護（MPU）・時間保護（タイムスロット）・通信保護（E2E Protection）の3軸で確保。AUTOSARのOSがMPU/タイミング保護機能を提供",
-    "【業界・OEM視点】マルチコアMCUでのFFI確保はISO 26262 Part 6（SW開発）の重点課題。OEMはLOCKSTEP実行やSW-C isolation設計で対応"
+    "【定義】干渉からの自由は「ASIL分解や混在システムでQM/低ASIL要素が高ASIL要素に悪影響を与えないことの保証。」",
+    "【技術】メモリ保護（MPU）・時間保護（タイムスロット）・通信保護（E2E Protection）の3軸で確保。AUTOSARのOSがMPU/タイミング保護機能を提供",
+    "【OEM視点】マルチコアMCUでのFFI確保はISO 26262 Part 6（SW開発）の重点課題。OEMはLOCKSTEP実行やSW-C isolation設計で対応"
   ],
   "termLinks": {
     "ASIL分解": "asil-decomposition",

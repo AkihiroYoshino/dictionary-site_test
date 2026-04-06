@@ -9,49 +9,57 @@
   "dialogue": [
     {
       "speaker": "student",
-      "text": "SID 0x14 ClearDiagnosticInformationって何？UDSのどこに位置するの？"
+      "text": "SID 0x14 ClearDiagnosticInformationってUDSのどのサービスなの？"
     },
     {
       "speaker": "teacher",
-      "text": "SID 0x14 ClearDiagnosticInformation（Clear Diagnostic Information）は、ECU内のDTC情報をクリアするサービス。修理後のDTC消去に使用。 たとえると「ECUの「故障記録の消しゴム」」だよ。"
+      "text": "SID 0x14 ClearDiagnosticInformationは「ECU内のDTC情報をクリアするサービス。修理後のDTC消去に使用。」だよ。たとえると「ECUの「故障記録の消しゴム」」のような役割かな。"
     },
     {
       "speaker": "student",
-      "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
+      "text": "プロトコルの仕様を教えて！"
     },
     {
       "speaker": "teacher",
-      "text": "GroupOfDTC（3バイト）指定で対象DTCグループをクリア。0xFFFFFF=全DTC消去。StatusByte・Snapshotデータ・ExtendedDataも同時にクリアされる"
+      "text": "GroupOfDTC（3バイト）指定で対象DTCグループをクリア。"
     },
     {
       "speaker": "student",
-      "text": "OEMの量産開発やディーラー診断でどう使うの？"
+      "text": "リクエスト/レスポンスの具体的な形式は？"
     },
     {
       "speaker": "teacher",
-      "text": "OEMはDTCクリア条件（修理完了確認後のみ等）を規定。排ガス関連DTCのクリアはOBD-II法規で制限される場合がある"
+      "text": "0xFFFFFF=全DTC消去。StatusByte・Snapshotデータ・ExtendedDataも同時にクリアされる"
     },
     {
       "speaker": "student",
-      "text": "セキュリティや安全性の観点で注意点は？"
+      "text": "量産開発やディーラー診断でどう使うの？"
     },
     {
       "speaker": "teacher",
-      "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
+      "text": "OEMはDTCクリア条件（修理完了確認後のみ等）を規定。"
     },
     {
       "speaker": "student",
-      "text": "ポイントをまとめて。"
+      "text": "セキュリティ観点での注意点はある？"
     },
     {
       "speaker": "teacher",
-      "text": "まとめ：\n・定義：ECU内のDTC情報をクリアするサービス。修理後のDTC消去に使用。\n・プロトコル：GroupOfDTC（3バイト）指定で対象DTCグループをクリア。0xFFFFFF=全DTC消去。StatusByte・Snapshotデータ・Extended…\n・実務：OEMはDTCクリア条件（修理完了確認後のみ等）を規定。排ガス関連DTCのクリアはOBD-II法規で制限される場合がある\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
+      "text": "診断通信はUN R155のアタックサーフェスになり得るよ。SecurityAccess(0x27)の強度やProgrammingSessionのアクセス制御がTARAの重要チェックポイントなんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "まとめるとどのポイントが大事？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "①ECU内のDTC情報をクリアするサービス。修理後のDTC消去に使用。②GroupOfDTC（3バイト）指定で対象DTCグループをクリア。0xFFFFFF=全DTC消去。Status…③OEMはDTCクリア条件（修理完了確認後のみ等）を規定。排ガス関連DTCのクリアはOBD-II法規で制限される場合がある——UDS理解は車両診断・リプロ・OTAの基盤だよ。"
     }
   ],
   "summary": [
-    "SID 0x14 ClearDiagnosticInformation（Clear Diagnostic Information）は、ECU内のDTC情報をクリアするサービス。修理後のDTC消去に使用。",
-    "【技術解説】GroupOfDTC（3バイト）指定で対象DTCグループをクリア。0xFFFFFF=全DTC消去。StatusByte・Snapshotデータ・ExtendedDataも同時にクリアされる",
-    "【業界・OEM視点】OEMはDTCクリア条件（修理完了確認後のみ等）を規定。排ガス関連DTCのクリアはOBD-II法規で制限される場合がある"
+    "【定義】SID 0x14 ClearDiagnosticInformationは「ECU内のDTC情報をクリアするサービス。修理後のDTC消去に使用。」",
+    "【技術】GroupOfDTC（3バイト）指定で対象DTCグループをクリア。0xFFFFFF=全DTC消去。StatusByte・Snapshotデータ・ExtendedDataも同時にクリアされる",
+    "【OEM視点】OEMはDTCクリア条件（修理完了確認後のみ等）を規定。排ガス関連DTCのクリアはOBD-II法規で制限される場合がある"
   ],
   "termLinks": {
     "ECU": "ecu",

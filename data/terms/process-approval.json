@@ -9,49 +9,57 @@
   "dialogue": [
     {
       "speaker": "student",
-      "text": "プロセス認可って何？どんな規制・規格なの？"
+      "text": "プロセス認可って何の規制なの？"
     },
     {
       "speaker": "teacher",
-      "text": "プロセス認可（Process Approval (A-SPICE Assessment)）は、OEMがTier1のソフトウェア開発プロセスをA-SPICEやISO 26262準拠で審査・承認する仕組み。量産委託の前提条件。 たとえると「サプライヤーへの「開発能力の審査証明」」だよ。"
+      "text": "プロセス認可は「OEMがTier1のソフトウェア開発プロセスをA-SPICEやISO 26262準拠で審査・承認する仕組み。量産委託の前提条件。」だよ。ルールブックに例えると「サプライヤーへの「開発能力の審査証明」」みたいな位置づけかな。"
     },
     {
       "speaker": "student",
-      "text": "具体的な内容や要件を教えて。"
+      "text": "具体的に何を規定してるの？"
     },
     {
       "speaker": "teacher",
-      "text": "A-SPICE（Automotive SPICE）のCapability Level（CL）0〜5でプロセス成熟度を評価する国際標準。CL2（Managed Process）：計画・監視実施。CL3（Established）：標準プロセスで組織的に実施。多くの欧州OEM・日系OEMはCL2以上を量産委託の前提条件とし、ASIL-C/Dでは一部でCL3要求を行う。intacs認定アセッサーまたはOEM内部アセッサーが審査実施"
+      "text": "A-SPICE（Automotive SPICE）のCapability Level（CL）0〜5でプロセス成熟度を評価する国際標準。"
     },
     {
       "speaker": "student",
-      "text": "OEMの開発にはどう影響するの？"
+      "text": "もう少し詳しく！要件の中身は？"
     },
     {
       "speaker": "teacher",
-      "text": "OEMは調達要件にA-SPICE CL評価結果の提出を義務付け、継続取引・新規選定の評価指標にする。ISO 26262 Functional Safety Auditとセットで実施されることが多い。アセスメント費用・期間がTier1の大きな負担となるため、OEMとサプライヤーの連携方針の明確化が重要"
+      "text": "CL2（Managed Process）：計画・監視実施。CL3（Established）：標準プロセスで組織的に実施。多くの欧州OEM・日系OEMはCL2以上を量産委託の前提条件とし、ASIL-C/Dでは一部でCL3要求を行う。intacs認定アセッサーまたはOEM内部アセッサーが審査実施"
     },
     {
       "speaker": "student",
-      "text": "対応しないとどうなるの？時間軸は？"
+      "text": "OEMの開発スケジュールにはどう影響するの？"
     },
     {
       "speaker": "teacher",
-      "text": "法規は型式認可や市場投入の前提条件なので、対応しないと新車を販売できないよ。計画的な対応と認可当局との事前調整が重要だね。"
+      "text": "OEMは調達要件にA-SPICE CL評価結果の提出を義務付け、継続取引・新規選定の評価指標にする。"
     },
     {
       "speaker": "student",
-      "text": "エンジニアとしてのポイントを整理して。"
+      "text": "対応できなかったらどうなるの？"
     },
     {
       "speaker": "teacher",
-      "text": "ポイント整理：\n・概要：OEMがTier1のソフトウェア開発プロセスをA-SPICEやISO 26262準拠で審査・承認する仕組み。量産委託の前提条件。\n・要件：A-SPICE（Automotive SPICE）のCapability Level（CL）0〜5でプロセス成熟度を評価する国際標準。CL2（Managed P…\n・OEM影響：OEMは調達要件にA-SPICE CL評価結果の提出を義務付け、継続取引・新規選定の評価指標にする。ISO 26262 Functional Safety Au…\n法規動向は車両開発日程に直結するので常にウォッチしよう。"
+      "text": "型式認可が下りないと新車を市場に出せないよ。規制発効の数年前から対応計画を立てることが必須なんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "エンジニアとして最低限押さえるポイントは？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "①OEMがTier1のソフトウェア開発プロセスをA-SPICEやISO 26262準拠で審査・承認する仕組み。量産委託の前提条件。②A-SPICE（Automotive SPICE）のCapability Level（CL）0〜5でプロセス成…③OEMは調達要件にA-SPICE CL評価結果の提出を義務付け、継続取引・新規選定の評価指標にする。ISO 2…——法規動向は車両開発日程に直結するので常にウォッチしよう。"
     }
   ],
   "summary": [
-    "プロセス認可（Process Approval (A-SPICE Assessment)）は、OEMがTier1のソフトウェア開発プロセスをA-SPICEやISO 26262準拠で審査・承認する仕組み。量産委託の前提条件。",
-    "【技術解説】A-SPICE（Automotive SPICE）のCapability Level（CL）0〜5でプロセス成熟度を評価する国際標準。CL2（Managed Process）：計画・監視実施。CL3（Established）：標準プロセスで組織的に実施。多くの欧州OEM・日系OEMはCL2以上を量産委託の前提条件とし、ASIL-C/Dでは一部でCL3要求を行う。intacs認定アセッサーまたはOEM内部アセッサーが審査実施",
-    "【業界・OEM視点】OEMは調達要件にA-SPICE CL評価結果の提出を義務付け、継続取引・新規選定の評価指標にする。ISO 26262 Functional Safety Auditとセットで実施されることが多い。アセスメント費用・期間がTier1の大きな負担となるため、OEMとサプライヤーの連携方針の明確化が重要"
+    "【定義】プロセス認可は「OEMがTier1のソフトウェア開発プロセスをA-SPICEやISO 26262準拠で審査・承認する仕組み。量産委託の前提条件。」",
+    "【技術】A-SPICE（Automotive SPICE）のCapability Level（CL）0〜5でプロセス成熟度を評価する国際標準。CL2（Managed Process）：計画・監視実施。CL3（Establishe…",
+    "【OEM視点】OEMは調達要件にA-SPICE CL評価結果の提出を義務付け、継続取引・新規選定の評価指標にする。ISO 26262 Functional Safety Auditとセットで実施されることが多い。アセスメント費用・期間…"
   ],
   "termLinks": {
     "ASIL": "asil",

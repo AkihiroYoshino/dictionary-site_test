@@ -9,35 +9,43 @@
   "dialogue": [
     {
       "speaker": "student",
-      "text": "プロセス間通信（IPC）って何？機能安全でどういう役割？"
+      "text": "プロセス間通信（IPC）って機能安全でどんな意味があるの？"
     },
     {
       "speaker": "teacher",
-      "text": "プロセス間通信（IPC）（Inter-Process Communication）は、マルチコアECUやハイパーバイザー環境でプロセス/パーティション間のデータを安全に交換する仕組み。FFI確保の核心。 たとえると「別々に動くプログラム同士の「安全な郵便システム」」だよ。"
+      "text": "プロセス間通信（IPC）は「マルチコアECUやハイパーバイザー環境でプロセス/パーティション間のデータを安全に交換する仕組み。FFI確保の核心。」だよ。わかりやすく言えば「別々に動くプログラム同士の「安全な郵便システム」」みたいなイメージかな。"
     },
     {
       "speaker": "student",
-      "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
+      "text": "ISO 26262の中でどう位置づけられてるの？"
     },
     {
       "speaker": "teacher",
-      "text": "AUTOSAR Classic：COM/RTE経由のPDUベースIPC、Adaptive AUTOSAR：SOME/IP・POSIX IPC（Shared Memory/Message Queue/Socket）。Hypervisor環境ではShared Memory・Virtio準拠・Doorbell通知等を用いた安全隔離IPC。E2E Protection Profile（CRC+カウンタ）でデータ完全性を保証し、ビット化け・タイミング異常を検出する"
+      "text": "AUTOSAR Classic：COM/RTE経由のPDUベースIPC、Adaptive AUTOSAR：SOME/IP・POSIX IPC（Shared Memory/Message Queue/Socket）。"
     },
     {
       "speaker": "student",
-      "text": "具体的にOEMの開発ではどう使われるの？"
+      "text": "もう少し詳しく教えて！"
     },
     {
       "speaker": "teacher",
-      "text": "ISO 26262 Part 6のFFI（Freedom From Interference）確保においてIPCの設計が核心課題。ASIL-D/QM混在ECUではAUTOSAR SWC Mapping・MPU設定・タイムパーティショニングでIPCのASIL分離を実現。QNX・Green Hills INTEGRITY・PikeOS等のRTOSがハードウェア支援IPCをASIL認証済みで提供。OEMはIPCのレイテンシ・帯域・アイソレーション設計を早期アーキテクチャフェーズで決定する必要がある"
+      "text": "Hypervisor環境ではShared Memory・Virtio準拠・Doorbell通知等を用いた安全隔離IPC。E2E Protection Profile（CRC+カウンタ）でデータ完全性を保証し、ビット化け・タイミング異常を検出する"
     },
     {
       "speaker": "student",
-      "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
+      "text": "具体的に開発現場ではどう使われるの？"
     },
     {
       "speaker": "teacher",
-      "text": "ADAS/ADの高度化に伴いプロセス間通信（IPC）の重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
+      "text": "ISO 26262 Part 6のFFI（Freedom From Interference）確保においてIPCの設計が核心課題。"
+    },
+    {
+      "speaker": "student",
+      "text": "ADAS・自動運転でのニーズはどう変わってる？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "ADAS/ADの高度化でASIL-C/D要件が増えており、SOTIFやサイバーセキュリティとの複合対応が求められているよ。安全分析がより複雑になっているんだ。"
     },
     {
       "speaker": "student",
@@ -45,19 +53,18 @@
     },
     {
       "speaker": "teacher",
-      "text": "要点：\n・定義：マルチコアECUやハイパーバイザー環境でプロセス/パーティション間のデータを安全に交換する仕組み。FFI確保の核心。\n・ISO 26262での位置づけ：AUTOSAR Classic：COM/RTE経由のPDUベースIPC、Adaptive AUTOSAR：SOME/IP・POSIX IPC（Shared Me…\n・開発現場：ISO 26262 Part 6のFFI（Freedom From Interference）確保においてIPCの設計が核心課題。ASIL-D/QM混在ECUで…\n安全設計の基盤として確実に理解しておこう。"
+      "text": "①マルチコアECUやハイパーバイザー環境でプロセス/パーティション間のデータを安全に交換する仕組み。FFI確保の核心。②AUTOSAR Classic：COM/RTE経由のPDUベースIPC、Adaptive AUTOSAR：SO…③ISO 26262 Part 6のFFI（Freedom From Interference）確保においてIP…——安全設計の基盤として確実に理解しておこう。"
     }
   ],
   "summary": [
-    "プロセス間通信（IPC）（Inter-Process Communication）は、マルチコアECUやハイパーバイザー環境でプロセス/パーティション間のデータを安全に交換する仕組み。FFI確保の核心。",
-    "【技術解説】AUTOSAR Classic：COM/RTE経由のPDUベースIPC、Adaptive AUTOSAR：SOME/IP・POSIX IPC（Shared Memory/Message Queue/Socket）。Hypervisor環境ではShared Memory・Virtio準拠・Doorbell通知等を用いた安全隔離IPC。E2E Protection Profile（CRC+カウンタ）でデータ完全性を保証し、ビット化け・タイミング異常を検出する",
-    "【業界・OEM視点】ISO 26262 Part 6のFFI（Freedom From Interference）確保においてIPCの設計が核心課題。ASIL-D/QM混在ECUではAUTOSAR SWC Mapping・MPU設定・タイムパーティショニングでIPCのASIL分離を実現。QNX・Green Hills INTEGRITY・PikeOS等のRTOSがハードウェア支援IPCをASIL認証済みで提供。OEMはIPCのレイテンシ・帯域・アイソレーション設計を早期アーキテクチャフェーズで決定する必要がある"
+    "【定義】プロセス間通信（IPC）は「マルチコアECUやハイパーバイザー環境でプロセス/パーティション間のデータを安全に交換する仕組み。FFI確保の核心。」",
+    "【技術】AUTOSAR Classic：COM/RTE経由のPDUベースIPC、Adaptive AUTOSAR：SOME/IP・POSIX IPC（Shared Memory/Message Queue/Socket）。Hyp…",
+    "【OEM視点】ISO 26262 Part 6のFFI（Freedom From Interference）確保においてIPCの設計が核心課題。ASIL-D/QM混在ECUではAUTOSAR SWC Mapping・MPU設定・タイム…"
   ],
   "termLinks": {
     "ASIL": "asil",
     "ECU": "ecu",
     "ISO 26262": "iso-26262",
-    "QNX": "qnx",
     "SOTIF": "sotif"
   },
   "date": "2026-04-06"

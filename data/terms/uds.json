@@ -9,49 +9,57 @@
   "dialogue": [
     {
       "speaker": "student",
-      "text": "UDSって何？UDSのどこに位置するの？"
+      "text": "UDSってUDSのどのサービスなの？"
     },
     {
       "speaker": "teacher",
-      "text": "UDS（Unified Diagnostic Services (ISO 14229)）は、車載ECUの診断通信プロトコル。統一されたサービスIDで診断・書込み・制御を実行。 たとえると「ECUと対話するための「共通言語」」だよ。"
+      "text": "UDSは「車載ECUの診断通信プロトコル。統一されたサービスIDで診断・書込み・制御を実行。」だよ。たとえると「ECUと対話するための「共通言語」」のような役割かな。"
     },
     {
       "speaker": "student",
-      "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
+      "text": "プロトコルの仕様を教えて！"
     },
     {
       "speaker": "teacher",
-      "text": "ISO 14229-1でサービス定義、14229-2でセッション管理、14229-3/5でCAN/IP上の実装を規定。テスター→ECU間のRequest/Responseモデルで動作。OBD-II診断もUDSベース化が進行中"
+      "text": "ISO 14229-1でサービス定義、14229-2でセッション管理、14229-3/5でCAN/IP上の実装を規定。"
     },
     {
       "speaker": "student",
-      "text": "OEMの量産開発やディーラー診断でどう使うの？"
+      "text": "リクエスト/レスポンスの具体的な形式は？"
     },
     {
       "speaker": "teacher",
-      "text": "OEM開発ではODX（Open Diagnostic Data eXchange）でUDS定義を管理しCANoeやCANdelaで診断テストを自動化。A-SPICEのSWE.6（SW統合テスト）でもUDS検証を活用"
+      "text": "テスター→ECU間のRequest/Responseモデルで動作。OBD-II診断もUDSベース化が進行中"
     },
     {
       "speaker": "student",
-      "text": "セキュリティや安全性の観点で注意点は？"
+      "text": "量産開発やディーラー診断でどう使うの？"
     },
     {
       "speaker": "teacher",
-      "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
+      "text": "OEM開発ではODX（Open Diagnostic Data eXchange）でUDS定義を管理しCANoeやCANdelaで診断テストを自動化。"
     },
     {
       "speaker": "student",
-      "text": "ポイントをまとめて。"
+      "text": "セキュリティ観点での注意点はある？"
     },
     {
       "speaker": "teacher",
-      "text": "まとめ：\n・定義：車載ECUの診断通信プロトコル。統一されたサービスIDで診断・書込み・制御を実行。\n・プロトコル：ISO 14229-1でサービス定義、14229-2でセッション管理、14229-3/5でCAN/IP上の実装を規定。テスター→ECU間のRequest/Res…\n・実務：OEM開発ではODX（Open Diagnostic Data eXchange）でUDS定義を管理しCANoeやCANdelaで診断テストを自動化。A-SPI…\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
+      "text": "診断通信はUN R155のアタックサーフェスになり得るよ。SecurityAccess(0x27)の強度やProgrammingSessionのアクセス制御がTARAの重要チェックポイントなんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "まとめるとどのポイントが大事？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "①車載ECUの診断通信プロトコル。統一されたサービスIDで診断・書込み・制御を実行。②ISO 14229-1でサービス定義、14229-2でセッション管理、14229-3/5でCAN/IP上の実装…③OEM開発ではODX（Open Diagnostic Data eXchange）でUDS定義を管理しCANo…——UDS理解は車両診断・リプロ・OTAの基盤だよ。"
     }
   ],
   "summary": [
-    "UDS（Unified Diagnostic Services (ISO 14229)）は、車載ECUの診断通信プロトコル。統一されたサービスIDで診断・書込み・制御を実行。",
-    "【技術解説】ISO 14229-1でサービス定義、14229-2でセッション管理、14229-3/5でCAN/IP上の実装を規定。テスター→ECU間のRequest/Responseモデルで動作。OBD-II診断もUDSベース化が進行中",
-    "【業界・OEM視点】OEM開発ではODX（Open Diagnostic Data eXchange）でUDS定義を管理しCANoeやCANdelaで診断テストを自動化。A-SPICEのSWE.6（SW統合テスト）でもUDS検証を活用"
+    "【定義】UDSは「車載ECUの診断通信プロトコル。統一されたサービスIDで診断・書込み・制御を実行。」",
+    "【技術】ISO 14229-1でサービス定義、14229-2でセッション管理、14229-3/5でCAN/IP上の実装を規定。テスター→ECU間のRequest/Responseモデルで動作。OBD-II診断もUDSベース化が進行中",
+    "【OEM視点】OEM開発ではODX（Open Diagnostic Data eXchange）でUDS定義を管理しCANoeやCANdelaで診断テストを自動化。A-SPICEのSWE.6（SW統合テスト）でもUDS検証を活用"
   ],
   "termLinks": {
     "ECU": "ecu",

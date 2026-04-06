@@ -9,49 +9,57 @@
   "dialogue": [
     {
       "speaker": "student",
-      "text": "SID 0x2E WriteDataByIdentifierって何？UDSのどこに位置するの？"
+      "text": "SID 0x2E WriteDataByIdentifierってUDSのどのサービスなの？"
     },
     {
       "speaker": "teacher",
-      "text": "SID 0x2E WriteDataByIdentifier（Write Data By Identifier）は、DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。 たとえると「ECUの「データ書き込み窓口」」だよ。"
+      "text": "SID 0x2E WriteDataByIdentifierは「DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。」だよ。たとえると「ECUの「データ書き込み窓口」」のような役割かな。"
     },
     {
       "speaker": "student",
-      "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
+      "text": "プロトコルの仕様を教えて！"
     },
     {
       "speaker": "teacher",
-      "text": "SecurityAccess後に使用。VINの書込み、車両仕様設定（CAN通信設定・機能ON/OFF等）、工場ラインでの個体別設定に使用される"
+      "text": "SecurityAccess後に使用。"
     },
     {
       "speaker": "student",
-      "text": "OEMの量産開発やディーラー診断でどう使うの？"
+      "text": "リクエスト/レスポンスの具体的な形式は？"
     },
     {
       "speaker": "teacher",
-      "text": "DIDの書込み保護設計がセキュリティ上重要。OEMはどのDIDをどのセキュリティレベルで保護するかをTARA結果に基づいて設計する"
+      "text": "VINの書込み、車両仕様設定（CAN通信設定・機能ON/OFF等）、工場ラインでの個体別設定に使用される"
     },
     {
       "speaker": "student",
-      "text": "セキュリティや安全性の観点で注意点は？"
+      "text": "量産開発やディーラー診断でどう使うの？"
     },
     {
       "speaker": "teacher",
-      "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
+      "text": "DIDの書込み保護設計がセキュリティ上重要。"
     },
     {
       "speaker": "student",
-      "text": "ポイントをまとめて。"
+      "text": "セキュリティ観点での注意点はある？"
     },
     {
       "speaker": "teacher",
-      "text": "まとめ：\n・定義：DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。\n・プロトコル：SecurityAccess後に使用。VINの書込み、車両仕様設定（CAN通信設定・機能ON/OFF等）、工場ラインでの個体別設定に使用される\n・実務：DIDの書込み保護設計がセキュリティ上重要。OEMはどのDIDをどのセキュリティレベルで保護するかをTARA結果に基づいて設計する\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
+      "text": "診断通信はUN R155のアタックサーフェスになり得るよ。SecurityAccess(0x27)の強度やProgrammingSessionのアクセス制御がTARAの重要チェックポイントなんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "まとめるとどのポイントが大事？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "①DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。②SecurityAccess後に使用。VINの書込み、車両仕様設定（CAN通信設定・機能ON/OFF等）、工場…③DIDの書込み保護設計がセキュリティ上重要。OEMはどのDIDをどのセキュリティレベルで保護するかをTARA結…——UDS理解は車両診断・リプロ・OTAの基盤だよ。"
     }
   ],
   "summary": [
-    "SID 0x2E WriteDataByIdentifier（Write Data By Identifier）は、DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。",
-    "【技術解説】SecurityAccess後に使用。VINの書込み、車両仕様設定（CAN通信設定・機能ON/OFF等）、工場ラインでの個体別設定に使用される",
-    "【業界・OEM視点】DIDの書込み保護設計がセキュリティ上重要。OEMはどのDIDをどのセキュリティレベルで保護するかをTARA結果に基づいて設計する"
+    "【定義】SID 0x2E WriteDataByIdentifierは「DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。」",
+    "【技術】SecurityAccess後に使用。VINの書込み、車両仕様設定（CAN通信設定・機能ON/OFF等）、工場ラインでの個体別設定に使用される",
+    "【OEM視点】DIDの書込み保護設計がセキュリティ上重要。OEMはどのDIDをどのセキュリティレベルで保護するかをTARA結果に基づいて設計する"
   ],
   "termLinks": {
     "ECU": "ecu",

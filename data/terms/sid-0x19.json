@@ -9,49 +9,57 @@
   "dialogue": [
     {
       "speaker": "student",
-      "text": "SID 0x19 ReadDTCInformationって何？UDSのどこに位置するの？"
+      "text": "SID 0x19 ReadDTCInformationってUDSのどのサービスなの？"
     },
     {
       "speaker": "teacher",
-      "text": "SID 0x19 ReadDTCInformation（Read DTC Information）は、DTC（故障コード）の読み出しサービス。StatusMaskやSnapshotDataの取得が可能。 たとえると「ECUの「故障履歴の問診」」だよ。"
+      "text": "SID 0x19 ReadDTCInformationは「DTC（故障コード）の読み出しサービス。StatusMaskやSnapshotDataの取得が可能。」だよ。たとえると「ECUの「故障履歴の問診」」のような役割かな。"
     },
     {
       "speaker": "student",
-      "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
+      "text": "プロトコルの仕様を教えて！"
     },
     {
       "speaker": "teacher",
-      "text": "SubFunction多数：0x02(DTC by Status Mask)、0x04(Snapshot by DTC)、0x06(ExtData by DTC)等。DTCは3バイト（UDS DTC）で故障を一意に識別。StatusByteで現在/履歴/確定状態を管理"
+      "text": "SubFunction多数：0x02(DTC by Status Mask)、0x04(Snapshot by DTC)、0x06(ExtData by DTC)等。"
     },
     {
       "speaker": "student",
-      "text": "OEMの量産開発やディーラー診断でどう使うの？"
+      "text": "リクエスト/レスポンスの具体的な形式は？"
     },
     {
       "speaker": "teacher",
-      "text": "OEM開発では DTC設計（設定条件・解除条件・デバウンスロジック）が品質に直結。量産後のフィールド分析で0x19によるDTC収集が最も基本的な診断作業"
+      "text": "DTCは3バイト（UDS DTC）で故障を一意に識別。StatusByteで現在/履歴/確定状態を管理"
     },
     {
       "speaker": "student",
-      "text": "セキュリティや安全性の観点で注意点は？"
+      "text": "量産開発やディーラー診断でどう使うの？"
     },
     {
       "speaker": "teacher",
-      "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
+      "text": "OEM開発では DTC設計（設定条件・解除条件・デバウンスロジック）が品質に直結。"
     },
     {
       "speaker": "student",
-      "text": "ポイントをまとめて。"
+      "text": "セキュリティ観点での注意点はある？"
     },
     {
       "speaker": "teacher",
-      "text": "まとめ：\n・定義：DTC（故障コード）の読み出しサービス。StatusMaskやSnapshotDataの取得が可能。\n・プロトコル：SubFunction多数：0x02(DTC by Status Mask)、0x04(Snapshot by DTC)、0x06(ExtData by DTC…\n・実務：OEM開発では DTC設計（設定条件・解除条件・デバウンスロジック）が品質に直結。量産後のフィールド分析で0x19によるDTC収集が最も基本的な診断作業\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
+      "text": "診断通信はUN R155のアタックサーフェスになり得るよ。SecurityAccess(0x27)の強度やProgrammingSessionのアクセス制御がTARAの重要チェックポイントなんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "まとめるとどのポイントが大事？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "①DTC（故障コード）の読み出しサービス。StatusMaskやSnapshotDataの取得が可能。②SubFunction多数：0x02(DTC by Status Mask)、0x04(Snapshot by…③OEM開発では DTC設計（設定条件・解除条件・デバウンスロジック）が品質に直結。量産後のフィールド分析で0x…——UDS理解は車両診断・リプロ・OTAの基盤だよ。"
     }
   ],
   "summary": [
-    "SID 0x19 ReadDTCInformation（Read DTC Information）は、DTC（故障コード）の読み出しサービス。StatusMaskやSnapshotDataの取得が可能。",
-    "【技術解説】SubFunction多数：0x02(DTC by Status Mask)、0x04(Snapshot by DTC)、0x06(ExtData by DTC)等。DTCは3バイト（UDS DTC）で故障を一意に識別。StatusByteで現在/履歴/確定状態を管理",
-    "【業界・OEM視点】OEM開発では DTC設計（設定条件・解除条件・デバウンスロジック）が品質に直結。量産後のフィールド分析で0x19によるDTC収集が最も基本的な診断作業"
+    "【定義】SID 0x19 ReadDTCInformationは「DTC（故障コード）の読み出しサービス。StatusMaskやSnapshotDataの取得が可能。」",
+    "【技術】SubFunction多数：0x02(DTC by Status Mask)、0x04(Snapshot by DTC)、0x06(ExtData by DTC)等。DTCは3バイト（UDS DTC）で故障を一意に識別。…",
+    "【OEM視点】OEM開発では DTC設計（設定条件・解除条件・デバウンスロジック）が品質に直結。量産後のフィールド分析で0x19によるDTC収集が最も基本的な診断作業"
   ],
   "termLinks": {
     "ECU": "ecu",

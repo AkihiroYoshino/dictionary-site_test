@@ -9,49 +9,57 @@
   "dialogue": [
     {
       "speaker": "student",
-      "text": "SID 0x22 ReadDataByIdentifierって何？UDSのどこに位置するの？"
+      "text": "SID 0x22 ReadDataByIdentifierってUDSのどのサービスなの？"
     },
     {
       "speaker": "teacher",
-      "text": "SID 0x22 ReadDataByIdentifier（Read Data By Identifier）は、DID（Data Identifier）指定でECU内部データを読み出すサービス。 たとえると「ECUの「データ読み出し窓口」」だよ。"
+      "text": "SID 0x22 ReadDataByIdentifierは「DID（Data Identifier）指定でECU内部データを読み出すサービス。」だよ。たとえると「ECUの「データ読み出し窓口」」のような役割かな。"
     },
     {
       "speaker": "student",
-      "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
+      "text": "プロトコルの仕様を教えて！"
     },
     {
       "speaker": "teacher",
-      "text": "DID（2バイト）で読出し対象を指定。0xF190=VIN、0xF186=ActiveDiagSession、0xF195=SW番号等がISO定義。OEM独自DIDで車両固有データ（学習値・DTC詳細等）も読出し可能"
+      "text": "DID（2バイト）で読出し対象を指定。"
     },
     {
       "speaker": "student",
-      "text": "OEMの量産開発やディーラー診断でどう使うの？"
+      "text": "リクエスト/レスポンスの具体的な形式は？"
     },
     {
       "speaker": "teacher",
-      "text": "OEM開発ではDID一覧をODXで管理。量産診断ではDID読出しによるECU状態確認・品質データ収集が日常的に使用される"
+      "text": "0xF190=VIN、0xF186=ActiveDiagSession、0xF195=SW番号等がISO定義。OEM独自DIDで車両固有データ（学習値・DTC詳細等）も読出し可能"
     },
     {
       "speaker": "student",
-      "text": "セキュリティや安全性の観点で注意点は？"
+      "text": "量産開発やディーラー診断でどう使うの？"
     },
     {
       "speaker": "teacher",
-      "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
+      "text": "OEM開発ではDID一覧をODXで管理。"
     },
     {
       "speaker": "student",
-      "text": "ポイントをまとめて。"
+      "text": "セキュリティ観点での注意点はある？"
     },
     {
       "speaker": "teacher",
-      "text": "まとめ：\n・定義：DID（Data Identifier）指定でECU内部データを読み出すサービス。\n・プロトコル：DID（2バイト）で読出し対象を指定。0xF190=VIN、0xF186=ActiveDiagSession、0xF195=SW番号等がISO定義。OEM独自D…\n・実務：OEM開発ではDID一覧をODXで管理。量産診断ではDID読出しによるECU状態確認・品質データ収集が日常的に使用される\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
+      "text": "診断通信はUN R155のアタックサーフェスになり得るよ。SecurityAccess(0x27)の強度やProgrammingSessionのアクセス制御がTARAの重要チェックポイントなんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "まとめるとどのポイントが大事？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "①DID（Data Identifier）指定でECU内部データを読み出すサービス。②DID（2バイト）で読出し対象を指定。0xF190=VIN、0xF186=ActiveDiagSession、…③OEM開発ではDID一覧をODXで管理。量産診断ではDID読出しによるECU状態確認・品質データ収集が日常的に使用される——UDS理解は車両診断・リプロ・OTAの基盤だよ。"
     }
   ],
   "summary": [
-    "SID 0x22 ReadDataByIdentifier（Read Data By Identifier）は、DID（Data Identifier）指定でECU内部データを読み出すサービス。",
-    "【技術解説】DID（2バイト）で読出し対象を指定。0xF190=VIN、0xF186=ActiveDiagSession、0xF195=SW番号等がISO定義。OEM独自DIDで車両固有データ（学習値・DTC詳細等）も読出し可能",
-    "【業界・OEM視点】OEM開発ではDID一覧をODXで管理。量産診断ではDID読出しによるECU状態確認・品質データ収集が日常的に使用される"
+    "【定義】SID 0x22 ReadDataByIdentifierは「DID（Data Identifier）指定でECU内部データを読み出すサービス。」",
+    "【技術】DID（2バイト）で読出し対象を指定。0xF190=VIN、0xF186=ActiveDiagSession、0xF195=SW番号等がISO定義。OEM独自DIDで車両固有データ（学習値・DTC詳細等）も読出し可能",
+    "【OEM視点】OEM開発ではDID一覧をODXで管理。量産診断ではDID読出しによるECU状態確認・品質データ収集が日常的に使用される"
   ],
   "termLinks": {
     "ECU": "ecu",
