@@ -8,47 +8,51 @@
   "category": "auto-parts",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "インジェクターって何？自動車のどこに使われてるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "インジェクター（Fuel Injector）は、燃料を高精度に噴射する装置。直噴は200bar超で噴射しPM低減と燃費改善を両立。 身近なたとえで言うと「燃料の「精密スプレーガン」」のようなものだよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "なるほど。もう少し技術的に教えて。どんな種類や構造があるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "マルチホール式ノズルで噴霧形状を最適化。ピエゾ式は応答速度に優れるがソレノイド式がコスト面で主流。デポジット対策が長期信頼性の課題"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMの開発現場ではどういう位置づけなの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "ボッシュ・デンソー・日立Astemoが市場を寡占。GDIエンジンではCCD対策が重要"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "EV化や電動化で、この部品はどう変わっていくの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "電動化の流れでインジェクターにも変革が求められているよ。軽量化・高効率化・システム統合が大きなトレンドで、従来のICE前提の設計からEV/HEV最適設計への移行が進んでいるんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "まとめると、インジェクターのポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "まとめるとこうだよ：\n・基本：燃料を高精度に噴射する装置。直噴は200bar超で噴射しPM低減と燃費改善を両立。\n・技術：マルチホール式ノズルで噴霧形状を最適化。ピエゾ式は応答速度に優れるがソレノイド式がコスト面で主流。デポジット対策が長期信頼性の課題\n・OEM視点：ボッシュ・デンソー・日立Astemoが市場を寡占。GDIエンジンではCCD対策が重要\n開発者として押さえておくべき重要部品だね。"
     }
   ],
-  "summary": "インジェクター（Fuel Injector）は、燃料を高精度に噴射する装置。直噴は200bar超で噴射しPM低減と燃費改善を両立。\n\n■ 技術解説\nマルチホール式ノズルで噴霧形状を最適化。ピエゾ式は応答速度に優れるがソレノイド式がコスト面で主流。デポジット対策が長期信頼性の課題\n\n■ 業界・OEM視点\nボッシュ・デンソー・日立Astemoが市場を寡占。GDIエンジンではCCD対策が重要",
+  "summary": [
+    "インジェクター（Fuel Injector）は、燃料を高精度に噴射する装置。直噴は200bar超で噴射しPM低減と燃費改善を両立。",
+    "【技術解説】マルチホール式ノズルで噴霧形状を最適化。ピエゾ式は応答速度に優れるがソレノイド式がコスト面で主流。デポジット対策が長期信頼性の課題",
+    "【業界・OEM視点】ボッシュ・デンソー・日立Astemoが市場を寡占。GDIエンジンではCCD対策が重要"
+  ],
   "termLinks": {},
   "date": "2026-04-06"
 }

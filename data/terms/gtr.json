@@ -8,47 +8,55 @@
   "category": "regulation",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "GTRって何？どんな規制・規格なの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "GTR（Global Technical Regulation）は、1998年協定に基づくグローバル技術基準。米国含む主要国が参加。 たとえると「世界共通の車両技術基準」だよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "具体的な内容や要件を教えて。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "UN規則（1958年協定ベース）と異なり、各国が国内法規に組み込む義務を負わない技術基準。ただし調和が進むことで各国法規の技術要件が収束する。GTR No.15（WLTP）が代表例"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMの開発にはどう影響するの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "1998年協定には米国も参加しているため、FMVSSとUN規則の橋渡し的な役割。EVバッテリー安全のGTR No.20も重要"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "対応しないとどうなるの？時間軸は？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "法規は型式認可や市場投入の前提条件なので、対応しないと新車を販売できないよ。計画的な対応と認可当局との事前調整が重要だね。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "エンジニアとしてのポイントを整理して。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "ポイント整理：\n・概要：1998年協定に基づくグローバル技術基準。米国含む主要国が参加。\n・要件：UN規則（1958年協定ベース）と異なり、各国が国内法規に組み込む義務を負わない技術基準。ただし調和が進むことで各国法規の技術要件が収束する。GTR No.15…\n・OEM影響：1998年協定には米国も参加しているため、FMVSSとUN規則の橋渡し的な役割。EVバッテリー安全のGTR No.20も重要\n法規動向は車両開発日程に直結するので常にウォッチしよう。"
     }
   ],
-  "summary": "GTR（Global Technical Regulation）は、1998年協定に基づくグローバル技術基準。米国含む主要国が参加。\n\n■ 技術解説\nUN規則（1958年協定ベース）と異なり、各国が国内法規に組み込む義務を負わない技術基準。ただし調和が進むことで各国法規の技術要件が収束する。GTR No.15（WLTP）が代表例\n\n■ 業界・OEM視点\n1998年協定には米国も参加しているため、FMVSSとUN規則の橋渡し的な役割。EVバッテリー安全のGTR No.20も重要",
-  "termLinks": {},
+  "summary": [
+    "GTR（Global Technical Regulation）は、1998年協定に基づくグローバル技術基準。米国含む主要国が参加。",
+    "【技術解説】UN規則（1958年協定ベース）と異なり、各国が国内法規に組み込む義務を負わない技術基準。ただし調和が進むことで各国法規の技術要件が収束する。GTR No.15（WLTP）が代表例",
+    "【業界・OEM視点】1998年協定には米国も参加しているため、FMVSSとUN規則の橋渡し的な役割。EVバッテリー安全のGTR No.20も重要"
+  ],
+  "termLinks": {
+    "1958年協定": "1958-agreement",
+    "型式認可": "type-approval",
+    "WLTP": "wltp"
+  },
   "date": "2026-04-06"
 }

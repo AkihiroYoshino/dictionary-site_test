@@ -8,47 +8,51 @@
   "category": "auto-parts",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "EGRバルブって何？自動車のどこに使われてるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "EGRバルブ（EGR Valve）は、排気ガスを吸気に戻しNOxを低減するバルブ。高圧/低圧EGRがある。 身近なたとえで言うと「排気ガスの「再利用ゲート」」のようなものだよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "なるほど。もう少し技術的に教えて。どんな種類や構造があるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "高圧EGRと低圧EGRを組み合わせるデュアルEGRが一般的。EGRクーラーで温度を下げてから混合する。煤によるデポジット詰まりが耐久課題"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMの開発現場ではどういう位置づけなの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "Euro 7ではRDE対応のため広い運転領域でのEGR制御精度が求められる"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "EV化や電動化で、この部品はどう変わっていくの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "電動化の流れでEGRバルブにも変革が求められているよ。軽量化・高効率化・システム統合が大きなトレンドで、従来のICE前提の設計からEV/HEV最適設計への移行が進んでいるんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "まとめると、EGRバルブのポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "まとめるとこうだよ：\n・基本：排気ガスを吸気に戻しNOxを低減するバルブ。高圧/低圧EGRがある。\n・技術：高圧EGRと低圧EGRを組み合わせるデュアルEGRが一般的。EGRクーラーで温度を下げてから混合する。煤によるデポジット詰まりが耐久課題\n・OEM視点：Euro 7ではRDE対応のため広い運転領域でのEGR制御精度が求められる\n開発者として押さえておくべき重要部品だね。"
     }
   ],
-  "summary": "EGRバルブ（EGR Valve）は、排気ガスを吸気に戻しNOxを低減するバルブ。高圧/低圧EGRがある。\n\n■ 技術解説\n高圧EGRと低圧EGRを組み合わせるデュアルEGRが一般的。EGRクーラーで温度を下げてから混合する。煤によるデポジット詰まりが耐久課題\n\n■ 業界・OEM視点\nEuro 7ではRDE対応のため広い運転領域でのEGR制御精度が求められる",
+  "summary": [
+    "EGRバルブ（EGR Valve）は、排気ガスを吸気に戻しNOxを低減するバルブ。高圧/低圧EGRがある。",
+    "【技術解説】高圧EGRと低圧EGRを組み合わせるデュアルEGRが一般的。EGRクーラーで温度を下げてから混合する。煤によるデポジット詰まりが耐久課題",
+    "【業界・OEM視点】Euro 7ではRDE対応のため広い運転領域でのEGR制御精度が求められる"
+  ],
   "termLinks": {},
   "date": "2026-04-06"
 }

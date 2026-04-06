@@ -8,47 +8,56 @@
   "category": "diagnostic",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "SID 0x10 DiagnosticSessionControlって何？UDSのどこに位置するの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "SID 0x10 DiagnosticSessionControl（Diagnostic Session Control）は、診断セッションの切替サービス。DefaultSession/ExtendedSession/ProgrammingSessionを管理。 たとえると「ECU診断の「入口の扉」を切りかえる」だよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "DefaultSession（通常稼働）→ExtendedSession（拡張診断）→ProgrammingSession（ソフト書込み）の3種+OEM定義セッション。セッションごとにアクセス可能なサービスが制限される"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMの量産開発やディーラー診断でどう使うの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "ProgrammingSessionへの遷移はSecurityAccess（0x27）と組み合わせてアクセス制御する。OEMはセッション遷移条件（車速0km/h等）を安全要件として定義"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "セキュリティや安全性の観点で注意点は？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ポイントをまとめて。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "まとめ：\n・定義：診断セッションの切替サービス。DefaultSession/ExtendedSession/ProgrammingSessionを管理。\n・プロトコル：DefaultSession（通常稼働）→ExtendedSession（拡張診断）→ProgrammingSession（ソフト書込み）の3種+OEM定義セッ…\n・実務：ProgrammingSessionへの遷移はSecurityAccess（0x27）と組み合わせてアクセス制御する。OEMはセッション遷移条件（車速0km/h…\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
     }
   ],
-  "summary": "SID 0x10 DiagnosticSessionControl（Diagnostic Session Control）は、診断セッションの切替サービス。DefaultSession/ExtendedSession/ProgrammingSessionを管理。\n\n■ 技術解説\nDefaultSession（通常稼働）→ExtendedSession（拡張診断）→ProgrammingSession（ソフト書込み）の3種+OEM定義セッション。セッションごとにアクセス可能なサービスが制限される\n\n■ 業界・OEM視点\nProgrammingSessionへの遷移はSecurityAccess（0x27）と組み合わせてアクセス制御する。OEMはセッション遷移条件（車速0km/h等）を安全要件として定義",
-  "termLinks": {},
+  "summary": [
+    "SID 0x10 DiagnosticSessionControl（Diagnostic Session Control）は、診断セッションの切替サービス。DefaultSession/ExtendedSession/ProgrammingSessionを管理。",
+    "【技術解説】DefaultSession（通常稼働）→ExtendedSession（拡張診断）→ProgrammingSession（ソフト書込み）の3種+OEM定義セッション。セッションごとにアクセス可能なサービスが制限される",
+    "【業界・OEM視点】ProgrammingSessionへの遷移はSecurityAccess（0x27）と組み合わせてアクセス制御する。OEMはセッション遷移条件（車速0km/h等）を安全要件として定義"
+  ],
+  "termLinks": {
+    "ECU": "ecu",
+    "TARA": "tara",
+    "UDS": "uds",
+    "UN R155": "un-r155"
+  },
   "date": "2026-04-06"
 }

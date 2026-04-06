@@ -8,47 +8,56 @@
   "category": "diagnostic",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "SID 0x27 SecurityAccessって何？UDSのどこに位置するの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "SID 0x27 SecurityAccess（Security Access）は、Seed&Key方式でECUへの重要操作をアクセス制御するサービス。 たとえると「ECUの「暗証番号ロック」」だよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "ECUがSeed（乱数）を送信→テスターがKey（Seedから算出）を返送→ECUが検証しアンロック。セキュリティレベルを複数持てる（Level 1=読出し、Level 2=書込み等）。UN R155対策で暗号強度の向上が進行中"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMの量産開発やディーラー診断でどう使うの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "OEMはSeed→Key変換アルゴリズムを秘匿管理。最近はPKCS#11ベースの証明書認証（0x29 Authentication）への移行も進む"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "セキュリティや安全性の観点で注意点は？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ポイントをまとめて。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "まとめ：\n・定義：Seed&Key方式でECUへの重要操作をアクセス制御するサービス。\n・プロトコル：ECUがSeed（乱数）を送信→テスターがKey（Seedから算出）を返送→ECUが検証しアンロック。セキュリティレベルを複数持てる（Level 1=読出し、L…\n・実務：OEMはSeed→Key変換アルゴリズムを秘匿管理。最近はPKCS#11ベースの証明書認証（0x29 Authentication）への移行も進む\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
     }
   ],
-  "summary": "SID 0x27 SecurityAccess（Security Access）は、Seed&Key方式でECUへの重要操作をアクセス制御するサービス。\n\n■ 技術解説\nECUがSeed（乱数）を送信→テスターがKey（Seedから算出）を返送→ECUが検証しアンロック。セキュリティレベルを複数持てる（Level 1=読出し、Level 2=書込み等）。UN R155対策で暗号強度の向上が進行中\n\n■ 業界・OEM視点\nOEMはSeed→Key変換アルゴリズムを秘匿管理。最近はPKCS#11ベースの証明書認証（0x29 Authentication）への移行も進む",
-  "termLinks": {},
+  "summary": [
+    "SID 0x27 SecurityAccess（Security Access）は、Seed&Key方式でECUへの重要操作をアクセス制御するサービス。",
+    "【技術解説】ECUがSeed（乱数）を送信→テスターがKey（Seedから算出）を返送→ECUが検証しアンロック。セキュリティレベルを複数持てる（Level 1=読出し、Level 2=書込み等）。UN R155対策で暗号強度の向上が進行中",
+    "【業界・OEM視点】OEMはSeed→Key変換アルゴリズムを秘匿管理。最近はPKCS#11ベースの証明書認証（0x29 Authentication）への移行も進む"
+  ],
+  "termLinks": {
+    "ECU": "ecu",
+    "TARA": "tara",
+    "UDS": "uds",
+    "UN R155": "un-r155"
+  },
   "date": "2026-04-06"
 }

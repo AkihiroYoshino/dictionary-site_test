@@ -8,47 +8,58 @@
   "category": "cybersecurity",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "WPA2/WPA3って何？車のサイバーセキュリティでどう重要なの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "WPA2/WPA3（Wi-Fi Protected Access 2/3）は、車載Wi-Fi通信のセキュリティプロトコル。IVI・TCU・DCMのWi-Fiアクセスポイント機能に適用されるセキュリティ規格。 たとえると「車内Wi-Fiの「鍵と錠前」の世代進化版」だよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "もう少し技術的に詳しく教えて。仕組みや構成は？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "WPA2（CCMP/AES-128・CCMP-128）→WPA3（SAE認証・GCMP-256・PMF=Management Frame Protection必須）に移行中。WPA3のSAE（Simultaneous Authentication of Equals/Dragonfly）はオフライン辞書攻撃・KRACK攻撃に対して耐性がある。Wi-Fi 6/6E（802.11ax/be）との組み合わせで高速・低遅延・セキュア接続を実現。Enterprise版（WPA3-Enterprise）はRADIUS/EAP-TLSで証明書認証"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "UN R155やISO/SAE 21434との関係は？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "UN R155のTARAでIVI/TCUのWi-Fi接続面は重点攻撃シナリオ。WPA2の既知脆弱性（KRACK・PMKIDハッシュ攻撃）対策としてWPA3移行が業界標準化。OEMはTCU/IVIのWi-Fiチップ（Qualcomm/Broadcom/NXP）のWPA3対応ファームウェアへの切替とFMVSS/UN R155開発要件化を進める"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "実際の攻撃シナリオだとどう機能するの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "実際のサイバー攻撃では、WPA2/WPA3は防御チェーンの重要な一環を担うよ。多層防御（Defense in Depth）の考え方でシステム全体の耐性を高めることが大切なんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "要点をまとめて。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "まとめ：\n・定義：車載Wi-Fi通信のセキュリティプロトコル。IVI・TCU・DCMのWi-Fiアクセスポイント機能に適用されるセキュリティ規格。\n・技術：WPA2（CCMP/AES-128・CCMP-128）→WPA3（SAE認証・GCMP-256・PMF=Management Frame Protection必…\n・規制関連：UN R155のTARAでIVI/TCUのWi-Fi接続面は重点攻撃シナリオ。WPA2の既知脆弱性（KRACK・PMKIDハッシュ攻撃）対策としてWPA3移行が…\nCSMS構築のピースとして理解しておこう。"
     }
   ],
-  "summary": "WPA2/WPA3（Wi-Fi Protected Access 2/3）は、車載Wi-Fi通信のセキュリティプロトコル。IVI・TCU・DCMのWi-Fiアクセスポイント機能に適用されるセキュリティ規格。\n\n■ 技術解説\nWPA2（CCMP/AES-128・CCMP-128）→WPA3（SAE認証・GCMP-256・PMF=Management Frame Protection必須）に移行中。WPA3のSAE（Simultaneous Authentication of Equals/Dragonfly）はオフライン辞書攻撃・KRACK攻撃に対して耐性がある。Wi-Fi 6/6E（802.11ax/be）との組み合わせで高速・低遅延・セキュア接続を実現。Enterprise版（WPA3-Enterprise）はRADIUS/EAP-TLSで証明書認証\n\n■ 業界・OEM視点\nUN R155のTARAでIVI/TCUのWi-Fi接続面は重点攻撃シナリオ。WPA2の既知脆弱性（KRACK・PMKIDハッシュ攻撃）対策としてWPA3移行が業界標準化。OEMはTCU/IVIのWi-Fiチップ（Qualcomm/Broadcom/NXP）のWPA3対応ファームウェアへの切替とFMVSS/UN R155開発要件化を進める",
-  "termLinks": {},
+  "summary": [
+    "WPA2/WPA3（Wi-Fi Protected Access 2/3）は、車載Wi-Fi通信のセキュリティプロトコル。IVI・TCU・DCMのWi-Fiアクセスポイント機能に適用されるセキュリティ規格。",
+    "【技術解説】WPA2（CCMP/AES-128・CCMP-128）→WPA3（SAE認証・GCMP-256・PMF=Management Frame Protection必須）に移行中。WPA3のSAE（Simultaneous Authentication of Equals/Dragonfly）はオフライン辞書攻撃・KRACK攻撃に対して耐性がある。Wi-Fi 6/6E（802.11ax/be）との組み合わせで高速・低遅延・セキュア接続を実現。Enterprise版（WPA3-Enterprise）はRADIUS/EAP-TLSで証明書認証",
+    "【業界・OEM視点】UN R155のTARAでIVI/TCUのWi-Fi接続面は重点攻撃シナリオ。WPA2の既知脆弱性（KRACK・PMKIDハッシュ攻撃）対策としてWPA3移行が業界標準化。OEMはTCU/IVIのWi-Fiチップ（Qualcomm/Broadcom/NXP）のWPA3対応ファームウェアへの切替とFMVSS/UN R155開発要件化を進める"
+  ],
+  "termLinks": {
+    "CSMS": "csms",
+    "DCM": "dcm",
+    "多層防御": "defense-in-depth",
+    "ISO/SAE 21434": "iso-sae-21434",
+    "TARA": "tara",
+    "UN R155": "un-r155"
+  },
   "date": "2026-04-06"
 }

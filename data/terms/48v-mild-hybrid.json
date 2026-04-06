@@ -8,47 +8,51 @@
   "category": "powertrain",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "48Vマイルドハイブリッド（48V Mild Hybrid）って何？パワートレイン全体のどこに位置するの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "48Vマイルドハイブリッドは、ISG+Li-ion電池でアイドリングストップ・回生・トルクアシストを行う簡易HEV。 たとえると「本格HEVの「ライト版」」だね。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "動作原理や仕組みをもう少し詳しく知りたい。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "ISG（Integrated Starter Generator）をベルト駆動（P0）またはTM接続（P2）で搭載。コスト500ドル程度の追加でCO2を10-15%低減。欧州メーカーを中心に普及"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMやサプライヤーではどう扱われてるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "日産・ルノーなども採用。48V系はDC/DCコンバーターで12V系と共存し、既存電装品との互換性を確保する"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "電動化やカーボンニュートラルの文脈だとどう変わる？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "電動化の中で48Vマイルドハイブリッドは形を変えながらも重要性を維持しているよ。HEV→BEV→FCEVの各パワートレイン構成で、技術の組み合わせ方が変わるんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "エンジニアとして覚えておくべきポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "要点をまとめるよ：\n・定義：ISG+Li-ion電池でアイドリングストップ・回生・トルクアシストを行う簡易HEV。\n・技術ポイント：ISG（Integrated Starter Generator）をベルト駆動（P0）またはTM接続（P2）で搭載。コスト500ドル程度の追加でCO2を10-1…\n・業界動向：日産・ルノーなども採用。48V系はDC/DCコンバーターで12V系と共存し、既存電装品との互換性を確保する\nパワートレイン設計の基礎として押さえておこう。"
     }
   ],
-  "summary": "48Vマイルドハイブリッド（48V Mild Hybrid）は、ISG+Li-ion電池でアイドリングストップ・回生・トルクアシストを行う簡易HEV。\n\n■ 技術解説\nISG（Integrated Starter Generator）をベルト駆動（P0）またはTM接続（P2）で搭載。コスト500ドル程度の追加でCO2を10-15%低減。欧州メーカーを中心に普及\n\n■ 業界・OEM視点\n日産・ルノーなども採用。48V系はDC/DCコンバーターで12V系と共存し、既存電装品との互換性を確保する",
+  "summary": [
+    "48Vマイルドハイブリッド（48V Mild Hybrid）は、ISG+Li-ion電池でアイドリングストップ・回生・トルクアシストを行う簡易HEV。",
+    "【技術解説】ISG（Integrated Starter Generator）をベルト駆動（P0）またはTM接続（P2）で搭載。コスト500ドル程度の追加でCO2を10-15%低減。欧州メーカーを中心に普及",
+    "【業界・OEM視点】日産・ルノーなども採用。48V系はDC/DCコンバーターで12V系と共存し、既存電装品との互換性を確保する"
+  ],
   "termLinks": {},
   "date": "2026-04-06"
 }

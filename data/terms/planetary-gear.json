@@ -8,47 +8,54 @@
   "category": "powertrain",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "遊星歯車機構（Planetary Gear Set）って何？パワートレイン全体のどこに位置するの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "遊星歯車機構は、サンギア・プラネタリ・リングギアで構成。AT/HEVシステムの中核。 たとえると「太陽の周りを惑星が回る歯車セット」だね。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "動作原理や仕組みをもう少し詳しく知りたい。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "コンパクトに大きな減速比を実現でき、複数セットの組合せでAT各段を構成。THSでは1セットで動力分割とCVT的な無段変速を実現している"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMやサプライヤーではどう扱われてるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "アイシン・ジヤトコがAT用を供給。歯面研磨精度がNVH（ギアノイズ）に直結するため、加工精度μm単位の管理が必要"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "電動化やカーボンニュートラルの文脈だとどう変わる？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "電動化の中で遊星歯車機構は形を変えながらも重要性を維持しているよ。HEV→BEV→FCEVの各パワートレイン構成で、技術の組み合わせ方が変わるんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "エンジニアとして覚えておくべきポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "要点をまとめるよ：\n・定義：サンギア・プラネタリ・リングギアで構成。AT/HEVシステムの中核。\n・技術ポイント：コンパクトに大きな減速比を実現でき、複数セットの組合せでAT各段を構成。THSでは1セットで動力分割とCVT的な無段変速を実現している\n・業界動向：アイシン・ジヤトコがAT用を供給。歯面研磨精度がNVH（ギアノイズ）に直結するため、加工精度μm単位の管理が必要\nパワートレイン設計の基礎として押さえておこう。"
     }
   ],
-  "summary": "遊星歯車機構（Planetary Gear Set）は、サンギア・プラネタリ・リングギアで構成。AT/HEVシステムの中核。\n\n■ 技術解説\nコンパクトに大きな減速比を実現でき、複数セットの組合せでAT各段を構成。THSでは1セットで動力分割とCVT的な無段変速を実現している\n\n■ 業界・OEM視点\nアイシン・ジヤトコがAT用を供給。歯面研磨精度がNVH（ギアノイズ）に直結するため、加工精度μm単位の管理が必要",
-  "termLinks": {},
+  "summary": [
+    "遊星歯車機構（Planetary Gear Set）は、サンギア・プラネタリ・リングギアで構成。AT/HEVシステムの中核。",
+    "【技術解説】コンパクトに大きな減速比を実現でき、複数セットの組合せでAT各段を構成。THSでは1セットで動力分割とCVT的な無段変速を実現している",
+    "【業界・OEM視点】アイシン・ジヤトコがAT用を供給。歯面研磨精度がNVH（ギアノイズ）に直結するため、加工精度μm単位の管理が必要"
+  ],
+  "termLinks": {
+    "CVT": "cvt",
+    "THS": "ths"
+  },
   "date": "2026-04-06"
 }

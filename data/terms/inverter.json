@@ -8,47 +8,51 @@
   "category": "powertrain",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "インバーター（Inverter）って何？パワートレイン全体のどこに位置するの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "インバーターは、バッテリーDC→モーター用ACの電力変換器。SiCデバイスで効率向上。 たとえると「DCとACの「通訳者」」だね。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "動作原理や仕組みをもう少し詳しく知りたい。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "IGBT→SiC MOSFETへの移行が進行中。SiCはスイッチング損失を大幅に低減し航続距離5〜10%改善に寄与。水冷両面冷却パッケージで高出力密度を実現"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMやサプライヤーではどう扱われてるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "デンソー・日立Astemo・コンチネンタルが供給。OEMは車載EMC規制対応のフィルター設計とNVH（インバーターノイズ）対策が開発課題"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "電動化やカーボンニュートラルの文脈だとどう変わる？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "電動化の中でインバーターは形を変えながらも重要性を維持しているよ。HEV→BEV→FCEVの各パワートレイン構成で、技術の組み合わせ方が変わるんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "エンジニアとして覚えておくべきポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "要点をまとめるよ：\n・定義：バッテリーDC→モーター用ACの電力変換器。SiCデバイスで効率向上。\n・技術ポイント：IGBT→SiC MOSFETへの移行が進行中。SiCはスイッチング損失を大幅に低減し航続距離5〜10%改善に寄与。水冷両面冷却パッケージで高出力密度を実現\n・業界動向：デンソー・日立Astemo・コンチネンタルが供給。OEMは車載EMC規制対応のフィルター設計とNVH（インバーターノイズ）対策が開発課題\nパワートレイン設計の基礎として押さえておこう。"
     }
   ],
-  "summary": "インバーター（Inverter）は、バッテリーDC→モーター用ACの電力変換器。SiCデバイスで効率向上。\n\n■ 技術解説\nIGBT→SiC MOSFETへの移行が進行中。SiCはスイッチング損失を大幅に低減し航続距離5〜10%改善に寄与。水冷両面冷却パッケージで高出力密度を実現\n\n■ 業界・OEM視点\nデンソー・日立Astemo・コンチネンタルが供給。OEMは車載EMC規制対応のフィルター設計とNVH（インバーターノイズ）対策が開発課題",
+  "summary": [
+    "インバーター（Inverter）は、バッテリーDC→モーター用ACの電力変換器。SiCデバイスで効率向上。",
+    "【技術解説】IGBT→SiC MOSFETへの移行が進行中。SiCはスイッチング損失を大幅に低減し航続距離5〜10%改善に寄与。水冷両面冷却パッケージで高出力密度を実現",
+    "【業界・OEM視点】デンソー・日立Astemo・コンチネンタルが供給。OEMは車載EMC規制対応のフィルター設計とNVH（インバーターノイズ）対策が開発課題"
+  ],
   "termLinks": {},
   "date": "2026-04-06"
 }

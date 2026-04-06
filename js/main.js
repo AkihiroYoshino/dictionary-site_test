@@ -343,7 +343,7 @@
 
       for (var di = 0; di < term.dialogue.length; di++) {
         var d = term.dialogue[di];
-        var isT = d.speaker === 'teacher';
+        var isT = d.speaker === 'teacher' || d.speaker === 'assistant';
         var cls = isT ? 'teacher' : 'student';
         var avatar = isT ? IMAGES.teacher : IMAGES.student;
         var name = isT ? '先生' : '生徒';
@@ -364,14 +364,19 @@
       /* まとめ */
       html +=
         '<div class="summary-box">' +
-          '<h2>まとめ</h2>' +
-          '<ul>';
+          '<h2>まとめ</h2>';
 
-      for (var si = 0; si < term.summary.length; si++) {
-        html += '<li>' + term.summary[si] + '</li>';
+      if (Array.isArray(term.summary)) {
+        html += '<ul>';
+        for (var si = 0; si < term.summary.length; si++) {
+          html += '<li>' + escapeHtml(term.summary[si]) + '</li>';
+        }
+        html += '</ul>';
+      } else if (typeof term.summary === 'string') {
+        html += '<p style="white-space:pre-line">' + escapeHtml(term.summary) + '</p>';
       }
 
-      html += '</ul></div>';
+      html += '</div>';
 
       /* 関連用語 */
       if (term.relatedTerms && term.relatedTerms.length > 0) {

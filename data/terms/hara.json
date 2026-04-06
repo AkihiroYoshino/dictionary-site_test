@@ -8,47 +8,56 @@
   "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "HARAって何？機能安全でどういう役割？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "HARA（Hazard Analysis and Risk Assessment）は、ISO 26262コンセプトフェーズのハザード分析・リスクアセスメント。ASILを決定。 たとえると「安全設計の「リスク棚卸し」」だよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "車両レベルの機能からハザーダスイベント（HE）を特定→S/E/C評価→ASIL決定→セーフティゴール導出のステップ。全運転状況（高速・市街地・悪天候等）を網羅的に分析する必要がある"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "具体的にOEMの開発ではどう使われるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "OEMは100以上のHEを分析することもある。セーフティゴールは「○○機能の意図しない作動を防止する（ASIL-C）」等の形式で記述"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "ADAS/ADの高度化に伴いHARAの重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "エンジニアとして押さえるポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "要点：\n・定義：ISO 26262コンセプトフェーズのハザード分析・リスクアセスメント。ASILを決定。\n・ISO 26262での位置づけ：車両レベルの機能からハザーダスイベント（HE）を特定→S/E/C評価→ASIL決定→セーフティゴール導出のステップ。全運転状況（高速・市街地・悪天候等）を網羅的…\n・開発現場：OEMは100以上のHEを分析することもある。セーフティゴールは「○○機能の意図しない作動を防止する（ASIL-C）」等の形式で記述\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": "HARA（Hazard Analysis and Risk Assessment）は、ISO 26262コンセプトフェーズのハザード分析・リスクアセスメント。ASILを決定。\n\n■ 技術解説\n車両レベルの機能からハザーダスイベント（HE）を特定→S/E/C評価→ASIL決定→セーフティゴール導出のステップ。全運転状況（高速・市街地・悪天候等）を網羅的に分析する必要がある\n\n■ 業界・OEM視点\nOEMは100以上のHEを分析することもある。セーフティゴールは「○○機能の意図しない作動を防止する（ASIL-C）」等の形式で記述",
-  "termLinks": {},
+  "summary": [
+    "HARA（Hazard Analysis and Risk Assessment）は、ISO 26262コンセプトフェーズのハザード分析・リスクアセスメント。ASILを決定。",
+    "【技術解説】車両レベルの機能からハザーダスイベント（HE）を特定→S/E/C評価→ASIL決定→セーフティゴール導出のステップ。全運転状況（高速・市街地・悪天候等）を網羅的に分析する必要がある",
+    "【業界・OEM視点】OEMは100以上のHEを分析することもある。セーフティゴールは「○○機能の意図しない作動を防止する（ASIL-C）」等の形式で記述"
+  ],
+  "termLinks": {
+    "ASIL": "asil",
+    "ISO 26262": "iso-26262",
+    "セーフティゴール": "safety-goal",
+    "SOTIF": "sotif"
+  },
   "date": "2026-04-06"
 }

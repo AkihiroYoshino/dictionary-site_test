@@ -8,47 +8,53 @@
   "category": "powertrain",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "eアクスル（Electric Axle）って何？パワートレイン全体のどこに位置するの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "eアクスルは、モーター・インバーター・減速機を一体化したEV/HEV向け電動駆動ユニット。 たとえると「EV駆動の「オールインワンパッケージ」」だね。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "動作原理や仕組みをもう少し詳しく知りたい。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "2in1（モーター+減速機）から3in1（+インバーター）に進化。高回転化（20,000rpm超）で小型軽量化とパワー密度向上を図る。SiCインバーターとのセット採用で効率95%超を実現"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMやサプライヤーではどう扱われてるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "アイシン・BluE Nexus・日立Astemo・ニデックが主力。OEMはNVH（ギア鳴り）対策が差別化ポイント"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "電動化やカーボンニュートラルの文脈だとどう変わる？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "電動化の中でeアクスルは形を変えながらも重要性を維持しているよ。HEV→BEV→FCEVの各パワートレイン構成で、技術の組み合わせ方が変わるんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "エンジニアとして覚えておくべきポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "要点をまとめるよ：\n・定義：モーター・インバーター・減速機を一体化したEV/HEV向け電動駆動ユニット。\n・技術ポイント：2in1（モーター+減速機）から3in1（+インバーター）に進化。高回転化（20,000rpm超）で小型軽量化とパワー密度向上を図る。SiCインバーターとのセッ…\n・業界動向：アイシン・BluE Nexus・日立Astemo・ニデックが主力。OEMはNVH（ギア鳴り）対策が差別化ポイント\nパワートレイン設計の基礎として押さえておこう。"
     }
   ],
-  "summary": "eアクスル（Electric Axle）は、モーター・インバーター・減速機を一体化したEV/HEV向け電動駆動ユニット。\n\n■ 技術解説\n2in1（モーター+減速機）から3in1（+インバーター）に進化。高回転化（20,000rpm超）で小型軽量化とパワー密度向上を図る。SiCインバーターとのセット採用で効率95%超を実現\n\n■ 業界・OEM視点\nアイシン・BluE Nexus・日立Astemo・ニデックが主力。OEMはNVH（ギア鳴り）対策が差別化ポイント",
-  "termLinks": {},
+  "summary": [
+    "eアクスル（Electric Axle）は、モーター・インバーター・減速機を一体化したEV/HEV向け電動駆動ユニット。",
+    "【技術解説】2in1（モーター+減速機）から3in1（+インバーター）に進化。高回転化（20,000rpm超）で小型軽量化とパワー密度向上を図る。SiCインバーターとのセット採用で効率95%超を実現",
+    "【業界・OEM視点】アイシン・BluE Nexus・日立Astemo・ニデックが主力。OEMはNVH（ギア鳴り）対策が差別化ポイント"
+  ],
+  "termLinks": {
+    "インバーター": "inverter"
+  },
   "date": "2026-04-06"
 }

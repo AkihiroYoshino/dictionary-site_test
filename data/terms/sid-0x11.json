@@ -8,47 +8,56 @@
   "category": "diagnostic",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "SID 0x11 ECUResetって何？UDSのどこに位置するの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "SID 0x11 ECUReset（ECU Reset）は、ECUをリセットするサービス。ハードリセット/ソフトリセット/キーオフオンリセットを指定。 たとえると「ECUの「再起動ボタン」」だよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "hardReset(0x01)=電源断相当、keyOffOnReset(0x02)=IGオフオン相当、softReset(0x03)=SW再起動。OTA後のアクティベーションやECU状態復帰に使用"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMの量産開発やディーラー診断でどう使うの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "リプロ完了後のリセットシーケンスはOEMごとに規定。リセット中の通信途絶タイムアウトをテスターツール側で適切に設定する必要がある"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "セキュリティや安全性の観点で注意点は？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ポイントをまとめて。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "まとめ：\n・定義：ECUをリセットするサービス。ハードリセット/ソフトリセット/キーオフオンリセットを指定。\n・プロトコル：hardReset(0x01)=電源断相当、keyOffOnReset(0x02)=IGオフオン相当、softReset(0x03)=SW再起動。OTA後のアク…\n・実務：リプロ完了後のリセットシーケンスはOEMごとに規定。リセット中の通信途絶タイムアウトをテスターツール側で適切に設定する必要がある\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
     }
   ],
-  "summary": "SID 0x11 ECUReset（ECU Reset）は、ECUをリセットするサービス。ハードリセット/ソフトリセット/キーオフオンリセットを指定。\n\n■ 技術解説\nhardReset(0x01)=電源断相当、keyOffOnReset(0x02)=IGオフオン相当、softReset(0x03)=SW再起動。OTA後のアクティベーションやECU状態復帰に使用\n\n■ 業界・OEM視点\nリプロ完了後のリセットシーケンスはOEMごとに規定。リセット中の通信途絶タイムアウトをテスターツール側で適切に設定する必要がある",
-  "termLinks": {},
+  "summary": [
+    "SID 0x11 ECUReset（ECU Reset）は、ECUをリセットするサービス。ハードリセット/ソフトリセット/キーオフオンリセットを指定。",
+    "【技術解説】hardReset(0x01)=電源断相当、keyOffOnReset(0x02)=IGオフオン相当、softReset(0x03)=SW再起動。OTA後のアクティベーションやECU状態復帰に使用",
+    "【業界・OEM視点】リプロ完了後のリセットシーケンスはOEMごとに規定。リセット中の通信途絶タイムアウトをテスターツール側で適切に設定する必要がある"
+  ],
+  "termLinks": {
+    "ECU": "ecu",
+    "TARA": "tara",
+    "UDS": "uds",
+    "UN R155": "un-r155"
+  },
   "date": "2026-04-06"
 }

@@ -8,47 +8,59 @@
   "category": "cybersecurity",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "多層防御って何？車のサイバーセキュリティでどう重要なの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "多層防御（Defense in Depth）は、複数の防御レイヤーで攻撃の侵入・拡大を防ぐセキュリティ設計原則。 たとえると「城の「堀・城壁・天守閣」のような多重防御」だよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "もう少し技術的に詳しく教えて。仕組みや構成は？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "外部IF（FW/IDS）→ゲートウェイ（ドメイン分離）→ECU間通信（SecOC/TLS）→ECU内部（セキュアブート/HSM）→アプリケーション（入力検証）の各層で防御。一つの層が破られても被害を限定"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "UN R155やISO/SAE 21434との関係は？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "UN R155が多層防御をCSMSの設計原則として要求。OEMはネットワークアーキテクチャ設計時に各層の脅威と対策をマッピングする"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "実際の攻撃シナリオだとどう機能するの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "実際のサイバー攻撃では、多層防御は防御チェーンの重要な一環を担うよ。多層防御（Defense in Depth）の考え方でシステム全体の耐性を高めることが大切なんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "要点をまとめて。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "まとめ：\n・定義：複数の防御レイヤーで攻撃の侵入・拡大を防ぐセキュリティ設計原則。\n・技術：外部IF（FW/IDS）→ゲートウェイ（ドメイン分離）→ECU間通信（SecOC/TLS）→ECU内部（セキュアブート/HSM）→アプリケーション（入力検証）の…\n・規制関連：UN R155が多層防御をCSMSの設計原則として要求。OEMはネットワークアーキテクチャ設計時に各層の脅威と対策をマッピングする\nCSMS構築のピースとして理解しておこう。"
     }
   ],
-  "summary": "多層防御（Defense in Depth）は、複数の防御レイヤーで攻撃の侵入・拡大を防ぐセキュリティ設計原則。\n\n■ 技術解説\n外部IF（FW/IDS）→ゲートウェイ（ドメイン分離）→ECU間通信（SecOC/TLS）→ECU内部（セキュアブート/HSM）→アプリケーション（入力検証）の各層で防御。一つの層が破られても被害を限定\n\n■ 業界・OEM視点\nUN R155が多層防御をCSMSの設計原則として要求。OEMはネットワークアーキテクチャ設計時に各層の脅威と対策をマッピングする",
-  "termLinks": {},
+  "summary": [
+    "多層防御（Defense in Depth）は、複数の防御レイヤーで攻撃の侵入・拡大を防ぐセキュリティ設計原則。",
+    "【技術解説】外部IF（FW/IDS）→ゲートウェイ（ドメイン分離）→ECU間通信（SecOC/TLS）→ECU内部（セキュアブート/HSM）→アプリケーション（入力検証）の各層で防御。一つの層が破られても被害を限定",
+    "【業界・OEM視点】UN R155が多層防御をCSMSの設計原則として要求。OEMはネットワークアーキテクチャ設計時に各層の脅威と対策をマッピングする"
+  ],
+  "termLinks": {
+    "CSMS": "csms",
+    "ECU": "ecu",
+    "HSM": "hsm",
+    "ISO/SAE 21434": "iso-sae-21434",
+    "SecOC": "secoc",
+    "セキュアブート": "secure-boot",
+    "UN R155": "un-r155"
+  },
   "date": "2026-04-06"
 }

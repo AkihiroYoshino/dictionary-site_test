@@ -8,47 +8,56 @@
   "category": "diagnostic",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "SID 0x2E WriteDataByIdentifierって何？UDSのどこに位置するの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "SID 0x2E WriteDataByIdentifier（Write Data By Identifier）は、DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。 たとえると「ECUの「データ書き込み窓口」」だよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "プロトコルの詳細を教えて。どんなパラメータがあるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "SecurityAccess後に使用。VINの書込み、車両仕様設定（CAN通信設定・機能ON/OFF等）、工場ラインでの個体別設定に使用される"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMの量産開発やディーラー診断でどう使うの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "DIDの書込み保護設計がセキュリティ上重要。OEMはどのDIDをどのセキュリティレベルで保護するかをTARA結果に基づいて設計する"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "セキュリティや安全性の観点で注意点は？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "診断通信はセキュリティの観点でUN R155のアタックサーフェスになり得るよ。特にSecurityAccess(0x27)の強度やProgrammingSessionへのアクセス制御がTARAで重点的に分析されるポイントだね。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ポイントをまとめて。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "まとめ：\n・定義：DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。\n・プロトコル：SecurityAccess後に使用。VINの書込み、車両仕様設定（CAN通信設定・機能ON/OFF等）、工場ラインでの個体別設定に使用される\n・実務：DIDの書込み保護設計がセキュリティ上重要。OEMはどのDIDをどのセキュリティレベルで保護するかをTARA結果に基づいて設計する\nUDS理解は車両診断・リプロ・OTAの基盤だね。"
     }
   ],
-  "summary": "SID 0x2E WriteDataByIdentifier（Write Data By Identifier）は、DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。\n\n■ 技術解説\nSecurityAccess後に使用。VINの書込み、車両仕様設定（CAN通信設定・機能ON/OFF等）、工場ラインでの個体別設定に使用される\n\n■ 業界・OEM視点\nDIDの書込み保護設計がセキュリティ上重要。OEMはどのDIDをどのセキュリティレベルで保護するかをTARA結果に基づいて設計する",
-  "termLinks": {},
+  "summary": [
+    "SID 0x2E WriteDataByIdentifier（Write Data By Identifier）は、DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。",
+    "【技術解説】SecurityAccess後に使用。VINの書込み、車両仕様設定（CAN通信設定・機能ON/OFF等）、工場ラインでの個体別設定に使用される",
+    "【業界・OEM視点】DIDの書込み保護設計がセキュリティ上重要。OEMはどのDIDをどのセキュリティレベルで保護するかをTARA結果に基づいて設計する"
+  ],
+  "termLinks": {
+    "ECU": "ecu",
+    "TARA": "tara",
+    "UDS": "uds",
+    "UN R155": "un-r155"
+  },
   "date": "2026-04-06"
 }

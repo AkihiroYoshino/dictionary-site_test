@@ -8,47 +8,61 @@
   "category": "auto-parts",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "CCUって何？自動車のどこに使われてるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "CCU（Central/Connectivity Control Unit）は、車載の通信機能（LTE/5G・Wi-Fi・Bluetooth・V2X・ETC）を一元統合するコネクティビティ管理ECU。SDVアーキテクチャの要。 身近なたとえで言うと「車の無線通信の「統合指令センター」」のようなものだよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "なるほど。もう少し技術的に教えて。どんな種類や構造があるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "DCM機能をSoC化しIVI・V2X通信制御・ETCを統合する車載ゾーンアーキテクチャのCommunication Gatewayを担う。Qualcomm Snapdragon Auto・NXP i.MX等のオートグレードSoCで実装。OTA更新管理・vSOCログ転送・リモートサービスAPIの提供も行う。IDS（車内通信の不正検知）機能を内蔵することが増加"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMの開発現場ではどういう位置づけなの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "OEMはCCUにFirewall・IDS・TLS終端・PKI管理機能を搭載するセキュアゲートウェイ化が進む。UN R155対応でTARA上の最重要アタックサーフェスとなるため、HSMを用いたセキュアブート・OTA認証・SecOCゲートウェイ機能が設計要件。ASILとサイバーセキュリティの統合設計が課題"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "EV化や電動化で、この部品はどう変わっていくの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "電動化の流れでCCUにも変革が求められているよ。軽量化・高効率化・システム統合が大きなトレンドで、従来のICE前提の設計からEV/HEV最適設計への移行が進んでいるんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "まとめると、CCUのポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "まとめるとこうだよ：\n・基本：車載の通信機能（LTE/5G・Wi-Fi・Bluetooth・V2X・ETC）を一元統合するコネクティビティ管理ECU。SDVアーキテクチャの要。\n・技術：DCM機能をSoC化しIVI・V2X通信制御・ETCを統合する車載ゾーンアーキテクチャのCommunication Gatewayを担う。Qualcomm Sn…\n・OEM視点：OEMはCCUにFirewall・IDS・TLS終端・PKI管理機能を搭載するセキュアゲートウェイ化が進む。UN R155対応でTARA上の最重要アタックサーフ…\n開発者として押さえておくべき重要部品だね。"
     }
   ],
-  "summary": "CCU（Central/Connectivity Control Unit）は、車載の通信機能（LTE/5G・Wi-Fi・Bluetooth・V2X・ETC）を一元統合するコネクティビティ管理ECU。SDVアーキテクチャの要。\n\n■ 技術解説\nDCM機能をSoC化しIVI・V2X通信制御・ETCを統合する車載ゾーンアーキテクチャのCommunication Gatewayを担う。Qualcomm Snapdragon Auto・NXP i.MX等のオートグレードSoCで実装。OTA更新管理・vSOCログ転送・リモートサービスAPIの提供も行う。IDS（車内通信の不正検知）機能を内蔵することが増加\n\n■ 業界・OEM視点\nOEMはCCUにFirewall・IDS・TLS終端・PKI管理機能を搭載するセキュアゲートウェイ化が進む。UN R155対応でTARA上の最重要アタックサーフェスとなるため、HSMを用いたセキュアブート・OTA認証・SecOCゲートウェイ機能が設計要件。ASILとサイバーセキュリティの統合設計が課題",
-  "termLinks": {},
+  "summary": [
+    "CCU（Central/Connectivity Control Unit）は、車載の通信機能（LTE/5G・Wi-Fi・Bluetooth・V2X・ETC）を一元統合するコネクティビティ管理ECU。SDVアーキテクチャの要。",
+    "【技術解説】DCM機能をSoC化しIVI・V2X通信制御・ETCを統合する車載ゾーンアーキテクチャのCommunication Gatewayを担う。Qualcomm Snapdragon Auto・NXP i.MX等のオートグレードSoCで実装。OTA更新管理・vSOCログ転送・リモートサービスAPIの提供も行う。IDS（車内通信の不正検知）機能を内蔵することが増加",
+    "【業界・OEM視点】OEMはCCUにFirewall・IDS・TLS終端・PKI管理機能を搭載するセキュアゲートウェイ化が進む。UN R155対応でTARA上の最重要アタックサーフェスとなるため、HSMを用いたセキュアブート・OTA認証・SecOCゲートウェイ機能が設計要件。ASILとサイバーセキュリティの統合設計が課題"
+  ],
+  "termLinks": {
+    "ASIL": "asil",
+    "DCM": "dcm",
+    "ECU": "ecu",
+    "HSM": "hsm",
+    "PKI": "pki",
+    "SecOC": "secoc",
+    "セキュアブート": "secure-boot",
+    "TARA": "tara",
+    "UN R155": "un-r155"
+  },
   "date": "2026-04-06"
 }

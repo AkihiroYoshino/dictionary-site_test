@@ -8,47 +8,53 @@
   "category": "powertrain",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "直噴エンジン（Direct Injection）って何？パワートレイン全体のどこに位置するの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "直噴エンジンは、燃料を燃焼室に直接噴射し高圧縮比と精密制御で熱効率を向上させるエンジン。 たとえると「燃料を直接「燃焼室に打ち込む」方式」だね。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "動作原理や仕組みをもう少し詳しく知りたい。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "200bar超の高圧燃料系統でpm粒子の微粒化を実現。スプレーガイデッド燃焼で超リーンバーンも可能に。マツダSKYACTIV-Xは圧縮着火（SPCCI）で熱効率50%に迫る"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMやサプライヤーではどう扱われてるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "ボッシュ・デンソーが高圧ポンプ+インジェクターを供給。PM/PN規制対応でGPF必須化が進む"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "電動化やカーボンニュートラルの文脈だとどう変わる？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "電動化の中で直噴エンジンは形を変えながらも重要性を維持しているよ。HEV→BEV→FCEVの各パワートレイン構成で、技術の組み合わせ方が変わるんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "エンジニアとして覚えておくべきポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "要点をまとめるよ：\n・定義：燃料を燃焼室に直接噴射し高圧縮比と精密制御で熱効率を向上させるエンジン。\n・技術ポイント：200bar超の高圧燃料系統でpm粒子の微粒化を実現。スプレーガイデッド燃焼で超リーンバーンも可能に。マツダSKYACTIV-Xは圧縮着火（SPCCI）で熱効率…\n・業界動向：ボッシュ・デンソーが高圧ポンプ+インジェクターを供給。PM/PN規制対応でGPF必須化が進む\nパワートレイン設計の基礎として押さえておこう。"
     }
   ],
-  "summary": "直噴エンジン（Direct Injection）は、燃料を燃焼室に直接噴射し高圧縮比と精密制御で熱効率を向上させるエンジン。\n\n■ 技術解説\n200bar超の高圧燃料系統でpm粒子の微粒化を実現。スプレーガイデッド燃焼で超リーンバーンも可能に。マツダSKYACTIV-Xは圧縮着火（SPCCI）で熱効率50%に迫る\n\n■ 業界・OEM視点\nボッシュ・デンソーが高圧ポンプ+インジェクターを供給。PM/PN規制対応でGPF必須化が進む",
-  "termLinks": {},
+  "summary": [
+    "直噴エンジン（Direct Injection）は、燃料を燃焼室に直接噴射し高圧縮比と精密制御で熱効率を向上させるエンジン。",
+    "【技術解説】200bar超の高圧燃料系統でpm粒子の微粒化を実現。スプレーガイデッド燃焼で超リーンバーンも可能に。マツダSKYACTIV-Xは圧縮着火（SPCCI）で熱効率50%に迫る",
+    "【業界・OEM視点】ボッシュ・デンソーが高圧ポンプ+インジェクターを供給。PM/PN規制対応でGPF必須化が進む"
+  ],
+  "termLinks": {
+    "インジェクター": "fuel-injector"
+  },
   "date": "2026-04-06"
 }

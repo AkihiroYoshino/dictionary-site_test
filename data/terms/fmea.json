@@ -8,47 +8,57 @@
   "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "FMEAって何？機能安全でどういう役割？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "FMEA（Failure Mode and Effects Analysis）は、故障モードとその影響を系統的に分析する手法。ISO 26262のHW/SW安全分析で必須。 たとえると「「もし壊れたらどうなる？」を徹底的に洗い出す分析」だよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "DFMEA（設計）とPFMEA（工程）がある。ISO 26262ではHW-FMEAでSingle Point Fault Metric/Latent Fault Metricの算出に使用。新AIAG-VDA FMEA（7ステップ法）が標準"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "具体的にOEMの開発ではどう使われるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "OEMは車両レベルFMEAからECUレベルFMEAまで階層的に分析。ASIL-C/Dでは定量FTA（故障木解析）との組合せが求められる"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "ADAS/ADの高度化に伴いFMEAの重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "エンジニアとして押さえるポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "要点：\n・定義：故障モードとその影響を系統的に分析する手法。ISO 26262のHW/SW安全分析で必須。\n・ISO 26262での位置づけ：DFMEA（設計）とPFMEA（工程）がある。ISO 26262ではHW-FMEAでSingle Point Fault Metric/Latent Fault…\n・開発現場：OEMは車両レベルFMEAからECUレベルFMEAまで階層的に分析。ASIL-C/Dでは定量FTA（故障木解析）との組合せが求められる\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": "FMEA（Failure Mode and Effects Analysis）は、故障モードとその影響を系統的に分析する手法。ISO 26262のHW/SW安全分析で必須。\n\n■ 技術解説\nDFMEA（設計）とPFMEA（工程）がある。ISO 26262ではHW-FMEAでSingle Point Fault Metric/Latent Fault Metricの算出に使用。新AIAG-VDA FMEA（7ステップ法）が標準\n\n■ 業界・OEM視点\nOEMは車両レベルFMEAからECUレベルFMEAまで階層的に分析。ASIL-C/Dでは定量FTA（故障木解析）との組合せが求められる",
-  "termLinks": {},
+  "summary": [
+    "FMEA（Failure Mode and Effects Analysis）は、故障モードとその影響を系統的に分析する手法。ISO 26262のHW/SW安全分析で必須。",
+    "【技術解説】DFMEA（設計）とPFMEA（工程）がある。ISO 26262ではHW-FMEAでSingle Point Fault Metric/Latent Fault Metricの算出に使用。新AIAG-VDA FMEA（7ステップ法）が標準",
+    "【業界・OEM視点】OEMは車両レベルFMEAからECUレベルFMEAまで階層的に分析。ASIL-C/Dでは定量FTA（故障木解析）との組合せが求められる"
+  ],
+  "termLinks": {
+    "ASIL": "asil",
+    "ECU": "ecu",
+    "FTA": "fta",
+    "ISO 26262": "iso-26262",
+    "SOTIF": "sotif"
+  },
   "date": "2026-04-06"
 }

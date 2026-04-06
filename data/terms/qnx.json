@@ -8,47 +8,56 @@
   "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "QNXって何？機能安全でどういう役割？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "QNX（QNX Neutrino RTOS）は、BlackBerry製マイクロカーネル型車載リアルタイムOS。ISO 26262 ASIL-D対応認証を取得し、IVI・ADAS・インスツルメントクラスタに広く採用。 たとえると「車載システムの「信頼性最優先RTOS」」だよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "マイクロカーネルアーキテクチャでドライバー・ファイルシステム等を別プロセスに分離し、一部クラッシュが全体に波及しない耐障害設計。スケジューラの決定論的動作で厳格なリアルタイム性を保証（ジッタ < 数μs）。QNX Hypervisor 2.xはARM/x86向けでASIL-Dの機能安全ドメインと非安全ドメイン（Android Automotive等）を一チップ上で分離実行できる。Adaptive AUTOSAR実行基盤としての採用も増加"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "具体的にOEMの開発ではどう使われるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "GM・フォード・BMW・現代・ジャガーランドローバー等の多数のOEMがIVI/クラスタにQNXを採用。競合はAndroid Automotive OS（Googleエコシステム）・AGL（Automotive Grade Linux）。ASIL-C/D要件ECUではQNXの機能安全証明書（TÜV認証）が開発工数を大幅削減する。OEMはQNX+AUTOSAR Adaptive+Hypervisorのスタック統合設計が大きな技術課題"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "ADAS/ADの高度化に伴いQNXの重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "エンジニアとして押さえるポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "要点：\n・定義：BlackBerry製マイクロカーネル型車載リアルタイムOS。ISO 26262 ASIL-D対応認証を取得し、IVI・ADAS・インスツルメントクラスタに広く採用。\n・ISO 26262での位置づけ：マイクロカーネルアーキテクチャでドライバー・ファイルシステム等を別プロセスに分離し、一部クラッシュが全体に波及しない耐障害設計。スケジューラの決定論的動作で厳格…\n・開発現場：GM・フォード・BMW・現代・ジャガーランドローバー等の多数のOEMがIVI/クラスタにQNXを採用。競合はAndroid Automotive OS（Goog…\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": "QNX（QNX Neutrino RTOS）は、BlackBerry製マイクロカーネル型車載リアルタイムOS。ISO 26262 ASIL-D対応認証を取得し、IVI・ADAS・インスツルメントクラスタに広く採用。\n\n■ 技術解説\nマイクロカーネルアーキテクチャでドライバー・ファイルシステム等を別プロセスに分離し、一部クラッシュが全体に波及しない耐障害設計。スケジューラの決定論的動作で厳格なリアルタイム性を保証（ジッタ < 数μs）。QNX Hypervisor 2.xはARM/x86向けでASIL-Dの機能安全ドメインと非安全ドメイン（Android Automotive等）を一チップ上で分離実行できる。Adaptive AUTOSAR実行基盤としての採用も増加\n\n■ 業界・OEM視点\nGM・フォード・BMW・現代・ジャガーランドローバー等の多数のOEMがIVI/クラスタにQNXを採用。競合はAndroid Automotive OS（Googleエコシステム）・AGL（Automotive Grade Linux）。ASIL-C/D要件ECUではQNXの機能安全証明書（TÜV認証）が開発工数を大幅削減する。OEMはQNX+AUTOSAR Adaptive+Hypervisorのスタック統合設計が大きな技術課題",
-  "termLinks": {},
+  "summary": [
+    "QNX（QNX Neutrino RTOS）は、BlackBerry製マイクロカーネル型車載リアルタイムOS。ISO 26262 ASIL-D対応認証を取得し、IVI・ADAS・インスツルメントクラスタに広く採用。",
+    "【技術解説】マイクロカーネルアーキテクチャでドライバー・ファイルシステム等を別プロセスに分離し、一部クラッシュが全体に波及しない耐障害設計。スケジューラの決定論的動作で厳格なリアルタイム性を保証（ジッタ < 数μs）。QNX Hypervisor 2.xはARM/x86向けでASIL-Dの機能安全ドメインと非安全ドメイン（Android Automotive等）を一チップ上で分離実行できる。Adaptive AUTOSAR実行基盤としての採用も増加",
+    "【業界・OEM視点】GM・フォード・BMW・現代・ジャガーランドローバー等の多数のOEMがIVI/クラスタにQNXを採用。競合はAndroid Automotive OS（Googleエコシステム）・AGL（Automotive Grade Linux）。ASIL-C/D要件ECUではQNXの機能安全証明書（TÜV認証）が開発工数を大幅削減する。OEMはQNX+AUTOSAR Adaptive+Hypervisorのスタック統合設計が大きな技術課題"
+  ],
+  "termLinks": {
+    "ASIL": "asil",
+    "ECU": "ecu",
+    "ISO 26262": "iso-26262",
+    "SOTIF": "sotif"
+  },
   "date": "2026-04-06"
 }

@@ -8,47 +8,53 @@
   "category": "auto-parts",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ドライブシャフトって何？自動車のどこに使われてるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "ドライブシャフト（Drive Shaft）は、TMからの動力をホイールまたはデフに伝達する回転軸。 身近なたとえで言うと「タイヤへの「動力パイプライン」」のようなものだよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "なるほど。もう少し技術的に教えて。どんな種類や構造があるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "FR/AWD車のプロペラシャフトとFF/AWD車のアクスルシャフトを総称。CFRP製プロペラシャフトは高い固有振動数で高回転対応が可能"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMの開発現場ではどういう位置づけなの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "EV化で高トルク瞬時入力への耐久確保が課題。NTN・GKN・NEXTeerが供給"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "EV化や電動化で、この部品はどう変わっていくの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "電動化の流れでドライブシャフトにも変革が求められているよ。軽量化・高効率化・システム統合が大きなトレンドで、従来のICE前提の設計からEV/HEV最適設計への移行が進んでいるんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "まとめると、ドライブシャフトのポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "まとめるとこうだよ：\n・基本：TMからの動力をホイールまたはデフに伝達する回転軸。\n・技術：FR/AWD車のプロペラシャフトとFF/AWD車のアクスルシャフトを総称。CFRP製プロペラシャフトは高い固有振動数で高回転対応が可能\n・OEM視点：EV化で高トルク瞬時入力への耐久確保が課題。NTN・GKN・NEXTeerが供給\n開発者として押さえておくべき重要部品だね。"
     }
   ],
-  "summary": "ドライブシャフト（Drive Shaft）は、TMからの動力をホイールまたはデフに伝達する回転軸。\n\n■ 技術解説\nFR/AWD車のプロペラシャフトとFF/AWD車のアクスルシャフトを総称。CFRP製プロペラシャフトは高い固有振動数で高回転対応が可能\n\n■ 業界・OEM視点\nEV化で高トルク瞬時入力への耐久確保が課題。NTN・GKN・NEXTeerが供給",
-  "termLinks": {},
+  "summary": [
+    "ドライブシャフト（Drive Shaft）は、TMからの動力をホイールまたはデフに伝達する回転軸。",
+    "【技術解説】FR/AWD車のプロペラシャフトとFF/AWD車のアクスルシャフトを総称。CFRP製プロペラシャフトは高い固有振動数で高回転対応が可能",
+    "【業界・OEM視点】EV化で高トルク瞬時入力への耐久確保が課題。NTN・GKN・NEXTeerが供給"
+  ],
+  "termLinks": {
+    "AWD": "awd"
+  },
   "date": "2026-04-06"
 }

@@ -8,47 +8,56 @@
   "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "Exposure（頻度）って何？機能安全でどういう役割？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "Exposure（頻度）（Exposure）は、HARAで評価されるハザーダスイベント発生条件の頻度。E0〜E4。 たとえると「危険な状況に「どれくらい出くわすか」」だよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "E0:ありえない, E1:非常にまれ, E2:まれ, E3:中程度, E4:高確率。運転シナリオ（高速走行・市街地走行等）ごとに評価。E4は日常的に遭遇する状況"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "具体的にOEMの開発ではどう使われるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "高速道路走行中は多くのシナリオでE4評価になりやすい。OEMは走行データ・事故統計を根拠として使用する"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "ADAS/ADの高度化に伴いExposure（頻度）の重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "エンジニアとして押さえるポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "要点：\n・定義：HARAで評価されるハザーダスイベント発生条件の頻度。E0〜E4。\n・ISO 26262での位置づけ：E0:ありえない, E1:非常にまれ, E2:まれ, E3:中程度, E4:高確率。運転シナリオ（高速走行・市街地走行等）ごとに評価。E4は日常的に遭遇する状況\n・開発現場：高速道路走行中は多くのシナリオでE4評価になりやすい。OEMは走行データ・事故統計を根拠として使用する\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": "Exposure（頻度）（Exposure）は、HARAで評価されるハザーダスイベント発生条件の頻度。E0〜E4。\n\n■ 技術解説\nE0:ありえない, E1:非常にまれ, E2:まれ, E3:中程度, E4:高確率。運転シナリオ（高速走行・市街地走行等）ごとに評価。E4は日常的に遭遇する状況\n\n■ 業界・OEM視点\n高速道路走行中は多くのシナリオでE4評価になりやすい。OEMは走行データ・事故統計を根拠として使用する",
-  "termLinks": {},
+  "summary": [
+    "Exposure（頻度）（Exposure）は、HARAで評価されるハザーダスイベント発生条件の頻度。E0〜E4。",
+    "【技術解説】E0:ありえない, E1:非常にまれ, E2:まれ, E3:中程度, E4:高確率。運転シナリオ（高速走行・市街地走行等）ごとに評価。E4は日常的に遭遇する状況",
+    "【業界・OEM視点】高速道路走行中は多くのシナリオでE4評価になりやすい。OEMは走行データ・事故統計を根拠として使用する"
+  ],
+  "termLinks": {
+    "ASIL": "asil",
+    "HARA": "hara",
+    "ISO 26262": "iso-26262",
+    "SOTIF": "sotif"
+  },
   "date": "2026-04-06"
 }

@@ -8,47 +8,56 @@
   "category": "functional-safety",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "Severity（重大度）って何？機能安全でどういう役割？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "Severity（重大度）（Severity）は、HARAで評価される事故の重大度。S0（傷害なし）〜S3（致命的・生命を脅かす）。 たとえると「事故の「ひどさレベル」」だよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ISO 26262での位置づけをもう少し詳しく教えて。"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "S0:傷害なし, S1:軽傷（挫傷等）, S2:重傷（骨折等・生存）, S3:致命傷（生命を脅かす・死亡）。評価は最悪ケースの合理的シナリオで判断する"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "具体的にOEMの開発ではどう使われるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "StewardingはOEMの安全エンジニアが担当。S3判定が出ると必然的にASILが高くなり開発コストに影響するため、シナリオの妥当性が議論になりやすい"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "ADAS/自動運転が進む中での重要度はどう変わる？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "ADAS/ADの高度化に伴いSeverity（重大度）の重要性はますます高まっているよ。ASIL-C/D要件の増加、SOTIFとの複合対応、サイバーセキュリティとの統合管理など、安全分析の複雑度が上がっているんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "エンジニアとして押さえるポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "要点：\n・定義：HARAで評価される事故の重大度。S0（傷害なし）〜S3（致命的・生命を脅かす）。\n・ISO 26262での位置づけ：S0:傷害なし, S1:軽傷（挫傷等）, S2:重傷（骨折等・生存）, S3:致命傷（生命を脅かす・死亡）。評価は最悪ケースの合理的シナリオで判断する\n・開発現場：StewardingはOEMの安全エンジニアが担当。S3判定が出ると必然的にASILが高くなり開発コストに影響するため、シナリオの妥当性が議論になりやすい\n安全設計の基盤として確実に理解しておこう。"
     }
   ],
-  "summary": "Severity（重大度）（Severity）は、HARAで評価される事故の重大度。S0（傷害なし）〜S3（致命的・生命を脅かす）。\n\n■ 技術解説\nS0:傷害なし, S1:軽傷（挫傷等）, S2:重傷（骨折等・生存）, S3:致命傷（生命を脅かす・死亡）。評価は最悪ケースの合理的シナリオで判断する\n\n■ 業界・OEM視点\nStewardingはOEMの安全エンジニアが担当。S3判定が出ると必然的にASILが高くなり開発コストに影響するため、シナリオの妥当性が議論になりやすい",
-  "termLinks": {},
+  "summary": [
+    "Severity（重大度）（Severity）は、HARAで評価される事故の重大度。S0（傷害なし）〜S3（致命的・生命を脅かす）。",
+    "【技術解説】S0:傷害なし, S1:軽傷（挫傷等）, S2:重傷（骨折等・生存）, S3:致命傷（生命を脅かす・死亡）。評価は最悪ケースの合理的シナリオで判断する",
+    "【業界・OEM視点】StewardingはOEMの安全エンジニアが担当。S3判定が出ると必然的にASILが高くなり開発コストに影響するため、シナリオの妥当性が議論になりやすい"
+  ],
+  "termLinks": {
+    "ASIL": "asil",
+    "HARA": "hara",
+    "ISO 26262": "iso-26262",
+    "SOTIF": "sotif"
+  },
   "date": "2026-04-06"
 }

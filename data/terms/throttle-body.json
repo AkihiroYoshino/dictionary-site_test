@@ -8,47 +8,54 @@
   "category": "auto-parts",
   "dialogue": [
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "スロットルボディって何？自動車のどこに使われてるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "スロットルボディ（Throttle Body）は、エンジンの吸入空気量を制御するバルブ。DBW式が標準。 身近なたとえで言うと「空気の「蛇口」」のようなものだよ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "なるほど。もう少し技術的に教えて。どんな種類や構造があるの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "DBW方式でアクセルペダルセンサー→ECU演算→スロットルモーター制御。リンプホーム用デフォルト開度やセンサー冗長化がISO 26262対応要件"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "OEMの開発現場ではどういう位置づけなの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "デンソー・愛三工業が供給。FC車の水素流量制御バルブへ技術転用が進む"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "EV化や電動化で、この部品はどう変わっていくの？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "電動化の流れでスロットルボディにも変革が求められているよ。軽量化・高効率化・システム統合が大きなトレンドで、従来のICE前提の設計からEV/HEV最適設計への移行が進んでいるんだ。"
     },
     {
-      "speaker": "user",
+      "speaker": "student",
       "text": "まとめると、スロットルボディのポイントは？"
     },
     {
-      "speaker": "assistant",
+      "speaker": "teacher",
       "text": "まとめるとこうだよ：\n・基本：エンジンの吸入空気量を制御するバルブ。DBW式が標準。\n・技術：DBW方式でアクセルペダルセンサー→ECU演算→スロットルモーター制御。リンプホーム用デフォルト開度やセンサー冗長化がISO 26262対応要件\n・OEM視点：デンソー・愛三工業が供給。FC車の水素流量制御バルブへ技術転用が進む\n開発者として押さえておくべき重要部品だね。"
     }
   ],
-  "summary": "スロットルボディ（Throttle Body）は、エンジンの吸入空気量を制御するバルブ。DBW式が標準。\n\n■ 技術解説\nDBW方式でアクセルペダルセンサー→ECU演算→スロットルモーター制御。リンプホーム用デフォルト開度やセンサー冗長化がISO 26262対応要件\n\n■ 業界・OEM視点\nデンソー・愛三工業が供給。FC車の水素流量制御バルブへ技術転用が進む",
-  "termLinks": {},
+  "summary": [
+    "スロットルボディ（Throttle Body）は、エンジンの吸入空気量を制御するバルブ。DBW式が標準。",
+    "【技術解説】DBW方式でアクセルペダルセンサー→ECU演算→スロットルモーター制御。リンプホーム用デフォルト開度やセンサー冗長化がISO 26262対応要件",
+    "【業界・OEM視点】デンソー・愛三工業が供給。FC車の水素流量制御バルブへ技術転用が進む"
+  ],
+  "termLinks": {
+    "ECU": "ecu",
+    "ISO 26262": "iso-26262"
+  },
   "date": "2026-04-06"
 }
