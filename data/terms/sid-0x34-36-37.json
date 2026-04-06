@@ -49,11 +49,6 @@
     }
   ],
   "summary": "SID 0x34/36/37 リプログラミング（RequestDownload / TransferData / RequestTransferExit）は、ECUのフラッシュメモリにソフトウェアをダウンロードする3つ組サービス。\n\n■ 技術解説\n0x34:ダウンロード要求（開始アドレス・サイズ指定）→0x36:データ転送（ブロック単位、BlockSequenceCounterで順序管理）→0x37:転送終了→CRC検証。圧縮・暗号化フォーマットもサポート\n\n■ 業界・OEM視点\nOTA/リコール対応のリプロはこのサービスが基盤。OEMはリプロシーケンスを標準化し、転送速度（CAN:50KB/s、DoIP:数MB/s）の高速化がUX改善に直結",
-  "termLinks": {
-    "ECU": "ecu",
-    "TARA": "tara",
-    "UDS": "uds",
-    "UN R155": "un-r155"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

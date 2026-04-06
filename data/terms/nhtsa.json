@@ -49,9 +49,6 @@
     }
   ],
   "summary": "NHTSA（National Highway Traffic Safety Administration）は、米国の車両安全規制当局。FMVSSの策定・リコール管理を担当。\n\n■ 技術解説\nFMVSS（連邦自動車安全基準）を策定しメーカーの自己認証を監督。リコール調査権限を持ちODI（欠陥調査室）が消費者苦情を分析。近年はADAS/自動運転のSGO（Standing General Order）で事故報告を義務化\n\n■ 業界・OEM視点\nUN規則体系には参加していないが1998年協定（GTR）には参加。OEMは米国向けにFMVSS適合の自己認証とNHTSA対応体制（ODI対応・リコール判断）が必要",
-  "termLinks": {
-    "GTR": "gtr",
-    "型式認可": "type-approval"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

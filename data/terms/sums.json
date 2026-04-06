@@ -49,13 +49,6 @@
     }
   ],
   "summary": "SUMS（Software Update Management System）は、UN R156が要求するソフトウェア更新管理体制。OTAとリコール更新の両方を包含。\n\n■ 技術解説\n更新対象ソフトの特定→影響分析（安全・法規）→更新パッケージ作成→配信→車両側適用→結果確認の全プロセスを管理。RxSWIN変更時は認可当局への届出が必要\n\n■ 業界・OEM視点\nCSMS認証とセットでSUMS認証が必要。OEMのソフト開発・配信プラットフォーム基盤の設計に直結する",
-  "termLinks": {
-    "CSMS": "csms",
-    "多層防御": "defense-in-depth",
-    "ISO/SAE 21434": "iso-sae-21434",
-    "RxSWIN": "rxswin",
-    "UN R155": "un-r155",
-    "UN R156": "un-r156"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

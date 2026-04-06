@@ -49,10 +49,6 @@
     }
   ],
   "summary": "RxSWIN（Rx Software Identification Number）は、型式認可に関わる車両ソフトウェアを識別する番号。UN R156で定義。\n\n■ 技術解説\n型式認可対象の規制（排ガス・安全等）に影響するソフトウェアに付与される識別番号。OTAでソフトを更新する際、RxSWINの変更有無＝認可への影響有無を判断基準にする。OEMはRxSWIN管理台帳と変更管理プロセスの整備が必須\n\n■ 業界・OEM視点\n認可当局がRxSWINをキーに車両ソフト構成を追跡可能になるため、OEMはSBOM（Software Bill of Materials）管理と紐づけて運用するケースが増加",
-  "termLinks": {
-    "SBOM": "sbom",
-    "型式認可": "type-approval",
-    "UN R156": "un-r156"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

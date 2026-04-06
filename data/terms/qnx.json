@@ -49,11 +49,6 @@
     }
   ],
   "summary": "QNX（QNX Neutrino RTOS）は、BlackBerry製マイクロカーネル型車載リアルタイムOS。ISO 26262 ASIL-D対応認証を取得し、IVI・ADAS・インスツルメントクラスタに広く採用。\n\n■ 技術解説\nマイクロカーネルアーキテクチャでドライバー・ファイルシステム等を別プロセスに分離し、一部クラッシュが全体に波及しない耐障害設計。スケジューラの決定論的動作で厳格なリアルタイム性を保証（ジッタ < 数μs）。QNX Hypervisor 2.xはARM/x86向けでASIL-Dの機能安全ドメインと非安全ドメイン（Android Automotive等）を一チップ上で分離実行できる。Adaptive AUTOSAR実行基盤としての採用も増加\n\n■ 業界・OEM視点\nGM・フォード・BMW・現代・ジャガーランドローバー等の多数のOEMがIVI/クラスタにQNXを採用。競合はAndroid Automotive OS（Googleエコシステム）・AGL（Automotive Grade Linux）。ASIL-C/D要件ECUではQNXの機能安全証明書（TÜV認証）が開発工数を大幅削減する。OEMはQNX+AUTOSAR Adaptive+Hypervisorのスタック統合設計が大きな技術課題",
-  "termLinks": {
-    "ASIL": "asil",
-    "ECU": "ecu",
-    "ISO 26262": "iso-26262",
-    "SOTIF": "sotif"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

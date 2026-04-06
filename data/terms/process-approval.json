@@ -49,10 +49,6 @@
     }
   ],
   "summary": "プロセス認可（Process Approval (A-SPICE Assessment)）は、OEMがTier1のソフトウェア開発プロセスをA-SPICEやISO 26262準拠で審査・承認する仕組み。量産委託の前提条件。\n\n■ 技術解説\nA-SPICE（Automotive SPICE）のCapability Level（CL）0〜5でプロセス成熟度を評価する国際標準。CL2（Managed Process）：計画・監視実施。CL3（Established）：標準プロセスで組織的に実施。多くの欧州OEM・日系OEMはCL2以上を量産委託の前提条件とし、ASIL-C/Dでは一部でCL3要求を行う。intacs認定アセッサーまたはOEM内部アセッサーが審査実施\n\n■ 業界・OEM視点\nOEMは調達要件にA-SPICE CL評価結果の提出を義務付け、継続取引・新規選定の評価指標にする。ISO 26262 Functional Safety Auditとセットで実施されることが多い。アセスメント費用・期間がTier1の大きな負担となるため、OEMとサプライヤーの連携方針の明確化が重要",
-  "termLinks": {
-    "ASIL": "asil",
-    "ISO 26262": "iso-26262",
-    "型式認可": "type-approval"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

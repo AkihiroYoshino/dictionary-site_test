@@ -49,13 +49,6 @@
     }
   ],
   "summary": "WPA2/WPA3（Wi-Fi Protected Access 2/3）は、車載Wi-Fi通信のセキュリティプロトコル。IVI・TCU・DCMのWi-Fiアクセスポイント機能に適用されるセキュリティ規格。\n\n■ 技術解説\nWPA2（CCMP/AES-128・CCMP-128）→WPA3（SAE認証・GCMP-256・PMF=Management Frame Protection必須）に移行中。WPA3のSAE（Simultaneous Authentication of Equals/Dragonfly）はオフライン辞書攻撃・KRACK攻撃に対して耐性がある。Wi-Fi 6/6E（802.11ax/be）との組み合わせで高速・低遅延・セキュア接続を実現。Enterprise版（WPA3-Enterprise）はRADIUS/EAP-TLSで証明書認証\n\n■ 業界・OEM視点\nUN R155のTARAでIVI/TCUのWi-Fi接続面は重点攻撃シナリオ。WPA2の既知脆弱性（KRACK・PMKIDハッシュ攻撃）対策としてWPA3移行が業界標準化。OEMはTCU/IVIのWi-Fiチップ（Qualcomm/Broadcom/NXP）のWPA3対応ファームウェアへの切替とFMVSS/UN R155開発要件化を進める",
-  "termLinks": {
-    "CSMS": "csms",
-    "DCM": "dcm",
-    "多層防御": "defense-in-depth",
-    "ISO/SAE 21434": "iso-sae-21434",
-    "TARA": "tara",
-    "UN R155": "un-r155"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

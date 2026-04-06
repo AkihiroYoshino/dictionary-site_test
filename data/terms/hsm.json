@@ -49,15 +49,6 @@
     }
   ],
   "summary": "HSM（Hardware Security Module）は、ECU内で暗号鍵を安全に保管・演算するハードウェアモジュール。\n\n■ 技術解説\nSHE（Secure Hardware Extension）/SHE+/Evita Medium/Evita Fullの各レベルがある。AES128/256、RSA、ECDSAなどの暗号演算を耐タンパー領域で実行。セキュアブート・SecOC・SecureDebugの基盤\n\n■ 業界・OEM視点\nインフィニオンAURIX TC3xx/TC4xx内蔵HSMが主流。ルネサスRH850/U2AもICU搭載。OEMはHSMレベル選定をTARA結果のAttack Feasibility Ratingに基づいて決定",
-  "termLinks": {
-    "CSMS": "csms",
-    "多層防御": "defense-in-depth",
-    "ECU": "ecu",
-    "ISO/SAE 21434": "iso-sae-21434",
-    "SecOC": "secoc",
-    "セキュアブート": "secure-boot",
-    "TARA": "tara",
-    "UN R155": "un-r155"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

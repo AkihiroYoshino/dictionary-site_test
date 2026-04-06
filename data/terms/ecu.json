@@ -49,8 +49,6 @@
     }
   ],
   "summary": "ECU（Electronic Control Unit）は、車両各システムを電子制御するコンピュータ。現代車は50〜100個搭載。\n\n■ 技術解説\nAUTOSAR準拠でBSW/RTE/ASWに階層化。MCUはルネサスRH850やInfineon AURIX等が主力。SDV化でゾーン統合ECU＋HPC構成への移行が進行中\n\n■ 業界・OEM視点\nOEMはA-SPICE準拠とISO 26262適合を開発要件としてTier1に要求する。ソフト規模は年々増大しCI/CD導入が進む",
-  "termLinks": {
-    "ISO 26262": "iso-26262"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

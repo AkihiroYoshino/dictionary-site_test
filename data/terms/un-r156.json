@@ -49,10 +49,6 @@
     }
   ],
   "summary": "UN R156（UN Regulation No.156 (Software Update)）は、SUMS構築を義務付けるOTAアップデートの国際車両規制。R155とセットで適用。\n\n■ 技術解説\nOEMはSUMS（Software Update Management System）を構築し、OTA含むソフトウェア更新のプロセスを管理する。RxSWIN（Rx Software Identification Number）による認可ソフト管理、更新時の車両安全確保、ロールバック機能確保が要件\n\n■ 業界・OEM視点\nSDV時代のOTA基盤として重要。型式認可された車両の構成ソフトが事後に変わるため、認可当局との関係が従来より動的になる。OEMは更新影響分析のプロセス確立が課題",
-  "termLinks": {
-    "RxSWIN": "rxswin",
-    "SUMS": "sums",
-    "型式認可": "type-approval"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

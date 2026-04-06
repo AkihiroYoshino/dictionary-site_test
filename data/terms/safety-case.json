@@ -49,10 +49,6 @@
     }
   ],
   "summary": "セーフティケース（Safety Case）は、安全性の論証構造。エビデンスに基づき安全目標の達成を体系的に示す文書。\n\n■ 技術解説\nGSN（Goal Structuring Notation）やCAE（Claims-Arguments-Evidence）で構造化。トップゴール→サブゴール→エビデンスの論証チェーンを構築。ISO 26262 Part 2で作成が要求される\n\n■ 業界・OEM視点\nOEMはセーフティケース作成のための専門チームを設けることが多い。第三者アセッサーのレビューで論証の妥当性を検証する",
-  "termLinks": {
-    "ASIL": "asil",
-    "ISO 26262": "iso-26262",
-    "SOTIF": "sotif"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

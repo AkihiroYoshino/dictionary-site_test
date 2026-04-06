@@ -49,11 +49,6 @@
     }
   ],
   "summary": "セーフティゴール（Safety Goal）は、HARAから導出されるトップレベル安全要求。機能安全設計の出発点。\n\n■ 技術解説\nセーフティゴールはFault Tolerant Time Interval（FTTI）とSafe Stateとセットで定義される。例：「EPSの意図しないアシストトルクの発生を防ぐ（ASIL-D, FTTI=100ms, Safe State=アシストオフ）」\n\n■ 業界・OEM視点\nセーフティゴールからTSR（技術安全要求）→HSR/SSR（HW/SW安全要求）へとブレークダウンする。OEMとTier1でセーフティゴール〜TSRの分担が契約上の重要論点",
-  "termLinks": {
-    "ASIL": "asil",
-    "HARA": "hara",
-    "ISO 26262": "iso-26262",
-    "SOTIF": "sotif"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

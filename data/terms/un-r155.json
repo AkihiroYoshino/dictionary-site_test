@@ -49,12 +49,6 @@
     }
   ],
   "summary": "UN R155（UN Regulation No.155 (Cyber Security)）は、CSMS構築を義務付けるサイバーセキュリティの国際車両規制。2024年7月から全新車に適用。\n\n■ 技術解説\nWP.29傘下のGRVA（自動運転/コネクテッド車両作業部会）が策定。OEMはCSMS（Cyber Security Management System）を構築し型式認可当局の審査を受ける必要がある。7つの脅威カテゴリ・69の脅威に対しリスクアセスメント（TARA）と対策実装が必要\n\n■ 業界・OEM視点\n日本ではUN R155を国内法化し、独立行政法人（NALTEC）が審査機関を担当。OEMはCSMS運用体制・サプライチェーン管理・インシデント対応まで一貫した体制構築が求められる。ISO/SAE 21434がエンジニアリングプロセスの参照規格",
-  "termLinks": {
-    "CSMS": "csms",
-    "ISO/SAE 21434": "iso-sae-21434",
-    "TARA": "tara",
-    "型式認可": "type-approval",
-    "WP.29": "wp29"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

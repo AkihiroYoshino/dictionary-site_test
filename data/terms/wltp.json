@@ -49,9 +49,6 @@
     }
   ],
   "summary": "WLTP（Worldwide Harmonized Light Vehicles Test Procedure）は、国際統一の燃費・排ガス試験法。JC08やNEDCに代わるリアルワールド指向の試験。\n\n■ 技術解説\nWLTCモード（Low/Mid/High/Extra High）で構成。実走行に近い走行パターンでJC08比でカタログ燃費と実燃費の乖離が縮小。試験温度23℃、RDE（Real Driving Emissions）と組み合わせて運用\n\n■ 業界・OEM視点\nGTR No.15として策定。日本は2018年から採用。OEMは認証燃費値がJC08より悪化するためカタログ訴求戦略の見直しが必要だった",
-  "termLinks": {
-    "GTR": "gtr",
-    "型式認可": "type-approval"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

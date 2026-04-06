@@ -49,14 +49,6 @@
     }
   ],
   "summary": "J-Auto-ISAC（Japan Automotive ISAC）は、日本版の自動車サイバーセキュリティ情報共有センター。国内OEM・Tier1が参加し脅威情報を共有。\n\n■ 技術解説\n一般社団法人として設立。トヨタ・ホンダ・日産・スズキ等の国内OEM・主要Tier1が会員。脅威情報・CVE・インシデント情報を匿名化してメンバー間で共有。国際的なAuto-ISAC（米）・ENISA（EU）・JASIC等との連携でグローバルな脅威情報を入手\n\n■ 業界・OEM視点\nOEMのCSMS運用において、J-Auto-ISACからの情報をvSOC・KVMSに活用する会員体制が求められる。UN R155の量産後モニタリング（運用・保守フェーズ）の実装手段として機能する。加盟費用・情報共有体制の構築がOEMの課題",
-  "termLinks": {
-    "Auto-ISAC": "auto-isac",
-    "CSMS": "csms",
-    "多層防御": "defense-in-depth",
-    "ISO/SAE 21434": "iso-sae-21434",
-    "JASIC": "jasic",
-    "KVMS": "kvms",
-    "UN R155": "un-r155"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

@@ -49,10 +49,6 @@
     }
   ],
   "summary": "JASPAR（Japan Automotive Software Platform and Architecture）は、日本のAUTOSAR普及・開発を担う業界団体。OEM・Tier1・半導体メーカーが参加し日本市場への適用ガイドを策定。\n\n■ 技術解説\nOEMはAUTOSAR規格を車両ECUに適用するためにJASPARの技術WGに参加し、標準AUTOSAR BSW設定・Classic/Adaptive AUTOSARの選択方針を決定する。Sil-kickerや設定ツールの共通化ガイドラインも提供。ISO 26262・A-SPICE適合のためのワーキンググループも活動中\n\n■ 業界・OEM視点\nデンソー・アイシン・日立Astemo・パナソニック・日本精機等の主要Tier1が会員。JASPAR経由でAUTOSAR本体（コンソーシアム）へのコントリビューションも行う。SDV化に伴いAdaptive AUTOSAR・SOME/IP対応の活動が活発化しており、OEMの標準化ラインに直結する",
-  "termLinks": {
-    "ECU": "ecu",
-    "ISO 26262": "iso-26262",
-    "型式認可": "type-approval"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

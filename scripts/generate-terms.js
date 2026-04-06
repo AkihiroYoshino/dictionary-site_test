@@ -184,7 +184,7 @@ function writeTermHTML(term) {
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app" data-page="term" data-term-id="${term.id}"></div>
   <script src="../js/main.js"><\/script>
 </body>
 </html>`;

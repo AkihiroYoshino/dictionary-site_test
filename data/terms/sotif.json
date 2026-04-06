@@ -49,10 +49,6 @@
     }
   ],
   "summary": "SOTIF（Safety Of The Intended Functionality (ISO 21448)）は、意図した機能が不十分な性能や誤使用でハザードを引き起こすリスクを扱う規格。\n\n■ 技術解説\nISO 26262は故障起因の危険を扱うのに対し、SOTIFは故障なしでの危険（センサー限界・AI誤認識等）を扱う。ADAS/自動運転のフォルスポジティブ/ネガティブ対策が主ターゲット\n\n■ 業界・OEM視点\nレベル3以上の自動運転認可にはSOTIF対応が事実上必須。OEMはISO 26262 + SOTIF + ISO/SAE 21434のトリプルV字プロセスを構築する必要がある",
-  "termLinks": {
-    "ASIL": "asil",
-    "ISO 26262": "iso-26262",
-    "ISO/SAE 21434": "iso-sae-21434"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

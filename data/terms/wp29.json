@@ -49,10 +49,6 @@
     }
   ],
   "summary": "WP.29（World Forum for Harmonization of Vehicle Regulations）は、国連欧州経済委員会(UNECE)の車両規則調和世界フォーラム。UN規則の策定母体。\n\n■ 技術解説\n1958年協定（相互承認）と1998年協定（GTR）の2つの国際協定を管理。傘下にGRSP（衝突安全）・GRVA（自動運転・コネクテッド）・GRPE（排出ガス）・GRE（灯火器）等の作業部会がある\n\n■ 業界・OEM視点\n日本・欧州・韓国等が1958年協定に加盟（米国は未加盟で独自FMVSS体系）。近年はGRVAがサイバーセキュリティ（R155）・OTA（R156）・自動運転（R157）等を策定し注目度が高い",
-  "termLinks": {
-    "1958年協定": "1958-agreement",
-    "GTR": "gtr",
-    "型式認可": "type-approval"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

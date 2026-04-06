@@ -49,11 +49,6 @@
     }
   ],
   "summary": "IDS/IPS（Intrusion Detection/Prevention System）は、車載ネットワーク上の不正通信を検知（IDS）・遮断（IPS）するシステム。\n\n■ 技術解説\nCAN IDSはメッセージ頻度異常・未定義ID・タイミング逸脱を検知。Ethernet IDSはDPI（Deep Packet Inspection）も可能。検知ログはvSOCに送信しクラウド側で分析\n\n■ 業界・OEM視点\nUN R155は量産後モニタリング（Post-production monitoring）を要求しておりIDS/vSOCがその実装手段。Argus・Upstream・C2A等のスタートアップソリューションも台頭",
-  "termLinks": {
-    "CSMS": "csms",
-    "多層防御": "defense-in-depth",
-    "ISO/SAE 21434": "iso-sae-21434",
-    "UN R155": "un-r155"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

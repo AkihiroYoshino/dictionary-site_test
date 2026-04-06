@@ -49,11 +49,6 @@
     }
   ],
   "summary": "HARA（Hazard Analysis and Risk Assessment）は、ISO 26262コンセプトフェーズのハザード分析・リスクアセスメント。ASILを決定。\n\n■ 技術解説\n車両レベルの機能からハザーダスイベント（HE）を特定→S/E/C評価→ASIL決定→セーフティゴール導出のステップ。全運転状況（高速・市街地・悪天候等）を網羅的に分析する必要がある\n\n■ 業界・OEM視点\nOEMは100以上のHEを分析することもある。セーフティゴールは「○○機能の意図しない作動を防止する（ASIL-C）」等の形式で記述",
-  "termLinks": {
-    "ASIL": "asil",
-    "ISO 26262": "iso-26262",
-    "セーフティゴール": "safety-goal",
-    "SOTIF": "sotif"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

@@ -49,11 +49,6 @@
     }
   ],
   "summary": "干渉からの自由（Freedom From Interference (FFI)）は、ASIL分解や混在システムでQM/低ASIL要素が高ASIL要素に悪影響を与えないことの保証。\n\n■ 技術解説\nメモリ保護（MPU）・時間保護（タイムスロット）・通信保護（E2E Protection）の3軸で確保。AUTOSARのOSがMPU/タイミング保護機能を提供\n\n■ 業界・OEM視点\nマルチコアMCUでのFFI確保はISO 26262 Part 6（SW開発）の重点課題。OEMはLOCKSTEP実行やSW-C isolation設計で対応",
-  "termLinks": {
-    "ASIL分解": "asil-decomposition",
-    "ASIL": "asil",
-    "ISO 26262": "iso-26262",
-    "SOTIF": "sotif"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

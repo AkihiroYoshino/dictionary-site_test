@@ -49,11 +49,6 @@
     }
   ],
   "summary": "Controllability（制御可能性）（Controllability）は、HARAで評価されるドライバー/乗員による回避可能性。C0〜C3。\n\n■ 技術解説\nC0:制御容易, C1:99%以上が回避可能, C2:90%以上が回避可能, C3:回避困難(<90%)。ドライバーの反応時間や操作難易度で評価。自動運転ではC3評価が多くなる\n\n■ 業界・OEM視点\nADAS/自動運転ではシステムが制御主体のためC3判定が増加→ASIL-D頻出となり、冗長設計のコストが課題。OEMはHMI設計での制御可能性向上も検討",
-  "termLinks": {
-    "ASIL": "asil",
-    "HARA": "hara",
-    "ISO 26262": "iso-26262",
-    "SOTIF": "sotif"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

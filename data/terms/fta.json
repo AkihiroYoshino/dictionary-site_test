@@ -49,10 +49,6 @@
     }
   ],
   "summary": "FTA（Fault Tree Analysis）は、頂上事象から原因を論理ゲートで展開する故障木解析。定量的安全分析に使用。\n\n■ 技術解説\nAND/ORゲートで故障伝播を構造化。最小カットセットの確率計算でPMHF（Probabilistic Metric for Hardware Failure）を算出。ISO 26262 Part 5のHW安全分析で使用\n\n■ 業界・OEM視点\nASIL-D: PMHF < 10^-8/hの目標値達成にはFTAによる定量評価が不可欠。Isograph FaultTree+、medini analyze等のツールを使用",
-  "termLinks": {
-    "ASIL": "asil",
-    "ISO 26262": "iso-26262",
-    "SOTIF": "sotif"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

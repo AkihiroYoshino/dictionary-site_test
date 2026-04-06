@@ -49,10 +49,6 @@
     }
   ],
   "summary": "ASIL（Automotive Safety Integrity Level）は、ISO 26262で定義される安全度水準（A〜D）。HARAの結果から決定される。\n\n■ 技術解説\nSeverity（S1-S3）×Exposure（E1-E4）×Controllability（C1-C3）の組み合わせ表で決定。QMはASIL不要。ASIL-Dが最も厳格で航空のDAL-Aに相当\n\n■ 業界・OEM視点\nASIL-Dでは2重冗長やダイバーシティ設計、高いテストカバレッジが要求され開発コストが大幅に増加。OEMはASIL配分の妥当性確認がコスト最適化の鍵",
-  "termLinks": {
-    "HARA": "hara",
-    "ISO 26262": "iso-26262",
-    "SOTIF": "sotif"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

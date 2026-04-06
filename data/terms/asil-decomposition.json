@@ -49,10 +49,6 @@
     }
   ],
   "summary": "ASIL分解（ASIL Decomposition）は、ASIL要求を冗長構成で分割しサブシステムの要求レベルを下げる手法。\n\n■ 技術解説\nASIL-D → ASIL-B(D) + ASIL-B(D)、ASIL-C → ASIL-A(C) + ASIL-B(C) 等に分解可能。独立性要件（DFI : Dependent Failure Initiative）の確保がASIL分解成立の前提条件。共通原因故障（CCF）対策が必須\n\n■ 業界・OEM視点\nOEMは冗長センサー・冗長MCU・異種SW実装等でDFIを確保。コスト最適化と安全性のバランスがシステムアーキテクチャ設計の腕の見せ所",
-  "termLinks": {
-    "ASIL": "asil",
-    "ISO 26262": "iso-26262",
-    "SOTIF": "sotif"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

@@ -49,11 +49,6 @@
     }
   ],
   "summary": "SID 0x27 SecurityAccess（Security Access）は、Seed&Key方式でECUへの重要操作をアクセス制御するサービス。\n\n■ 技術解説\nECUがSeed（乱数）を送信→テスターがKey（Seedから算出）を返送→ECUが検証しアンロック。セキュリティレベルを複数持てる（Level 1=読出し、Level 2=書込み等）。UN R155対策で暗号強度の向上が進行中\n\n■ 業界・OEM視点\nOEMはSeed→Key変換アルゴリズムを秘匿管理。最近はPKCS#11ベースの証明書認証（0x29 Authentication）への移行も進む",
-  "termLinks": {
-    "ECU": "ecu",
-    "TARA": "tara",
-    "UDS": "uds",
-    "UN R155": "un-r155"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

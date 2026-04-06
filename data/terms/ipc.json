@@ -49,12 +49,6 @@
     }
   ],
   "summary": "プロセス間通信（IPC）（Inter-Process Communication）は、マルチコアECUやハイパーバイザー環境でプロセス/パーティション間のデータを安全に交換する仕組み。FFI確保の核心。\n\n■ 技術解説\nAUTOSAR Classic：COM/RTE経由のPDUベースIPC、Adaptive AUTOSAR：SOME/IP・POSIX IPC（Shared Memory/Message Queue/Socket）。Hypervisor環境ではShared Memory・Virtio準拠・Doorbell通知等を用いた安全隔離IPC。E2E Protection Profile（CRC+カウンタ）でデータ完全性を保証し、ビット化け・タイミング異常を検出する\n\n■ 業界・OEM視点\nISO 26262 Part 6のFFI（Freedom From Interference）確保においてIPCの設計が核心課題。ASIL-D/QM混在ECUではAUTOSAR SWC Mapping・MPU設定・タイムパーティショニングでIPCのASIL分離を実現。QNX・Green Hills INTEGRITY・PikeOS等のRTOSがハードウェア支援IPCをASIL認証済みで提供。OEMはIPCのレイテンシ・帯域・アイソレーション設計を早期アーキテクチャフェーズで決定する必要がある",
-  "termLinks": {
-    "ASIL": "asil",
-    "ECU": "ecu",
-    "ISO 26262": "iso-26262",
-    "QNX": "qnx",
-    "SOTIF": "sotif"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

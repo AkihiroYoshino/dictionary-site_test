@@ -49,11 +49,6 @@
     }
   ],
   "summary": "SID 0x2E WriteDataByIdentifier（Write Data By Identifier）は、DID指定でECU内部データを書き込むサービス。キャリブレーション・設定変更に使用。\n\n■ 技術解説\nSecurityAccess後に使用。VINの書込み、車両仕様設定（CAN通信設定・機能ON/OFF等）、工場ラインでの個体別設定に使用される\n\n■ 業界・OEM視点\nDIDの書込み保護設計がセキュリティ上重要。OEMはどのDIDをどのセキュリティレベルで保護するかをTARA結果に基づいて設計する",
-  "termLinks": {
-    "ECU": "ecu",
-    "TARA": "tara",
-    "UDS": "uds",
-    "UN R155": "un-r155"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

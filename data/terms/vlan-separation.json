@@ -49,11 +49,6 @@
     }
   ],
   "summary": "VLAN分離（VLAN Separation）は、車載Ethernet上でVLANタグにより通信ドメインを論理分離するセキュリティ手法。\n\n■ 技術解説\nIEEE 802.1Q VLANタグでIVI系・ADAS系・ボディ系等のドメインを分離。車載スイッチICがVLAN制御を担う。CAN→Ethernetへの移行に伴いネットワークセグメンテーションが実現可能に\n\n■ 業界・OEM視点\nマーベル・ブロードコム・NXPがEthernet SwitchICを供給。OEMはゾーンアーキテクチャ移行に合わせてVLAN設計を行う",
-  "termLinks": {
-    "CSMS": "csms",
-    "多層防御": "defense-in-depth",
-    "ISO/SAE 21434": "iso-sae-21434",
-    "UN R155": "un-r155"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

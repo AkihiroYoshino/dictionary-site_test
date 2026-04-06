@@ -49,8 +49,6 @@
     }
   ],
   "summary": "UN R157（UN Regulation No.157 (ALKS)）は、レベル3自動運転（ALKS: Automated Lane Keeping System）の型式認可要件を定めた初の国際規則。\n\n■ 技術解説\nDDT（動的運転タスク）の自動化区間において、システムの安全要件・MRM（Minimal Risk Manoeuvre）・運転者への引き渡し・データ記録（DSSAD）等を規定。適用領域はまず高速道路の低速渋滞時（60km/h以下→130km/hへ拡大検討中）\n\n■ 業界・OEM視点\nホンダLEGENDが世界初の型式認可を取得（日本）。OEMはDSSAD（走行データ記録装置）の実装とMRM設計が開発上の大きな課題",
-  "termLinks": {
-    "型式認可": "type-approval"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

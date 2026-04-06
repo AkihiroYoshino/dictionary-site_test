@@ -49,16 +49,6 @@
     }
   ],
   "summary": "CCU（Central/Connectivity Control Unit）は、車載の通信機能（LTE/5G・Wi-Fi・Bluetooth・V2X・ETC）を一元統合するコネクティビティ管理ECU。SDVアーキテクチャの要。\n\n■ 技術解説\nDCM機能をSoC化しIVI・V2X通信制御・ETCを統合する車載ゾーンアーキテクチャのCommunication Gatewayを担う。Qualcomm Snapdragon Auto・NXP i.MX等のオートグレードSoCで実装。OTA更新管理・vSOCログ転送・リモートサービスAPIの提供も行う。IDS（車内通信の不正検知）機能を内蔵することが増加\n\n■ 業界・OEM視点\nOEMはCCUにFirewall・IDS・TLS終端・PKI管理機能を搭載するセキュアゲートウェイ化が進む。UN R155対応でTARA上の最重要アタックサーフェスとなるため、HSMを用いたセキュアブート・OTA認証・SecOCゲートウェイ機能が設計要件。ASILとサイバーセキュリティの統合設計が課題",
-  "termLinks": {
-    "ASIL": "asil",
-    "DCM": "dcm",
-    "ECU": "ecu",
-    "HSM": "hsm",
-    "PKI": "pki",
-    "SecOC": "secoc",
-    "セキュアブート": "secure-boot",
-    "TARA": "tara",
-    "UN R155": "un-r155"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

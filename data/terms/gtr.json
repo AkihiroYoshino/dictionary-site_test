@@ -49,10 +49,6 @@
     }
   ],
   "summary": "GTR（Global Technical Regulation）は、1998年協定に基づくグローバル技術基準。米国含む主要国が参加。\n\n■ 技術解説\nUN規則（1958年協定ベース）と異なり、各国が国内法規に組み込む義務を負わない技術基準。ただし調和が進むことで各国法規の技術要件が収束する。GTR No.15（WLTP）が代表例\n\n■ 業界・OEM視点\n1998年協定には米国も参加しているため、FMVSSとUN規則の橋渡し的な役割。EVバッテリー安全のGTR No.20も重要",
-  "termLinks": {
-    "1958年協定": "1958-agreement",
-    "型式認可": "type-approval",
-    "WLTP": "wltp"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }

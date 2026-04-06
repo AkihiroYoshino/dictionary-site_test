@@ -49,9 +49,6 @@
     }
   ],
   "summary": "ISO 26262（ISO 26262 Road Vehicles - Functional Safety）は、車両の機能安全に関する国際規格。安全ライフサイクル全体の活動を規定。\n\n■ 技術解説\n2018年に第2版が発行。全12パートで管理・コンセプト・システム・HW・SW・生産・運用まで包括。ASILに基づく安全要求と検証手法を規定。SOTIF（ISO 21448）と補完関係\n\n■ 業界・OEM視点\nOEMは社内の安全文化構築とプロセス標準化が必須。A-SPICEと合わせてTier1への要求水準としても使用。ツールクオリフィケーション（Part 8）も重要要件",
-  "termLinks": {
-    "ASIL": "asil",
-    "SOTIF": "sotif"
-  },
+  "termLinks": {},
   "date": "2026-04-06"
 }
