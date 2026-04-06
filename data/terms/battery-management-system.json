@@ -1,0 +1,38 @@
+{
+  "id": "battery-management-system",
+  "name": "BMS（バッテリーマネジメントシステム）",
+  "reading": "ビーエムエス",
+  "fullName": "Battery Management System",
+  "aliases": [],
+  "oneLiner": "バッテリーの電圧・温度・SOC（充電状態）を監視し、セルバランス・過充放電保護を行う制御システム。",
+  "date": "2026-01-30",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>BMS（バッテリーマネジメントシステム）</strong>」って何ですか？パワートレインに関係あるって聞いたんですけど…"
+    },
+    {
+      "speaker": "teacher",
+      "text": "そうだよ！<strong>BMS（バッテリーマネジメントシステム）</strong>（Battery Management System）は、バッテリーの電圧・温度・SOC（充電状態）を監視し、セルバランス・過充放電保護を行う制御システム。<br><br>わかりやすく言うと、<strong>バッテリーの「健康管理者」。各セルの状態を見張り、安全で長寿命な使い方を実現する</strong>ようなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ〜！じゃあ、BMS（バッテリーマネジメントシステム）はクルマの走りにどう影響するんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この技術はクルマの走行性能・燃費・環境性能に直結する重要な要素なんだ。<br><br>最近のクルマはどんどん進化していて、BMS（バッテリーマネジメントシステム）の技術も日々進歩しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "BMS（バッテリーマネジメントシステム）のおかげでクルマが進化してるんですね！すごいなぁ！"
+    }
+  ],
+  "summary": [
+    "<strong>BMS（バッテリーマネジメントシステム）</strong>は「Battery Management System」の略称・通称",
+    "バッテリーの電圧・温度・SOC（充電状態）を監視し、セルバランス・過充放電保護を行う制御システム。",
+    "たとえるなら「バッテリーの「健康管理者」。各セルの状態を見張り、安全で長寿命な使い方を実現する」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

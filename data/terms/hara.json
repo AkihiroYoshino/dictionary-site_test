@@ -1,0 +1,40 @@
+{
+  "id": "hara",
+  "name": "HARA（ハザード分析とリスク評価）",
+  "reading": "ハラ",
+  "fullName": "Hazard Analysis and Risk Assessment",
+  "aliases": [],
+  "oneLiner": "ISO 26262のPart 3で規定される、S値・E値・C値からASILを決定するための分析手法。各ハザードシナリオに対してリスクを体系的に評価する。",
+  "date": "2026-03-24",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>HARA（ハザード分析とリスク評価）</strong>」って機能安全でどういう意味があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>HARA（ハザード分析とリスク評価）</strong>（Hazard Analysis and Risk Assessment）は、ISO 26262のPart 3で規定される、S値・E値・C値からASILを決定するための分析手法。各ハザードシナリオに対してリスクを体系的に評価する。<br><br>たとえるなら、<strong>S値×E値×C値の組み合わせで決まる「安全のリスク評価表」。ハザードごとにASILランクが導出される</strong>みたいなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "機能安全って奥が深いんですね。HARA（ハザード分析とリスク評価）、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>HARA（ハザード分析とリスク評価）</strong>は「Hazard Analysis and Risk Assessment」の略称・通称",
+    "ISO 26262のPart 3で規定される、S値・E値・C値からASILを決定するための分析手法。各ハザードシナリオに対してリスクを体系的に評価する。",
+    "たとえるなら「S値×E値×C値の組み合わせで決まる「安全のリスク評価表」。ハザードごとにASILランクが導出される」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {
+    "ISO 26262": "iso-26262"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "sotif",
+  "name": "SOTIF（意図した機能の安全性）",
+  "reading": "ソティフ",
+  "fullName": "Safety of the Intended Functionality (ISO 21448)",
+  "aliases": [],
+  "oneLiner": "故障のない状態でも、センサー認識限界やアルゴリズムの不十分さが引き起こすハザードに対処する規格。ISO 26262が故障起因なのに対し、SOTIFは性能限界起因の安全を扱う。",
+  "date": "2026-03-29",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SOTIF（意図した機能の安全性）</strong>」って機能安全でどういう意味があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SOTIF（意図した機能の安全性）</strong>（Safety of the Intended Functionality (ISO 21448)）は、故障のない状態でも、センサー認識限界やアルゴリズムの不十分さが引き起こすハザードに対処する規格。ISO 26262が故障起因なのに対し、SOTIFは性能限界起因の安全を扱う。<br><br>たとえるなら、<strong>「壊れていないのに危険」なケースに備える安全の考え方。センサーの見落としやAIの判断ミスへの対策</strong>みたいなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "機能安全って奥が深いんですね。SOTIF（意図した機能の安全性）、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>SOTIF（意図した機能の安全性）</strong>は「Safety of the Intended Functionality (ISO 21448)」の略称・通称",
+    "故障のない状態でも、センサー認識限界やアルゴリズムの不十分さが引き起こすハザードに対処する規格。ISO 26262が故障起因なのに対し、SOTIFは性能限界起因",
+    "たとえるなら「「壊れていないのに危険」なケースに備える安全の考え方。センサーの見落としやAIの判断ミスへの対策」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {
+    "ISO 26262": "iso-26262"
+  }
+}

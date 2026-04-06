@@ -1,0 +1,38 @@
+{
+  "id": "hsm",
+  "name": "HSM（ハードウェアセキュリティモジュール）",
+  "reading": "エイチエスエム",
+  "fullName": "Hardware Security Module",
+  "aliases": [],
+  "oneLiner": "暗号鍵の生成・保管・暗号処理を専用ハードウェアで行うセキュリティチップ。SHE、Evita Full等の車載HSM規格がある。",
+  "date": "2026-03-12",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>HSM（ハードウェアセキュリティモジュール）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>HSM（ハードウェアセキュリティモジュール）</strong>（Hardware Security Module）は、暗号鍵の生成・保管・暗号処理を専用ハードウェアで行うセキュリティチップ。SHE、Evita Full等の車載HSM規格がある。<br><br>たとえるなら、<strong>暗号の鍵を「金庫」のようなハードウェアで守るチップ。鍵が外部に漏れないように物理的に保護する</strong>みたいなものだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>HSM（ハードウェアセキュリティモジュール）は、その防御の重要な一部なんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマのセキュリティって奥が深いんですね。HSM（ハードウェアセキュリティモジュール）、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>HSM（ハードウェアセキュリティモジュール）</strong>は「Hardware Security Module」の略称・通称",
+    "暗号鍵の生成・保管・暗号処理を専用ハードウェアで行うセキュリティチップ。SHE、Evita Full等の車載HSM規格がある。",
+    "たとえるなら「暗号の鍵を「金庫」のようなハードウェアで守るチップ。鍵が外部に漏れないように物理的に保護する」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

@@ -1,0 +1,38 @@
+{
+  "id": "iso-26262",
+  "name": "ISO 26262",
+  "reading": "アイエスオーニロクニロクニ",
+  "fullName": "ISO 26262 Road Vehicles - Functional Safety",
+  "aliases": [],
+  "oneLiner": "自動車の電気・電子（E/E）システムの機能安全に関する国際規格。ハザード分析からASIL決定、設計・検証までの安全ライフサイクルを規定する。",
+  "date": "2026-03-17",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>ISO 26262</strong>」って機能安全でどういう意味があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>ISO 26262</strong>（ISO 26262 Road Vehicles - Functional Safety）は、自動車の電気・電子（E/E）システムの機能安全に関する国際規格。ハザード分析からASIL決定、設計・検証までの安全ライフサイクルを規定する。<br><br>たとえるなら、<strong>クルマの電子制御が「万が一壊れても人を傷つけない」ための安全設計・開発ルールブック</strong>みたいなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "機能安全って奥が深いんですね。ISO 26262、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>ISO 26262</strong>は「ISO 26262 Road Vehicles - Functional Safety」の略称・通称",
+    "自動車の電気・電子（E/E）システムの機能安全に関する国際規格。ハザード分析からASIL決定、設計・検証までの安全ライフサイクルを規定する。",
+    "たとえるなら「クルマの電子制御が「万が一壊れても人を傷つけない」ための安全設計・開発ルールブック」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

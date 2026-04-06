@@ -1,0 +1,38 @@
+{
+  "id": "secure-ota",
+  "name": "セキュアOTA",
+  "reading": "セキュアオーティーエー",
+  "fullName": "Secure Over-The-Air Update",
+  "aliases": [],
+  "oneLiner": "車両ソフトウェアを無線通信で安全に更新する技術。暗号化・署名検証・差分更新・ロールバック機能で安全性を確保する。",
+  "date": "2026-03-08",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>セキュアOTA</strong>」ってサイバーセキュリティでどういう意味ですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>セキュアOTA</strong>（Secure Over-The-Air Update）は、車両ソフトウェアを無線通信で安全に更新する技術。暗号化・署名検証・差分更新・ロールバック機能で安全性を確保する。<br><br>たとえるなら、<strong>スマホのアプリ更新のように、クルマのソフトも無線で安全にアップデートする仕組み</strong>みたいなものだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>セキュアOTAは、その防御の重要な一部なんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマのセキュリティって奥が深いんですね。セキュアOTA、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>セキュアOTA</strong>は「Secure Over-The-Air Update」の略称・通称",
+    "車両ソフトウェアを無線通信で安全に更新する技術。暗号化・署名検証・差分更新・ロールバック機能で安全性を確保する。",
+    "たとえるなら「スマホのアプリ更新のように、クルマのソフトも無線で安全にアップデートする仕組み」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

@@ -1,0 +1,38 @@
+{
+  "id": "subaru",
+  "name": "SUBARU（スバル）",
+  "reading": "スバル",
+  "fullName": "SUBARU Corporation",
+  "aliases": [],
+  "oneLiner": "水平対向エンジンとシンメトリカルAWDを特徴とする日本の自動車OEM。高い走行安全性と悪路走破性でアウトドア層から支持される。",
+  "date": "2026-01-31",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SUBARU（スバル）</strong>」ってどんな会社なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SUBARU（スバル）</strong>（SUBARU Corporation）は、水平対向エンジンとシンメトリカルAWDを特徴とする日本の自動車OEM。高い走行安全性と悪路走破性でアウトドア層から支持される。<br><br>自動車業界では、<strong>「安全と走り」を両立する、水平対向エンジンにこだわる個性派自動車メーカー</strong>のような存在なんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "すごいですね！具体的にはどんな製品やサービスを提供しているんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この企業は自動車産業のサプライチェーンにおいて非常に重要な役割を果たしているよ。<br><br>世界中の自動車メーカーや部品メーカーと協力して、より良いクルマづくりに貢献しているんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "SUBARU（スバル）って自動車業界になくてはならない存在なんですね！"
+    }
+  ],
+  "summary": [
+    "<strong>SUBARU（スバル）</strong>は「SUBARU Corporation」の略称・通称",
+    "水平対向エンジンとシンメトリカルAWDを特徴とする日本の自動車OEM。高い走行安全性と悪路走破性でアウトドア層から支持される。",
+    "たとえるなら「「安全と走り」を両立する、水平対向エンジンにこだわる個性派自動車メーカー」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

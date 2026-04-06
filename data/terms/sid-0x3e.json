@@ -1,0 +1,38 @@
+{
+  "id": "sid-0x3e",
+  "name": "SID 0x3E（TesterPresent）",
+  "reading": "エスアイディーゼロエックスサンイー",
+  "fullName": "TesterPresent (SID 0x3E)",
+  "aliases": [],
+  "oneLiner": "診断ツールがまだ接続中であることをECUに知らせるキープアライブ信号。これを定期的に送らないとECUがデフォルトセッションに戻る。",
+  "date": "2026-04-09",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SID 0x3E（TesterPresent）</strong>」って診断通信でどういう役割があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SID 0x3E（TesterPresent）</strong>（TesterPresent (SID 0x3E)）は、診断ツールがまだ接続中であることをECUに知らせるキープアライブ信号。これを定期的に送らないとECUがデフォルトセッションに戻る。<br><br>たとえるなら、<strong>「まだ診断中ですよ」とECUに伝え続ける信号。電話の「もしもし」のように、通信切断を防ぐ</strong>みたいなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！SID 0x3E（TesterPresent）、よく分かりました！"
+    }
+  ],
+  "summary": [
+    "<strong>SID 0x3E（TesterPresent）</strong>は「TesterPresent (SID 0x3E)」の略称・通称",
+    "診断ツールがまだ接続中であることをECUに知らせるキープアライブ信号。これを定期的に送らないとECUがデフォルトセッションに戻る。",
+    "たとえるなら「「まだ診断中ですよ」とECUに伝え続ける信号。電話の「もしもし」のように、通信切断を防ぐ」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

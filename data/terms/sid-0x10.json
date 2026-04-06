@@ -1,0 +1,38 @@
+{
+  "id": "sid-0x10",
+  "name": "SID 0x10（DiagnosticSessionControl）",
+  "reading": "エスアイディーゼロエックスジュウ",
+  "fullName": "DiagnosticSessionControl (SID 0x10)",
+  "aliases": [],
+  "oneLiner": "UDSの診断セッションを切り替えるサービス。デフォルトセッション→拡張セッション→プログラミングセッション等を制御する。",
+  "date": "2026-03-31",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SID 0x10（DiagnosticSessionControl）</strong>」って診断通信でどういう役割があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SID 0x10（DiagnosticSessionControl）</strong>（DiagnosticSessionControl (SID 0x10)）は、UDSの診断セッションを切り替えるサービス。デフォルトセッション→拡張セッション→プログラミングセッション等を制御する。<br><br>たとえるなら、<strong>ECUとの会話の「モード切替スイッチ」。普通の問診→精密検査→手術、と会話レベルを変える</strong>みたいなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！SID 0x10（DiagnosticSessionControl）、よく分かりました！"
+    }
+  ],
+  "summary": [
+    "<strong>SID 0x10（DiagnosticSessionControl）</strong>は「DiagnosticSessionControl (SID 0x10)」の略称・通称",
+    "UDSの診断セッションを切り替えるサービス。デフォルトセッション→拡張セッション→プログラミングセッション等を制御する。",
+    "たとえるなら「ECUとの会話の「モード切替スイッチ」。普通の問診→精密検査→手術、と会話レベルを変える」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

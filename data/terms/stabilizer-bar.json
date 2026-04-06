@@ -1,0 +1,40 @@
+{
+  "id": "stabilizer-bar",
+  "name": "スタビライザー",
+  "reading": "スタビライザー",
+  "fullName": "Stabilizer Bar / Anti-Roll Bar",
+  "aliases": [],
+  "oneLiner": "コーナリング時の車体のロール（傾き）を抑制する棒状の部品。左右のサスペンションを連結する。",
+  "date": "2026-01-11",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>スタビライザー</strong>」ってクルマのどこに使われている部品なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "いい質問だね！<strong>スタビライザー</strong>（Stabilizer Bar / Anti-Roll Bar）は、コーナリング時の車体のロール（傾き）を抑制する棒状の部品。左右のサスペンションを連結する。<br><br>たとえるなら、<strong>左右のサスペンションを「つなぐバー」。コーナーで車体がグラッと傾くのを抑えるバランス棒</strong>みたいなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど！じゃあ、もしスタビライザーが壊れたり劣化したりしたらどうなるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この部品が正常に機能しないと、クルマの性能や安全性に大きく影響するんだ。<br><br>だから定期的な点検や整備がとても大切なんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "スタビライザーって思った以上に重要な部品なんですね！覚えておきます！"
+    }
+  ],
+  "summary": [
+    "<strong>スタビライザー</strong>は「Stabilizer Bar / Anti-Roll Bar」の略称・通称",
+    "コーナリング時の車体のロール（傾き）を抑制する棒状の部品。左右のサスペンションを連結する。",
+    "たとえるなら「左右のサスペンションを「つなぐバー」。コーナーで車体がグラッと傾くのを抑えるバランス棒」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {
+    "サスペンション": "suspension"
+  }
+}

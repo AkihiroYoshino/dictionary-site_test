@@ -1,0 +1,38 @@
+{
+  "id": "uds",
+  "name": "UDS（統一診断サービス）",
+  "reading": "ユーディーエス",
+  "fullName": "Unified Diagnostic Services (ISO 14229)",
+  "aliases": [],
+  "oneLiner": "自動車のECU診断通信の国際規格。SID（サービスID）で定義される各種診断サービスを用いて、ECUの状態取得・設定変更・プログラム書換等を行う。",
+  "date": "2026-03-30",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>UDS（統一診断サービス）</strong>」って診断通信でどういう役割があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>UDS（統一診断サービス）</strong>（Unified Diagnostic Services (ISO 14229)）は、自動車のECU診断通信の国際規格。SID（サービスID）で定義される各種診断サービスを用いて、ECUの状態取得・設定変更・プログラム書換等を行う。<br><br>たとえるなら、<strong>ECUと対話するための「共通言語」。世界中の整備士がクルマの頭脳と会話するための統一ルール</strong>みたいなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！UDS（統一診断サービス）、よく分かりました！"
+    }
+  ],
+  "summary": [
+    "<strong>UDS（統一診断サービス）</strong>は「Unified Diagnostic Services (ISO 14229)」の略称・通称",
+    "自動車のECU診断通信の国際規格。SID（サービスID）で定義される各種診断サービスを用いて、ECUの状態取得・設定変更・プログラム書換等を行う。",
+    "たとえるなら「ECUと対話するための「共通言語」。世界中の整備士がクルマの頭脳と会話するための統一ルール」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

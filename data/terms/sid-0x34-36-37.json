@@ -1,0 +1,38 @@
+{
+  "id": "sid-0x34-36-37",
+  "name": "SID 0x34/0x36/0x37（ダウンロード転送）",
+  "reading": "エスアイディーゼロエックスサンヨン",
+  "fullName": "RequestDownload / TransferData / RequestTransferExit",
+  "aliases": [],
+  "oneLiner": "ECUへのプログラム書換え（リプログ）に使われるサービス群。0x34で転送開始要求、0x36でデータ送信、0x37で転送完了を行う。",
+  "date": "2026-04-08",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SID 0x34/0x36/0x37（ダウンロード転送）</strong>」って診断通信でどういう役割があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SID 0x34/0x36/0x37（ダウンロード転送）</strong>（RequestDownload / TransferData / RequestTransferExit）は、ECUへのプログラム書換え（リプログ）に使われるサービス群。0x34で転送開始要求、0x36でデータ送信、0x37で転送完了を行う。<br><br>たとえるなら、<strong>ECUに新しいプログラムを「ダウンロード」する手順。リプログ（ソフト更新）の核となる通信3兄弟</strong>みたいなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！SID 0x34/0x36/0x37（ダウンロード転送）、よく分かりました！"
+    }
+  ],
+  "summary": [
+    "<strong>SID 0x34/0x36/0x37（ダウンロード転送）</strong>は「RequestDownload / TransferData / RequestTransferExit」の略称・通称",
+    "ECUへのプログラム書換え（リプログ）に使われるサービス群。0x34で転送開始要求、0x36でデータ送信、0x37で転送完了を行う。",
+    "たとえるなら「ECUに新しいプログラムを「ダウンロード」する手順。リプログ（ソフト更新）の核となる通信3兄弟」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

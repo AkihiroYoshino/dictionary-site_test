@@ -1,0 +1,38 @@
+{
+  "id": "egr-valve",
+  "name": "EGRバルブ",
+  "reading": "イージーアールバルブ",
+  "fullName": "Exhaust Gas Recirculation Valve",
+  "aliases": [],
+  "oneLiner": "排気ガスの一部を吸気側に戻してNOx排出量を低減するバルブ。燃焼温度を下げることで有害物質を抑制する。",
+  "date": "2026-01-09",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>EGRバルブ</strong>」ってクルマのどこに使われている部品なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "いい質問だね！<strong>EGRバルブ</strong>（Exhaust Gas Recirculation Valve）は、排気ガスの一部を吸気側に戻してNOx排出量を低減するバルブ。燃焼温度を下げることで有害物質を抑制する。<br><br>たとえるなら、<strong>排気ガスを「リサイクル」する仕組み。燃焼温度を下げてNOxという有害物質の発生を防ぐ</strong>みたいなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど！じゃあ、もしEGRバルブが壊れたり劣化したりしたらどうなるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この部品が正常に機能しないと、クルマの性能や安全性に大きく影響するんだ。<br><br>だから定期的な点検や整備がとても大切なんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "EGRバルブって思った以上に重要な部品なんですね！覚えておきます！"
+    }
+  ],
+  "summary": [
+    "<strong>EGRバルブ</strong>は「Exhaust Gas Recirculation Valve」の略称・通称",
+    "排気ガスの一部を吸気側に戻してNOx排出量を低減するバルブ。燃焼温度を下げることで有害物質を抑制する。",
+    "たとえるなら「排気ガスを「リサイクル」する仕組み。燃焼温度を下げてNOxという有害物質の発生を防ぐ」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

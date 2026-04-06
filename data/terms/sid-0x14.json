@@ -1,0 +1,38 @@
+{
+  "id": "sid-0x14",
+  "name": "SID 0x14（ClearDiagnosticInformation）",
+  "reading": "エスアイディーゼロエックスジュウヨン",
+  "fullName": "ClearDiagnosticInformation (SID 0x14)",
+  "aliases": [],
+  "oneLiner": "ECUに保存されたDTC（故障コード）やフリーズフレームデータを消去するサービス。整備後のリセットで使用する。",
+  "date": "2026-04-02",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SID 0x14（ClearDiagnosticInformation）</strong>」って診断通信でどういう役割があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SID 0x14（ClearDiagnosticInformation）</strong>（ClearDiagnosticInformation (SID 0x14)）は、ECUに保存されたDTC（故障コード）やフリーズフレームデータを消去するサービス。整備後のリセットで使用する。<br><br>たとえるなら、<strong>ECUの「故障履歴の消しゴム」。修理が終わったら故障記録をリセットする機能</strong>みたいなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！SID 0x14（ClearDiagnosticInformation）、よく分かりました！"
+    }
+  ],
+  "summary": [
+    "<strong>SID 0x14（ClearDiagnosticInformation）</strong>は「ClearDiagnosticInformation (SID 0x14)」の略称・通称",
+    "ECUに保存されたDTC（故障コード）やフリーズフレームデータを消去するサービス。整備後のリセットで使用する。",
+    "たとえるなら「ECUの「故障履歴の消しゴム」。修理が終わったら故障記録をリセットする機能」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

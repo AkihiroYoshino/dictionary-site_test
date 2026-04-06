@@ -1,0 +1,38 @@
+{
+  "id": "negative-response",
+  "name": "NRC（否定応答コード）",
+  "reading": "エヌアールシー",
+  "fullName": "Negative Response Code",
+  "aliases": [],
+  "oneLiner": "UDSでECUがサービス要求を拒否したときに返す応答コード。SID 0x7Fで返され、原因を示すNRCコード（0x12:サブファンクション無効、0x31:範囲外等）が含まれる。",
+  "date": "2026-04-10",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>NRC（否定応答コード）</strong>」って診断通信でどういう役割があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>NRC（否定応答コード）</strong>（Negative Response Code）は、UDSでECUがサービス要求を拒否したときに返す応答コード。SID 0x7Fで返され、原因を示すNRCコード（0x12:サブファンクション無効、0x31:範囲外等）が含まれる。<br><br>たとえるなら、<strong>ECUからの「ごめん、それはできません」メッセージ。原因コード付きで拒否理由が分かる</strong>みたいなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！NRC（否定応答コード）、よく分かりました！"
+    }
+  ],
+  "summary": [
+    "<strong>NRC（否定応答コード）</strong>は「Negative Response Code」の略称・通称",
+    "UDSでECUがサービス要求を拒否したときに返す応答コード。SID 0x7Fで返され、原因を示すNRCコード（0x12:サブファンクション無効、0x31:範囲外",
+    "たとえるなら「ECUからの「ごめん、それはできません」メッセージ。原因コード付きで拒否理由が分かる」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

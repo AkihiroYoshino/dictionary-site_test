@@ -1,0 +1,38 @@
+{
+  "id": "sid-0x31",
+  "name": "SID 0x31（RoutineControl）",
+  "reading": "エスアイディーゼロエックスサンジュウイチ",
+  "fullName": "RoutineControl (SID 0x31)",
+  "aliases": [],
+  "oneLiner": "ECU内部で特定のルーチン（処理）を開始・停止・結果取得するサービス。自己診断テスト・消去処理・学習値リセット等に使用。",
+  "date": "2026-04-07",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SID 0x31（RoutineControl）</strong>」って診断通信でどういう役割があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SID 0x31（RoutineControl）</strong>（RoutineControl (SID 0x31)）は、ECU内部で特定のルーチン（処理）を開始・停止・結果取得するサービス。自己診断テスト・消去処理・学習値リセット等に使用。<br><br>たとえるなら、<strong>ECUに「この作業をやって」と命令する機能。アクチュエータテストや学習値初期化などを遠隔操作できる</strong>みたいなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！SID 0x31（RoutineControl）、よく分かりました！"
+    }
+  ],
+  "summary": [
+    "<strong>SID 0x31（RoutineControl）</strong>は「RoutineControl (SID 0x31)」の略称・通称",
+    "ECU内部で特定のルーチン（処理）を開始・停止・結果取得するサービス。自己診断テスト・消去処理・学習値リセット等に使用。",
+    "たとえるなら「ECUに「この作業をやって」と命令する機能。アクチュエータテストや学習値初期化などを遠隔操作できる」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

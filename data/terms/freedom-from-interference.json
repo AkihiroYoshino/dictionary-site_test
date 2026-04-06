@@ -1,0 +1,38 @@
+{
+  "id": "freedom-from-interference",
+  "name": "FFI（干渉からの自由）",
+  "reading": "エフエフアイ",
+  "fullName": "Freedom From Interference",
+  "aliases": [],
+  "oneLiner": "異なるASILの要素間で、低ASIL側の故障が高ASIL側に悪影響を及ぼさないことを保証する設計概念。メモリ保護やタイミング保護で実現。",
+  "date": "2026-03-28",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>FFI（干渉からの自由）</strong>」って機能安全でどういう意味があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>FFI（干渉からの自由）</strong>（Freedom From Interference）は、異なるASILの要素間で、低ASIL側の故障が高ASIL側に悪影響を及ぼさないことを保証する設計概念。メモリ保護やタイミング保護で実現。<br><br>たとえるなら、<strong>ASIL Aの部品が壊れても、隣のASIL D部品に「迷惑をかけない」ことを保証する設計概念</strong>みたいなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "機能安全って奥が深いんですね。FFI（干渉からの自由）、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>FFI（干渉からの自由）</strong>は「Freedom From Interference」の略称・通称",
+    "異なるASILの要素間で、低ASIL側の故障が高ASIL側に悪影響を及ぼさないことを保証する設計概念。メモリ保護やタイミング保護で実現。",
+    "たとえるなら「ASIL Aの部品が壊れても、隣のASIL D部品に「迷惑をかけない」ことを保証する設計概念」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

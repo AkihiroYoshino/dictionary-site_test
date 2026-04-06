@@ -1,0 +1,38 @@
+{
+  "id": "iso-sae-21434",
+  "name": "ISO/SAE 21434",
+  "reading": "アイエスオーエスエーイーニイチヨンサンヨン",
+  "fullName": "ISO/SAE 21434 Road Vehicles - Cybersecurity Engineering",
+  "aliases": [],
+  "oneLiner": "自動車のサイバーセキュリティエンジニアリングに関する国際規格。コンセプト段階から廃棄までのセキュリティ活動を体系化。",
+  "date": "2026-03-06",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>ISO/SAE 21434</strong>」ってサイバーセキュリティでどういう意味ですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>ISO/SAE 21434</strong>（ISO/SAE 21434 Road Vehicles - Cybersecurity Engineering）は、自動車のサイバーセキュリティエンジニアリングに関する国際規格。コンセプト段階から廃棄までのセキュリティ活動を体系化。<br><br>たとえるなら、<strong>自動車サイバーセキュリティの「教科書」。企画から廃車まで、何をすべきかを体系的にまとめた国際規格</strong>みたいなものだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>ISO/SAE 21434は、その防御の重要な一部なんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマのセキュリティって奥が深いんですね。ISO/SAE 21434、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>ISO/SAE 21434</strong>は「ISO/SAE 21434 Road Vehicles - Cybersecurity Engineering」の略称・通称",
+    "自動車のサイバーセキュリティエンジニアリングに関する国際規格。コンセプト段階から廃棄までのセキュリティ活動を体系化。",
+    "たとえるなら「自動車サイバーセキュリティの「教科書」。企画から廃車まで、何をすべきかを体系的にまとめた国際規格」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

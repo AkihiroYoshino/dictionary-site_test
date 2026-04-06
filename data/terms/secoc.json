@@ -1,0 +1,38 @@
+{
+  "id": "secoc",
+  "name": "SecOC（Secure Onboard Communication）",
+  "reading": "セックオーシー",
+  "fullName": "Secure Onboard Communication",
+  "aliases": [],
+  "oneLiner": "AUTOSAR規格の車載通信セキュリティモジュール。CANやEthernet上のメッセージにMAC（メッセージ認証コード）を付与して改ざんを検知する。",
+  "date": "2026-03-11",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SecOC（Secure Onboard Communication）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SecOC（Secure Onboard Communication）</strong>（Secure Onboard Communication）は、AUTOSAR規格の車載通信セキュリティモジュール。CANやEthernet上のメッセージにMAC（メッセージ認証コード）を付与して改ざんを検知する。<br><br>たとえるなら、<strong>車内通信メッセージに「印鑑」を押して、途中で改ざんされていないかを確認する仕組み</strong>みたいなものだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>SecOC（Secure Onboard Communication）は、その防御の重要な一部なんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマのセキュリティって奥が深いんですね。SecOC（Secure Onboard Communication）、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>SecOC（Secure Onboard Communication）</strong>は「Secure Onboard Communication」の略称・通称",
+    "AUTOSAR規格の車載通信セキュリティモジュール。CANやEthernet上のメッセージにMAC（メッセージ認証コード）を付与して改ざんを検知する。",
+    "たとえるなら「車内通信メッセージに「印鑑」を押して、途中で改ざんされていないかを確認する仕組み」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

@@ -1,0 +1,40 @@
+{
+  "id": "sums",
+  "name": "SUMS（ソフトウェアアップデート管理システム）",
+  "reading": "サムス",
+  "fullName": "Software Update Management System",
+  "aliases": [],
+  "oneLiner": "UN R156で要求される、車両ソフトウェアの更新を安全に管理するためのシステム。OTAを含む全更新プロセスを対象。",
+  "date": "2026-03-03",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SUMS（ソフトウェアアップデート管理システム）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SUMS（ソフトウェアアップデート管理システム）</strong>（Software Update Management System）は、UN R156で要求される、車両ソフトウェアの更新を安全に管理するためのシステム。OTAを含む全更新プロセスを対象。<br><br>たとえるなら、<strong>クルマのソフトウェアを「安全にアップデート」する管理体制。スマホのOS更新を厳格に管理する仕組み</strong>みたいなものだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>SUMS（ソフトウェアアップデート管理システム）は、その防御の重要な一部なんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマのセキュリティって奥が深いんですね。SUMS（ソフトウェアアップデート管理システム）、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>SUMS（ソフトウェアアップデート管理システム）</strong>は「Software Update Management System」の略称・通称",
+    "UN R156で要求される、車両ソフトウェアの更新を安全に管理するためのシステム。OTAを含む全更新プロセスを対象。",
+    "たとえるなら「クルマのソフトウェアを「安全にアップデート」する管理体制。スマホのOS更新を厳格に管理する仕組み」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {
+    "UN R156": "un-r156"
+  }
+}

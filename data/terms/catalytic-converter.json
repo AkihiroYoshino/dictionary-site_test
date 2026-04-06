@@ -1,0 +1,38 @@
+{
+  "id": "catalytic-converter",
+  "name": "触媒コンバーター（三元触媒）",
+  "reading": "ショクバイコンバーター",
+  "fullName": "Catalytic Converter",
+  "aliases": [],
+  "oneLiner": "排気ガス中のHC・CO・NOxを化学反応で無害な物質に変換する排気系部品。環境規制対応の要。",
+  "date": "2026-01-06",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>触媒コンバーター（三元触媒）</strong>」ってクルマのどこに使われている部品なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "いい質問だね！<strong>触媒コンバーター（三元触媒）</strong>（Catalytic Converter）は、排気ガス中のHC・CO・NOxを化学反応で無害な物質に変換する排気系部品。環境規制対応の要。<br><br>たとえるなら、<strong>排気ガスを「浄化するフィルター」。有害物質を無害な水やCO2に変える化学工場</strong>みたいなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど！じゃあ、もし触媒コンバーター（三元触媒）が壊れたり劣化したりしたらどうなるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この部品が正常に機能しないと、クルマの性能や安全性に大きく影響するんだ。<br><br>だから定期的な点検や整備がとても大切なんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "触媒コンバーター（三元触媒）って思った以上に重要な部品なんですね！覚えておきます！"
+    }
+  ],
+  "summary": [
+    "<strong>触媒コンバーター（三元触媒）</strong>は「Catalytic Converter」の略称・通称",
+    "排気ガス中のHC・CO・NOxを化学反応で無害な物質に変換する排気系部品。環境規制対応の要。",
+    "たとえるなら「排気ガスを「浄化するフィルター」。有害物質を無害な水やCO2に変える化学工場」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

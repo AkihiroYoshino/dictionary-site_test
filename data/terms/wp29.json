@@ -1,0 +1,38 @@
+{
+  "id": "wp29",
+  "name": "WP.29（自動車基準調和世界フォーラム）",
+  "reading": "ダブリューピーニジュウキュウ",
+  "fullName": "World Forum for Harmonization of Vehicle Regulations",
+  "aliases": [],
+  "oneLiner": "国連欧州経済委員会（UNECE）の下に設置された、自動車の国際基準を策定するフォーラム。各国の法規を調和させる場。",
+  "date": "2026-02-12",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>WP.29（自動車基準調和世界フォーラム）</strong>」ってどんな法規・規格なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>WP.29（自動車基準調和世界フォーラム）</strong>（World Forum for Harmonization of Vehicle Regulations）は、国連欧州経済委員会（UNECE）の下に設置された、自動車の国際基準を策定するフォーラム。各国の法規を調和させる場。<br><br>たとえるなら、<strong>世界中のクルマのルールを「統一」するための国際会議。各国が集まって共通の安全基準を決める場所</strong>のようなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜこの規制・規格が必要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この規格・法規があることで、クルマの安全性や環境性能が世界的に確保されているんだ。<br><br>世界中のクルマが一定の基準を満たすことで、私たちの安全と環境が守られているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "法規や規格って、私たちの安全を守るためにとても大切なんですね！"
+    }
+  ],
+  "summary": [
+    "<strong>WP.29（自動車基準調和世界フォーラム）</strong>は「World Forum for Harmonization of Vehicle Regulations」の略称・通称",
+    "国連欧州経済委員会（UNECE）の下に設置された、自動車の国際基準を策定するフォーラム。各国の法規を調和させる場。",
+    "たとえるなら「世界中のクルマのルールを「統一」するための国際会議。各国が集まって共通の安全基準を決める場所」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

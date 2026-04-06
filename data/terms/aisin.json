@@ -1,0 +1,38 @@
+{
+  "id": "aisin",
+  "name": "アイシン",
+  "reading": "アイシン",
+  "fullName": "AISIN Corporation",
+  "aliases": [],
+  "oneLiner": "AT（オートマチックトランスミッション）で世界トップクラスのシェアを持つトヨタグループのTier1サプライヤー。",
+  "date": "2026-02-04",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>アイシン</strong>」ってどんな会社なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>アイシン</strong>（AISIN Corporation）は、AT（オートマチックトランスミッション）で世界トップクラスのシェアを持つトヨタグループのTier1サプライヤー。<br><br>自動車業界では、<strong>AT（自動変速機）で世界をリードする、クルマの「動力伝達の匠」</strong>のような存在なんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "すごいですね！具体的にはどんな製品やサービスを提供しているんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この企業は自動車産業のサプライチェーンにおいて非常に重要な役割を果たしているよ。<br><br>世界中の自動車メーカーや部品メーカーと協力して、より良いクルマづくりに貢献しているんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "アイシンって自動車業界になくてはならない存在なんですね！"
+    }
+  ],
+  "summary": [
+    "<strong>アイシン</strong>は「AISIN Corporation」の略称・通称",
+    "AT（オートマチックトランスミッション）で世界トップクラスのシェアを持つトヨタグループのTier1サプライヤー。",
+    "たとえるなら「AT（自動変速機）で世界をリードする、クルマの「動力伝達の匠」」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

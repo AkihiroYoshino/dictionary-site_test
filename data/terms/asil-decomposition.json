@@ -1,0 +1,38 @@
+{
+  "id": "asil-decomposition",
+  "name": "ASIL分解",
+  "reading": "エーシルブンカイ",
+  "fullName": "ASIL Decomposition",
+  "aliases": [],
+  "oneLiner": "高いASIL要件を2つ以上の独立した要素に分割して、各要素のASILを下げる手法。例：ASIL D → ASIL B(D) + ASIL B(D)。冗長設計で安全を確保する。",
+  "date": "2026-03-22",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>ASIL分解</strong>」って機能安全でどういう意味があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>ASIL分解</strong>（ASIL Decomposition）は、高いASIL要件を2つ以上の独立した要素に分割して、各要素のASILを下げる手法。例：ASIL D → ASIL B(D) + ASIL B(D)。冗長設計で安全を確保する。<br><br>たとえるなら、<strong>「一人で重いものを持つ代わりに、二人で分担して持つ」ことで安全を確保する設計手法</strong>みたいなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "機能安全って奥が深いんですね。ASIL分解、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>ASIL分解</strong>は「ASIL Decomposition」の略称・通称",
+    "高いASIL要件を2つ以上の独立した要素に分割して、各要素のASILを下げる手法。例：ASIL D → ASIL B(D) + ASIL B(D)。冗長設計で安",
+    "たとえるなら「「一人で重いものを持つ代わりに、二人で分担して持つ」ことで安全を確保する設計手法」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

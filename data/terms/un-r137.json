@@ -1,0 +1,38 @@
+{
+  "id": "un-r137",
+  "name": "UN R137",
+  "reading": "ユーエヌアールヒャクサンジュウナナ",
+  "fullName": "UN Regulation No. 137 (Frontal Impact - Pole)",
+  "aliases": [],
+  "oneLiner": "前面衝突テストの一種で、電柱など狭い障害物への衝突時の乗員保護を評価する国連規則。",
+  "date": "2026-02-18",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>UN R137</strong>」ってどんな法規・規格なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>UN R137</strong>（UN Regulation No. 137 (Frontal Impact - Pole)）は、前面衝突テストの一種で、電柱など狭い障害物への衝突時の乗員保護を評価する国連規則。<br><br>たとえるなら、<strong>電柱のような細い物にぶつかったときの安全性を評価する「ポール衝突」のルール</strong>のようなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜこの規制・規格が必要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この規格・法規があることで、クルマの安全性や環境性能が世界的に確保されているんだ。<br><br>世界中のクルマが一定の基準を満たすことで、私たちの安全と環境が守られているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "法規や規格って、私たちの安全を守るためにとても大切なんですね！"
+    }
+  ],
+  "summary": [
+    "<strong>UN R137</strong>は「UN Regulation No. 137 (Frontal Impact - Pole)」の略称・通称",
+    "前面衝突テストの一種で、電柱など狭い障害物への衝突時の乗員保護を評価する国連規則。",
+    "たとえるなら「電柱のような細い物にぶつかったときの安全性を評価する「ポール衝突」のルール」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

@@ -1,0 +1,38 @@
+{
+  "id": "wltp",
+  "name": "WLTP（世界統一試験手法）",
+  "reading": "ダブリューエルティーピー",
+  "fullName": "Worldwide harmonized Light vehicles Test Procedure",
+  "aliases": [],
+  "oneLiner": "乗用車の燃費・排ガスを測定するための世界統一試験方法。実走行に近い条件で計測し、従来のNEDCより現実的。",
+  "date": "2026-03-01",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>WLTP（世界統一試験手法）</strong>」ってどんな法規・規格なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>WLTP（世界統一試験手法）</strong>（Worldwide harmonized Light vehicles Test Procedure）は、乗用車の燃費・排ガスを測定するための世界統一試験方法。実走行に近い条件で計測し、従来のNEDCより現実的。<br><br>たとえるなら、<strong>世界共通の「燃費・排ガス計測テスト」。実際の運転に近い条件で測るからリアルな数値が出る</strong>のようなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜこの規制・規格が必要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この規格・法規があることで、クルマの安全性や環境性能が世界的に確保されているんだ。<br><br>世界中のクルマが一定の基準を満たすことで、私たちの安全と環境が守られているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "法規や規格って、私たちの安全を守るためにとても大切なんですね！"
+    }
+  ],
+  "summary": [
+    "<strong>WLTP（世界統一試験手法）</strong>は「Worldwide harmonized Light vehicles Test Procedure」の略称・通称",
+    "乗用車の燃費・排ガスを測定するための世界統一試験方法。実走行に近い条件で計測し、従来のNEDCより現実的。",
+    "たとえるなら「世界共通の「燃費・排ガス計測テスト」。実際の運転に近い条件で測るからリアルな数値が出る」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

@@ -1,0 +1,38 @@
+{
+  "id": "fmea",
+  "name": "FMEA（故障モード影響解析）",
+  "reading": "エフエムイーエー",
+  "fullName": "Failure Mode and Effects Analysis",
+  "aliases": [],
+  "oneLiner": "部品やシステムの故障モードを洗い出し、その影響と重大度・発生頻度・検出度を評価する分析手法。設計FMEA・プロセスFMEAがある。",
+  "date": "2026-03-25",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>FMEA（故障モード影響解析）</strong>」って機能安全でどういう意味があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>FMEA（故障モード影響解析）</strong>（Failure Mode and Effects Analysis）は、部品やシステムの故障モードを洗い出し、その影響と重大度・発生頻度・検出度を評価する分析手法。設計FMEA・プロセスFMEAがある。<br><br>たとえるなら、<strong>「もし部品Aがこう壊れたら、どんな影響が出る？」を一つ一つ洗い出す故障分析の定番手法</strong>みたいなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "機能安全って奥が深いんですね。FMEA（故障モード影響解析）、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>FMEA（故障モード影響解析）</strong>は「Failure Mode and Effects Analysis」の略称・通称",
+    "部品やシステムの故障モードを洗い出し、その影響と重大度・発生頻度・検出度を評価する分析手法。設計FMEA・プロセスFMEAがある。",
+    "たとえるなら「「もし部品Aがこう壊れたら、どんな影響が出る？」を一つ一つ洗い出す故障分析の定番手法」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

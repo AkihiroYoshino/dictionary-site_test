@@ -1,0 +1,38 @@
+{
+  "id": "sid-0x2e",
+  "name": "SID 0x2E（WriteDataByIdentifier）",
+  "reading": "エスアイディーゼロエックスニジュウハチイー",
+  "fullName": "WriteDataByIdentifier (SID 0x2E)",
+  "aliases": [],
+  "oneLiner": "DID（データ識別子）を指定してECUにデータを書き込むサービス。VIN書込み・校正データ変更・オプション設定等に使用。通常はセキュリティアクセスが前提。",
+  "date": "2026-04-06",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SID 0x2E（WriteDataByIdentifier）</strong>」って診断通信でどういう役割があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SID 0x2E（WriteDataByIdentifier）</strong>（WriteDataByIdentifier (SID 0x2E)）は、DID（データ識別子）を指定してECUにデータを書き込むサービス。VIN書込み・校正データ変更・オプション設定等に使用。通常はセキュリティアクセスが前提。<br><br>たとえるなら、<strong>ECUに「このデータを書いて」と指示する機能。鍵（セキュリティアクセス）がないと書けない安全設計</strong>みたいなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！SID 0x2E（WriteDataByIdentifier）、よく分かりました！"
+    }
+  ],
+  "summary": [
+    "<strong>SID 0x2E（WriteDataByIdentifier）</strong>は「WriteDataByIdentifier (SID 0x2E)」の略称・通称",
+    "DID（データ識別子）を指定してECUにデータを書き込むサービス。VIN書込み・校正データ変更・オプション設定等に使用。通常はセキュリティアクセスが前提。",
+    "たとえるなら「ECUに「このデータを書いて」と指示する機能。鍵（セキュリティアクセス）がないと書けない安全設計」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

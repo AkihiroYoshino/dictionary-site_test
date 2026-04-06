@@ -1,0 +1,38 @@
+{
+  "id": "sid-0x27",
+  "name": "SID 0x27（SecurityAccess）",
+  "reading": "エスアイディーゼロエックスニジュウナナ",
+  "fullName": "SecurityAccess (SID 0x27)",
+  "aliases": [],
+  "oneLiner": "ECUの保護された機能にアクセスするためのチャレンジ・レスポンス認証サービス。シードを受け取り、正しいキーを返すことで認証される。",
+  "date": "2026-04-05",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SID 0x27（SecurityAccess）</strong>」って診断通信でどういう役割があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SID 0x27（SecurityAccess）</strong>（SecurityAccess (SID 0x27)）は、ECUの保護された機能にアクセスするためのチャレンジ・レスポンス認証サービス。シードを受け取り、正しいキーを返すことで認証される。<br><br>たとえるなら、<strong>ECUの「暗号付きロック」。合言葉（シード＆キー）が合わないと重要な操作ができない認証システム</strong>みたいなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！SID 0x27（SecurityAccess）、よく分かりました！"
+    }
+  ],
+  "summary": [
+    "<strong>SID 0x27（SecurityAccess）</strong>は「SecurityAccess (SID 0x27)」の略称・通称",
+    "ECUの保護された機能にアクセスするためのチャレンジ・レスポンス認証サービス。シードを受け取り、正しいキーを返すことで認証される。",
+    "たとえるなら「ECUの「暗号付きロック」。合言葉（シード＆キー）が合わないと重要な操作ができない認証システム」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

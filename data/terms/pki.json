@@ -1,0 +1,40 @@
+{
+  "id": "pki",
+  "name": "PKI（公開鍵基盤）",
+  "reading": "ピーケーアイ",
+  "fullName": "Public Key Infrastructure",
+  "aliases": [],
+  "oneLiner": "公開鍵暗号を使ったデジタル証明書の発行・管理基盤。車載セキュアOTAやV2X通信の認証に使用される。",
+  "date": "2026-03-13",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>PKI（公開鍵基盤）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>PKI（公開鍵基盤）</strong>（Public Key Infrastructure）は、公開鍵暗号を使ったデジタル証明書の発行・管理基盤。車載セキュアOTAやV2X通信の認証に使用される。<br><br>たとえるなら、<strong>「デジタルの身分証明書」を発行・管理する仕組み。クルマが本物のサーバーと安全に通信するために使う</strong>みたいなものだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>PKI（公開鍵基盤）は、その防御の重要な一部なんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマのセキュリティって奥が深いんですね。PKI（公開鍵基盤）、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>PKI（公開鍵基盤）</strong>は「Public Key Infrastructure」の略称・通称",
+    "公開鍵暗号を使ったデジタル証明書の発行・管理基盤。車載セキュアOTAやV2X通信の認証に使用される。",
+    "たとえるなら「「デジタルの身分証明書」を発行・管理する仕組み。クルマが本物のサーバーと安全に通信するために使う」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {
+    "セキュアOTA": "secure-ota"
+  }
+}

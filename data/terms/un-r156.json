@@ -1,0 +1,40 @@
+{
+  "id": "un-r156",
+  "name": "UN R156",
+  "reading": "ユーエヌアールヒャクゴジュウロク",
+  "fullName": "UN Regulation No. 156 (Software Update)",
+  "aliases": [],
+  "oneLiner": "車両のソフトウェアアップデートに関する国連規則。SUMS（ソフトウェアアップデート管理システム）の要件を規定。OTAアップデートの安全管理が対象。",
+  "date": "2026-02-22",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>UN R156</strong>」ってどんな法規・規格なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>UN R156</strong>（UN Regulation No. 156 (Software Update)）は、車両のソフトウェアアップデートに関する国連規則。SUMS（ソフトウェアアップデート管理システム）の要件を規定。OTAアップデートの安全管理が対象。<br><br>たとえるなら、<strong>クルマのソフトウェアを「安全にアップデート」するための管理体制を求める国際ルール</strong>のようなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜこの規制・規格が必要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この規格・法規があることで、クルマの安全性や環境性能が世界的に確保されているんだ。<br><br>世界中のクルマが一定の基準を満たすことで、私たちの安全と環境が守られているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "法規や規格って、私たちの安全を守るためにとても大切なんですね！"
+    }
+  ],
+  "summary": [
+    "<strong>UN R156</strong>は「UN Regulation No. 156 (Software Update)」の略称・通称",
+    "車両のソフトウェアアップデートに関する国連規則。SUMS（ソフトウェアアップデート管理システム）の要件を規定。OTAアップデートの安全管理が対象。",
+    "たとえるなら「クルマのソフトウェアを「安全にアップデート」するための管理体制を求める国際ルール」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {
+    "SUMS（ソフトウェアアップデート管理システム）": "sums"
+  }
+}

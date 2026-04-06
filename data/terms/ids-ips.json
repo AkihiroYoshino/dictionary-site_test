@@ -1,0 +1,38 @@
+{
+  "id": "ids-ips",
+  "name": "IDS/IPS（侵入検知/防御システム）",
+  "reading": "アイディーエスアイピーエス",
+  "fullName": "Intrusion Detection System / Intrusion Prevention System",
+  "aliases": [],
+  "oneLiner": "車載ネットワーク上の不正な通信や攻撃パターンを検知（IDS）し、必要に応じてブロック（IPS）するセキュリティシステム。",
+  "date": "2026-03-09",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>IDS/IPS（侵入検知/防御システム）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>IDS/IPS（侵入検知/防御システム）</strong>（Intrusion Detection System / Intrusion Prevention System）は、車載ネットワーク上の不正な通信や攻撃パターンを検知（IDS）し、必要に応じてブロック（IPS）するセキュリティシステム。<br><br>たとえるなら、<strong>車載ネットワークの「監視カメラと警備員」。怪しい通信を見つけたら警告し、危険なら遮断する</strong>みたいなものだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>IDS/IPS（侵入検知/防御システム）は、その防御の重要な一部なんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマのセキュリティって奥が深いんですね。IDS/IPS（侵入検知/防御システム）、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>IDS/IPS（侵入検知/防御システム）</strong>は「Intrusion Detection System / Intrusion Prevention System」の略称・通称",
+    "車載ネットワーク上の不正な通信や攻撃パターンを検知（IDS）し、必要に応じてブロック（IPS）するセキュリティシステム。",
+    "たとえるなら「車載ネットワークの「監視カメラと警備員」。怪しい通信を見つけたら警告し、危険なら遮断する」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

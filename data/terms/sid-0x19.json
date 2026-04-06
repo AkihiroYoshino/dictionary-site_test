@@ -1,0 +1,38 @@
+{
+  "id": "sid-0x19",
+  "name": "SID 0x19（ReadDTCInformation）",
+  "reading": "エスアイディーゼロエックスジュウキュウ",
+  "fullName": "ReadDTCInformation (SID 0x19)",
+  "aliases": [],
+  "oneLiner": "ECUに記録された故障コード（DTC）を読み出すサービス。サブファンクションで現在DTC・確定DTC・スナップショット等を指定する。",
+  "date": "2026-04-03",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SID 0x19（ReadDTCInformation）</strong>」って診断通信でどういう役割があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SID 0x19（ReadDTCInformation）</strong>（ReadDTCInformation (SID 0x19)）は、ECUに記録された故障コード（DTC）を読み出すサービス。サブファンクションで現在DTC・確定DTC・スナップショット等を指定する。<br><br>たとえるなら、<strong>ECUの「健康診断カルテ」を読む機能。今の故障、過去の故障、発生時の状況を確認できる</strong>みたいなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！SID 0x19（ReadDTCInformation）、よく分かりました！"
+    }
+  ],
+  "summary": [
+    "<strong>SID 0x19（ReadDTCInformation）</strong>は「ReadDTCInformation (SID 0x19)」の略称・通称",
+    "ECUに記録された故障コード（DTC）を読み出すサービス。サブファンクションで現在DTC・確定DTC・スナップショット等を指定する。",
+    "たとえるなら「ECUの「健康診断カルテ」を読む機能。今の故障、過去の故障、発生時の状況を確認できる」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

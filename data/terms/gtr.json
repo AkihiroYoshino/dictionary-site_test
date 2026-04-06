@@ -1,0 +1,38 @@
+{
+  "id": "gtr",
+  "name": "GTR（世界技術規則）",
+  "reading": "ジーティーアール",
+  "fullName": "Global Technical Regulation",
+  "aliases": [],
+  "oneLiner": "1998年協定に基づく世界統一技術規則。UN規則とは異なり、各国が国内法に取り込む形で運用される。",
+  "date": "2026-02-28",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>GTR（世界技術規則）</strong>」ってどんな法規・規格なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>GTR（世界技術規則）</strong>（Global Technical Regulation）は、1998年協定に基づく世界統一技術規則。UN規則とは異なり、各国が国内法に取り込む形で運用される。<br><br>たとえるなら、<strong>世界共通の車の「技術ルールブック」。各国が自国の法律に組み込んで使う</strong>のようなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜこの規制・規格が必要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この規格・法規があることで、クルマの安全性や環境性能が世界的に確保されているんだ。<br><br>世界中のクルマが一定の基準を満たすことで、私たちの安全と環境が守られているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "法規や規格って、私たちの安全を守るためにとても大切なんですね！"
+    }
+  ],
+  "summary": [
+    "<strong>GTR（世界技術規則）</strong>は「Global Technical Regulation」の略称・通称",
+    "1998年協定に基づく世界統一技術規則。UN規則とは異なり、各国が国内法に取り込む形で運用される。",
+    "たとえるなら「世界共通の車の「技術ルールブック」。各国が自国の法律に組み込んで使う」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

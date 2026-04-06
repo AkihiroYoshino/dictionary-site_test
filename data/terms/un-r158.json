@@ -1,0 +1,38 @@
+{
+  "id": "un-r158",
+  "name": "UN R158",
+  "reading": "ユーエヌアールヒャクゴジュウハチ",
+  "fullName": "UN Regulation No. 158 (Reversing motion / REI)",
+  "aliases": [],
+  "oneLiner": "後退時の安全性に関する国連規則。リバースカメラやセンサー等により後方の障害物を検知する機能要件を規定。",
+  "date": "2026-02-24",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>UN R158</strong>」ってどんな法規・規格なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>UN R158</strong>（UN Regulation No. 158 (Reversing motion / REI)）は、後退時の安全性に関する国連規則。リバースカメラやセンサー等により後方の障害物を検知する機能要件を規定。<br><br>たとえるなら、<strong>バックするときに後ろの人や物を検知する「バックカメラ・センサー」の国際基準</strong>のようなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜこの規制・規格が必要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この規格・法規があることで、クルマの安全性や環境性能が世界的に確保されているんだ。<br><br>世界中のクルマが一定の基準を満たすことで、私たちの安全と環境が守られているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "法規や規格って、私たちの安全を守るためにとても大切なんですね！"
+    }
+  ],
+  "summary": [
+    "<strong>UN R158</strong>は「UN Regulation No. 158 (Reversing motion / REI)」の略称・通称",
+    "後退時の安全性に関する国連規則。リバースカメラやセンサー等により後方の障害物を検知する機能要件を規定。",
+    "たとえるなら「バックするときに後ろの人や物を検知する「バックカメラ・センサー」の国際基準」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

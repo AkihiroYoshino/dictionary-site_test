@@ -1,0 +1,38 @@
+{
+  "id": "astemo",
+  "name": "日立Astemo（アステモ）",
+  "reading": "アステモ",
+  "fullName": "Hitachi Astemo, Ltd.",
+  "aliases": [],
+  "oneLiner": "日立製作所とホンダの合弁で誕生した大手Tier1サプライヤー。パワトレイン・シャシー・ADAS領域を統合的に提供。",
+  "date": "2026-02-02",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>日立Astemo（アステモ）</strong>」ってどんな会社なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>日立Astemo（アステモ）</strong>（Hitachi Astemo, Ltd.）は、日立製作所とホンダの合弁で誕生した大手Tier1サプライヤー。パワトレイン・シャシー・ADAS領域を統合的に提供。<br><br>自動車業界では、<strong>パワトレインから足回り、先進安全まで「まるごと」提供できる総合Tier1メーカー</strong>のような存在なんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "すごいですね！具体的にはどんな製品やサービスを提供しているんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この企業は自動車産業のサプライチェーンにおいて非常に重要な役割を果たしているよ。<br><br>世界中の自動車メーカーや部品メーカーと協力して、より良いクルマづくりに貢献しているんだ。"
+    },
+    {
+      "speaker": "student",
+      "text": "日立Astemo（アステモ）って自動車業界になくてはならない存在なんですね！"
+    }
+  ],
+  "summary": [
+    "<strong>日立Astemo（アステモ）</strong>は「Hitachi Astemo, Ltd.」の略称・通称",
+    "日立製作所とホンダの合弁で誕生した大手Tier1サプライヤー。パワトレイン・シャシー・ADAS領域を統合的に提供。",
+    "たとえるなら「パワトレインから足回り、先進安全まで「まるごと」提供できる総合Tier1メーカー」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

@@ -129,25 +129,35 @@ function generateTermsIndex(terms) {
 /**
  * メイン処理
  */
-function build() {
+async function build() {
   console.log('='.repeat(50));
   console.log('対話で学ぶ くるま🚙用語辞典 - ビルド開始');
   console.log('='.repeat(50));
 
   // 1. 全用語読み込み
-  console.log('\n[1/3] 用語データ読み込み中...');
+  console.log('\n[1/4] 用語データ読み込み中...');
   const terms = loadAllTerms();
   console.log(`    ${terms.length}件の用語を読み込みました`);
 
   // 2. 用語名マップ作成 & termLinks自動生成
-  console.log('\n[2/3] 対話文中の用語リンクを自動生成中...');
+  console.log('\n[2/4] 対話文中の用語リンクを自動生成中...');
   const termNameMap = buildTermNameMap(terms);
   const updatedCount = generateTermLinks(terms, termNameMap);
   console.log(`    ${updatedCount}件のtermLinksを更新しました`);
 
   // 3. terms-index.json 生成
-  console.log('\n[3/3] terms-index.json を生成中...');
+  console.log('\n[3/4] terms-index.json を生成中...');
   generateTermsIndex(terms);
+
+  // 4. レビューチェックリストExcel生成
+  console.log('\n[4/4] レビューチェックリスト(Excel)を生成中...');
+  try {
+    const { generateReviewChecklist } = require('./generate-review-checklist');
+    await generateReviewChecklist();
+  } catch (err) {
+    console.error('⚠ Excel生成エラー:', err.message);
+    console.log('    (exceljs がインストールされていない場合は npm install exceljs --save-dev)');
+  }
 
   console.log('\n' + '='.repeat(50));
   console.log('ビルド完了！');
@@ -155,4 +165,7 @@ function build() {
 }
 
 // 実行
-build();
+build().catch(err => {
+  console.error('ビルドエラー:', err);
+  process.exit(1);
+});

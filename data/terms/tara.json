@@ -1,0 +1,40 @@
+{
+  "id": "tara",
+  "name": "TARA（脅威分析とリスク評価）",
+  "reading": "タラ",
+  "fullName": "Threat Analysis and Risk Assessment",
+  "aliases": [],
+  "oneLiner": "車両に対するサイバー攻撃の脅威を特定し、リスクの大きさを評価して対策の優先度を決める手法。ISO/SAE 21434で規定。",
+  "date": "2026-03-05",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>TARA（脅威分析とリスク評価）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>TARA（脅威分析とリスク評価）</strong>（Threat Analysis and Risk Assessment）は、車両に対するサイバー攻撃の脅威を特定し、リスクの大きさを評価して対策の優先度を決める手法。ISO/SAE 21434で規定。<br><br>たとえるなら、<strong>「どんな泥棒がどこから侵入しうるか」を洗い出し、対策の優先順位をつける分析手法</strong>みたいなものだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>TARA（脅威分析とリスク評価）は、その防御の重要な一部なんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマのセキュリティって奥が深いんですね。TARA（脅威分析とリスク評価）、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>TARA（脅威分析とリスク評価）</strong>は「Threat Analysis and Risk Assessment」の略称・通称",
+    "車両に対するサイバー攻撃の脅威を特定し、リスクの大きさを評価して対策の優先度を決める手法。ISO/SAE 21434で規定。",
+    "たとえるなら「「どんな泥棒がどこから侵入しうるか」を洗い出し、対策の優先順位をつける分析手法」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {
+    "ISO/SAE 21434": "iso-sae-21434"
+  }
+}

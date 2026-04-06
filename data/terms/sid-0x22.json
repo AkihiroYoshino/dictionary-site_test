@@ -1,0 +1,38 @@
+{
+  "id": "sid-0x22",
+  "name": "SID 0x22（ReadDataByIdentifier）",
+  "reading": "エスアイディーゼロエックスニジュウニ",
+  "fullName": "ReadDataByIdentifier (SID 0x22)",
+  "aliases": [],
+  "oneLiner": "DID（データ識別子）を指定してECU内部のデータを読み出すサービス。車速・回転数・電圧等のリアルタイムデータや車台番号等を取得する。",
+  "date": "2026-04-04",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>SID 0x22（ReadDataByIdentifier）</strong>」って診断通信でどういう役割があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>SID 0x22（ReadDataByIdentifier）</strong>（ReadDataByIdentifier (SID 0x22)）は、DID（データ識別子）を指定してECU内部のデータを読み出すサービス。車速・回転数・電圧等のリアルタイムデータや車台番号等を取得する。<br><br>たとえるなら、<strong>ECUに「この情報見せて」と番号で指定してデータを読み出す機能。商品の「バーコードで品物を特定する」ようなもの</strong>みたいなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ！具体的にはどういう場面で使うんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この仕組みは、クルマの故障診断やメンテナンスの現場で欠かせない技術なんだ。<br><br>整備士がクルマの状態を正確に把握するために、この仕組みが活躍しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "診断通信って、クルマの「健康診断」みたいなものなんですね！SID 0x22（ReadDataByIdentifier）、よく分かりました！"
+    }
+  ],
+  "summary": [
+    "<strong>SID 0x22（ReadDataByIdentifier）</strong>は「ReadDataByIdentifier (SID 0x22)」の略称・通称",
+    "DID（データ識別子）を指定してECU内部のデータを読み出すサービス。車速・回転数・電圧等のリアルタイムデータや車台番号等を取得する。",
+    "たとえるなら「ECUに「この情報見せて」と番号で指定してデータを読み出す機能。商品の「バーコードで品物を特定する」ようなもの」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

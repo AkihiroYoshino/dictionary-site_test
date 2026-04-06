@@ -1,0 +1,38 @@
+{
+  "id": "un-r100",
+  "name": "UN R100",
+  "reading": "ユーエヌアールヒャク",
+  "fullName": "UN Regulation No. 100 (Electric Power Train)",
+  "aliases": [],
+  "oneLiner": "電気動力装置の安全性に関する国連規則。感電保護・バッテリー安全性・水没試験等のEV/HEV安全要件を規定。",
+  "date": "2026-02-17",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>UN R100</strong>」ってどんな法規・規格なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>UN R100</strong>（UN Regulation No. 100 (Electric Power Train)）は、電気動力装置の安全性に関する国連規則。感電保護・バッテリー安全性・水没試験等のEV/HEV安全要件を規定。<br><br>たとえるなら、<strong>EV・ハイブリッド車の高電圧系が「安全に設計されているか」を確認するための国際ルール</strong>のようなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜこの規制・規格が必要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この規格・法規があることで、クルマの安全性や環境性能が世界的に確保されているんだ。<br><br>世界中のクルマが一定の基準を満たすことで、私たちの安全と環境が守られているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "法規や規格って、私たちの安全を守るためにとても大切なんですね！"
+    }
+  ],
+  "summary": [
+    "<strong>UN R100</strong>は「UN Regulation No. 100 (Electric Power Train)」の略称・通称",
+    "電気動力装置の安全性に関する国連規則。感電保護・バッテリー安全性・水没試験等のEV/HEV安全要件を規定。",
+    "たとえるなら「EV・ハイブリッド車の高電圧系が「安全に設計されているか」を確認するための国際ルール」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

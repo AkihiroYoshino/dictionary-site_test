@@ -1,0 +1,38 @@
+{
+  "id": "un-r157",
+  "name": "UN R157",
+  "reading": "ユーエヌアールヒャクゴジュウナナ",
+  "fullName": "UN Regulation No. 157 (ALKS - Automated Lane Keeping System)",
+  "aliases": [],
+  "oneLiner": "自動車線維持システム（ALKS）に関する国連規則。レベル3自動運転の国際的な型式認可基準を世界で初めて規定。",
+  "date": "2026-02-23",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>UN R157</strong>」ってどんな法規・規格なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>UN R157</strong>（UN Regulation No. 157 (ALKS - Automated Lane Keeping System)）は、自動車線維持システム（ALKS）に関する国連規則。レベル3自動運転の国際的な型式認可基準を世界で初めて規定。<br><br>たとえるなら、<strong>高速道路でハンズオフ自動運転を行うための「レベル3自動運転の世界初の国際基準」</strong>のようなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜこの規制・規格が必要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この規格・法規があることで、クルマの安全性や環境性能が世界的に確保されているんだ。<br><br>世界中のクルマが一定の基準を満たすことで、私たちの安全と環境が守られているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "法規や規格って、私たちの安全を守るためにとても大切なんですね！"
+    }
+  ],
+  "summary": [
+    "<strong>UN R157</strong>は「UN Regulation No. 157 (ALKS - Automated Lane Keeping System)」の略称・通称",
+    "自動車線維持システム（ALKS）に関する国連規則。レベル3自動運転の国際的な型式認可基準を世界で初めて規定。",
+    "たとえるなら「高速道路でハンズオフ自動運転を行うための「レベル3自動運転の世界初の国際基準」」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}

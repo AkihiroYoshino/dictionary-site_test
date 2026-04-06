@@ -1,0 +1,40 @@
+{
+  "id": "power-split-device",
+  "name": "動力分割機構",
+  "reading": "ドウリョクブンカツキコウ",
+  "fullName": "Power Split Device",
+  "aliases": [],
+  "oneLiner": "ハイブリッド車でエンジン出力をタイヤ駆動と発電に分配する遊星歯車機構。THSの中核技術。",
+  "date": "2026-01-21",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>動力分割機構</strong>」って何ですか？パワートレインに関係あるって聞いたんですけど…"
+    },
+    {
+      "speaker": "teacher",
+      "text": "そうだよ！<strong>動力分割機構</strong>（Power Split Device）は、ハイブリッド車でエンジン出力をタイヤ駆動と発電に分配する遊星歯車機構。THSの中核技術。<br><br>わかりやすく言うと、<strong>エンジンの力を「走る用」と「発電用」に自在に振り分ける交差点のような装置</strong>ようなイメージだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "へぇ〜！じゃあ、動力分割機構はクルマの走りにどう影響するんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この技術はクルマの走行性能・燃費・環境性能に直結する重要な要素なんだ。<br><br>最近のクルマはどんどん進化していて、動力分割機構の技術も日々進歩しているんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "動力分割機構のおかげでクルマが進化してるんですね！すごいなぁ！"
+    }
+  ],
+  "summary": [
+    "<strong>動力分割機構</strong>は「Power Split Device」の略称・通称",
+    "ハイブリッド車でエンジン出力をタイヤ駆動と発電に分配する遊星歯車機構。THSの中核技術。",
+    "たとえるなら「エンジンの力を「走る用」と「発電用」に自在に振り分ける交差点のような装置」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {
+    "遊星歯車機構": "planetary-gear"
+  }
+}

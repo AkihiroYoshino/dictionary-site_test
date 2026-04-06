@@ -1,0 +1,40 @@
+{
+  "id": "asil",
+  "name": "ASIL（自動車安全度水準）",
+  "reading": "エーシル",
+  "fullName": "Automotive Safety Integrity Level",
+  "aliases": [],
+  "oneLiner": "ISO 26262で定義される安全度の指標。A（低）→B→C→D（最高）の4レベルがあり、リスクが大きいほど高いASILが要求される。",
+  "date": "2026-03-18",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>ASIL（自動車安全度水準）</strong>」って機能安全でどういう意味があるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>ASIL（自動車安全度水準）</strong>（Automotive Safety Integrity Level）は、ISO 26262で定義される安全度の指標。A（低）→B→C→D（最高）の4レベルがあり、リスクが大きいほど高いASILが要求される。<br><br>たとえるなら、<strong>リスクの大きさで決まる安全設計の「ランク」。DはVIP警護レベル、AはカジュアルSPレベル</strong>みたいなものだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "なるほど。なぜ機能安全でこれが重要なんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "この考え方は、クルマの電子制御システムが故障した際に人命を守るための根幹技術なんだ。<br><br>クルマの電子化が進む今、E/Eシステムの安全設計は絶対に欠かせないんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "機能安全って奥が深いんですね。ASIL（自動車安全度水準）、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>ASIL（自動車安全度水準）</strong>は「Automotive Safety Integrity Level」の略称・通称",
+    "ISO 26262で定義される安全度の指標。A（低）→B→C→D（最高）の4レベルがあり、リスクが大きいほど高いASILが要求される。",
+    "たとえるなら「リスクの大きさで決まる安全設計の「ランク」。DはVIP警護レベル、AはカジュアルSPレベル」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {
+    "ISO 26262": "iso-26262"
+  }
+}

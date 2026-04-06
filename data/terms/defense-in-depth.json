@@ -1,0 +1,38 @@
+{
+  "id": "defense-in-depth",
+  "name": "多層防御（Defense in Depth）",
+  "reading": "タソウボウギョ",
+  "fullName": "Defense in Depth",
+  "aliases": [],
+  "oneLiner": "単一の防御に頼らず、ネットワーク・ホスト・アプリケーション等の各層で多重にセキュリティ対策を施すアプローチ。車載システムでは外部IF→GW→ドメイン→ECU各層で防御する。",
+  "date": "2026-03-04",
+  "dialogue": [
+    {
+      "speaker": "student",
+      "text": "先生、「<strong>多層防御（Defense in Depth）</strong>」ってサイバーセキュリティでどういう意味ですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "<strong>多層防御（Defense in Depth）</strong>（Defense in Depth）は、単一の防御に頼らず、ネットワーク・ホスト・アプリケーション等の各層で多重にセキュリティ対策を施すアプローチ。車載システムでは外部IF→GW→ドメイン→ECU各層で防御する。<br><br>たとえるなら、<strong>城の「堀・城壁・門番・見張り台」のように、何重もの防御線でクルマを守るセキュリティの考え方</strong>みたいなものだね。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマにもサイバーセキュリティが必要なんですね。具体的にどう使われるんですか？"
+    },
+    {
+      "speaker": "teacher",
+      "text": "現代のコネクテッドカーでは、この技術がなければサイバー攻撃に対して無防備になってしまうなんだ。<br><br>多層防御（Defense in Depth）は、その防御の重要な一部なんだよ。"
+    },
+    {
+      "speaker": "student",
+      "text": "クルマのセキュリティって奥が深いんですね。多層防御（Defense in Depth）、しっかり覚えます！"
+    }
+  ],
+  "summary": [
+    "<strong>多層防御（Defense in Depth）</strong>は「Defense in Depth」の略称・通称",
+    "単一の防御に頼らず、ネットワーク・ホスト・アプリケーション等の各層で多重にセキュリティ対策を施すアプローチ。車載システムでは外部IF→GW→ドメイン→ECU各層",
+    "たとえるなら「城の「堀・城壁・門番・見張り台」のように、何重もの防御線でクルマを守るセキュリティの考え方」"
+  ],
+  "relatedTerms": [],
+  "termLinks": {}
+}
